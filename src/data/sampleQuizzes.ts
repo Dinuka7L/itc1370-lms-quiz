@@ -68,7 +68,7 @@ export const sampleQuizzes: Quiz[] = [
     {
       id: 'q7',
       type: 'dropdown',
-      question: 'Choose the correct operator to complete the expression:\n\n```python\nif age [dropdown_1] 18:\n```',
+      question: 'Choose the correct operator to complete the expression:\n\n```python\nif age _____ 18:\n    print("you are an adult")\n```[dropdown_1]',
       dropdownBlanks: [
         {
           id: 'dropdown_1',
