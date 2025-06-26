@@ -9,14 +9,14 @@ const Footer: React.FC = () => {
           
           {/* Left Side: Contact Developer */}
           <div className="text-sm text-gray-600 flex items-center space-x-1">
-            <span>© 2025 ITC Mock Quiz Platform.</span>
+            <span>© 2025 IT-Sprint LMS.</span>
             <a
               href="https://www.linkedin.com/in/dinuka-liyanage/" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-red-600 hover:underline ml-2"
             >
-              <span className="mr-1">Contact Developer</span>
+              <span className="mr-1">Contact Dev</span>
               <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>
