@@ -38,6 +38,7 @@ export interface Quiz {
   questions: Question[];
   totalMarks: number;
   weight: number; // out of 70%
+  category: 'lesson' | 'mockFinal';
 }
 
 export interface QuizAttempt {

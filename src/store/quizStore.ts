@@ -17,6 +17,12 @@ interface QuizStore extends QuizState {
   getTotalWeightedProgress: () => number;
   getTotalMarksObtained: () => number;
   getTotalPossibleMarks: () => number;
+  // New methods for mock final exams
+  getMockFinalProgress: () => number;
+  getMockFinalMarksObtained: () => number;
+  getMockFinalTotalMarks: () => number;
+  getLessonQuizzes: () => Quiz[];
+  getMockFinalQuizzes: () => Quiz[];
 }
 
 export const useQuizStore = create<QuizStore>((set, get) => ({
@@ -255,11 +261,12 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
 
   getTotalWeightedProgress: () => {
     const { quizzes, attempts } = get();
-    const totalWeight = quizzes.reduce((sum, quiz) => sum + quiz.weight, 0);
+    const lessonQuizzes = quizzes.filter(q => q.category === 'lesson');
+    const totalWeight = lessonQuizzes.reduce((sum, quiz) => sum + quiz.weight, 0);
     
     if (totalWeight === 0) return 0;
     
-    const weightedProgress = quizzes.reduce((sum, quiz) => {
+    const weightedProgress = lessonQuizzes.reduce((sum, quiz) => {
       const attempt = attempts.find(a => a.quizId === quiz.id && a.isCompleted);
       const quizProgress = attempt ? (attempt.percentage / 100) : 0;
       return sum + (quizProgress * quiz.weight);
@@ -278,5 +285,39 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
   getTotalPossibleMarks: () => {
     const { quizzes } = get();
     return quizzes.reduce((sum, quiz) => sum + quiz.totalMarks, 0);
+  },
+
+  // New methods for mock final exams
+  getMockFinalProgress: () => {
+    const { attempts } = get();
+    const mockFinalQuizzes = get().getMockFinalQuizzes();
+    const completedQuizzes = mockFinalQuizzes.filter(quiz => 
+      attempts.some(a => a.quizId === quiz.id && a.isCompleted)
+    );
+    
+    return mockFinalQuizzes.length > 0 ? (completedQuizzes.length / mockFinalQuizzes.length) * 100 : 0;
+  },
+
+  getMockFinalMarksObtained: () => {
+    const { attempts } = get();
+    const mockFinalQuizzes = get().getMockFinalQuizzes();
+    
+    return mockFinalQuizzes.reduce((sum, quiz) => {
+      const attempt = attempts.find(a => a.quizId === quiz.id && a.isCompleted);
+      return sum + (attempt?.score || 0);
+    }, 0);
+  },
+
+  getMockFinalTotalMarks: () => {
+    const mockFinalQuizzes = get().getMockFinalQuizzes();
+    return mockFinalQuizzes.reduce((sum, quiz) => sum + quiz.totalMarks, 0);
+  },
+
+  getLessonQuizzes: () => {
+    return get().quizzes.filter(q => q.category === 'lesson');
+  },
+
+  getMockFinalQuizzes: () => {
+    return get().quizzes.filter(q => q.category === 'mockFinal');
   },
 }));

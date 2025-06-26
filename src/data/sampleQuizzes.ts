@@ -8,6 +8,7 @@ export const sampleQuizzes: Quiz[] = [
   timeOptions: [5, 10, 15],
   totalMarks: 50,
   weight: 20,
+  category: 'lesson',
   questions: [
     {
       id: 'q1',
@@ -114,6 +115,7 @@ export const sampleQuizzes: Quiz[] = [
     timeOptions: [10, 15, 20],
     totalMarks: 60,
     weight: 17.5,
+    category: 'lesson',
     questions: [
       {
         id: 'js1',
@@ -196,6 +198,7 @@ export const sampleQuizzes: Quiz[] = [
     timeOptions: [15, 20, 25],
     totalMarks: 70,
     weight: 17.5,
+    category: 'lesson',
     questions: [
       {
         id: 'db1',
@@ -274,6 +277,7 @@ export const sampleQuizzes: Quiz[] = [
     timeOptions: [15, 20, 30],
     totalMarks: 80,
     weight: 17.5,
+    category: 'lesson',
     questions: [
       {
         id: 'sad1',
@@ -342,6 +346,207 @@ export const sampleQuizzes: Quiz[] = [
           { id: 'phase4', left: 'Testing', right: 'Finding and fixing bugs' }
         ],
         marks: 3
+      }
+    ]
+  },
+  // Mock Final Exam Quizzes
+  {
+    id: 'mock-final-1',
+    title: 'Mock Final Exam - Part 1',
+    description: 'Comprehensive assessment covering Python fundamentals and programming concepts',
+    timeOptions: [30, 45, 60],
+    totalMarks: 25,
+    weight: 25,
+    category: 'mockFinal',
+    questions: [
+      {
+        id: 'mf1-q1',
+        type: 'multipleChoice',
+        question: 'What is the output of the following Python code?\n\nx = 10\ny = 3\nprint(x // y)',
+        options: ['3.33', '3', '4', 'Error'],
+        answer: '3',
+        rationale: 'The // operator performs floor division, which returns the largest integer less than or equal to the result.',
+        marks: 5
+      },
+      {
+        id: 'mf1-q2',
+        type: 'multiSelect',
+        question: 'Which of the following are mutable data types in Python?',
+        options: ['list', 'tuple', 'dict', 'set', 'str'],
+        answer: ['list', 'dict', 'set'],
+        rationale: 'Lists, dictionaries, and sets are mutable in Python, while tuples and strings are immutable.',
+        marks: 8
+      },
+      {
+        id: 'mf1-q3',
+        type: 'fillInBlank',
+        question: 'The ________ function is used to convert a string to an integer in Python.',
+        answer: 'int',
+        rationale: 'The int() function converts a string representation of a number to an integer.',
+        marks: 4
+      },
+      {
+        id: 'mf1-q4',
+        type: 'essay',
+        question: 'Explain the difference between a while loop and a for loop in Python. Provide examples of when you would use each.',
+        idealKeywords: ['iteration', 'condition', 'counter', 'sequence', 'range', 'indefinite', 'definite'],
+        marks: 8
+      }
+    ]
+  },
+  {
+    id: 'mock-final-2',
+    title: 'Mock Final Exam - Part 2',
+    description: 'Advanced programming concepts and data structures',
+    timeOptions: [30, 45, 60],
+    totalMarks: 25,
+    weight: 25,
+    category: 'mockFinal',
+    questions: [
+      {
+        id: 'mf2-q1',
+        type: 'dragDrop',
+        question: 'Complete the function definition: A [blank_1] is a collection of statements that perform a specific task. Functions help in code [blank_2] and make programs more [blank_3].',
+        dragItems: [
+          { id: 'func1', content: 'function', category: 'blank_1' },
+          { id: 'func2', content: 'reusability', category: 'blank_2' },
+          { id: 'func3', content: 'modular', category: 'blank_3' }
+        ],
+        marks: 10
+      },
+      {
+        id: 'mf2-q2',
+        type: 'dropdown',
+        question: 'In Python, [dropdown_1] is used to handle exceptions, [dropdown_2] contains the code that might raise an exception, and [dropdown_3] contains cleanup code.',
+        dropdownBlanks: [
+          {
+            id: 'dropdown_1',
+            options: ['try-except', 'if-else', 'while', 'for', 'def'],
+            correctAnswer: 'try-except'
+          },
+          {
+            id: 'dropdown_2',
+            options: ['try', 'except', 'finally', 'else', 'raise'],
+            correctAnswer: 'try'
+          },
+          {
+            id: 'dropdown_3',
+            options: ['try', 'except', 'finally', 'else', 'raise'],
+            correctAnswer: 'finally'
+          }
+        ],
+        rationale: 'Exception handling uses try-except blocks, with try containing risky code and finally containing cleanup code.',
+        marks: 9
+      },
+      {
+        id: 'mf2-q3',
+        type: 'matching',
+        question: 'Match the Python data structure with its characteristics:',
+        matchPairs: [
+          { id: 'ds1', left: 'List', right: 'Ordered, mutable, allows duplicates' },
+          { id: 'ds2', left: 'Tuple', right: 'Ordered, immutable, allows duplicates' },
+          { id: 'ds3', left: 'Set', right: 'Unordered, mutable, no duplicates' },
+          { id: 'ds4', left: 'Dictionary', right: 'Key-value pairs, mutable, keys unique' }
+        ],
+        marks: 6
+      }
+    ]
+  },
+  {
+    id: 'mock-final-3',
+    title: 'Mock Final Exam - Part 3',
+    description: 'Database concepts and SQL fundamentals',
+    timeOptions: [30, 45, 60],
+    totalMarks: 25,
+    weight: 25,
+    category: 'mockFinal',
+    questions: [
+      {
+        id: 'mf3-q1',
+        type: 'multipleChoice',
+        question: 'Which SQL command is used to retrieve data from a database?',
+        options: ['INSERT', 'UPDATE', 'SELECT', 'DELETE'],
+        answer: 'SELECT',
+        rationale: 'SELECT is the SQL command used to query and retrieve data from database tables.',
+        marks: 5
+      },
+      {
+        id: 'mf3-q2',
+        type: 'essay',
+        question: 'Explain the concept of database normalization. Why is it important and what problems does it solve?',
+        idealKeywords: ['redundancy', 'consistency', 'integrity', 'anomalies', '1NF', '2NF', '3NF', 'dependencies'],
+        marks: 12
+      },
+      {
+        id: 'mf3-q3',
+        type: 'fillInBlank',
+        question: 'A ________ key uniquely identifies each record in a database table.',
+        answer: 'primary',
+        rationale: 'A primary key is a unique identifier for each record in a database table.',
+        marks: 4
+      },
+      {
+        id: 'mf3-q4',
+        type: 'multiSelect',
+        question: 'Which of the following are valid SQL data types?',
+        options: ['VARCHAR', 'INTEGER', 'BOOLEAN', 'DATE', 'FLOAT', 'STRING'],
+        answer: ['VARCHAR', 'INTEGER', 'BOOLEAN', 'DATE', 'FLOAT'],
+        rationale: 'All options except STRING are valid SQL data types. VARCHAR is used for variable-length strings.',
+        marks: 4
+      }
+    ]
+  },
+  {
+    id: 'mock-final-4',
+    title: 'Mock Final Exam - Part 4',
+    description: 'System analysis, design principles, and software development',
+    timeOptions: [30, 45, 60],
+    totalMarks: 25,
+    weight: 25,
+    category: 'mockFinal',
+    questions: [
+      {
+        id: 'mf4-q1',
+        type: 'dropdown',
+        question: 'The [dropdown_1] methodology follows a sequential approach, while [dropdown_2] is iterative. [dropdown_3] focuses on individuals and interactions over processes and tools.',
+        dropdownBlanks: [
+          {
+            id: 'dropdown_1',
+            options: ['Waterfall', 'Agile', 'Scrum', 'Kanban', 'Spiral'],
+            correctAnswer: 'Waterfall'
+          },
+          {
+            id: 'dropdown_2',
+            options: ['Waterfall', 'Agile', 'Scrum', 'Kanban', 'Spiral'],
+            correctAnswer: 'Agile'
+          },
+          {
+            id: 'dropdown_3',
+            options: ['Waterfall', 'Agile', 'Scrum', 'Kanban', 'Spiral'],
+            correctAnswer: 'Agile'
+          }
+        ],
+        rationale: 'Waterfall is sequential, Agile is iterative and emphasizes individuals and interactions.',
+        marks: 9
+      },
+      {
+        id: 'mf4-q2',
+        type: 'matching',
+        question: 'Match the SDLC phase with its primary deliverable:',
+        matchPairs: [
+          { id: 'sdlc1', left: 'Requirements Analysis', right: 'Requirements Document' },
+          { id: 'sdlc2', left: 'Design', right: 'System Architecture' },
+          { id: 'sdlc3', left: 'Implementation', right: 'Source Code' },
+          { id: 'sdlc4', left: 'Testing', right: 'Test Reports' }
+        ],
+        marks: 8
+      },
+      {
+        id: 'mf4-q3',
+        type: 'essay',
+        question: 'Describe the importance of user requirements in system development. How do functional and non-functional requirements differ?',
+        idealKeywords: ['stakeholder', 'functional', 'non-functional', 'performance', 'usability', 'security', 'specifications'],
+        marks: 8
       }
     ]
   }
