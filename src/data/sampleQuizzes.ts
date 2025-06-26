@@ -354,7 +354,7 @@ export const sampleQuizzes: Quiz[] = [
     id: 'mock-final-1',
     title: 'Mock Final Exam - Part 1',
     description: 'Comprehensive assessment covering Python fundamentals and programming concepts',
-    timeOptions: [30, 45, 60],
+    timeOptions: [30],
     totalMarks: 25,
     weight: 25,
     category: 'mockFinal',
