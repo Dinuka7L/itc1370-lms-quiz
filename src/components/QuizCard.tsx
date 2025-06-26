@@ -70,7 +70,10 @@ const QuizCard: React.FC<QuizCardProps> = ({ quiz, progress, score, onStart }) =
           <div className="flex items-center justify-between text-sm">
             <span className="text-gray-600">Score</span>
             <span className="font-medium text-gray-900">
-              {score.toFixed(1)}% {quiz.category === 'lesson' && `(Weight: ${quiz.weight}%)`}
+              {score.toFixed(1)}% 
+              {quiz.category === 'mockFinal' && quiz.weight > 0 && (
+                <span className="text-xs text-gray-500 ml-1">(Weight: {quiz.weight}%)</span>
+              )}
             </span>
           </div>
           

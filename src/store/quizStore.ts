@@ -14,10 +14,9 @@ interface QuizStore extends QuizState {
   resetQuiz: () => void;
   getQuizProgress: (quizId: string) => number;
   getQuizScore: (quizId: string) => number;
-  getTotalWeightedProgress: () => number;
   getTotalMarksObtained: () => number;
   getTotalPossibleMarks: () => number;
-  // New methods for mock final exams
+  // Methods for mock final exams
   getMockFinalProgress: () => number;
   getMockFinalMarksObtained: () => number;
   getMockFinalTotalMarks: () => number;
@@ -259,22 +258,6 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     return attempt?.percentage || 0;
   },
 
-  getTotalWeightedProgress: () => {
-    const { quizzes, attempts } = get();
-    const lessonQuizzes = quizzes.filter(q => q.category === 'lesson');
-    const totalWeight = lessonQuizzes.reduce((sum, quiz) => sum + quiz.weight, 0);
-    
-    if (totalWeight === 0) return 0;
-    
-    const weightedProgress = lessonQuizzes.reduce((sum, quiz) => {
-      const attempt = attempts.find(a => a.quizId === quiz.id && a.isCompleted);
-      const quizProgress = attempt ? (attempt.percentage / 100) : 0;
-      return sum + (quizProgress * quiz.weight);
-    }, 0);
-    
-    return (weightedProgress / totalWeight) * 100;
-  },
-
   getTotalMarksObtained: () => {
     const { attempts } = get();
     return attempts.reduce((sum, attempt) => {
@@ -287,7 +270,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     return quizzes.reduce((sum, quiz) => sum + quiz.totalMarks, 0);
   },
 
-  // New methods for mock final exams
+  // Methods for mock final exams
   getMockFinalProgress: () => {
     const { attempts } = get();
     const mockFinalQuizzes = get().getMockFinalQuizzes();

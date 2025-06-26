@@ -14,6 +14,27 @@ interface QuestionRendererProps {
 }
 
 const QuestionRenderer: React.FC<QuestionRendererProps> = ({ question, showResults = false }) => {
+  // Function to format Python code blocks in question text
+  const formatQuestionText = (text: string) => {
+    // Replace ```python code blocks with properly formatted code
+    const formattedText = text.replace(
+      /```python\n([\s\S]*?)\n```/g,
+      (match, code) => {
+        return `<div class="my-4 p-4 bg-gray-900 rounded-lg border border-gray-700">
+          <pre class="text-green-400 font-mono text-sm leading-relaxed overflow-x-auto"><code>${code.trim()}</code></pre>
+        </div>`;
+      }
+    );
+
+    // Also handle inline code with backticks for Python keywords/functions
+    const withInlineCode = formattedText.replace(
+      /`([^`]+)`/g,
+      '<code class="px-2 py-1 bg-gray-100 text-gray-800 rounded font-mono text-sm">$1</code>'
+    );
+
+    return withInlineCode;
+  };
+
   const renderQuestion = () => {
     switch (question.type) {
       case 'multipleChoice':
@@ -59,6 +80,13 @@ const QuestionRenderer: React.FC<QuestionRendererProps> = ({ question, showResul
             {question.marks} {question.marks === 1 ? 'mark' : 'marks'}
           </div>
         </div>
+      </div>
+      
+      <div className="mb-6">
+        <div 
+          className="text-lg font-medium text-gray-900 leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: formatQuestionText(question.question) }}
+        />
       </div>
       
       {renderQuestion()}

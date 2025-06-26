@@ -7,7 +7,7 @@ export const sampleQuizzes: Quiz[] = [
   description: 'Assess your understanding of basic Python programming concepts.',
   timeOptions: [5, 10, 15],
   totalMarks: 50,
-  weight: 20,
+  weight: 0,
   category: 'lesson',
   questions: [
     {
@@ -68,7 +68,7 @@ export const sampleQuizzes: Quiz[] = [
     {
       id: 'q7',
       type: 'dropdown',
-      question: 'Choose the correct operator to complete the expression:\n\nif age [dropdown_1] 18:',
+      question: 'Choose the correct operator to complete the expression:\n\n```python\nif age [dropdown_1] 18:\n```',
       dropdownBlanks: [
         {
           id: 'dropdown_1',
@@ -82,7 +82,7 @@ export const sampleQuizzes: Quiz[] = [
     {
       id: 'q8',
       type: 'multipleChoice',
-      question: 'What will the following code print if the user enters 7?\n\na = int(input("Enter a number: "))\nif a % 2 == 0:\n    print("Even")\nelse:\n    print("Odd")',
+      question: 'What will the following code print if the user enters 7?\n\n```python\na = int(input("Enter a number: "))\nif a % 2 == 0:\n    print("Even")\nelse:\n    print("Odd")\n```',
       options: ['7', 'Even', 'Error', 'Odd'],
       answer: 'Odd',
       rationale: '7 is not divisible by 2, so the program will print "Odd".',
@@ -114,7 +114,7 @@ export const sampleQuizzes: Quiz[] = [
   "description": "A comprehensive quiz covering key concepts in networking and communication, including network types, devices, protocols, and applications.",
   "timeOptions": [10,25,35],
   "totalMarks": 60,
-  "weight": 1,
+  "weight": 0,
   "category": "lesson",
   "questions": [
     {
@@ -311,7 +311,7 @@ export const sampleQuizzes: Quiz[] = [
   "description": "A quiz assessing knowledge of key concepts in information systems security, including threats, the CIA triad, malware, attackers, and security strategies.",
   "timeOptions": [10,25,35],
   "totalMarks": 60,
-  "weight": 1,
+  "weight": 0,
   "category": "lesson",
   "questions": [
     {
@@ -511,7 +511,7 @@ export const sampleQuizzes: Quiz[] = [
       {
         id: 'mf1-q1',
         type: 'multipleChoice',
-        question: 'What is the output of the following Python code?\n\nx = 10\ny = 3\nprint(x // y)',
+        question: 'What is the output of the following Python code?\n\n```python\nx = 10\ny = 3\nprint(x // y)\n```',
         options: ['3.33', '3', '4', 'Error'],
         answer: '3',
         rationale: 'The // operator performs floor division, which returns the largest integer less than or equal to the result.',

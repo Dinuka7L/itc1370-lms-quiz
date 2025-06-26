@@ -14,7 +14,6 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
   const { 
     getQuizProgress, 
     getQuizScore, 
-    getTotalWeightedProgress,
     getTotalMarksObtained,
     getTotalPossibleMarks,
     getMockFinalProgress,
@@ -27,14 +26,16 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
   const lessonQuizzes = getLessonQuizzes();
   const mockFinalQuizzes = getMockFinalQuizzes();
   
-  const totalWeightedProgress = getTotalWeightedProgress();
   const totalMarksObtained = getTotalMarksObtained();
   const totalPossibleMarks = getTotalPossibleMarks();
-  const totalWeight = lessonQuizzes.reduce((sum, quiz) => sum + quiz.weight, 0);
 
   const mockFinalProgress = getMockFinalProgress();
   const mockFinalMarksObtained = getMockFinalMarksObtained();
   const mockFinalTotalMarks = getMockFinalTotalMarks();
+
+  // Calculate lesson quiz completion
+  const completedLessonQuizzes = lessonQuizzes.filter(q => getQuizProgress(q.id) === 100).length;
+  const lessonQuizProgress = lessonQuizzes.length > 0 ? (completedLessonQuizzes / lessonQuizzes.length) * 100 : 0;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
@@ -48,43 +49,10 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Complete all quiz assessments to evaluate your understanding of IT subjects focused for the final exams. 
-              Each quiz contributes to your overall grade.
+              Practice with lesson quizzes and test your knowledge with mock final exams.
             </p>
           </div>
           
-          {/* Overall Progress Card */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200/50 mb-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center space-x-3">
-                <div className="p-2 bg-primary-100 rounded-full">
-                  <TrendingUp className="h-6 w-6 text-primary-600" />
-                </div>
-                <div>
-                  <h2 className="text-xl font-semibold text-gray-900">Overall Progress</h2>
-                  <p className="text-gray-600">Your weighted progress across all lesson quizzes</p>
-                </div>
-              </div>
-              <div className="text-right">
-                <div className="text-3xl font-bold text-primary-600">
-                  {totalWeightedProgress.toFixed(1)}%
-                </div>
-                <div className="text-sm text-gray-500">of {totalWeight}% total weight</div>
-              </div>
-            </div>
-            
-            <ProgressBar current={totalWeightedProgress} total={100} className="mb-4" />
-            
-            <div className="flex items-center justify-between text-sm text-gray-600">
-              <span>Weighted Progress: {totalWeightedProgress.toFixed(1)}% Complete</span>
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
-                  <Award className="h-4 w-4" />
-                  <span>Target: 100%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Total Marks Card */}
           <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200/50 mb-8">
             <div className="flex items-center justify-between mb-4">
@@ -113,11 +81,11 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
             
             <div className="flex items-center justify-between text-sm text-gray-600">
               <span>
-                Marks Progress: {totalPossibleMarks > 0 ? ((totalMarksObtained / totalPossibleMarks) * 100).toFixed(1) : 0}% Complete
+                Overall Progress: {totalPossibleMarks > 0 ? ((totalMarksObtained / totalPossibleMarks) * 100).toFixed(1) : 0}% Complete
               </span>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
-                  <span>Average: {lessonQuizzes.length > 0 ? (totalMarksObtained / lessonQuizzes.filter(q => getQuizProgress(q.id) === 100).length || 0).toFixed(1) : 0} marks/quiz</span>
+                  <span>Average: {(completedLessonQuizzes + mockFinalQuizzes.filter(q => getQuizProgress(q.id) === 100).length) > 0 ? (totalMarksObtained / (completedLessonQuizzes + mockFinalQuizzes.filter(q => getQuizProgress(q.id) === 100).length)).toFixed(1) : 0} marks/quiz</span>
                 </div>
               </div>
             </div>
@@ -132,7 +100,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Final Exam Mock Quizzes</h2>
-              <p className="text-gray-600">Comprehensive practice tests to prepare for your final examination</p>
+              <p className="text-gray-600">Comprehensive practice tests to prepare for your final examination (Total: 100 marks)</p>
             </div>
           </div>
 
@@ -195,7 +163,45 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Lesson Quizzes</h2>
-              <p className="text-gray-600">Topic-specific assessments covering individual course modules</p>
+              <p className="text-gray-600">Topic-specific assessments covering individual course modules (Practice only)</p>
+            </div>
+          </div>
+
+          {/* Lesson Quiz Progress Card */}
+          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200/50 rounded-xl p-6 shadow-lg mb-6">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center space-x-3">
+                <div className="p-2 bg-blue-100 rounded-full">
+                  <BookOpen className="h-6 w-6 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900">Lesson Quiz Progress</h3>
+                  <p className="text-gray-600">Your progress through topic-specific practice quizzes</p>
+                </div>
+              </div>
+              <div className="text-right">
+                <div className="text-3xl font-bold text-blue-600">
+                  {completedLessonQuizzes}
+                </div>
+                <div className="text-sm text-gray-500">out of {lessonQuizzes.length} quizzes</div>
+              </div>
+            </div>
+            
+            <ProgressBar 
+              current={completedLessonQuizzes} 
+              total={lessonQuizzes.length} 
+              className="mb-4" 
+            />
+            
+            <div className="flex items-center justify-between text-sm text-gray-600">
+              <span>
+                Lesson Progress: {lessonQuizProgress.toFixed(1)}% Complete
+              </span>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <span>For practice and concept reinforcement</span>
+                </div>
+              </div>
             </div>
           </div>
           
