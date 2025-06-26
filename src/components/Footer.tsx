@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
           
           {/* Left Side: Contact Developer */}
           <div className="text-sm text-gray-600 flex items-center space-x-1">
-            <span>© 2024 LMS Quiz Platform.</span>
+            <span>© 2025 ITC Mock Quiz Platform.</span>
             <a
-              href="https://dinuka7l.github.io/dinuka-portfolio/" 
+              href="https://www.linkedin.com/in/dinuka-liyanage/" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-red-600 hover:underline ml-2"
