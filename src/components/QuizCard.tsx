@@ -12,9 +12,31 @@ interface QuizCardProps {
 const QuizCard: React.FC<QuizCardProps> = ({ quiz, progress, score, onStart }) => {
   const isCompleted = progress === 100;
 
+  // Define color themes based on quiz category
+  const getThemeColors = () => {
+    if (quiz.category === 'lesson') {
+      return {
+        gradient: 'from-blue-600 to-blue-800',
+        progressBg: 'from-blue-500 to-blue-700',
+        buttonBg: 'bg-blue-700 hover:bg-blue-800',
+        buttonText: 'text-white'
+      };
+    } else {
+      // Mock final exams keep the purple theme
+      return {
+        gradient: 'from-purple-500 to-purple-700',
+        progressBg: 'from-purple-500 to-purple-600',
+        buttonBg: 'bg-purple-600 hover:bg-purple-700',
+        buttonText: 'text-white'
+      };
+    }
+  };
+
+  const theme = getThemeColors();
+
   return (
     <div className="group relative">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300" />
+      <div className={`absolute inset-0 bg-gradient-to-r ${theme.gradient} rounded-xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300`} />
       
       <div className="relative bg-white/70 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-[1.02]">
         <div className="flex items-start justify-between mb-4">
@@ -40,7 +62,7 @@ const QuizCard: React.FC<QuizCardProps> = ({ quiz, progress, score, onStart }) =
           
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-500"
+              className={`bg-gradient-to-r ${theme.progressBg} h-2 rounded-full transition-all duration-500`}
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -48,7 +70,7 @@ const QuizCard: React.FC<QuizCardProps> = ({ quiz, progress, score, onStart }) =
           <div className="flex items-center justify-between text-sm">
             <span className="text-gray-600">Score</span>
             <span className="font-medium text-gray-900">
-              {score.toFixed(1)}% (Weight: {quiz.weight}%)
+              {score.toFixed(1)}% {quiz.category === 'lesson' && `(Weight: ${quiz.weight}%)`}
             </span>
           </div>
           
@@ -60,7 +82,7 @@ const QuizCard: React.FC<QuizCardProps> = ({ quiz, progress, score, onStart }) =
         
         <button
           onClick={onStart}
-          className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2 group"
+          className={`w-full ${theme.buttonBg} ${theme.buttonText} font-medium py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2 group`}
         >
           <Play className="h-4 w-4 group-hover:scale-110 transition-transform duration-200" />
           <span>{isCompleted ? 'Retake Quiz' : 'Start Quiz'}</span>
