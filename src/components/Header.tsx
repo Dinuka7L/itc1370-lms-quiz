@@ -7,7 +7,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ currentQuiz }) => {
   return (
-    <header className="relative bg-white/60 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-50">
+    <header className="relative bg-white/60 backdrop-blur-md border-b border-gray-200/50 shadow-md sticky top-0 z-50">
       {/* Gradient Red Overlay on Left */}
       <div className="absolute inset-y-0 left-0 w-[200px] bg-gradient-to-r from-red-500/30 to-transparent pointer-events-none" />
 
@@ -34,15 +34,16 @@ const Header: React.FC<HeaderProps> = ({ currentQuiz }) => {
             )}
           </nav>
 
-          {/* Right Side: Logo + Website Name */}
-          <div className="flex items-center space-x-2 z-10">
-            <div className="w-6 h-6 rounded-full bg-red-800 flex items-center justify-center text-white font-bold text-xs">
-              👨🏻‍💻
+            {/* Right Side: Large Website Logo Only */}
+            <div className="z-10">
+              <img
+                src="/Academia-logo.png"
+                alt="Website Logo"
+                className="md:w-30 h-16 rounded-full object-cover"
+              />
             </div>
-            <div className="text-sm font-medium text-gray-700 whitespace-nowrap">
-              IT-Sprint LMS
-            </div>
-          </div>
+
+
 
         </div>
       </div>
