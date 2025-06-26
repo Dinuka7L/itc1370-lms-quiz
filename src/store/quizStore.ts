@@ -24,6 +24,16 @@ interface QuizStore extends QuizState {
   getMockFinalQuizzes: () => Quiz[];
 }
 
+// Function to shuffle array using Fisher-Yates algorithm
+const shuffleArray = <T>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 export const useQuizStore = create<QuizStore>((set, get) => ({
   // Initial state
   quizzes: sampleQuizzes,
@@ -37,8 +47,15 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
 
   // Actions
   startQuiz: (quizId: string, timeLimit: number) => {
-    const quiz = get().quizzes.find(q => q.id === quizId);
-    if (!quiz) return;
+    const originalQuiz = get().quizzes.find(q => q.id === quizId);
+    if (!originalQuiz) return;
+
+    // Create a new quiz instance with shuffled questions
+    const shuffledQuestions = shuffleArray(originalQuiz.questions);
+    const quiz: Quiz = {
+      ...originalQuiz,
+      questions: shuffledQuestions
+    };
 
     const attempt: QuizAttempt = {
       quizId,
