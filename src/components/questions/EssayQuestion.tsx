@@ -22,9 +22,10 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
 
   return (
     <div className="space-y-4">
-      <div className="text-lg font-medium text-gray-900 leading-relaxed">
-        {question.question}
-      </div>
+      <div 
+        className="text-lg font-medium text-gray-900 leading-relaxed"
+        dangerouslySetInnerHTML={{ __html: question.question }}
+      />
       
       <div className="text-sm text-gray-600 mb-4">
         This is an essay question. Provide a comprehensive answer in the text area below.

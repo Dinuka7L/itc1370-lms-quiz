@@ -36,21 +36,23 @@ const QuestionRenderer: React.FC<QuestionRendererProps> = ({ question, showResul
   };
 
   const renderQuestion = () => {
+    const formattedQuestion = { ...question, question: formatQuestionText(question.question) };
+    
     switch (question.type) {
       case 'multipleChoice':
-        return <MultipleChoiceQuestion question={question} showResults={showResults} />;
+        return <MultipleChoiceQuestion question={formattedQuestion} showResults={showResults} />;
       case 'multiSelect':
-        return <MultiSelectQuestion question={question} showResults={showResults} />;
+        return <MultiSelectQuestion question={formattedQuestion} showResults={showResults} />;
       case 'fillInBlank':
-        return <FillInBlankQuestion question={question} showResults={showResults} />;
+        return <FillInBlankQuestion question={formattedQuestion} showResults={showResults} />;
       case 'essay':
-        return <EssayQuestion question={question} showResults={showResults} />;
+        return <EssayQuestion question={formattedQuestion} showResults={showResults} />;
       case 'dragDrop':
-        return <DragDropQuestion question={question} showResults={showResults} />;
+        return <DragDropQuestion question={formattedQuestion} showResults={showResults} />;
       case 'matching':
-        return <MatchingQuestion question={question} showResults={showResults} />;
+        return <MatchingQuestion question={formattedQuestion} showResults={showResults} />;
       case 'dropdown':
-        return <DropdownQuestion question={question} showResults={showResults} />;
+        return <DropdownQuestion question={formattedQuestion} showResults={showResults} />;
       default:
         return <div className="text-red-500">Unsupported question type: {question.type}</div>;
     }
@@ -80,13 +82,6 @@ const QuestionRenderer: React.FC<QuestionRendererProps> = ({ question, showResul
             {question.marks} {question.marks === 1 ? 'mark' : 'marks'}
           </div>
         </div>
-      </div>
-      
-      <div className="mb-6">
-        <div 
-          className="text-lg font-medium text-gray-900 leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: formatQuestionText(question.question) }}
-        />
       </div>
       
       {renderQuestion()}

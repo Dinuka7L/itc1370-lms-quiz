@@ -76,9 +76,10 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
 
   return (
     <div className="space-y-6">
-      <div className="text-lg font-medium text-gray-900 leading-relaxed">
-        {question.question}
-      </div>
+      <div 
+        className="text-lg font-medium text-gray-900 leading-relaxed"
+        dangerouslySetInnerHTML={{ __html: question.question }}
+      />
       
       <div className="text-sm text-gray-600">
         Click on items from the left column, then click on the corresponding item from the right column to create matches.

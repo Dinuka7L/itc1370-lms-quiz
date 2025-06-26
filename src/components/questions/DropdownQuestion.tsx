@@ -79,7 +79,7 @@ const DropdownQuestion: React.FC<DropdownQuestionProps> = ({
           </select>
         );
       }
-      return <span key={index}>{part}</span>;
+      return <span key={index} dangerouslySetInnerHTML={{ __html: part }} />;
     });
   };
 
