@@ -94,127 +94,143 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
 
         {/* Mock Final Exam Section */}
         <div className="mb-12">
-          <div className="flex items-center space-x-3 mb-6">
-            <div className="p-2 bg-purple-100 rounded-full">
-              <GraduationCap className="h-6 w-6 text-purple-600" />
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">Final Exam Mock Quizzes</h2>
-              <p className="text-gray-600">Comprehensive practice tests to prepare for your final examination (Total: 100 marks)</p>
-            </div>
-          </div>
-
-          {/* Mock Final Progress Card */}
-          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200/50 rounded-xl p-6 shadow-lg mb-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center space-x-3">
-                <div className="p-2 bg-purple-100 rounded-full">
-                  <GraduationCap className="h-6 w-6 text-purple-600" />
+          {/* Glass-like gradient background for Mock Final section */}
+          <div className="relative bg-gradient-to-br from-purple-100/60 via-indigo-50/40 to-blue-100/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30 mb-8">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-2xl" />
+            <div className="relative">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-3 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full shadow-lg">
+                  <GraduationCap className="h-8 w-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">Mock Final Exam Progress</h3>
-                  <p className="text-gray-600">Your progress through the comprehensive final exam practice</p>
+                  <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-700 to-indigo-700 bg-clip-text text-transparent">
+                    Final Exam Mock Quizzes
+                  </h2>
+                  <p className="text-gray-700 font-medium">Comprehensive practice tests to prepare for your final examination (Total: 100 marks)</p>
                 </div>
               </div>
-              <div className="text-right">
-                <div className="text-3xl font-bold text-purple-600">
-                  {mockFinalMarksObtained}
-                </div>
-                <div className="text-sm text-gray-500">out of 100 marks</div>
-              </div>
-            </div>
-            
-            <ProgressBar 
-              current={mockFinalMarksObtained} 
-              total={100} 
-              className="mb-4" 
-            />
-            
-            <div className="flex items-center justify-between text-sm text-gray-600">
-              <span>
-                Mock Final Progress: {mockFinalProgress.toFixed(1)}% Complete ({mockFinalQuizzes.filter(q => getQuizProgress(q.id) === 100).length}/{mockFinalQuizzes.length} quizzes)
-              </span>
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
-                  <span>Score: {mockFinalTotalMarks > 0 ? ((mockFinalMarksObtained / mockFinalTotalMarks) * 100).toFixed(1) : 0}%</span>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-            {mockFinalQuizzes.map((quiz) => (
-              <QuizCard
-                key={quiz.id}
-                quiz={quiz}
-                progress={getQuizProgress(quiz.id)}
-                score={getQuizScore(quiz.id)}
-                onStart={() => onStartQuiz(quiz.id)}
-              />
-            ))}
+              {/* Mock Final Progress Card */}
+              <div className="bg-white/70 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-lg mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="p-2 bg-purple-100 rounded-full">
+                      <GraduationCap className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">Mock Final Exam Progress</h3>
+                      <p className="text-gray-600">Your progress through the comprehensive final exam practice</p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-3xl font-bold text-purple-600">
+                      {mockFinalMarksObtained}
+                    </div>
+                    <div className="text-sm text-gray-500">out of 100 marks</div>
+                  </div>
+                </div>
+                
+                <ProgressBar 
+                  current={mockFinalMarksObtained} 
+                  total={100} 
+                  className="mb-4" 
+                />
+                
+                <div className="flex items-center justify-between text-sm text-gray-600">
+                  <span>
+                    Mock Final Progress: {mockFinalProgress.toFixed(1)}% Complete ({mockFinalQuizzes.filter(q => getQuizProgress(q.id) === 100).length}/{mockFinalQuizzes.length} quizzes)
+                  </span>
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2">
+                      <span>Score: {mockFinalTotalMarks > 0 ? ((mockFinalMarksObtained / mockFinalTotalMarks) * 100).toFixed(1) : 0}%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                {mockFinalQuizzes.map((quiz) => (
+                  <QuizCard
+                    key={quiz.id}
+                    quiz={quiz}
+                    progress={getQuizProgress(quiz.id)}
+                    score={getQuizScore(quiz.id)}
+                    onStart={() => onStartQuiz(quiz.id)}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Lesson Quizzes Section */}
         <div>
-          <div className="flex items-center space-x-3 mb-6">
-            <div className="p-2 bg-blue-100 rounded-full">
-              <BookOpen className="h-6 w-6 text-blue-600" />
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">Lesson Quizzes</h2>
-              <p className="text-gray-600">Topic-specific assessments covering individual course modules (Practice only)</p>
-            </div>
-          </div>
-
-          {/* Lesson Quiz Progress Card */}
-          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200/50 rounded-xl p-6 shadow-lg mb-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center space-x-3">
-                <div className="p-2 bg-blue-100 rounded-full">
-                  <BookOpen className="h-6 w-6 text-blue-600" />
+          {/* Glass-like gradient background for Lesson section */}
+          <div className="relative bg-gradient-to-br from-blue-100/60 via-cyan-50/40 to-teal-100/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-teal-500/10 rounded-2xl" />
+            <div className="relative">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-3 bg-gradient-to-br from-blue-500 to-teal-600 rounded-full shadow-lg">
+                  <BookOpen className="h-8 w-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">Lesson Quiz Progress</h3>
-                  <p className="text-gray-600">Your progress through topic-specific practice quizzes</p>
+                  <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-teal-700 bg-clip-text text-transparent">
+                    Lesson Quizzes
+                  </h2>
+                  <p className="text-gray-700 font-medium">Topic-specific assessments covering individual course modules (Practice only)</p>
                 </div>
               </div>
-              <div className="text-right">
-                <div className="text-3xl font-bold text-blue-600">
-                  {completedLessonQuizzes}
+
+              {/* Lesson Quiz Progress Card */}
+              <div className="bg-white/70 backdrop-blur-sm border border-white/50 rounded-xl p-6 shadow-lg mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="p-2 bg-blue-100 rounded-full">
+                      <BookOpen className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">Lesson Quiz Progress</h3>
+                      <p className="text-gray-600">Your progress through topic-specific practice quizzes</p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-3xl font-bold text-blue-600">
+                      {completedLessonQuizzes}
+                    </div>
+                    <div className="text-sm text-gray-500">out of {lessonQuizzes.length} quizzes</div>
+                  </div>
                 </div>
-                <div className="text-sm text-gray-500">out of {lessonQuizzes.length} quizzes</div>
+                
+                <ProgressBar 
+                  current={completedLessonQuizzes} 
+                  total={lessonQuizzes.length} 
+                  className="mb-4" 
+                />
+                
+                <div className="flex items-center justify-between text-sm text-gray-600">
+                  <span>
+                    Lesson Progress: {lessonQuizProgress.toFixed(1)}% Complete
+                  </span>
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2">
+                      <span>For practice and concept reinforcement</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                {lessonQuizzes.map((quiz) => (
+                  <QuizCard
+                    key={quiz.id}
+                    quiz={quiz}
+                    progress={getQuizProgress(quiz.id)}
+                    score={getQuizScore(quiz.id)}
+                    onStart={() => onStartQuiz(quiz.id)}
+                  />
+                ))}
               </div>
             </div>
-            
-            <ProgressBar 
-              current={completedLessonQuizzes} 
-              total={lessonQuizzes.length} 
-              className="mb-4" 
-            />
-            
-            <div className="flex items-center justify-between text-sm text-gray-600">
-              <span>
-                Lesson Progress: {lessonQuizProgress.toFixed(1)}% Complete
-              </span>
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
-                  <span>For practice and concept reinforcement</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-            {lessonQuizzes.map((quiz) => (
-              <QuizCard
-                key={quiz.id}
-                quiz={quiz}
-                progress={getQuizProgress(quiz.id)}
-                score={getQuizScore(quiz.id)}
-                onStart={() => onStartQuiz(quiz.id)}
-              />
-            ))}
           </div>
         </div>
       </main>

@@ -34,6 +34,70 @@ const shuffleArray = <T>(array: T[]): T[] => {
   return shuffled;
 };
 
+// Function to normalize text for comparison (handles typos and variations)
+const normalizeText = (text: string): string => {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s]/g, '') // Remove punctuation
+    .replace(/\s+/g, ' '); // Normalize whitespace
+};
+
+// Function to check if two strings are similar (handles minor typos)
+const isSimilarText = (userAnswer: string, correctAnswer: string): boolean => {
+  const normalizedUser = normalizeText(userAnswer);
+  const normalizedCorrect = normalizeText(correctAnswer);
+  
+  // Exact match after normalization
+  if (normalizedUser === normalizedCorrect) return true;
+  
+  // Check for minor typos using Levenshtein distance
+  const distance = levenshteinDistance(normalizedUser, normalizedCorrect);
+  const maxLength = Math.max(normalizedUser.length, normalizedCorrect.length);
+  
+  // Allow up to 20% character differences for typos
+  const threshold = Math.ceil(maxLength * 0.2);
+  return distance <= threshold;
+};
+
+// Levenshtein distance algorithm for typo detection
+const levenshteinDistance = (str1: string, str2: string): number => {
+  const matrix = Array(str2.length + 1).fill(null).map(() => Array(str1.length + 1).fill(null));
+  
+  for (let i = 0; i <= str1.length; i++) matrix[0][i] = i;
+  for (let j = 0; j <= str2.length; j++) matrix[j][0] = j;
+  
+  for (let j = 1; j <= str2.length; j++) {
+    for (let i = 1; i <= str1.length; i++) {
+      const indicator = str1[i - 1] === str2[j - 1] ? 0 : 1;
+      matrix[j][i] = Math.min(
+        matrix[j][i - 1] + 1, // deletion
+        matrix[j - 1][i] + 1, // insertion
+        matrix[j - 1][i - 1] + indicator // substitution
+      );
+    }
+  }
+  
+  return matrix[str2.length][str1.length];
+};
+
+// Function to calculate essay score based on keywords
+const calculateEssayScore = (userAnswer: string, idealKeywords: string[]): number => {
+  if (!userAnswer || !idealKeywords || idealKeywords.length === 0) return 0;
+  
+  const normalizedAnswer = normalizeText(userAnswer);
+  let matchedKeywords = 0;
+  
+  idealKeywords.forEach(keyword => {
+    const normalizedKeyword = normalizeText(keyword);
+    if (normalizedAnswer.includes(normalizedKeyword)) {
+      matchedKeywords++;
+    }
+  });
+  
+  return (matchedKeywords / idealKeywords.length) * 100;
+};
+
 export const useQuizStore = create<QuizStore>((set, get) => ({
   // Initial state
   quizzes: sampleQuizzes,
@@ -156,7 +220,11 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       const userAnswer = currentAttempt.answers[question.id];
       
       if (question.type === 'essay') {
-        // Essay questions are not auto-evaluated
+        // Essay questions are now auto-evaluated based on keywords
+        if (userAnswer && question.idealKeywords && question.idealKeywords.length > 0) {
+          const essayScore = calculateEssayScore(userAnswer, question.idealKeywords);
+          score += (essayScore / 100) * question.marks;
+        }
         return;
       }
 
@@ -171,7 +239,8 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
           score += question.marks;
         }
       } else if (question.type === 'fillInBlank') {
-        if (userAnswer?.toLowerCase().trim() === (question.answer as string)?.toLowerCase().trim()) {
+        // Use improved text comparison for fill-in-blank questions
+        if (userAnswer && isSimilarText(userAnswer, question.answer as string)) {
           score += question.marks;
         }
       } else if (question.type === 'dragDrop') {
@@ -223,13 +292,13 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       }
     });
 
-    const percentage = (score / totalMarks) * 100;
+    const percentage = totalMarks > 0 ? (score / totalMarks) * 100 : 0;
 
     const completedAttempt: QuizAttempt = {
       ...currentAttempt,
       endTime: new Date(),
-      score,
-      percentage,
+      score: Math.round(score * 100) / 100, // Round to 2 decimal places
+      percentage: Math.round(percentage * 100) / 100,
       isCompleted: true,
       isSubmitted: true,
     };
@@ -277,9 +346,9 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
 
   getTotalMarksObtained: () => {
     const { attempts } = get();
-    return attempts.reduce((sum, attempt) => {
+    return Math.round(attempts.reduce((sum, attempt) => {
       return attempt.isCompleted ? sum + (attempt.score || 0) : sum;
-    }, 0);
+    }, 0) * 100) / 100;
   },
 
   getTotalPossibleMarks: () => {
@@ -302,10 +371,10 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     const { attempts } = get();
     const mockFinalQuizzes = get().getMockFinalQuizzes();
     
-    return mockFinalQuizzes.reduce((sum, quiz) => {
+    return Math.round(mockFinalQuizzes.reduce((sum, quiz) => {
       const attempt = attempts.find(a => a.quizId === quiz.id && a.isCompleted);
       return sum + (attempt?.score || 0);
-    }, 0);
+    }, 0) * 100) / 100;
   },
 
   getMockFinalTotalMarks: () => {

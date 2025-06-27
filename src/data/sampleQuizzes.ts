@@ -41,6 +41,7 @@ export const sampleQuizzes: Quiz[] = [
       type: 'essay',
       question: 'Describe what an IDE is and list two examples. How does it help beginner programmers?',
       idealKeywords: ['integrated development environment', 'IDLE', 'VS Code', 'debugging', 'editor', 'run code'],
+      rationale: 'An IDE (Integrated Development Environment) is a software application that provides comprehensive facilities for software development. Examples include IDLE, VS Code, PyCharm, etc. IDEs help beginners by providing syntax highlighting, debugging tools, code completion, and integrated terminals.',
       marks: 8
     },
     {
@@ -283,6 +284,7 @@ export const sampleQuizzes: Quiz[] = [
       "type": "essay",
       "question": "Explain the difference between client-server and peer-to-peer network architectures.",
       "idealKeywords": ["central server", "clients", "direct access", "functional level", "cost", "complexity"],
+      "rationale": "Client-server architecture uses a central server to manage resources and provide services to client computers, while peer-to-peer allows direct communication between computers without a central server. Client-server offers better security and centralized management but is more expensive, while P2P is simpler and cheaper but less secure.",
       "marks": 5
     },
     {
@@ -475,6 +477,7 @@ export const sampleQuizzes: Quiz[] = [
       "type": "essay",
       "question": "Describe the importance of security awareness training for employees.",
       "idealKeywords": ["user behavior", "phishing", "policy", "risk reduction", "compliance"],
+      "rationale": "Security awareness training is crucial for educating employees about security threats, proper procedures, and their role in maintaining organizational security. It helps reduce human error, improves compliance with security policies, and creates a security-conscious culture.",
       "marks": 5
     },
     {
@@ -621,25 +624,7 @@ export const sampleQuizzes: Quiz[] = [
     "options": ["and", "+", "-", "*"],
     "answer": "and",
     "rationale": "and is a logical operator, not arithmetic.",
-    "marks": 2
-  },
-  {
-    "id": "q14",
-    "type": "multipleChoice",
-    "question": "What is the result of 9 // 4 in Python?",
-    "options": ["2", "2.25", "3", "1"],
-    "answer": "2",
-    "rationale": "// operator gives the integer part of the division.",
-    "marks": 2
-  },
-  {
-    "id": "q15",
-    "type": "multipleChoice",
-    "question": "Which operator is used to multiply two numbers in Python?",
-    "options": ["*", "+", "/", "%"],
-    "answer": "*",
-    "rationale": "* is the multiplication operator.",
-    "marks": 2
+    "marks": 1
   }
 ]
 }
@@ -685,6 +670,7 @@ export const sampleQuizzes: Quiz[] = [
         type: 'essay',
         question: 'Explain the difference between a while loop and a for loop in Python. Provide examples of when you would use each.',
         idealKeywords: ['iteration', 'condition', 'counter', 'sequence', 'range', 'indefinite', 'definite'],
+        rationale: 'A while loop continues as long as a condition is true (indefinite iteration), while a for loop iterates over a sequence for a predetermined number of times (definite iteration). While loops are used when you don\'t know how many iterations you need, for loops are used when iterating over collections or a known range.',
         marks: 8
       }
     ]
@@ -770,6 +756,7 @@ export const sampleQuizzes: Quiz[] = [
         type: 'essay',
         question: 'Explain the concept of database normalization. Why is it important and what problems does it solve?',
         idealKeywords: ['redundancy', 'consistency', 'integrity', 'anomalies', '1NF', '2NF', '3NF', 'dependencies'],
+        rationale: 'Database normalization is the process of organizing data to reduce redundancy and improve data integrity. It eliminates data anomalies, ensures consistency, and reduces storage space by organizing data into related tables following normal forms (1NF, 2NF, 3NF).',
         marks: 12
       },
       {
@@ -841,6 +828,7 @@ export const sampleQuizzes: Quiz[] = [
         type: 'essay',
         question: 'Describe the importance of user requirements in system development. How do functional and non-functional requirements differ?',
         idealKeywords: ['stakeholder', 'functional', 'non-functional', 'performance', 'usability', 'security', 'specifications'],
+        rationale: 'User requirements define what the system should do and how it should perform. Functional requirements specify system behavior and features, while non-functional requirements define quality attributes like performance, security, and usability. Both are essential for successful system development.',
         marks: 8
       }
     ]
