@@ -707,7 +707,7 @@ export const sampleQuizzes: Quiz[] = [
           "correctAnswer": "65"
         }
       ],
-      "rationale": "Grade B starts at 65.",
+      "rationale": "The Grade B starts at 65.",
       "marks": 3
     },
     {
