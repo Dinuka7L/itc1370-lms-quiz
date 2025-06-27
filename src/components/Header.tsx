@@ -9,7 +9,7 @@ const Header: React.FC<HeaderProps> = ({ currentQuiz }) => {
   return (
     <header className="relative bg-white/60 backdrop-blur-md border-b border-gray-200/50 shadow-md sticky top-0 z-50">
       {/* Gradient Red Overlay on Left */}
-      <div className="absolute inset-y-0 left-0 w-[150px] sm:w-[200px] bg-gradient-to-r from-red-500/30 to-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-[150px] sm:w-[200px] bg-gradient-to-r from-red-500/20 to-transparent pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-between min-h-[4rem] gap-y-2">
