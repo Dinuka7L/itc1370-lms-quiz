@@ -227,3 +227,5 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     </div>
   );
 };
+
+export default QuizInterface;
