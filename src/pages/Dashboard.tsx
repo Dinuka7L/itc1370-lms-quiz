@@ -48,8 +48,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
               ITC1370: Information Technology for Business 
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Complete all quiz assessments to evaluate your understanding of IT subjects focused for the final exams. 
-              Practice with lesson quizzes and test your knowledge with mock final exams.
+              Complete all quiz assessments to evaluate your understanding of IT subjects focused for the final exams.
             </p>
           </div>
           

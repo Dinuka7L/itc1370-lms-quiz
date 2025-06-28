@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ currentQuiz, onNavigateHome }) => {
 
             {/* Left Side: Large ITC1370 Text */}
             <div className="text-xl sm:text-2xl font-bold text-gray-800 z-10">
-              ITC1370
+              ITC Quizzes
             </div>
 
             {/* Breadcrumb Navigation */}
@@ -69,8 +69,9 @@ const Header: React.FC<HeaderProps> = ({ currentQuiz, onNavigateHome }) => {
                 <img
                   src="/Academia-logo.png"
                   alt="Website Logo"
-                  className="w-12 sm:w-16 md:w-20 h-auto rounded-full object-cover"
+                  className="w-16 sm:w-20 md:w-24 lg:w-32 h-auto rounded-full object-cover"
                 />
+
               </button>
             </div>
 
