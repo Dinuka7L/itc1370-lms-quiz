@@ -22,6 +22,8 @@ interface QuizStore extends QuizState {
   getMockFinalTotalMarks: () => number;
   getLessonQuizzes: () => Quiz[];
   getMockFinalQuizzes: () => Quiz[];
+  // New method for calculating actual time remaining
+  calculateTimeRemaining: () => number;
 }
 
 // Function to shuffle array using Fisher-Yates algorithm
@@ -121,10 +123,11 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       questions: shuffledQuestions
     };
 
+    const startTime = new Date();
     const attempt: QuizAttempt = {
       quizId,
       answers: {},
-      startTime: new Date(),
+      startTime,
       timeLimit,
       isCompleted: false,
       isSubmitted: false,
@@ -313,6 +316,19 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       currentAttempt: completedAttempt,
       timeRemaining: 0,
     });
+  },
+
+  // New method to calculate actual time remaining based on timestamps
+  calculateTimeRemaining: () => {
+    const { currentAttempt, isTimerRunning } = get();
+    if (!currentAttempt || !isTimerRunning) return 0;
+
+    const now = new Date();
+    const elapsedSeconds = Math.floor((now.getTime() - currentAttempt.startTime.getTime()) / 1000);
+    const totalTimeInSeconds = currentAttempt.timeLimit * 60;
+    const remainingTime = Math.max(0, totalTimeInSeconds - elapsedSeconds);
+
+    return remainingTime;
   },
 
   setTimeRemaining: (time: number) => {

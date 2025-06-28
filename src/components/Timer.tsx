@@ -1,31 +1,115 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Clock, AlertTriangle } from 'lucide-react';
 import { useQuizStore } from '../store/quizStore';
 
 const Timer: React.FC = () => {
-  const { timeRemaining, isTimerRunning, setTimeRemaining, submitQuiz } = useQuizStore();
+  const { 
+    timeRemaining, 
+    isTimerRunning, 
+    setTimeRemaining, 
+    submitQuiz, 
+    calculateTimeRemaining,
+    currentAttempt 
+  } = useQuizStore();
+  
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const lastUpdateRef = useRef<number>(Date.now());
 
   useEffect(() => {
-    if (!isTimerRunning) return;
+    if (!isTimerRunning || !currentAttempt) {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+      return;
+    }
+
+    // Update timer immediately when starting
+    const actualTimeRemaining = calculateTimeRemaining();
+    if (actualTimeRemaining !== timeRemaining) {
+      setTimeRemaining(actualTimeRemaining);
+    }
 
     // If time has already run out, submit immediately
-    if (timeRemaining <= 0) {
+    if (actualTimeRemaining <= 0) {
       submitQuiz();
       return;
     }
 
-    const interval = setInterval(() => {
-      setTimeRemaining(timeRemaining - 1);
-      
-      // Check if time just ran out and submit
-      if (timeRemaining - 1 <= 0) {
-        submitQuiz();
-        clearInterval(interval);
-      }
-    }, 1000);
+    // Clear any existing interval
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
 
-    return () => clearInterval(interval);
-  }, [timeRemaining, isTimerRunning, setTimeRemaining, submitQuiz]);
+    // Set up a more frequent interval to catch up after tab switching
+    intervalRef.current = setInterval(() => {
+      const now = Date.now();
+      const actualTime = calculateTimeRemaining();
+      
+      // Update the time based on actual elapsed time, not just decrementing
+      setTimeRemaining(actualTime);
+      
+      // If time is up, submit the quiz
+      if (actualTime <= 0) {
+        submitQuiz();
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
+      }
+      
+      lastUpdateRef.current = now;
+    }, 250); // Update every 250ms for smoother countdown and better tab-switching detection
+
+    // Cleanup function
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+  }, [isTimerRunning, currentAttempt, calculateTimeRemaining, setTimeRemaining, submitQuiz]);
+
+  // Handle page visibility change (tab switching)
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (!document.hidden && isTimerRunning && currentAttempt) {
+        // When tab becomes visible again, immediately sync with actual time
+        const actualTime = calculateTimeRemaining();
+        setTimeRemaining(actualTime);
+        
+        if (actualTime <= 0) {
+          submitQuiz();
+        }
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [isTimerRunning, currentAttempt, calculateTimeRemaining, setTimeRemaining, submitQuiz]);
+
+  // Handle page focus/blur events as additional backup
+  useEffect(() => {
+    const handleFocus = () => {
+      if (isTimerRunning && currentAttempt) {
+        const actualTime = calculateTimeRemaining();
+        setTimeRemaining(actualTime);
+        
+        if (actualTime <= 0) {
+          submitQuiz();
+        }
+      }
+    };
+
+    window.addEventListener('focus', handleFocus);
+    
+    return () => {
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, [isTimerRunning, currentAttempt, calculateTimeRemaining, setTimeRemaining, submitQuiz]);
 
   const formatTime = (seconds: number): string => {
     const minutes = Math.floor(Math.max(0, seconds) / 60);
