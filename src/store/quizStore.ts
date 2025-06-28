@@ -208,8 +208,11 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
   },
 
   submitQuiz: () => {
-    const { currentAttempt, currentQuiz, attempts } = get();
-    if (!currentAttempt || !currentQuiz) return;
+    const { currentAttempt, currentQuiz, attempts, isTimerRunning } = get();
+    if (!currentAttempt || !currentQuiz || currentAttempt.isSubmitted) return;
+
+    // Stop the timer immediately
+    set({ isTimerRunning: false });
 
     // Calculate score
     let score = 0;
@@ -308,12 +311,19 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     set({
       attempts: updatedAttempts,
       currentAttempt: completedAttempt,
-      isTimerRunning: false,
+      timeRemaining: 0,
     });
   },
 
   setTimeRemaining: (time: number) => {
-    set({ timeRemaining: time });
+    const { isTimerRunning } = get();
+    
+    // Only update time if timer is still running and quiz hasn't been submitted
+    if (!isTimerRunning) return;
+    
+    set({ timeRemaining: Math.max(0, time) });
+    
+    // Auto-submit when time reaches 0
     if (time <= 0) {
       get().submitQuiz();
     }
