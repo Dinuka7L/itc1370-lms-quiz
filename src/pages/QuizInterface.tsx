@@ -9,9 +9,10 @@ import { useQuizStore } from '../store/quizStore';
 
 interface QuizInterfaceProps {
   onSubmit: () => void;
+  onNavigateHome?: () => void;
 }
 
-const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit }) => {
+const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome }) => {
   const [showSubmitModal, setShowSubmitModal] = useState(false);
   
   const { 
@@ -56,7 +57,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
-      <Header currentQuiz={currentQuiz.title} />
+      <Header currentQuiz={currentQuiz.title} onNavigateHome={onNavigateHome} />
       
       <main className="flex-1 flex">
         {/* Left Sidebar */}

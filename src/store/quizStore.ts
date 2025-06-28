@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { Quiz, QuizAttempt, QuizState, QuestionStatus } from '../types/quiz';
-import { sampleQuizzes } from '../data/sampleQuizzes';
+import { allQuizzes } from '../data/quizLoader';
 
 interface QuizStore extends QuizState {
   // Actions
@@ -99,8 +99,8 @@ const calculateEssayScore = (userAnswer: string, idealKeywords: string[]): numbe
 };
 
 export const useQuizStore = create<QuizStore>((set, get) => ({
-  // Initial state
-  quizzes: sampleQuizzes,
+  // Initial state - now using dynamically loaded quizzes
+  quizzes: allQuizzes,
   attempts: [],
   currentQuiz: null,
   currentAttempt: null,

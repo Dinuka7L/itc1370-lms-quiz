@@ -62,7 +62,7 @@ function App() {
         ) : null;
       
       case 'quiz':
-        return <QuizInterface onSubmit={handleSubmitQuiz} />;
+        return <QuizInterface onSubmit={handleSubmitQuiz} onNavigateHome={handleReturnHome} />;
       
       case 'results':
         return (

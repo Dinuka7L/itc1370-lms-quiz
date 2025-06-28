@@ -27,7 +27,7 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
-      <Header currentQuiz={quiz.title} />
+      <Header currentQuiz={quiz.title} onNavigateHome={onBack} />
       
       <main className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl w-full">
