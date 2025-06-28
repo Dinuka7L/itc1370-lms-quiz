@@ -8,7 +8,7 @@ interface QuizStore extends QuizState {
   setCurrentQuestion: (index: number) => void;
   saveAnswer: (questionId: string, answer: any) => void;
   toggleQuestionFlag: (questionId: string) => void;
-  submitQuiz: () => void;
+  submitQuiz: (isAutoSubmit?: boolean) => void;
   setTimeRemaining: (time: number) => void;
   setTimerRunning: (running: boolean) => void;
   resetQuiz: () => void;
@@ -210,7 +210,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     set({ questionStatuses: updatedStatuses });
   },
 
-  submitQuiz: () => {
+  submitQuiz: (isAutoSubmit = false) => {
     const { currentAttempt, currentQuiz, attempts, isTimerRunning } = get();
     if (!currentAttempt || !currentQuiz || currentAttempt.isSubmitted) return;
 
@@ -307,6 +307,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       percentage: Math.round(percentage * 100) / 100,
       isCompleted: true,
       isSubmitted: true,
+      isAutoSubmitted: isAutoSubmit, // Track if it was auto-submitted
     };
 
     const updatedAttempts = [...attempts.filter(a => a.quizId !== currentAttempt.quizId), completedAttempt];
@@ -341,7 +342,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     
     // Auto-submit when time reaches 0
     if (time <= 0) {
-      get().submitQuiz();
+      get().submitQuiz(true); // Pass true to indicate auto-submit
     }
   },
 

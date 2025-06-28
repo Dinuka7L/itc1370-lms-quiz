@@ -32,7 +32,7 @@ const Timer: React.FC = () => {
 
     // If time has already run out, submit immediately
     if (actualTimeRemaining <= 0) {
-      submitQuiz();
+      submitQuiz(true); // Pass true for auto-submit
       return;
     }
 
@@ -51,7 +51,7 @@ const Timer: React.FC = () => {
       
       // If time is up, submit the quiz
       if (actualTime <= 0) {
-        submitQuiz();
+        submitQuiz(true); // Pass true for auto-submit
         if (intervalRef.current) {
           clearInterval(intervalRef.current);
           intervalRef.current = null;
@@ -79,7 +79,7 @@ const Timer: React.FC = () => {
         setTimeRemaining(actualTime);
         
         if (actualTime <= 0) {
-          submitQuiz();
+          submitQuiz(true); // Pass true for auto-submit
         }
       }
     };
@@ -99,7 +99,7 @@ const Timer: React.FC = () => {
         setTimeRemaining(actualTime);
         
         if (actualTime <= 0) {
-          submitQuiz();
+          submitQuiz(true); // Pass true for auto-submit
         }
       }
     };
