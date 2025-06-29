@@ -20,9 +20,11 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
     }
   };
 
-  // Calculate keyword match percentage for results
-  const calculateKeywordScore = (): number => {
-    if (!userAnswer || !question.idealKeywords || question.idealKeywords.length === 0) return 0;
+  // Calculate keyword match with custom threshold (default 4 keywords required for full marks)
+  const calculateKeywordScore = (requiredKeywords: number = 4): { score: number; matchedCount: number } => {
+    if (!userAnswer || !question.idealKeywords || question.idealKeywords.length === 0) {
+      return { score: 0, matchedCount: 0 };
+    }
     
     const normalizedAnswer = userAnswer.toLowerCase();
     let matchedKeywords = 0;
@@ -33,10 +35,18 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
       }
     });
     
-    return (matchedKeywords / question.idealKeywords.length) * 100;
+    // If matched keywords meet or exceed the required threshold, give full score
+    if (matchedKeywords >= requiredKeywords) {
+      return { score: 100, matchedCount: matchedKeywords };
+    }
+    
+    // Otherwise, give partial score based on the percentage of required keywords found
+    const score = (matchedKeywords / requiredKeywords) * 100;
+    return { score, matchedCount: matchedKeywords };
   };
 
-  const keywordScore = showResults ? calculateKeywordScore() : 0;
+  const requiredKeywords = 4; // You can make this configurable per question if needed
+  const { score: keywordScore, matchedCount } = showResults ? calculateKeywordScore(requiredKeywords) : { score: 0, matchedCount: 0 };
   const earnedMarks = showResults ? Math.round((keywordScore / 100) * question.marks * 100) / 100 : 0;
 
   return (
@@ -50,7 +60,7 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
         This is an essay question. Provide a comprehensive answer in the text area below.
         {question.idealKeywords && question.idealKeywords.length > 0 && (
           <span className="block mt-1 text-blue-600">
-            💡 Try to include key concepts related to the topic for better scoring.
+            💡 Try to include key concepts related to the topic for better scoring. (Need {requiredKeywords} key concepts for full marks)
           </span>
         )}
       </div>
@@ -98,8 +108,14 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
             </div>
             <div className={`mb-3 ${keywordScore >= 70 ? 'text-green-800' : keywordScore >= 40 ? 'text-yellow-800' : 'text-red-800'}`}>
               <div className="flex items-center justify-between">
-                <span>Keyword Coverage: {keywordScore.toFixed(1)}%</span>
+                <span>Keywords Found: {matchedCount}/{requiredKeywords} required (Total available: {question.idealKeywords?.length || 0})</span>
                 <span className="font-bold">Score: {earnedMarks}/{question.marks} marks</span>
+              </div>
+              <div className="text-sm mt-1">
+                {matchedCount >= requiredKeywords 
+                  ? `✅ Full marks awarded! Found ${matchedCount} keywords (${requiredKeywords} required)`
+                  : `⚠️ Partial marks: ${((matchedCount / requiredKeywords) * 100).toFixed(1)}% of required keywords found`
+                }
               </div>
             </div>
             
@@ -122,6 +138,9 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
                       </span>
                     );
                   })}
+                </div>
+                <div className="text-xs text-gray-600 mt-2">
+                  Note: You need {requiredKeywords} keywords for full marks, but including more shows deeper understanding.
                 </div>
               </div>
             )}

@@ -83,8 +83,8 @@ const levenshteinDistance = (str1: string, str2: string): number => {
   return matrix[str2.length][str1.length];
 };
 
-// Function to calculate essay score based on keywords
-const calculateEssayScore = (userAnswer: string, idealKeywords: string[]): number => {
+// Updated function to calculate essay score based on keywords with custom threshold
+const calculateEssayScore = (userAnswer: string, idealKeywords: string[], requiredKeywords: number = 4): number => {
   if (!userAnswer || !idealKeywords || idealKeywords.length === 0) return 0;
   
   const normalizedAnswer = normalizeText(userAnswer);
@@ -97,7 +97,13 @@ const calculateEssayScore = (userAnswer: string, idealKeywords: string[]): numbe
     }
   });
   
-  return (matchedKeywords / idealKeywords.length) * 100;
+  // If matched keywords meet or exceed the required threshold, give full marks
+  if (matchedKeywords >= requiredKeywords) {
+    return 100;
+  }
+  
+  // Otherwise, give partial marks based on the percentage of required keywords found
+  return (matchedKeywords / requiredKeywords) * 100;
 };
 
 export const useQuizStore = create<QuizStore>((set, get) => ({
@@ -226,9 +232,11 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       const userAnswer = currentAttempt.answers[question.id];
       
       if (question.type === 'essay') {
-        // Essay questions are now auto-evaluated based on keywords
+        // Essay questions are now auto-evaluated based on keywords with custom threshold
         if (userAnswer && question.idealKeywords && question.idealKeywords.length > 0) {
-          const essayScore = calculateEssayScore(userAnswer, question.idealKeywords);
+          // Use 4 as default required keywords, or you can make this configurable per question
+          const requiredKeywords = 4;
+          const essayScore = calculateEssayScore(userAnswer, question.idealKeywords, requiredKeywords);
           score += (essayScore / 100) * question.marks;
         }
         return;
