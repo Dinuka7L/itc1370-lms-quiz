@@ -6,6 +6,7 @@ import { networkingFundamentalsQuiz } from './lessonQuizzes/networkingFundamenta
 import { InformationSecurityQuiz } from './lessonQuizzes/InformationSecurity';
 import { PythonOperatorsQuiz } from './lessonQuizzes/PythonOperators';
 import { PythonConditionalStatementsQuiz } from './lessonQuizzes/PythonConditionalStatements';
+import { DataAndDatabasesQuiz } from './lessonQuizzes/DataAndDatabases';
 
 // Import mock exam quizzes
 import { mockFinalPart1Quiz } from './mockExamQuizzes/mockFinalPart1';
@@ -20,6 +21,7 @@ export const allQuizzes: Quiz[] = [
   pythonFundamentalsQuiz,
   networkingFundamentalsQuiz,
   InformationSecurityQuiz,
+  DataAndDatabasesQuiz,
   PythonOperatorsQuiz,
   PythonConditionalStatementsQuiz,
   
