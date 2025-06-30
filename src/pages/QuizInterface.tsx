@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Send, AlertTriangle } from 'lucide-react';
 import Header from '../components/Header';
 import Timer from '../components/Timer';
@@ -19,11 +19,48 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     currentQuiz, 
     currentQuestionIndex, 
     questionStatuses,
-    setCurrentQuestion 
+    setCurrentQuestion,
+    currentAttempt,
+    timeRemaining,
+    isTimerRunning
   } = useQuizStore();
+
+  // Auto-navigate to results when quiz is submitted (either manually or by timer)
+  useEffect(() => {
+    if (currentAttempt?.isSubmitted && !isTimerRunning) {
+      // Small delay to show the appropriate message
+      const timer = setTimeout(() => {
+        onSubmit();
+      }, currentAttempt.isAutoSubmitted ? 2000 : 100);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [currentAttempt?.isSubmitted, isTimerRunning, onSubmit, currentAttempt?.isAutoSubmitted]);
 
   if (!currentQuiz) {
     return <div>No quiz active</div>;
+  }
+
+  // If quiz is already submitted, show a loading state with dynamic message
+  if (currentAttempt?.isSubmitted) {
+    const isAutoSubmitted = currentAttempt.isAutoSubmitted;
+    
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-200/50 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">
+            {isAutoSubmitted ? 'Time\'s Up!' : 'Quiz Submitted!'}
+          </h2>
+          <p className="text-gray-600">
+            {isAutoSubmitted 
+              ? 'Your quiz has been automatically submitted. Calculating results...'
+              : 'Processing your answers and calculating results...'
+            }
+          </p>
+        </div>
+      </div>
+    );
   }
 
   const currentQuestion = currentQuiz.questions[currentQuestionIndex];
@@ -46,7 +83,8 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
 
   const handleSubmit = () => {
     setShowSubmitModal(false);
-    onSubmit();
+    const { submitQuiz } = useQuizStore.getState();
+    submitQuiz(false); // Pass false to indicate manual submit
   };
 
   const getUnansweredQuestions = () => {

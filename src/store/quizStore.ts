@@ -8,7 +8,7 @@ interface QuizStore extends QuizState {
   setCurrentQuestion: (index: number) => void;
   saveAnswer: (questionId: string, answer: any) => void;
   toggleQuestionFlag: (questionId: string) => void;
-  submitQuiz: () => void;
+  submitQuiz: (isAutoSubmit?: boolean) => void;
   setTimeRemaining: (time: number) => void;
   setTimerRunning: (running: boolean) => void;
   resetQuiz: () => void;
@@ -22,6 +22,8 @@ interface QuizStore extends QuizState {
   getMockFinalTotalMarks: () => number;
   getLessonQuizzes: () => Quiz[];
   getMockFinalQuizzes: () => Quiz[];
+  // New method for calculating actual time remaining
+  calculateTimeRemaining: () => number;
 }
 
 // Function to shuffle array using Fisher-Yates algorithm
@@ -81,8 +83,8 @@ const levenshteinDistance = (str1: string, str2: string): number => {
   return matrix[str2.length][str1.length];
 };
 
-// Function to calculate essay score based on keywords
-const calculateEssayScore = (userAnswer: string, idealKeywords: string[]): number => {
+// Updated function to calculate essay score based on keywords with custom threshold
+const calculateEssayScore = (userAnswer: string, idealKeywords: string[], requiredKeywords: number = 4): number => {
   if (!userAnswer || !idealKeywords || idealKeywords.length === 0) return 0;
   
   const normalizedAnswer = normalizeText(userAnswer);
@@ -95,7 +97,13 @@ const calculateEssayScore = (userAnswer: string, idealKeywords: string[]): numbe
     }
   });
   
-  return (matchedKeywords / idealKeywords.length) * 100;
+  // If matched keywords meet or exceed the required threshold, give full marks
+  if (matchedKeywords >= requiredKeywords) {
+    return 100;
+  }
+  
+  // Otherwise, give partial marks based on the percentage of required keywords found
+  return (matchedKeywords / requiredKeywords) * 100;
 };
 
 export const useQuizStore = create<QuizStore>((set, get) => ({
@@ -121,10 +129,11 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       questions: shuffledQuestions
     };
 
+    const startTime = new Date();
     const attempt: QuizAttempt = {
       quizId,
       answers: {},
-      startTime: new Date(),
+      startTime,
       timeLimit,
       isCompleted: false,
       isSubmitted: false,
@@ -207,9 +216,12 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     set({ questionStatuses: updatedStatuses });
   },
 
-  submitQuiz: () => {
-    const { currentAttempt, currentQuiz, attempts } = get();
-    if (!currentAttempt || !currentQuiz) return;
+  submitQuiz: (isAutoSubmit = false) => {
+    const { currentAttempt, currentQuiz, attempts, isTimerRunning } = get();
+    if (!currentAttempt || !currentQuiz || currentAttempt.isSubmitted) return;
+
+    // Stop the timer immediately
+    set({ isTimerRunning: false });
 
     // Calculate score
     let score = 0;
@@ -220,9 +232,11 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       const userAnswer = currentAttempt.answers[question.id];
       
       if (question.type === 'essay') {
-        // Essay questions are now auto-evaluated based on keywords
+        // Essay questions are now auto-evaluated based on keywords with custom threshold
         if (userAnswer && question.idealKeywords && question.idealKeywords.length > 0) {
-          const essayScore = calculateEssayScore(userAnswer, question.idealKeywords);
+          // Use 4 as default required keywords, or you can make this configurable per question
+          const requiredKeywords = 4;
+          const essayScore = calculateEssayScore(userAnswer, question.idealKeywords, requiredKeywords);
           score += (essayScore / 100) * question.marks;
         }
         return;
@@ -301,6 +315,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       percentage: Math.round(percentage * 100) / 100,
       isCompleted: true,
       isSubmitted: true,
+      isAutoSubmitted: isAutoSubmit, // Track if it was auto-submitted
     };
 
     const updatedAttempts = [...attempts.filter(a => a.quizId !== currentAttempt.quizId), completedAttempt];
@@ -308,14 +323,34 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
     set({
       attempts: updatedAttempts,
       currentAttempt: completedAttempt,
-      isTimerRunning: false,
+      timeRemaining: 0,
     });
   },
 
+  // New method to calculate actual time remaining based on timestamps
+  calculateTimeRemaining: () => {
+    const { currentAttempt, isTimerRunning } = get();
+    if (!currentAttempt || !isTimerRunning) return 0;
+
+    const now = new Date();
+    const elapsedSeconds = Math.floor((now.getTime() - currentAttempt.startTime.getTime()) / 1000);
+    const totalTimeInSeconds = currentAttempt.timeLimit * 60;
+    const remainingTime = Math.max(0, totalTimeInSeconds - elapsedSeconds);
+
+    return remainingTime;
+  },
+
   setTimeRemaining: (time: number) => {
-    set({ timeRemaining: time });
+    const { isTimerRunning } = get();
+    
+    // Only update time if timer is still running and quiz hasn't been submitted
+    if (!isTimerRunning) return;
+    
+    set({ timeRemaining: Math.max(0, time) });
+    
+    // Auto-submit when time reaches 0
     if (time <= 0) {
-      get().submitQuiz();
+      get().submitQuiz(true); // Pass true to indicate auto-submit
     }
   },
 

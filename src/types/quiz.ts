@@ -51,6 +51,7 @@ export interface QuizAttempt {
   percentage?: number;
   isCompleted: boolean;
   isSubmitted: boolean;
+  isAutoSubmitted?: boolean; // Track if quiz was auto-submitted due to timeout
 }
 
 export interface QuestionStatus {
