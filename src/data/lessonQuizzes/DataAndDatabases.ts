@@ -4,7 +4,7 @@ export const DataAndDatabasesQuiz: Quiz = {
   "id": "quiz-data-and-databases-1",
   "title": "Data and Databases",
   "description": "Practice quiz covering business analytics, DBMS concepts, DIKW hierarchy, and big data.",
-  "timeOptions": [10, 15, 20],
+  "timeOptions": [10, 15, 20, 45],
   "totalMarks": 58,
   "weight": 20,
   "category": "lesson",
@@ -142,7 +142,7 @@ export const DataAndDatabasesQuiz: Quiz = {
     {
       "id": "q8",
       "type": "multipleChoice",
-      "question": "Flat file systems have several limitations compared to modern database management systems. Identify the option that contains only the incorrect statements.",
+      "question": "Flat file systems have several limitations compared to modern database management systems.<br> Identify the option that contains only the incorrect statements.<br>1. Data Redundancy: Flat file systems often store the same data in multiple files, leading to increased storage needs and potential inconsistencies. <br>2. Data Integrity Issues: Flat file systems automatically enforce data integrity through built-in constraints, ensuring consistent and accurate data. <br>3. Weak Security: Flat file systems lack robust security features, making data vulnerable to unauthorized access or modifications.<br> 4. Coarse Sharing: Flat file systems allow fine-grained sharing, enabling multiple users to access specific records simultaneously with ease.<br><b>Identify the option that contains only the incorrect statements:</b> ",
       "options": [
         "1 and 3",
         "2 and 4",
