@@ -31,6 +31,23 @@ interface QuizStore extends QuizState {
   setCurrentAttemptAndQuiz: (attempt: QuizAttempt, quiz: Quiz) => void;
 }
 
+const createInitialState = (): QuizState & {
+  randomizeQuestions: boolean;
+  // ...other properties
+} => ({
+  randomizeQuestions: true,
+  quizzes: allQuizzes,
+  attempts: [],
+  currentQuiz: null,
+  currentAttempt: null,
+  currentQuestionIndex: 0,
+  questionStatuses: {},
+  timeRemaining: 0,
+  isTimerRunning: false,
+  // no actions here, just state
+});
+
+
 // Function to shuffle array using Fisher-Yates algorithm
 const shuffleArray = <T>(array: T[]): T[] => {
   const shuffled = [...array];
@@ -114,17 +131,7 @@ const calculateEssayScore = (userAnswer: string, idealKeywords: string[], requir
 export const useQuizStore = create<QuizStore>()(
   persist(
     (set, get) => ({
-  // Initial state - now using dynamically loaded quizzes
-  randomizeQuestions: true,
-  quizzes: allQuizzes,
-  attempts: [],
-  currentQuiz: null,
-  currentAttempt: null,
-  currentQuestionIndex: 0,
-  questionStatuses: {},
-  timeRemaining: 0,
-  isTimerRunning: false,
-  
+      ...createInitialState(),
 
   // Actions
   setCurrentAttemptAndQuiz: (attempt, quiz) => {
@@ -456,6 +463,9 @@ export const useQuizStore = create<QuizStore>()(
     }
   )
 );
+
+export { createInitialState };
+
 
 
 // Dev Notes:

@@ -23,6 +23,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
     getMockFinalQuizzes
   } = useQuizStore();
 
+  const { attempts } = useQuizStore();
   const lessonQuizzes = getLessonQuizzes();
   const mockFinalQuizzes = getMockFinalQuizzes();
   
@@ -155,7 +156,15 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
                     progress={getQuizProgress(quiz.id)}
                     score={getQuizScore(quiz.id)}
                     onStart={() => onStartQuiz(quiz.id)}
+                    hasPastAttempt={attempts.some(
+                      a =>
+                        a.quizId === quiz.id &&
+                        a.isCompleted &&
+                        a.answers &&
+                        Object.keys(a.answers).length > 0
+                    )}
                   />
+
                 ))}
               </div>
             </div>
@@ -226,7 +235,15 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
                     progress={getQuizProgress(quiz.id)}
                     score={getQuizScore(quiz.id)}
                     onStart={() => onStartQuiz(quiz.id)}
+                    hasPastAttempt={attempts.some(
+                      a =>
+                        a.quizId === quiz.id &&
+                        a.isCompleted &&
+                        a.answers &&
+                        Object.keys(a.answers).length > 0
+                    )}
                   />
+
                 ))}
               </div>
             </div>

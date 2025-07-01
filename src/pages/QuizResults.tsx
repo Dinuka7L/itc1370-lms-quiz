@@ -13,9 +13,18 @@ interface QuizResultsProps {
 const QuizResults: React.FC<QuizResultsProps> = ({ onReturnHome, onRetakeQuiz }) => {
   const { currentQuiz, currentAttempt } = useQuizStore();
 
-  if (!currentQuiz || !currentAttempt) {
-    return <div>No results available</div>;
-  }
+  if (
+  !currentQuiz ||
+  !currentAttempt ||
+  !currentAttempt.answers ||
+  Object.keys(currentAttempt.answers).length === 0
+) {
+  return (
+    <div className="text-center py-8">
+      <p className="text-gray-600">No past results available for this quiz.</p>
+    </div>
+  );
+}
 
   const score = currentAttempt.score || 0;
   const percentage = currentAttempt.percentage || 0;

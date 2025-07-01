@@ -17,7 +17,13 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack, onViewRe
   
   const quiz = quizzes.find(q => q.id === quizId);
   const { attempts } = useQuizStore();
-  const pastAttempt = attempts.find(a => a.quizId === quizId && a.isCompleted);
+  const pastAttempt = attempts.find(
+  a =>
+    a.quizId === quizId &&
+    a.isCompleted &&
+    a.answers &&
+    Object.keys(a.answers).length > 0
+);
 
   
   if (!quiz) {
