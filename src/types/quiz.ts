@@ -2,6 +2,8 @@ export interface Question {
   id: string;
   type: 'multipleChoice' | 'multiSelect' | 'fillInBlank' | 'essay' | 'dragDrop' | 'matching' | 'dropdown';
   question: string;
+  image?: string; // Optional image URL or path
+  imageAlt?: string; // Optional alt text for accessibility
   options?: string[];
   answer?: string | string[];
   rationale?: string;

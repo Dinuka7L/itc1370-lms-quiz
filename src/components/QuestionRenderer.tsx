@@ -84,6 +84,25 @@ const QuestionRenderer: React.FC<QuestionRendererProps> = ({ question, showResul
         </div>
       </div>
       
+      {/* Display image if provided */}
+      {question.image && (
+        <div className="mb-6">
+          <div className="relative bg-gray-50 rounded-lg p-4 border border-gray-200">
+            <img
+              src={question.image}
+              alt={question.imageAlt || 'Question image'}
+              className="max-w-full h-auto mx-auto rounded-lg shadow-sm"
+              style={{ maxHeight: '400px' }}
+            />
+            {question.imageAlt && (
+              <p className="text-xs text-gray-500 mt-2 text-center italic">
+                {question.imageAlt}
+              </p>
+            )}
+          </div>
+        </div>
+      )}
+      
       {renderQuestion()}
     </div>
   );

@@ -5,7 +5,7 @@ export const PythonConditionalStatementsQuiz: Quiz = {
   "title": "Python - Conditional Statements Mastery Test",
   "description": "Assess your knowledge of if, elif, else, logical operators, and nested if statements in Python.",
   "timeOptions": [10, 15, 20, 35],
-  "totalMarks": 70,
+  "totalMarks": 80,
   "weight": 0,
   "category": "lesson",
   "questions": [
@@ -254,6 +254,20 @@ export const PythonConditionalStatementsQuiz: Quiz = {
       ],
       "rationale": "BMI >=30 is Obesity.",
       "marks": 3
+    },
+    {
+      "id": "q21",
+      "type": "dragDrop",
+      "question": "Look at the network diagram below and drag the correct network components to their appropriate locations in the network infrastructure.",
+      "image": "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg",
+      "imageAlt": "Network infrastructure diagram showing different network zones and connection points",
+      "dragItems": [
+        { "id": "item1", "content": "Router", "category": "blank_1" },
+        { "id": "item2", "content": "Switch", "category": "blank_2" },
+        { "id": "item3", "content": "Firewall", "category": "blank_3" },
+        { "id": "item4", "content": "Access Point", "category": "blank_4" }
+      ],
+      "marks": 8
     }
   ]
 }
