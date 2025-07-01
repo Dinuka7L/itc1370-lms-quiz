@@ -88,7 +88,7 @@ const QuizCard: React.FC<QuizCardProps> = ({ quiz, progress, score, onStart }) =
           className={`w-full ${theme.buttonBg} ${theme.buttonText} font-medium py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2 group`}
         >
           <Play className="h-4 w-4 group-hover:scale-110 transition-transform duration-200" />
-          <span>{isCompleted ? 'Retake Quiz' : 'Start Quiz'}</span>
+          <span>{isCompleted ? 'View Past Results/Retake Quiz' : 'Start Quiz'}</span>
         </button>
       </div>
     </div>

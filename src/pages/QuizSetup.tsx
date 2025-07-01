@@ -8,13 +8,17 @@ interface QuizSetupProps {
   quizId: string;
   onStart: (timeLimit: number) => void;
   onBack: () => void;
+  onViewResults: (quizId: string) => void;
 }
 
-const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack }) => {
+const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack, onViewResults }) => {
   const { quizzes, randomizeQuestions, setRandomizeQuestions } = useQuizStore();
   const [selectedTime, setSelectedTime] = useState<number | null>(null);
   
   const quiz = quizzes.find(q => q.id === quizId);
+  const { attempts } = useQuizStore();
+  const pastAttempt = attempts.find(a => a.quizId === quizId && a.isCompleted);
+
   
   if (!quiz) {
     return <div>Quiz not found</div>;
@@ -114,20 +118,29 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack }) => {
               </div>
             </div>
             
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0 sm:space-x-3">
               <button
                 onClick={onBack}
-                className="flex items-center space-x-2 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                className="flex items-center space-x-2 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200 w-full sm:w-auto"
               >
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Dashboard</span>
               </button>
-              
+
+              {pastAttempt && (
+                <button
+                  onClick={() => onViewResults(quizId)}
+                  className="flex items-center space-x-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors duration-200 w-full sm:w-auto"
+                >
+                  <span>View Past Results</span>
+                </button>
+              )}
+
               <button
                 onClick={handleStart}
                 disabled={!selectedTime}
                 className={`
-                  flex items-center space-x-2 px-8 py-3 rounded-lg font-medium transition-all duration-200
+                  flex items-center space-x-2 px-8 py-3 rounded-lg font-medium transition-all duration-200 w-full sm:w-auto
                   ${selectedTime
                     ? 'bg-primary-600 hover:bg-primary-700 text-white transform hover:scale-105'
                     : 'bg-gray-300 text-gray-500 cursor-not-allowed'
@@ -138,6 +151,7 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack }) => {
                 <ArrowRight className="h-4 w-4" />
               </button>
             </div>
+
           </div>
         </div>
       </main>

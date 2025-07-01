@@ -12,7 +12,7 @@ const Timer: React.FC = () => {
     currentAttempt 
   } = useQuizStore();
   
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const lastUpdateRef = useRef<number>(Date.now());
 
   useEffect(() => {

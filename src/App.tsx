@@ -58,8 +58,22 @@ function App() {
             quizId={selectedQuizId}
             onStart={handleBeginQuiz}
             onBack={handleBackToDashboard}
+            onViewResults={(quizId) => {
+              const { attempts, quizzes, setCurrentAttemptAndQuiz } = useQuizStore.getState();
+
+              const attempt = attempts.find(
+                (a) => a.quizId === quizId && a.isCompleted
+              );
+              const quiz = quizzes.find((q) => q.id === quizId);
+
+              if (attempt && quiz) {
+                setCurrentAttemptAndQuiz(attempt, quiz);
+                setCurrentState('results');
+              }
+            }}
           />
         ) : null;
+
       
       case 'quiz':
         return <QuizInterface onSubmit={handleSubmitQuiz} onNavigateHome={handleReturnHome} />;

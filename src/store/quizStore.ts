@@ -4,8 +4,6 @@ import { allQuizzes } from '../data/quizLoader';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
 
-
-
 interface QuizStore extends QuizState {
   randomizeQuestions: boolean;
   // Actions
@@ -30,7 +28,7 @@ interface QuizStore extends QuizState {
   // New method for calculating actual time remaining
   calculateTimeRemaining: () => number;
   setRandomizeQuestions: (value: boolean) => void;
-
+  setCurrentAttemptAndQuiz: (attempt: QuizAttempt, quiz: Quiz) => void;
 }
 
 // Function to shuffle array using Fisher-Yates algorithm
@@ -126,8 +124,16 @@ export const useQuizStore = create<QuizStore>()(
   questionStatuses: {},
   timeRemaining: 0,
   isTimerRunning: false,
+  
 
   // Actions
+  setCurrentAttemptAndQuiz: (attempt, quiz) => {
+  set({
+    currentAttempt: attempt,
+    currentQuiz: quiz
+  });
+  },
+
   startQuiz: (quizId: string, timeLimit: number) => {
     const originalQuiz = get().quizzes.find(q => q.id === quizId);
     if (!originalQuiz) return;
@@ -446,7 +452,7 @@ export const useQuizStore = create<QuizStore>()(
 }),
     {
       name: 'quiz-store', // The key to store in local storage
-      storage: createJSONStorage(() => sessionStorage),
+      storage: createJSONStorage(() => localStorage),
     }
   )
 );
