@@ -3,6 +3,7 @@ import { Clock, ArrowRight, ArrowLeft } from 'lucide-react';
 import Header from '../components/Header';
 import { useQuizStore } from '../store/quizStore';
 
+
 interface QuizSetupProps {
   quizId: string;
   onStart: (timeLimit: number) => void;
@@ -10,7 +11,7 @@ interface QuizSetupProps {
 }
 
 const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack }) => {
-  const { quizzes } = useQuizStore();
+  const { quizzes, randomizeQuestions, setRandomizeQuestions } = useQuizStore();
   const [selectedTime, setSelectedTime] = useState<number | null>(null);
   
   const quiz = quizzes.find(q => q.id === quizId);
@@ -81,6 +82,21 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack }) => {
               </div>
             </div>
             
+            {/* Randomization Toggle */}
+            <div className="mb-8 flex items-center space-x-2">
+              <input
+                type="checkbox"
+                id="randomizeToggle"
+                checked={randomizeQuestions}
+                onChange={(e) => setRandomizeQuestions(e.target.checked)}
+                className="h-4 w-4 text-primary-600 border-gray-300 rounded"
+              />
+              <label htmlFor="randomizeToggle" className="text-gray-700 text-sm">
+                Randomize Question Order
+              </label>
+            </div>
+
+            
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-8">
               <div className="flex items-start space-x-3">
                 <div className="text-yellow-600 mt-0.5">⚠️</div>
@@ -92,6 +108,7 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack }) => {
                     <li>• You can navigate between questions freely</li>
                     <li>• Your quiz answers and progress are saved automatically on your browser.</li>
                     <li>• No information is sent to our servers or shared with anyone.</li>
+                  
                   </ul>
                 </div>
               </div>

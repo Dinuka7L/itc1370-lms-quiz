@@ -7,6 +7,7 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 
 
 interface QuizStore extends QuizState {
+  randomizeQuestions: boolean;
   // Actions
   startQuiz: (quizId: string, timeLimit: number) => void;
   setCurrentQuestion: (index: number) => void;
@@ -28,6 +29,8 @@ interface QuizStore extends QuizState {
   getMockFinalQuizzes: () => Quiz[];
   // New method for calculating actual time remaining
   calculateTimeRemaining: () => number;
+  setRandomizeQuestions: (value: boolean) => void;
+
 }
 
 // Function to shuffle array using Fisher-Yates algorithm
@@ -114,6 +117,7 @@ export const useQuizStore = create<QuizStore>()(
   persist(
     (set, get) => ({
   // Initial state - now using dynamically loaded quizzes
+  randomizeQuestions: true,
   quizzes: allQuizzes,
   attempts: [],
   currentQuiz: null,
@@ -129,7 +133,11 @@ export const useQuizStore = create<QuizStore>()(
     if (!originalQuiz) return;
 
     // Create a new quiz instance with shuffled questions
-    const shuffledQuestions = shuffleArray(originalQuiz.questions);
+    const shuffledQuestions = get().randomizeQuestions
+    ? shuffleArray(originalQuiz.questions)
+    : originalQuiz.questions;
+
+    
     const quiz: Quiz = {
       ...originalQuiz,
       questions: shuffledQuestions
@@ -365,15 +373,20 @@ export const useQuizStore = create<QuizStore>()(
   },
 
   resetQuiz: () => {
-    set({
-      currentQuiz: null,
-      currentAttempt: null,
-      currentQuestionIndex: 0,
-      questionStatuses: {},
-      timeRemaining: 0,
-      isTimerRunning: false,
-    });
+  set({
+    currentQuiz: null,
+    currentAttempt: null,
+    currentQuestionIndex: 0,
+    questionStatuses: {},
+    timeRemaining: 0,
+    isTimerRunning: false,
+  });
   },
+
+  setRandomizeQuestions: (value: boolean) => {
+  set({ randomizeQuestions: value });
+  },
+
 
   getQuizProgress: (quizId: string) => {
     const attempt = get().attempts.find(a => a.quizId === quizId);
