@@ -2,7 +2,7 @@ import { Quiz } from '../../types/quiz';
 
 export const mockFinalPart2Quiz: Quiz = {
     id: 'mock-final-2',
-    title: 'Mock Final Exam - Part 2',
+    title: 'Mock Final Exam - Part 2 (Module 1:Chapters 1-9)',
     description: 'Advanced programming concepts and data structures',
     timeOptions: [30, 45, 60],
     totalMarks: 25,

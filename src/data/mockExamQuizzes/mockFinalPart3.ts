@@ -2,8 +2,8 @@ import { Quiz } from '../../types/quiz';
 
 export const mockFinalPart3Quiz: Quiz = {
     id: 'mock-final-3',
-    title: 'Mock Final Exam - Part 3',
-    description: 'Database concepts and SQL fundamentals',
+    title: 'Mock Final Exam - Part 3 (Module 2:Excel, Python)',
+    description: 'Excel and Python based quiz',
     timeOptions: [30, 45, 60],
     totalMarks: 25,
     weight: 25,

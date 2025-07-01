@@ -1,8 +1,8 @@
 import { Quiz } from '../../types/quiz';
 
 export const mockFinalPart1Quiz: Quiz = {
-    id: 'mock-final-1',
-    title: 'Mock Final Exam - Part 1',
+    id: 'mock-Part 01 - Chapter 1',
+    title: 'Mock Final Exam - Part 1 (Module 1:Chapters 1-9)',
     description: 'Comprehensive assessment covering Python fundamentals and programming concepts',
     timeOptions: [30],
     totalMarks: 25,
