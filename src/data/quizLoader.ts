@@ -1,6 +1,7 @@
 import { Quiz } from '../types/quiz';
 
 // Import lesson quizzes
+import { OverviewOfInformationTechnologyAndSystemsQuiz } from './lessonQuizzes/OverviewOfITSystems';
 import { pythonFundamentalsQuiz } from './lessonQuizzes/pythonFundamentals';
 import { networkingFundamentalsQuiz } from './lessonQuizzes/networkingFundamentals';
 import { InformationSecurityQuiz } from './lessonQuizzes/InformationSecurity';
@@ -9,6 +10,9 @@ import { PythonConditionalStatementsQuiz } from './lessonQuizzes/PythonCondition
 import { DataAndDatabasesQuiz } from './lessonQuizzes/DataAndDatabases';
 import { BusinessProcessQuiz } from './lessonQuizzes/BusinessProcess';
 import { EmergingTechnologiesInITQuiz } from './lessonQuizzes/EmergingTechnologiesInIT';
+import { SoftwareQuiz } from './lessonQuizzes/Software';
+import { HardwareQuiz } from './lessonQuizzes/Hardware';
+import { InformationSystemsDevelopmentQuiz } from './lessonQuizzes/InformationSystemsDevelopment';
 
 // Import mock exam quizzes
 import { mockFinalPart1Quiz } from './mockExamQuizzes/mockFinalPart1';
@@ -20,10 +24,14 @@ import { mockFinalPart4Quiz } from './mockExamQuizzes/mockFinalPart4';
 // Combine all quizzes
 export const allQuizzes: Quiz[] = [
   // Lesson quizzes
+  OverviewOfInformationTechnologyAndSystemsQuiz,
+  HardwareQuiz,
+  SoftwareQuiz,
   DataAndDatabasesQuiz,
   networkingFundamentalsQuiz,
   InformationSecurityQuiz,
   BusinessProcessQuiz,
+  InformationSystemsDevelopmentQuiz,
   EmergingTechnologiesInITQuiz,
   pythonFundamentalsQuiz,
   PythonOperatorsQuiz,

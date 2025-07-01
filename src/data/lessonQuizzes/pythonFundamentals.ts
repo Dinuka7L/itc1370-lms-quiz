@@ -1,7 +1,7 @@
 import { Quiz } from '../../types/quiz';
 
 export const pythonFundamentalsQuiz: Quiz = {
-  id: 'quiz-1',
+  id: 'quiz-python fundamentals',
   title: 'Python Fundamentals',
   description: 'Assess your understanding of basic Python programming concepts.',
   timeOptions: [5, 10, 15],

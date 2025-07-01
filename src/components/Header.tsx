@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ currentQuiz, onNavigateHome }) => {
 
             {/* Left Side: Large ITC1370 Text */}
             <div className="text-xl sm:text-2xl font-bold text-gray-800 z-10">
-              ITC Quizzes
+              Academia - ITC Quizzes
             </div>
 
             {/* Breadcrumb Navigation */}

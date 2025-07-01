@@ -3,9 +3,9 @@ import { Quiz } from '../../types/quiz';
 export const EmergingTechnologiesInITQuiz: Quiz = 
     {
   "id": "quiz-Emerging Technologies in IT",
-  "title": "Emerging Technologies in IT",
+  "title": " Lesson 9 - Emerging Technologies in IT",
   "description": "Quiz assessing understanding of key emerging IT technologies and their impact.",
-  "timeOptions": [10, 15, 20],
+  "timeOptions": [10, 15, 20, 60],
   "totalMarks": 41,
   "weight": 0,
   "category": "lesson",

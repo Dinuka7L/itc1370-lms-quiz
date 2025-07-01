@@ -3,7 +3,7 @@ import { Quiz } from '../../types/quiz';
 export const BusinessProcessQuiz: Quiz =
 {
   "id": "Business Process-Quiz",
-  "title": "Chapter 8 - Business Processes",
+  "title": "Lesson 7 - Business Processes",
   "description": "Quiz on business process concepts, systems, and IT integration.",
   "timeOptions": [10, 15, 20, 60],
   "totalMarks": 38,

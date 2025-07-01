@@ -433,7 +433,7 @@ export const useQuizStore = create<QuizStore>()(
 }),
     {
       name: 'quiz-store', // The key to store in local storage
-      storage: createJSONStorage(() => localStorage),
+      storage: createJSONStorage(() => sessionStorage),
     }
   )
 );
