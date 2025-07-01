@@ -69,7 +69,7 @@ export const DataAndDatabasesQuiz: Quiz = {
     {
       "id": "q5",
       "type": "dropdown",
-      "question": "Complete the paragraph by selecting the most technically accurate terms.\n\n\"General-purpose application software (e.g., word processors) typically stores data in [dropdown_1], whereas modern information systems rely on [dropdown_2] for structured, integrated data storage. Historically, even specialized software in early information systems used [dropdown_3] for storage, despite their limitations in [dropdown_4] and [dropdown_5] compared to contemporary solutions.\"",
+      "question": "Complete the paragraph by selecting the most technically accurate terms.<br><br>\"General-purpose application software (e.g., word processors) typically stores data in [dropdown_1], whereas modern information systems rely on [dropdown_2] for structured, integrated data storage. Historically, even specialized software in early information systems used [dropdown_3] for storage, despite their limitations in [dropdown_4] and [dropdown_5] compared to contemporary solutions.\"",
       "dropdownBlanks": [
         {
           "id": "dropdown_1",
@@ -285,6 +285,36 @@ export const DataAndDatabasesQuiz: Quiz = {
       "rationale": "A DBMS is software for database management.",
       "marks": 2
     },
+    {
+      "id": "q14",
+      "type": "dropdown",
+      "question": "For each statement below, select whether it is True or False regarding the advantages of Business Analytics:<br><br>I. Business Analytics helps companies understand target customers better by analyzing their preferences and behaviors using data insights: [dropdown_1]<br><br>II. Big Data in Business Analytics primarily focuses on analyzing customer sentiments to reduce the need for physical stores, saving billions in real estate costs: [dropdown_2]<br><br>III. Business Analytics enables organizations to cut down expenditures in various sectors by improving operational efficiency, potentially saving billions of dollars: [dropdown_3]<br><br>IV. The use of Big Data in Business Analytics increases operating margins by replacing all manual labor with automated machines, eliminating human involvement entirely: [dropdown_4]",
+      "dropdownBlanks": [
+        {
+          "id": "dropdown_1",
+          "options": ["True", "False"],
+          "correctAnswer": "True"
+        },
+        {
+          "id": "dropdown_2",
+          "options": ["True", "False"],
+          "correctAnswer": "False"
+        },
+        {
+          "id": "dropdown_3",
+          "options": ["True", "False"],
+          "correctAnswer": "True"
+        },
+        {
+          "id": "dropdown_4",
+          "options": ["True", "False"],
+          "correctAnswer": "False"
+        }
+      ],
+      "rationale": "Statements I and III are true benefits of Business Analytics. Statement II exaggerates the scope of sentiment analysis, and Statement IV is incorrect as Big Data does not eliminate all human involvement.",
+      "marks": 4
+    },
+
     {
       "id": "q15",
       "type": "matching",

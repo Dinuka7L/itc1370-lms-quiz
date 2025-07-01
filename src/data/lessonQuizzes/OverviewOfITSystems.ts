@@ -12,11 +12,37 @@ export const OverviewOfInformationTechnologyAndSystemsQuiz: Quiz =
   "questions": [
     {
       "id": "q1",
-      "type": "fillInBlank",
-      "question": "An information system (IS) can be defined as a set of interrelated components that collect, process, store, and distribute information to support and control in an organization.",
-      "answer": "True",
-      "rationale": "This is the standard definition of an information system.",
-      "marks": 2
+      "type": "dropdown",
+      "question": "Fill in the blanks:<br><br>I. An information system (IS) can be defined as a set of interrelated components that collect, process, store, and distribute information to support __________________ and control in an organization: [dropdown_1]<br><br>II. The tangible, physical portion of an information system is known as __________________: [dropdown_2]<br><br>III. High-level, aggregate information for senior management to make strategic decisions is typically provided by ______________________: [dropdown_3]<br><br>IV. Analytical tools that help managers make unique, non-routine decisions are found in ___________________: [dropdown_4]<br><br>V. A __________________ is a series of steps undertaken to achieve a desired outcome: [dropdown_5]",
+      "dropdownBlanks": [
+        {
+          "id": "dropdown_1",
+          "options": ["data storage", "decision making", "software", "networking"],
+          "correctAnswer": "decision making"
+        },
+        {
+          "id": "dropdown_2",
+          "options": ["software", "hardware", "networking", "database"],
+          "correctAnswer": "hardware"
+        },
+        {
+          "id": "dropdown_3",
+          "options": ["Management Information Systems", "Executive Information Systems", "Transaction Processing Systems", "Decision Support Systems"],
+          "correctAnswer": "Executive Information Systems"
+        },
+        {
+          "id": "dropdown_4",
+          "options": ["Expert Systems", "Decision Support Systems", "Executive Information Systems", "Transaction Processing Systems"],
+          "correctAnswer": "Decision Support Systems"
+        },
+        {
+          "id": "dropdown_5",
+          "options": ["process", "procedure", "program", "system"],
+          "correctAnswer": "process"
+        }
+      ],
+      "rationale": "These are standard definitions and concepts in Information Systems: decision making is supported by IS; hardware is the physical part; Executive Information Systems provide high-level summaries; Decision Support Systems help with unique decisions; a process is a sequence of steps.",
+      "marks": 5
     },
     {
       "id": "q2",
