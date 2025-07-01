@@ -5,7 +5,7 @@ export const DataAndDatabasesQuiz: Quiz = {
   "title": "Chapter 4 - Data and Databases",
   "description": "Practice quiz covering business analytics, DBMS concepts, DIKW hierarchy, and big data.",
   "timeOptions": [10, 15, 20, 45, 60],
-  "totalMarks": 58,
+  "totalMarks": 63,
   "weight": 0,
   "category": "lesson",
   "questions": [
@@ -138,6 +138,16 @@ export const DataAndDatabasesQuiz: Quiz = {
       "answer": "Bit → Character (Byte) → Field → Record → File",
       "rationale": "Data builds from bits up to complete files.",
       "marks": 3
+    },
+    {
+      "id": "q7",
+      "type": "fillInBlank",
+      "question": "Based on the DBMS diagram shown above, identify the main component that manages all database operations and user interactions.",
+      "image": "/images/DBMS-Database-P1.png",
+      "imageAlt": "Database Management System architecture diagram showing various components and their relationships",
+      "answer": "Database Management System",
+      "rationale": "The DBMS is the central software component that handles all database operations, user requests, and data management tasks.",
+      "marks": 5
     },
     {
       "id": "q8",
