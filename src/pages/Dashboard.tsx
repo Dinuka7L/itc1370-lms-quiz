@@ -174,7 +174,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
                 </div>
                 <div>
                   <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-700 to-indigo-700 bg-clip-text text-transparent">
-                    Final Exam Mock Quizzes
+                    Final Exam Mock Quizzes (Do Not Attempt Yet)
                   </h2>
                   <p className="text-gray-700 font-medium">Comprehensive practice tests to prepare for your final examination (Total: 100 marks)</p>
                 </div>
