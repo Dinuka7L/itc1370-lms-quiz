@@ -3,7 +3,7 @@ import { Quiz } from '../../types/quiz';
 export const HardwareQuiz: Quiz = {
   id: "quiz-Computer Hardware",
   title: "Lesson 02 – Computer Hardware",
-  description: "Quiz covering fundamental concepts of computer hardware.",
+  description: "Test your knowledge on basic computer operations and types of computers to essential components like the CPU, memory, and storage. ",
   timeOptions: [10, 20, 30],
   totalMarks: 40,
   weight: 0,

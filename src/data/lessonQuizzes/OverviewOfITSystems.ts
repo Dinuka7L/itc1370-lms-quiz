@@ -4,7 +4,7 @@ export const OverviewOfInformationTechnologyAndSystemsQuiz: Quiz =
 {
   "id": "quiz- lesson 01- Overiew of IT&S",
   "title": "Lesson 1 - Overview of Information Technology",
-  "description": "Comprehensive quiz covering fundamental concepts of Information Technology and Information Systems, including components, eras, ICT4D, and strategic IT roles.",
+  "description": "covers fundamental concepts of Information Technology and Information Systems, including components, eras, ICT4D, and strategic IT roles.",
   "timeOptions": [45, 60, 90],
   "totalMarks": 100,
   "weight": 0,
