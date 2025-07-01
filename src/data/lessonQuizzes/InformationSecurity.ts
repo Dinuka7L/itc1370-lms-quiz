@@ -1,8 +1,8 @@
 import { Quiz } from '../../types/quiz';
 
 export const InformationSecurityQuiz: Quiz = {
-  "id": "quiz-3",
-  "title": "Information Systems Security",
+  "id": "quiz-Information Systems Security",
+  "title": "Chapter 6 -Information Systems Security",
   "description": "A quiz assessing knowledge of key concepts in information systems security, including threats, the CIA triad, malware, attackers, and security strategies.",
   "timeOptions": [10,25,35],
   "totalMarks": 60,

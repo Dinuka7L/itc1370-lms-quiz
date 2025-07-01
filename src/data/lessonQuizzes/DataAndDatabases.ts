@@ -2,9 +2,9 @@ import { Quiz } from '../../types/quiz';
 
 export const DataAndDatabasesQuiz: Quiz = {
   "id": "quiz-data-and-databases-1",
-  "title": "Data and Databases",
+  "title": "Chapter 4 - Data and Databases",
   "description": "Practice quiz covering business analytics, DBMS concepts, DIKW hierarchy, and big data.",
-  "timeOptions": [10, 15, 20, 45],
+  "timeOptions": [10, 15, 20, 45, 60],
   "totalMarks": 58,
   "weight": 0,
   "category": "lesson",

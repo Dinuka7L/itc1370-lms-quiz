@@ -20,9 +20,9 @@ import { mockFinalPart4Quiz } from './mockExamQuizzes/mockFinalPart4';
 // Combine all quizzes
 export const allQuizzes: Quiz[] = [
   // Lesson quizzes
+  DataAndDatabasesQuiz,
   networkingFundamentalsQuiz,
   InformationSecurityQuiz,
-  DataAndDatabasesQuiz,
   BusinessProcessQuiz,
   EmergingTechnologiesInITQuiz,
   pythonFundamentalsQuiz,

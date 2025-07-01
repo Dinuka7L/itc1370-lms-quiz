@@ -1,8 +1,8 @@
 import { Quiz } from '../../types/quiz';
 
 export const networkingFundamentalsQuiz: Quiz = {
-  "id": "quiz-2",
-  "title": "Networking and Communication Fundamentals",
+  "id": "quiz- Networking and Communication",
+  "title": "Chapter 5- Networking and Communication",
   "description": "A comprehensive quiz covering key concepts in networking and communication, including network types, devices, protocols, and applications.",
   "timeOptions": [10,25,35],
   "totalMarks": 60,
