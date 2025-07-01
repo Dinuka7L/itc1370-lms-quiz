@@ -3,7 +3,7 @@ import { Quiz } from '../../types/quiz';
 export const SoftwareQuiz: Quiz = 
 {
   id: "quiz-software-03",
-  title: "Chapter 03 - Software",
+  title: "Lesson 03 - Software",
   description: "Assessment covering key concepts of software types, operating systems, software licensing, and strategic software use.",
   timeOptions: [45, 60, 90],
   totalMarks: 100,

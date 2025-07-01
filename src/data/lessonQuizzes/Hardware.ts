@@ -2,7 +2,7 @@ import { Quiz } from '../../types/quiz';
 
 export const HardwareQuiz: Quiz = {
   id: "quiz-Computer Hardware",
-  title: "Chapter 02 – Computer Hardware",
+  title: "Lesson 02 – Computer Hardware",
   description: "Quiz covering fundamental concepts of computer hardware.",
   timeOptions: [10, 20, 30],
   totalMarks: 40,
