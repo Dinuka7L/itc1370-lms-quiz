@@ -1,6 +1,10 @@
 import { create } from 'zustand';
 import { Quiz, QuizAttempt, QuizState, QuestionStatus } from '../types/quiz';
 import { allQuizzes } from '../data/quizLoader';
+import { persist, createJSONStorage } from 'zustand/middleware';
+
+
+
 
 interface QuizStore extends QuizState {
   // Actions
@@ -106,7 +110,9 @@ const calculateEssayScore = (userAnswer: string, idealKeywords: string[], requir
   return (matchedKeywords / requiredKeywords) * 100;
 };
 
-export const useQuizStore = create<QuizStore>((set, get) => ({
+export const useQuizStore = create<QuizStore>()(
+  persist(
+    (set, get) => ({
   // Initial state - now using dynamically loaded quizzes
   quizzes: allQuizzes,
   attempts: [],
@@ -424,4 +430,18 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
   getMockFinalQuizzes: () => {
     return get().quizzes.filter(q => q.category === 'mockFinal');
   },
-}));
+}),
+    {
+      name: 'quiz-store', // The key to store in local storage
+      storage: createJSONStorage(() => localStorage),
+    }
+  )
+);
+
+
+// Dev Notes:
+// Storage Type	Survives refresh	Survives tab close	Survives browser restart
+// sessionStorage	✅	❌	❌
+// localStorage	✅	✅	✅
+
+// ✅ So localStorage is perfect if you want persistence across sessions.

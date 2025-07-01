@@ -90,7 +90,8 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack }) => {
                     <li>• Once started, the timer cannot be paused</li>
                     <li>• Your quiz will auto-submit when time expires</li>
                     <li>• You can navigate between questions freely</li>
-                    <li>• Make sure you don't refresh the page while a quiz (resets everything)</li>
+                    <li>• Your quiz answers and progress are saved automatically on your browser.</li>
+                    <li>• No information is sent to our servers or shared with anyone.</li>
                   </ul>
                 </div>
               </div>
