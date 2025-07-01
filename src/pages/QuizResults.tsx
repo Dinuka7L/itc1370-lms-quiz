@@ -13,12 +13,7 @@ interface QuizResultsProps {
 const QuizResults: React.FC<QuizResultsProps> = ({ onReturnHome, onRetakeQuiz }) => {
   const { currentQuiz, currentAttempt } = useQuizStore();
 
-  if (
-  !currentQuiz ||
-  !currentAttempt ||
-  !currentAttempt.answers ||
-  Object.keys(currentAttempt.answers).length === 0
-) {
+  if (!currentQuiz || !currentAttempt || !currentAttempt.isCompleted) {
   return (
     <div className="text-center py-8">
       <p className="text-gray-600">No past results available for this quiz.</p>

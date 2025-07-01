@@ -141,12 +141,33 @@ export const DataAndDatabasesQuiz: Quiz = {
     },
     {
       "id": "q7",
-      "type": "fillInBlank",
-      "question": "Based on the DBMS diagram shown above, identify the main component that manages all database operations and user interactions.",
+      "type": "dropdown",
+      "question": "Based on the DBMS diagram shown above, identify the most technically accurate term for each concept:<br><br>I. A single row in a table is called a [dropdown_1].<br><br>II. The smallest unit of data in a table is a [dropdown_2].<br><br>III. A vertical arrangement of data values is known as a [dropdown_3].<br><br>IV. A table itself is referred to as a [dropdown_4].",
       "image": "/images/DBMS-Database-P1.png",
       "imageAlt": "Database Management System architecture diagram showing various components and their relationships",
-      "answer": "Database Management System",
-      "rationale": "The DBMS is the central software component that handles all database operations, user requests, and data management tasks.",
+      "dropdownBlanks": [
+        {
+          "id": "dropdown_1",
+          "options": ["Relation", "Column", "Record", "Field"],
+          "correctAnswer": "Record"
+        },
+        {
+          "id": "dropdown_2",
+          "options": ["Relation", "Column", "Record", "Field"],
+          "correctAnswer": "Field"
+        },
+        {
+          "id": "dropdown_3",
+          "options": ["Relation", "Column", "Record", "Field"],
+          "correctAnswer": "Column"
+        },
+        {
+          "id": "dropdown_4",
+          "options": ["Relation", "Column", "Record", "Field"],
+          "correctAnswer": "Relation"
+        }
+      ],
+      "rationale": "A Record is a row, a Field is the smallest unit of data, a Column is a vertical set of fields, and a Relation is the table itself in relational databases.",
       "marks": 5
     },
     {
