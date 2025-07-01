@@ -36,7 +36,15 @@ const Header: React.FC<HeaderProps> = ({ currentQuiz, onNavigateHome }) => {
 
         <div className="relative max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between min-h-[4rem] gap-y-2">
-
+            <div className="z-10 shrink-0 mr-2">
+              <button
+                onClick={handleLogoClick}
+                className="p-2 rounded-full hover:bg-gray-200 transition-colors duration-200"
+                title="Return to dashboard"
+              >
+                <Home className="h-5 w-5 text-gray-800" />
+              </button>
+            </div>
             {/* Left Side: Large ITC1370 Text */}
             <div className="text-xl sm:text-2xl font-bold text-gray-800 z-10">
               Academia - ITC Quizzes
