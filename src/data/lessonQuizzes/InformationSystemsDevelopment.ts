@@ -39,7 +39,7 @@ export const InformationSystemsDevelopmentQuiz: Quiz = {
     {
       "id": "q4",
       "type": "fillInBlank",
-      "question": "Fill in the blanks using the most appropriate software development technology<br>A large, established government agency needs to develop a new system to manage public records. The project has very clearly defined requirements from the outset, and strict regulations necessitate extensive documentation and sign-offs at each stage. Changes are expected to be minimal once the project begins, and a predictable, sequential flow is preferred to ensure compliance and thoroughness. This project would most likely benefit from following a __________ methodology.",
+      "question": "Fill in the blanks using the most appropriate software development technology<br><br>A large, established government agency needs to develop a new system to manage public records. The project has very clearly defined requirements from the outset, and strict regulations necessitate extensive documentation and sign-offs at each stage. Changes are expected to be minimal once the project begins, and a predictable, sequential flow is preferred to ensure compliance and thoroughness. This project would most likely benefit from following a __________ methodology.",
       "answer": "Waterfall",
       "rationale": "Waterfall is a sequential approach suitable for stable requirements and regulated environments.",
       "marks": 2

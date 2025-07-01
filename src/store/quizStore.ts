@@ -458,9 +458,22 @@ export const useQuizStore = create<QuizStore>()(
   },
 }),
     {
-      name: 'quiz-store', // The key to store in local storage
-      storage: createJSONStorage(() => localStorage),
-    }
+    version: 2, // Increment this when you do a breaking change
+    name: 'quiz-store', // The key to store in local storage
+    storage: createJSONStorage(() => localStorage),
+    migrate: (persistedState, version) => {
+      if (version === 2) {
+        // This means storage already matches the new version
+        return persistedState;
+      }
+      console.log('Detected old version of quiz store. Resetting storage...');
+      return {
+        ...createInitialState(),
+        // Optionally: preserve quizzes array if needed
+        quizzes: allQuizzes,
+      };
+    },
+  }
   )
 );
 
