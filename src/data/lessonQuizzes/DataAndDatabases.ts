@@ -6,7 +6,7 @@ export const DataAndDatabasesQuiz: Quiz = {
   "description": "Practice quiz covering business analytics, DBMS concepts, DIKW hierarchy, and big data.",
   "timeOptions": [10, 15, 20, 45],
   "totalMarks": 58,
-  "weight": 20,
+  "weight": 0,
   "category": "lesson",
   "questions": [
     {
