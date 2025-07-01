@@ -39,7 +39,7 @@ export const InformationSystemsDevelopmentQuiz: Quiz = {
     {
       "id": "q4",
       "type": "fillInBlank",
-      "question": "A large, established government agency needs to develop a new system to manage public records. The project has very clearly defined requirements from the outset, and strict regulations necessitate extensive documentation and sign-offs at each stage. Changes are expected to be minimal once the project begins, and a predictable, sequential flow is preferred to ensure compliance and thoroughness. This project would most likely benefit from following a __________ methodology.",
+      "question": "Fill in the blanks using the most appropriate software development technology<br>A large, established government agency needs to develop a new system to manage public records. The project has very clearly defined requirements from the outset, and strict regulations necessitate extensive documentation and sign-offs at each stage. Changes are expected to be minimal once the project begins, and a predictable, sequential flow is preferred to ensure compliance and thoroughness. This project would most likely benefit from following a __________ methodology.",
       "answer": "Waterfall",
       "rationale": "Waterfall is a sequential approach suitable for stable requirements and regulated environments.",
       "marks": 2
@@ -47,7 +47,7 @@ export const InformationSystemsDevelopmentQuiz: Quiz = {
     {
       "id": "q5",
       "type": "fillInBlank",
-      "question": "A small, innovative software company is developing a new social media application. They want to get a basic version of the app into the hands of a few early adopters very quickly to gather feedback and rapidly incorporate user suggestions into subsequent versions. They plan to release incremental updates every few weeks, prioritizing working software and collaboration over comprehensive documentation. This development approach aligns best with the principles of __________ methodologies.",
+      "question": "Fill in the blanks using the most appropriate software development technology<br>A small, innovative software company is developing a new social media application. They want to get a basic version of the app into the hands of a few early adopters very quickly to gather feedback and rapidly incorporate user suggestions into subsequent versions. They plan to release incremental updates every few weeks, prioritizing working software and collaboration over comprehensive documentation. This development approach aligns best with the principles of __________ methodologies.",
       "answer": "Agile",
       "rationale": "Agile emphasizes flexibility, rapid iterations, and customer collaboration.",
       "marks": 2
@@ -55,7 +55,7 @@ export const InformationSystemsDevelopmentQuiz: Quiz = {
     {
       "id": "q6",
       "type": "fillInBlank",
-      "question": "A marketing firm needs a custom web portal for a specific client project. The project has a tight deadline of 60–90 days, and there's a strong emphasis on user interface and rapid prototyping to ensure the client is satisfied with the look and feel before full development. This project would be a good fit for the __________ approach.",
+      "question": "Fill in the blanks using the most appropriate software development technology<br>A marketing firm needs a custom web portal for a specific client project. The project has a tight deadline of 60–90 days, and there's a strong emphasis on user interface and rapid prototyping to ensure the client is satisfied with the look and feel before full development. This project would be a good fit for the __________ approach.",
       "answer": "Rapid Application Development (RAD)",
       "rationale": "RAD uses rapid prototyping and quick iterations with user feedback.",
       "marks": 2
@@ -95,11 +95,18 @@ export const InformationSystemsDevelopmentQuiz: Quiz = {
       "question": "Describe the primary responsibilities of a Systems Analyst within the context of information systems development. How does their role bridge the gap between business needs and system design?",
       "idealKeywords": [
         "requirements",
-        "analysis",
+        "analyze",
         "communication",
-        "specifications",
+        "specific",
         "stakeholders",
-        "design translation"
+        "design translation",
+        "business processes",
+        "purpose of the business",
+        "understanding of the business",
+        "document",
+        "team",
+        "team work",
+        "department"
       ],
       "marks": 5
     },
@@ -113,7 +120,12 @@ export const InformationSystemsDevelopmentQuiz: Quiz = {
         "user satisfaction",
         "lack of testing",
         "data integrity",
-        "support challenges"
+        "support challenges",
+        "Quick development of software",
+        "Development is closer to those that will use them",
+        "May not be fully tested and bug-free",
+        "Data is not always backed up"
+
       ],
       "marks": 4
     },

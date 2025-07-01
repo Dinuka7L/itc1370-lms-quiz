@@ -185,17 +185,68 @@ export const DataAndDatabasesQuiz: Quiz = {
       "marks": 3
     },
     {
+    "id": "q9",
+    "type": "dropdown",
+    "question": "Based on the diagram shown above, select the most appropriate database model corresponding to each concept of data organization and visualization:<br><br>I. A simple structure storing data in plain text without relationships: [dropdown_1]<br><br>II. A tree-like structure where each record has a single parent: [dropdown_2]<br><br>III. A flexible structure allowing records to have multiple parent and child relationships: [dropdown_3]<br><br>IV. A structure where data is stored in tables with rows and columns and can be related through keys: [dropdown_4].",
+    "image": "/images/DBMS-Database-Types-P2.png",
+    "imageAlt": "Diagram illustrating Database models",
+    "dropdownBlanks": [
+      {
+        "id": "dropdown_1",
+        "options": [
+          "Flat File Model",
+          "Hierarchical Model",
+          "Network Model",
+          "Relational Model"
+        ],
+        "correctAnswer": "Flat File Model"
+      },
+      {
+        "id": "dropdown_2",
+        "options": [
+          "Flat File Model",
+          "Hierarchical Model",
+          "Network Model",
+          "Relational Model"
+        ],
+        "correctAnswer": "Hierarchical Model"
+      },
+      {
+        "id": "dropdown_3",
+        "options": [
+          "Flat File Model",
+          "Hierarchical Model",
+          "Network Model",
+          "Relational Model"
+        ],
+        "correctAnswer": "Network Model"
+      },
+      {
+        "id": "dropdown_4",
+        "options": [
+          "Flat File Model",
+          "Hierarchical Model",
+          "Network Model",
+          "Relational Model"
+        ],
+        "correctAnswer": "Relational Model"
+      }
+    ],
+    "rationale": "The Flat File Model stores unstructured data; the Hierarchical Model uses tree-like parent-child relationships; the Network Model allows more complex many-to-many relationships; and the Relational Model organizes data in related tables.",
+    "marks": 5
+  },
+    {
       "id": "q10",
       "type": "multipleChoice",
-      "question": "Identify the statements that are correct about the relational database model.",
+      "question": "The relational database model organizes data into tables (or relations) with specific structures and relationships. Following are four statements related to it:<br><br>1. Data in a relational database is organized into tables, where each table has a set of fields that define its structure.<br><br>2. A record in a relational database is represented as a column, and fields are the rows of the table.<br><br>3. The relational database model allows tables to be joined using a unique identifier, such as \"StudentID,\" to connect related data.<br><br>4. Every table in a relational database must contain the same number of fields and records to maintain consistency.<br><br>Identify the statements that are correct.",
       "options": [
-        "1 and 3",
-        "2 and 4",
-        "1 and 2",
-        "3 and 4"
+        "a) 1 and 3",
+        "b) 2 and 4",
+        "c) 1 and 2",
+        "d) 3 and 4"
       ],
-      "answer": "1 and 3",
-      "rationale": "Statements 1 and 3 accurately describe relational tables and joins.",
+      "answer": "a) 1 and 3",
+      "rationale": "Statements 1 and 3 are correct. Statement 2 is incorrect because rows (not columns) represent records, and statement 4 is incorrect as tables can have different numbers of records.",
       "marks": 3
     },
     {
@@ -261,24 +312,34 @@ export const DataAndDatabasesQuiz: Quiz = {
       "marks": 3
     },
     {
-      "id": "q17",
-      "type": "dragDrop",
-      "question": "Drag each statement under the correct category: Data Mart or Data Warehouse.",
-      "dragItems": [
-        { "id": "item1", "content": "Serves a specific business function with focused data relevant only to that area.", "category": "Data Mart" },
-        { "id": "item2", "content": "Consolidates and integrates data from across all departments in the organization.", "category": "Data Warehouse" },
-        { "id": "item3", "content": "Generally faster to deploy due to smaller size and scope.", "category": "Data Mart" },
-        { "id": "item4", "content": "Designed to support enterprise-wide, long-term data storage and analysis.", "category": "Data Warehouse" },
-        { "id": "item5", "content": "Usually contains highly summarized or aggregated data tailored to user needs.", "category": "Data Mart" },
-        { "id": "item6", "content": "Contains detailed historical data collected from multiple operational systems.", "category": "Data Warehouse" },
-        { "id": "item7", "content": "May exist as a subset or component within a larger data warehouse architecture.", "category": "Data Mart" },
-        { "id": "item8", "content": "Supports tactical decisions for individual teams or departments.", "category": "Data Mart" },
-        { "id": "item9", "content": "Optimized for complex queries involving large volumes of diverse data.", "category": "Data Warehouse" },
-        { "id": "item10", "content": "Data integration efforts are limited to a few sources, usually departmental.", "category": "Data Mart" },
-        { "id": "item11", "content": "Data refresh cycles may be more frequent to support operational needs.", "category": "Data Mart" },
-        { "id": "item12", "content": "Data refreshes tend to be less frequent but involve massive amounts of data.", "category": "Data Warehouse" }
-      ],
-      "marks": 6
-    }
+    "id": "q17",
+    "type": "dropdown",
+    "question": "For each statement below, select whether it describes a Data Mart or a Data Warehouse:<br><br>I. Serves a specific business function with focused data relevant only to that area: [dropdown_1]<br><br>II. Consolidates and integrates data from across all departments in the organization: [dropdown_2]<br><br>III. Generally faster to deploy due to smaller size and scope: [dropdown_3]<br><br>IV. Designed to support enterprise-wide, long-term data storage and analysis: [dropdown_4]",
+    "dropdownBlanks": [
+      {
+        "id": "dropdown_1",
+        "options": ["Data Mart", "Data Warehouse"],
+        "correctAnswer": "Data Mart"
+      },
+      {
+        "id": "dropdown_2",
+        "options": ["Data Mart", "Data Warehouse"],
+        "correctAnswer": "Data Warehouse"
+      },
+      {
+        "id": "dropdown_3",
+        "options": ["Data Mart", "Data Warehouse"],
+        "correctAnswer": "Data Mart"
+      },
+      {
+        "id": "dropdown_4",
+        "options": ["Data Mart", "Data Warehouse"],
+        "correctAnswer": "Data Warehouse"
+      }
+    ],
+    "rationale": "Data Marts serve specific departments and are quicker to deploy, while Data Warehouses integrate organization-wide data for long-term analysis.",
+    "marks": 6
+  }
+
   ]
 }
