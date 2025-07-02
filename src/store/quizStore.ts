@@ -157,13 +157,18 @@ export const useQuizStore = create<QuizStore>()(
     };
 
     const startTime = new Date();
+    
+    // Handle unlimited time (timeLimit = -1)
+    const isUnlimited = timeLimit === -1;
+    
     const attempt: QuizAttempt = {
       quizId,
       answers: {},
       startTime,
-      timeLimit,
+      timeLimit: isUnlimited ? 0 : timeLimit, // Store 0 for unlimited
       isCompleted: false,
       isSubmitted: false,
+      isUnlimited, // Add flag to track unlimited quizzes
     };
 
     const questionStatuses: Record<string, QuestionStatus> = {};
@@ -180,8 +185,8 @@ export const useQuizStore = create<QuizStore>()(
       currentAttempt: attempt,
       currentQuestionIndex: 0,
       questionStatuses,
-      timeRemaining: timeLimit * 60,
-      isTimerRunning: true,
+      timeRemaining: isUnlimited ? 0 : timeLimit * 60,
+      isTimerRunning: !isUnlimited, // Don't run timer for unlimited quizzes
     });
   },
 
@@ -247,8 +252,10 @@ export const useQuizStore = create<QuizStore>()(
     const { currentAttempt, currentQuiz, attempts, isTimerRunning } = get();
     if (!currentAttempt || !currentQuiz || currentAttempt.isSubmitted) return;
 
-    // Stop the timer immediately
-    set({ isTimerRunning: false });
+    // Stop the timer immediately (only if it was running)
+    if (isTimerRunning) {
+      set({ isTimerRunning: false });
+    }
 
     // Calculate score
     let score = 0;
@@ -357,7 +364,7 @@ export const useQuizStore = create<QuizStore>()(
   // New method to calculate actual time remaining based on timestamps
   calculateTimeRemaining: () => {
     const { currentAttempt, isTimerRunning } = get();
-    if (!currentAttempt || !isTimerRunning) return 0;
+    if (!currentAttempt || !isTimerRunning || currentAttempt.isUnlimited) return 0;
 
     const now = new Date();
     const elapsedSeconds = Math.floor((now.getTime() - currentAttempt.startTime.getTime()) / 1000);
@@ -368,10 +375,10 @@ export const useQuizStore = create<QuizStore>()(
   },
 
   setTimeRemaining: (time: number) => {
-    const { isTimerRunning } = get();
+    const { isTimerRunning, currentAttempt } = get();
     
-    // Only update time if timer is still running and quiz hasn't been submitted
-    if (!isTimerRunning) return;
+    // Only update time if timer is still running, quiz hasn't been submitted, and it's not unlimited
+    if (!isTimerRunning || currentAttempt?.isUnlimited) return;
     
     set({ timeRemaining: Math.max(0, time) });
     
@@ -458,11 +465,11 @@ export const useQuizStore = create<QuizStore>()(
   },
 }),
     {
-    version: 2, // Increment this when you do a breaking change
+    version: 3, // Updated to version 3
     name: 'quiz-store', // The key to store in local storage
     storage: createJSONStorage(() => localStorage),
     migrate: (persistedState, version) => {
-      if (version === 2) {
+      if (version === 3) {
         // This means storage already matches the new version
         return persistedState;
       }

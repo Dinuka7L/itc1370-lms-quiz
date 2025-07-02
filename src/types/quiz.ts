@@ -48,12 +48,13 @@ export interface QuizAttempt {
   answers: Record<string, any>;
   startTime: Date;
   endTime?: Date;
-  timeLimit: number; // in minutes
+  timeLimit: number; // in minutes (0 for unlimited)
   score?: number;
   percentage?: number;
   isCompleted: boolean;
   isSubmitted: boolean;
   isAutoSubmitted?: boolean; // Track if quiz was auto-submitted due to timeout
+  isUnlimited?: boolean; // Track if quiz has unlimited time
 }
 
 export interface QuestionStatus {

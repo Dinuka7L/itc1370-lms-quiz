@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Clock, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Clock, ArrowRight, ArrowLeft, Infinity } from 'lucide-react';
 import Header from '../components/Header';
 import { useQuizStore } from '../store/quizStore';
 
@@ -31,10 +31,13 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack, onViewRe
   }
 
   const handleStart = () => {
-    if (selectedTime) {
+    if (selectedTime !== null) {
       onStart(selectedTime);
     }
   };
+
+  // Special value for no time limit (using -1 to represent unlimited time)
+  const NO_TIME_LIMIT = -1;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
@@ -72,7 +75,26 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack, onViewRe
                 Select Time Limit
               </h2>
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {/* No Time Limit Option */}
+                <button
+                  onClick={() => setSelectedTime(NO_TIME_LIMIT)}
+                  className={`
+                    p-4 rounded-lg border-2 transition-all duration-200 text-center
+                    ${selectedTime === NO_TIME_LIMIT
+                      ? 'border-green-500 bg-green-50 text-green-700'
+                      : 'border-gray-200 hover:border-green-300 hover:bg-green-25'
+                    }
+                  `}
+                >
+                  <div className="flex items-center justify-center mb-2">
+                    <Infinity className="h-6 w-6" />
+                  </div>
+                  <div className="text-sm font-medium">No Limit</div>
+                  <div className="text-xs text-gray-600">Unlimited time</div>
+                </button>
+
+                {/* Regular Time Options */}
                 {quiz.timeOptions.map((time) => (
                   <button
                     key={time}
@@ -113,8 +135,8 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack, onViewRe
                 <div className="text-yellow-800 text-sm">
                   <div className="font-medium mb-1">Important Instructions:</div>
                   <ul className="space-y-1">
-                    <li>• Once started, the timer cannot be paused</li>
-                    <li>• Your quiz will auto-submit when time expires</li>
+                    <li>• Once started, the timer cannot be paused (unless no time limit is selected)</li>
+                    <li>• Your quiz will auto-submit when time expires (timed quizzes only)</li>
                     <li>• You can navigate between questions freely</li>
                     <li>• Your quiz answers and progress are saved automatically on your browser.</li>
                     <li>• No information is sent to our servers or shared with anyone.</li>
@@ -144,10 +166,10 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack, onViewRe
 
               <button
                 onClick={handleStart}
-                disabled={!selectedTime}
+                disabled={selectedTime === null}
                 className={`
                   flex items-center space-x-2 px-8 py-3 rounded-lg font-medium transition-all duration-200 w-full sm:w-auto
-                  ${selectedTime
+                  ${selectedTime !== null
                     ? 'bg-primary-600 hover:bg-primary-700 text-white transform hover:scale-105'
                     : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                   }

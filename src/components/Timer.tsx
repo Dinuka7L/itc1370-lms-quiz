@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Clock, AlertTriangle } from 'lucide-react';
+import { Clock, AlertTriangle, Infinity } from 'lucide-react';
 import { useQuizStore } from '../store/quizStore';
 
 const Timer: React.FC = () => {
@@ -15,8 +15,11 @@ const Timer: React.FC = () => {
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const lastUpdateRef = useRef<number>(Date.now());
 
+  // Check if current quiz is unlimited
+  const isUnlimited = currentAttempt?.isUnlimited || false;
+
   useEffect(() => {
-    if (!isTimerRunning || !currentAttempt) {
+    if (!isTimerRunning || !currentAttempt || isUnlimited) {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
         intervalRef.current = null;
@@ -68,12 +71,12 @@ const Timer: React.FC = () => {
         intervalRef.current = null;
       }
     };
-  }, [isTimerRunning, currentAttempt, calculateTimeRemaining, setTimeRemaining, submitQuiz]);
+  }, [isTimerRunning, currentAttempt, calculateTimeRemaining, setTimeRemaining, submitQuiz, isUnlimited]);
 
   // Handle page visibility change (tab switching)
   useEffect(() => {
     const handleVisibilityChange = () => {
-      if (!document.hidden && isTimerRunning && currentAttempt) {
+      if (!document.hidden && isTimerRunning && currentAttempt && !isUnlimited) {
         // When tab becomes visible again, immediately sync with actual time
         const actualTime = calculateTimeRemaining();
         setTimeRemaining(actualTime);
@@ -89,12 +92,12 @@ const Timer: React.FC = () => {
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, [isTimerRunning, currentAttempt, calculateTimeRemaining, setTimeRemaining, submitQuiz]);
+  }, [isTimerRunning, currentAttempt, calculateTimeRemaining, setTimeRemaining, submitQuiz, isUnlimited]);
 
   // Handle page focus/blur events as additional backup
   useEffect(() => {
     const handleFocus = () => {
-      if (isTimerRunning && currentAttempt) {
+      if (isTimerRunning && currentAttempt && !isUnlimited) {
         const actualTime = calculateTimeRemaining();
         setTimeRemaining(actualTime);
         
@@ -109,13 +112,39 @@ const Timer: React.FC = () => {
     return () => {
       window.removeEventListener('focus', handleFocus);
     };
-  }, [isTimerRunning, currentAttempt, calculateTimeRemaining, setTimeRemaining, submitQuiz]);
+  }, [isTimerRunning, currentAttempt, calculateTimeRemaining, setTimeRemaining, submitQuiz, isUnlimited]);
 
   const formatTime = (seconds: number): string => {
     const minutes = Math.floor(Math.max(0, seconds) / 60);
     const remainingSeconds = Math.max(0, seconds) % 60;
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
   };
+
+  // Don't show timer for unlimited quizzes
+  if (isUnlimited) {
+    return (
+      <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border-2 border-green-200">
+        <div className="flex items-center space-x-3">
+          <div className="p-2 bg-green-100 rounded-full">
+            <Infinity className="h-5 w-5 text-green-600" />
+          </div>
+          
+          <div>
+            <div className="text-xs text-gray-500 uppercase tracking-wide font-medium">
+              Time Limit
+            </div>
+            <div className="text-2xl font-bold text-green-600 tabular-nums">
+              Unlimited
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-2 text-xs font-medium text-green-600">
+          ✨ Take your time!
+        </div>
+      </div>
+    );
+  }
 
   const isLowTime = timeRemaining < 300; // Less than 5 minutes
   const isCritical = timeRemaining < 60; // Less than 1 minute
