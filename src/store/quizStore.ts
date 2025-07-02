@@ -465,11 +465,11 @@ export const useQuizStore = create<QuizStore>()(
   },
 }),
     {
-    version: 3, // Updated to version 3
+    version: 4, // Updated to version 4
     name: 'quiz-store', // The key to store in local storage
     storage: createJSONStorage(() => localStorage),
     migrate: (persistedState, version) => {
-      if (version === 3) {
+      if (version === 4) {
         // This means storage already matches the new version
         return persistedState;
       }
@@ -489,8 +489,9 @@ export { createInitialState };
 
 
 // Dev Notes:
-// Storage Type	Survives refresh	Survives tab close	Survives browser restart
-// sessionStorage	✅	❌	❌
-// localStorage	✅	✅	✅
+// --------------------------------------------------------------------------------------------------
+// Storage Type       |	Survives refresh    |   	Survives tab close |     Survives browser restart
+// sessionStorage	    |         ✅	         |              ❌       |                 	❌
+// localStorage       |        	✅	         |              ✅	      |                  ✅
 
 // ✅ So localStorage is perfect if you want persistence across sessions.
