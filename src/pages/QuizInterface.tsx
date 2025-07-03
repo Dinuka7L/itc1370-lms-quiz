@@ -22,8 +22,47 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     setCurrentQuestion,
     currentAttempt,
     timeRemaining,
-    isTimerRunning
+    isTimerRunning,
+    pauseQuiz
   } = useQuizStore();
+
+  // Handle page visibility change and beforeunload events
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden && currentAttempt && !currentAttempt.isCompleted) {
+        // User switched tabs or minimized window - pause the quiz
+        pauseQuiz();
+      }
+    };
+
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (currentAttempt && !currentAttempt.isCompleted) {
+        // User is trying to close/refresh the page - pause the quiz
+        pauseQuiz();
+        
+        // Show confirmation dialog
+        e.preventDefault();
+        e.returnValue = 'Your quiz progress will be saved. Are you sure you want to leave?';
+        return e.returnValue;
+      }
+    };
+
+    // Listen for continue quiz event from QuizSetup
+    const handleContinueQuiz = () => {
+      // This will be triggered when user clicks continue from setup page
+      // The quiz state should already be restored by resumeQuiz()
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('continueQuiz', handleContinueQuiz);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('continueQuiz', handleContinueQuiz);
+    };
+  }, [currentAttempt, pauseQuiz]);
 
   // Auto-navigate to results when quiz is submitted (either manually or by timer)
   useEffect(() => {
@@ -87,6 +126,16 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     submitQuiz(false); // Pass false to indicate manual submit
   };
 
+  const handleNavigateHome = () => {
+    if (currentAttempt && !currentAttempt.isCompleted) {
+      // Pause the quiz before navigating away
+      pauseQuiz();
+    }
+    if (onNavigateHome) {
+      onNavigateHome();
+    }
+  };
+
   const getUnansweredQuestions = () => {
     return currentQuiz.questions.filter(q => !questionStatuses[q.id]?.answered);
   };
@@ -95,7 +144,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
-      <Header currentQuiz={currentQuiz.title} onNavigateHome={onNavigateHome} />
+      <Header currentQuiz={currentQuiz.title} onNavigateHome={handleNavigateHome} />
       
       <main className="flex-1 flex">
         {/* Left Sidebar */}
@@ -115,6 +164,11 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
                   <div className="text-sm text-gray-600">
                     {currentQuestion.marks} {currentQuestion.marks === 1 ? 'mark' : 'marks'}
                   </div>
+                </div>
+                
+                {/* Auto-save indicator */}
+                <div className="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full">
+                  ✓ Progress auto-saved
                 </div>
               </div>
               

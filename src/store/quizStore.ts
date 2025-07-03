@@ -29,6 +29,12 @@ interface QuizStore extends QuizState {
   calculateTimeRemaining: () => number;
   setRandomizeQuestions: (value: boolean) => void;
   setCurrentAttemptAndQuiz: (attempt: QuizAttempt, quiz: Quiz) => void;
+  // New methods for progress saving
+  pauseQuiz: () => void;
+  resumeQuiz: (quizId: string) => void;
+  hasInProgressQuiz: (quizId: string) => boolean;
+  getInProgressAttempt: (quizId: string) => QuizAttempt | null;
+  saveProgress: () => void;
 }
 
 const createInitialState = (): QuizState & {
@@ -169,6 +175,9 @@ export const useQuizStore = create<QuizStore>()(
       isCompleted: false,
       isSubmitted: false,
       isUnlimited, // Add flag to track unlimited quizzes
+      isPaused: false,
+      timeSpent: 0,
+      currentQuestionIndex: 0,
     };
 
     const questionStatuses: Record<string, QuestionStatus> = {};
@@ -180,6 +189,9 @@ export const useQuizStore = create<QuizStore>()(
       };
     });
 
+    // Remove any existing in-progress attempt for this quiz
+    const updatedAttempts = get().attempts.filter(a => !(a.quizId === quizId && !a.isCompleted));
+    
     set({
       currentQuiz: quiz,
       currentAttempt: attempt,
@@ -187,7 +199,126 @@ export const useQuizStore = create<QuizStore>()(
       questionStatuses,
       timeRemaining: isUnlimited ? 0 : timeLimit * 60,
       isTimerRunning: !isUnlimited, // Don't run timer for unlimited quizzes
+      attempts: [...updatedAttempts, attempt],
     });
+  },
+
+  resumeQuiz: (quizId: string) => {
+    const inProgressAttempt = get().getInProgressAttempt(quizId);
+    const originalQuiz = get().quizzes.find(q => q.id === quizId);
+    
+    if (!inProgressAttempt || !originalQuiz) return;
+
+    // Restore the quiz with the same question order as when it was started
+    const quiz: Quiz = {
+      ...originalQuiz,
+      questions: originalQuiz.questions // Keep original order for now - could be enhanced to save shuffled order
+    };
+
+    // Calculate remaining time
+    let timeRemaining = 0;
+    if (!inProgressAttempt.isUnlimited && inProgressAttempt.timeLimit > 0) {
+      const totalTimeInSeconds = inProgressAttempt.timeLimit * 60;
+      const timeSpentSoFar = inProgressAttempt.timeSpent || 0;
+      timeRemaining = Math.max(0, totalTimeInSeconds - timeSpentSoFar);
+    }
+
+    // Update the attempt to mark it as resumed
+    const updatedAttempt = {
+      ...inProgressAttempt,
+      isPaused: false,
+      pausedTime: undefined,
+    };
+
+    // Update attempts array
+    const updatedAttempts = get().attempts.map(a => 
+      a.quizId === quizId && !a.isCompleted ? updatedAttempt : a
+    );
+
+    set({
+      currentQuiz: quiz,
+      currentAttempt: updatedAttempt,
+      currentQuestionIndex: inProgressAttempt.currentQuestionIndex || 0,
+      questionStatuses: inProgressAttempt.questionStatuses || {},
+      timeRemaining,
+      isTimerRunning: !inProgressAttempt.isUnlimited,
+      attempts: updatedAttempts,
+    });
+  },
+
+  pauseQuiz: () => {
+    const { currentAttempt, timeRemaining, isTimerRunning } = get();
+    if (!currentAttempt || currentAttempt.isCompleted) return;
+
+    // Calculate time spent so far
+    const now = new Date();
+    let timeSpent = currentAttempt.timeSpent || 0;
+    
+    if (isTimerRunning && !currentAttempt.isUnlimited) {
+      const sessionTime = Math.floor((now.getTime() - currentAttempt.startTime.getTime()) / 1000);
+      const totalTimeInSeconds = currentAttempt.timeLimit * 60;
+      timeSpent = totalTimeInSeconds - timeRemaining;
+    }
+
+    const pausedAttempt = {
+      ...currentAttempt,
+      isPaused: true,
+      pausedTime: now,
+      timeSpent,
+      currentQuestionIndex: get().currentQuestionIndex,
+      questionStatuses: get().questionStatuses,
+    };
+
+    // Update attempts array
+    const updatedAttempts = get().attempts.map(a => 
+      a.quizId === currentAttempt.quizId && !a.isCompleted ? pausedAttempt : a
+    );
+
+    set({
+      attempts: updatedAttempts,
+      currentAttempt: pausedAttempt,
+      isTimerRunning: false,
+    });
+  },
+
+  saveProgress: () => {
+    const { currentAttempt, currentQuestionIndex, questionStatuses, timeRemaining, isTimerRunning } = get();
+    if (!currentAttempt || currentAttempt.isCompleted) return;
+
+    // Calculate time spent so far
+    let timeSpent = currentAttempt.timeSpent || 0;
+    
+    if (isTimerRunning && !currentAttempt.isUnlimited) {
+      const now = new Date();
+      const sessionTime = Math.floor((now.getTime() - currentAttempt.startTime.getTime()) / 1000);
+      const totalTimeInSeconds = currentAttempt.timeLimit * 60;
+      timeSpent = totalTimeInSeconds - timeRemaining;
+    }
+
+    const updatedAttempt = {
+      ...currentAttempt,
+      currentQuestionIndex,
+      questionStatuses,
+      timeSpent,
+    };
+
+    // Update attempts array
+    const updatedAttempts = get().attempts.map(a => 
+      a.quizId === currentAttempt.quizId && !a.isCompleted ? updatedAttempt : a
+    );
+
+    set({
+      attempts: updatedAttempts,
+      currentAttempt: updatedAttempt,
+    });
+  },
+
+  hasInProgressQuiz: (quizId: string) => {
+    return get().attempts.some(a => a.quizId === quizId && !a.isCompleted && !a.isSubmitted);
+  },
+
+  getInProgressAttempt: (quizId: string) => {
+    return get().attempts.find(a => a.quizId === quizId && !a.isCompleted && !a.isSubmitted) || null;
   },
 
   setCurrentQuestion: (index: number) => {
@@ -207,6 +338,9 @@ export const useQuizStore = create<QuizStore>()(
       currentQuestionIndex: index,
       questionStatuses: updatedStatuses,
     });
+
+    // Auto-save progress
+    setTimeout(() => get().saveProgress(), 100);
   },
 
   saveAnswer: (questionId: string, answer: any) => {
@@ -233,6 +367,9 @@ export const useQuizStore = create<QuizStore>()(
       currentAttempt: updatedAttempt,
       questionStatuses: updatedStatuses,
     });
+
+    // Auto-save progress
+    setTimeout(() => get().saveProgress(), 100);
   },
 
   toggleQuestionFlag: (questionId: string) => {
@@ -246,6 +383,9 @@ export const useQuizStore = create<QuizStore>()(
     };
 
     set({ questionStatuses: updatedStatuses });
+
+    // Auto-save progress
+    setTimeout(() => get().saveProgress(), 100);
   },
 
   submitQuiz: (isAutoSubmit = false) => {
@@ -350,9 +490,10 @@ export const useQuizStore = create<QuizStore>()(
       isCompleted: true,
       isSubmitted: true,
       isAutoSubmitted: isAutoSubmit, // Track if it was auto-submitted
+      isPaused: false,
     };
 
-    const updatedAttempts = [...attempts.filter(a => a.quizId !== currentAttempt.quizId), completedAttempt];
+    const updatedAttempts = [...attempts.filter(a => !(a.quizId === currentAttempt.quizId && !a.isCompleted)), completedAttempt];
 
     set({
       attempts: updatedAttempts,
@@ -369,7 +510,8 @@ export const useQuizStore = create<QuizStore>()(
     const now = new Date();
     const elapsedSeconds = Math.floor((now.getTime() - currentAttempt.startTime.getTime()) / 1000);
     const totalTimeInSeconds = currentAttempt.timeLimit * 60;
-    const remainingTime = Math.max(0, totalTimeInSeconds - elapsedSeconds);
+    const timeSpentBefore = currentAttempt.timeSpent || 0;
+    const remainingTime = Math.max(0, totalTimeInSeconds - timeSpentBefore - elapsedSeconds);
 
     return remainingTime;
   },
@@ -465,18 +607,39 @@ export const useQuizStore = create<QuizStore>()(
   },
 }),
     {
-    version: 5, // Updated to version 5 (latest change: added python mock 4 quiz)
+    version: 6, // Updated to version 6 for auto-save progress feature
     name: 'quiz-store', // The key to store in local storage
     storage: createJSONStorage(() => localStorage),
     migrate: (persistedState, version) => {
-      if (version === 5) {
-        // This means storage already matches the new version
+      if (version === 6) {
+        // This means storage already matches the current version
         return persistedState;
       }
+      if (version === 5) {
+        console.log('Migrating from version 5 to 6...');
+        return {
+          ...persistedState,
+          quizzes: allQuizzes, // Ensure quizzes are refreshed with latest data
+        };
+      }
+      if (version === 4) {
+        console.log('Migrating from version 4 to 6...');
+        return {
+          ...persistedState,
+          quizzes: allQuizzes,
+        };
+      }
+      if (version === 3) {
+        console.log('Migrating from version 3 to 6...');
+        return {
+          ...persistedState,
+          quizzes: allQuizzes,
+        };
+      }
+      // For versions older than 3, do a full reset
       console.log('Detected old version of quiz store. Resetting storage...');
       return {
         ...createInitialState(),
-        // Optionally: preserve quizzes array if needed
         quizzes: allQuizzes,
       };
     },

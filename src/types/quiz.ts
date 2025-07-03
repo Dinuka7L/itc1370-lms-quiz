@@ -55,6 +55,11 @@ export interface QuizAttempt {
   isSubmitted: boolean;
   isAutoSubmitted?: boolean; // Track if quiz was auto-submitted due to timeout
   isUnlimited?: boolean; // Track if quiz has unlimited time
+  isPaused?: boolean; // Track if quiz is paused (user left)
+  pausedTime?: Date; // When the quiz was paused
+  timeSpent?: number; // Total time spent in seconds (for paused quizzes)
+  currentQuestionIndex?: number; // Save current question position
+  questionStatuses?: Record<string, QuestionStatus>; // Save question statuses
 }
 
 export interface QuestionStatus {

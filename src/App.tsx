@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Dashboard from './pages/Dashboard';
 import QuizSetup from './pages/QuizSetup';
 import QuizInterface from './pages/QuizInterface';
@@ -11,11 +11,30 @@ function App() {
   const [currentState, setCurrentState] = useState<AppState>('dashboard');
   const [selectedQuizId, setSelectedQuizId] = useState<string | null>(null);
   
-  const { startQuiz, submitQuiz, resetQuiz } = useQuizStore();
+  const { startQuiz, submitQuiz, resetQuiz, hasInProgressQuiz, resumeQuiz } = useQuizStore();
+
+  // Listen for continue quiz event
+  useEffect(() => {
+    const handleContinueQuiz = () => {
+      setCurrentState('quiz');
+    };
+
+    window.addEventListener('continueQuiz', handleContinueQuiz);
+    
+    return () => {
+      window.removeEventListener('continueQuiz', handleContinueQuiz);
+    };
+  }, []);
 
   const handleStartQuiz = (quizId: string) => {
     setSelectedQuizId(quizId);
-    setCurrentState('setup');
+    
+    // Check if there's an in-progress quiz
+    if (hasInProgressQuiz(quizId)) {
+      setCurrentState('setup'); // Go to setup to show continue option
+    } else {
+      setCurrentState('setup');
+    }
   };
 
   const handleBeginQuiz = (timeLimit: number) => {
