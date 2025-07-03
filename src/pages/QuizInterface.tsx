@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Send, AlertTriangle, Bug } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Send, AlertTriangle } from 'lucide-react';
 import Header from '../components/Header';
 import Timer from '../components/Timer';
 import QuestionNavigation from '../components/QuestionNavigation';
@@ -14,7 +14,6 @@ interface QuizInterfaceProps {
 
 const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome }) => {
   const [showSubmitModal, setShowSubmitModal] = useState(false);
-  const [showDebugInfo, setShowDebugInfo] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const { 
@@ -25,8 +24,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     currentAttempt,
     timeRemaining,
     isTimerRunning,
-    pauseQuiz,
-    getSubmissionDebugInfo
+    pauseQuiz
   } = useQuizStore();
 
   // Handle page visibility change and beforeunload events
@@ -101,15 +99,6 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
               : 'Processing your answers and calculating results...'
             }
           </p>
-          
-          {/* Debug info for troubleshooting */}
-          {currentAttempt?.submissionError && (
-            <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-red-800 text-sm">
-                Submission completed with error handling. Your progress has been saved.
-              </p>
-            </div>
-          )}
         </div>
       </div>
     );
@@ -138,14 +127,11 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     setIsSubmitting(true);
     
     try {
-      console.log('🚀 User initiated quiz submission');
       const { submitQuiz } = useQuizStore.getState();
       await submitQuiz(false); // Pass false to indicate manual submit
-      console.log('✅ Quiz submission completed');
     } catch (error) {
-      console.error('❌ Error during submission:', error);
       setIsSubmitting(false);
-      // Show error message to user
+      // Show user-friendly error message
       alert('There was an issue submitting your quiz. Your progress has been saved. Please try again.');
     }
   };
@@ -190,32 +176,11 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-3">
-                  {/* Auto-save indicator */}
-                  <div className="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full">
-                    ✓ Progress auto-saved
-                  </div>
-                  
-                  {/* Debug button for troubleshooting */}
-                  <button
-                    onClick={() => setShowDebugInfo(!showDebugInfo)}
-                    className="text-xs text-gray-500 hover:text-gray-700 p-1 rounded"
-                    title="Debug Info"
-                  >
-                    <Bug className="h-4 w-4" />
-                  </button>
+                {/* Auto-save indicator */}
+                <div className="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full">
+                  ✓ Progress auto-saved
                 </div>
               </div>
-              
-              {/* Debug Info Panel */}
-              {showDebugInfo && (
-                <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                  <h3 className="font-medium text-yellow-900 mb-2">Debug Information</h3>
-                  <pre className="text-xs text-yellow-800 overflow-auto">
-                    {JSON.stringify(getSubmissionDebugInfo(), null, 2)}
-                  </pre>
-                </div>
-              )}
               
               <QuestionRenderer question={currentQuestion} />
             </div>
