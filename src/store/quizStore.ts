@@ -35,6 +35,8 @@ interface QuizStore extends QuizState {
   hasInProgressQuiz: (quizId: string) => boolean;
   getInProgressAttempt: (quizId: string) => QuizAttempt | null;
   saveProgress: () => void;
+  // Debug methods
+  getSubmissionDebugInfo: () => any;
 }
 
 const createInitialState = (): QuizState & {
@@ -66,6 +68,7 @@ const shuffleArray = <T>(array: T[]): T[] => {
 
 // Function to normalize text for comparison (handles typos and variations)
 const normalizeText = (text: string): string => {
+  if (typeof text !== 'string') return '';
   return text
     .toLowerCase()
     .trim()
@@ -75,6 +78,9 @@ const normalizeText = (text: string): string => {
 
 // Function to check if two strings are similar (handles minor typos)
 const isSimilarText = (userAnswer: string, correctAnswer: string): boolean => {
+  if (!userAnswer || !correctAnswer) return false;
+  if (typeof userAnswer !== 'string' || typeof correctAnswer !== 'string') return false;
+  
   const normalizedUser = normalizeText(userAnswer);
   const normalizedCorrect = normalizeText(correctAnswer);
   
@@ -92,6 +98,8 @@ const isSimilarText = (userAnswer: string, correctAnswer: string): boolean => {
 
 // Levenshtein distance algorithm for typo detection
 const levenshteinDistance = (str1: string, str2: string): number => {
+  if (!str1 || !str2) return Math.max(str1?.length || 0, str2?.length || 0);
+  
   const matrix = Array(str2.length + 1).fill(null).map(() => Array(str1.length + 1).fill(null));
   
   for (let i = 0; i <= str1.length; i++) matrix[0][i] = i;
@@ -114,14 +122,17 @@ const levenshteinDistance = (str1: string, str2: string): number => {
 // Updated function to calculate essay score based on keywords with custom threshold
 const calculateEssayScore = (userAnswer: string, idealKeywords: string[], requiredKeywords: number = 4): number => {
   if (!userAnswer || !idealKeywords || idealKeywords.length === 0) return 0;
+  if (typeof userAnswer !== 'string') return 0;
   
   const normalizedAnswer = normalizeText(userAnswer);
   let matchedKeywords = 0;
   
   idealKeywords.forEach(keyword => {
-    const normalizedKeyword = normalizeText(keyword);
-    if (normalizedAnswer.includes(normalizedKeyword)) {
-      matchedKeywords++;
+    if (keyword && typeof keyword === 'string') {
+      const normalizedKeyword = normalizeText(keyword);
+      if (normalizedKeyword && normalizedAnswer.includes(normalizedKeyword)) {
+        matchedKeywords++;
+      }
     }
   });
   
@@ -132,6 +143,141 @@ const calculateEssayScore = (userAnswer: string, idealKeywords: string[], requir
   
   // Otherwise, give partial marks based on the percentage of required keywords found
   return (matchedKeywords / requiredKeywords) * 100;
+};
+
+// Robust scoring function with comprehensive error handling
+const calculateQuestionScore = (question: any, userAnswer: any): { score: number; maxScore: number; error?: string } => {
+  try {
+    const maxScore = question.marks || 0;
+    
+    if (!question || typeof question !== 'object') {
+      return { score: 0, maxScore, error: 'Invalid question object' };
+    }
+
+    if (userAnswer === undefined || userAnswer === null || userAnswer === '') {
+      return { score: 0, maxScore, error: 'No answer provided' };
+    }
+
+    switch (question.type) {
+      case 'essay': {
+        if (question.idealKeywords && Array.isArray(question.idealKeywords) && question.idealKeywords.length > 0) {
+          const requiredKeywords = 4;
+          const essayScore = calculateEssayScore(userAnswer, question.idealKeywords, requiredKeywords);
+          return { score: (essayScore / 100) * maxScore, maxScore };
+        }
+        return { score: 0, maxScore, error: 'Essay question missing ideal keywords' };
+      }
+
+      case 'multipleChoice': {
+        if (!question.answer) {
+          return { score: 0, maxScore, error: 'Question missing correct answer' };
+        }
+        return { score: userAnswer === question.answer ? maxScore : 0, maxScore };
+      }
+
+      case 'multiSelect': {
+        if (!Array.isArray(question.answer)) {
+          return { score: 0, maxScore, error: 'MultiSelect question answer is not an array' };
+        }
+        if (!Array.isArray(userAnswer)) {
+          return { score: 0, maxScore, error: 'User answer for multiSelect is not an array' };
+        }
+        
+        const correctAnswers = question.answer.sort();
+        const userAnswers = userAnswer.sort();
+        const isCorrect = JSON.stringify(correctAnswers) === JSON.stringify(userAnswers);
+        return { score: isCorrect ? maxScore : 0, maxScore };
+      }
+
+      case 'fillInBlank': {
+        if (!question.answer || typeof question.answer !== 'string') {
+          return { score: 0, maxScore, error: 'FillInBlank question missing string answer' };
+        }
+        if (typeof userAnswer !== 'string') {
+          return { score: 0, maxScore, error: 'User answer for fillInBlank is not a string' };
+        }
+        
+        const isCorrect = isSimilarText(userAnswer, question.answer);
+        return { score: isCorrect ? maxScore : 0, maxScore };
+      }
+
+      case 'dragDrop': {
+        if (!Array.isArray(question.dragItems)) {
+          return { score: 0, maxScore, error: 'DragDrop question missing dragItems array' };
+        }
+        if (!userAnswer || typeof userAnswer !== 'object') {
+          return { score: 0, maxScore, error: 'User answer for dragDrop is not an object' };
+        }
+        
+        let correctCount = 0;
+        let totalBlanks = 0;
+        
+        question.dragItems.forEach((item: any) => {
+          if (item && item.category && item.id) {
+            totalBlanks++;
+            if (userAnswer[item.category] === item.id) {
+              correctCount++;
+            }
+          }
+        });
+        
+        const isCorrect = correctCount === totalBlanks && totalBlanks > 0;
+        return { score: isCorrect ? maxScore : 0, maxScore };
+      }
+
+      case 'matching': {
+        if (!Array.isArray(question.matchPairs)) {
+          return { score: 0, maxScore, error: 'Matching question missing matchPairs array' };
+        }
+        if (!userAnswer || typeof userAnswer !== 'object') {
+          return { score: 0, maxScore, error: 'User answer for matching is not an object' };
+        }
+        
+        let correctCount = 0;
+        let totalPairs = question.matchPairs.length;
+        
+        question.matchPairs.forEach((pair: any) => {
+          if (pair && pair.left && pair.right) {
+            if (userAnswer[pair.left] === pair.right) {
+              correctCount++;
+            }
+          }
+        });
+        
+        const isCorrect = correctCount === totalPairs && totalPairs > 0;
+        return { score: isCorrect ? maxScore : 0, maxScore };
+      }
+
+      case 'dropdown': {
+        if (!Array.isArray(question.dropdownBlanks)) {
+          return { score: 0, maxScore, error: 'Dropdown question missing dropdownBlanks array' };
+        }
+        if (!userAnswer || typeof userAnswer !== 'object') {
+          return { score: 0, maxScore, error: 'User answer for dropdown is not an object' };
+        }
+        
+        let correctCount = 0;
+        let totalBlanks = question.dropdownBlanks.length;
+        
+        question.dropdownBlanks.forEach((blank: any) => {
+          if (blank && blank.id && blank.correctAnswer) {
+            if (userAnswer[blank.id] === blank.correctAnswer) {
+              correctCount++;
+            }
+          }
+        });
+        
+        const isCorrect = correctCount === totalBlanks && totalBlanks > 0;
+        return { score: isCorrect ? maxScore : 0, maxScore };
+      }
+
+      default:
+        return { score: 0, maxScore, error: `Unknown question type: ${question.type}` };
+    }
+  } catch (error) {
+    console.error('Error calculating question score:', error);
+    return { score: 0, maxScore: question.marks || 0, error: `Calculation error: ${error.message}` };
+  }
 };
 
 export const useQuizStore = create<QuizStore>()(
@@ -390,116 +536,164 @@ export const useQuizStore = create<QuizStore>()(
 
   submitQuiz: (isAutoSubmit = false) => {
     const { currentAttempt, currentQuiz, attempts, isTimerRunning } = get();
-    if (!currentAttempt || !currentQuiz || currentAttempt.isSubmitted) return;
+    
+    console.log('🚀 Starting quiz submission...', {
+      hasCurrentAttempt: !!currentAttempt,
+      hasCurrentQuiz: !!currentQuiz,
+      isAlreadySubmitted: currentAttempt?.isSubmitted,
+      quizId: currentAttempt?.quizId,
+      quizTitle: currentQuiz?.title
+    });
 
-    // Stop the timer immediately (only if it was running)
-    if (isTimerRunning) {
-      set({ isTimerRunning: false });
+    if (!currentAttempt || !currentQuiz) {
+      console.error('❌ Submission failed: Missing current attempt or quiz');
+      return;
     }
 
-    // Calculate score
-    let score = 0;
-    let totalMarks = 0;
+    if (currentAttempt.isSubmitted) {
+      console.warn('⚠️ Quiz already submitted, skipping...');
+      return;
+    }
 
-    currentQuiz.questions.forEach(question => {
-      totalMarks += question.marks;
-      const userAnswer = currentAttempt.answers[question.id];
+    try {
+      // Stop the timer immediately (only if it was running)
+      if (isTimerRunning) {
+        console.log('⏹️ Stopping timer...');
+        set({ isTimerRunning: false });
+      }
+
+      // Calculate score with comprehensive error handling
+      let totalScore = 0;
+      let totalMarks = 0;
+      const scoringDetails: any[] = [];
+
+      console.log('📊 Starting score calculation...');
+      console.log('📝 Questions to evaluate:', currentQuiz.questions.length);
+      console.log('📋 User answers:', Object.keys(currentAttempt.answers).length);
+
+      currentQuiz.questions.forEach((question, index) => {
+        try {
+          const userAnswer = currentAttempt.answers[question.id];
+          const result = calculateQuestionScore(question, userAnswer);
+          
+          totalMarks += result.maxScore;
+          totalScore += result.score;
+          
+          scoringDetails.push({
+            questionIndex: index + 1,
+            questionId: question.id,
+            questionType: question.type,
+            userAnswer,
+            maxScore: result.maxScore,
+            earnedScore: result.score,
+            error: result.error
+          });
+
+          if (result.error) {
+            console.warn(`⚠️ Question ${index + 1} scoring issue:`, result.error);
+          }
+        } catch (error) {
+          console.error(`❌ Error scoring question ${index + 1}:`, error);
+          scoringDetails.push({
+            questionIndex: index + 1,
+            questionId: question.id,
+            error: `Scoring error: ${error.message}`,
+            maxScore: question.marks || 0,
+            earnedScore: 0
+          });
+          totalMarks += question.marks || 0;
+        }
+      });
+
+      console.log('📊 Scoring complete:', {
+        totalScore: totalScore.toFixed(2),
+        totalMarks,
+        percentage: totalMarks > 0 ? ((totalScore / totalMarks) * 100).toFixed(2) : 0
+      });
+
+      const percentage = totalMarks > 0 ? (totalScore / totalMarks) * 100 : 0;
+      const roundedScore = Math.round(totalScore * 100) / 100;
+      const roundedPercentage = Math.round(percentage * 100) / 100;
+
+      const completedAttempt: QuizAttempt = {
+        ...currentAttempt,
+        endTime: new Date(),
+        score: roundedScore,
+        percentage: roundedPercentage,
+        isCompleted: true,
+        isSubmitted: true,
+        isAutoSubmitted: isAutoSubmit,
+        isPaused: false,
+        scoringDetails, // Store detailed scoring info for debugging
+      };
+
+      console.log('✅ Creating completed attempt:', {
+        score: roundedScore,
+        percentage: roundedPercentage,
+        isAutoSubmitted: isAutoSubmit
+      });
+
+      // Update attempts array - remove any incomplete attempts and add the completed one
+      const filteredAttempts = attempts.filter(a => !(a.quizId === currentAttempt.quizId && !a.isCompleted));
+      const updatedAttempts = [...filteredAttempts, completedAttempt];
+
+      console.log('💾 Updating store with completed attempt...');
+
+      set({
+        attempts: updatedAttempts,
+        currentAttempt: completedAttempt,
+        timeRemaining: 0,
+      });
+
+      console.log('🎉 Quiz submission completed successfully!');
+
+      // Log detailed scoring for debugging
+      console.log('📋 Detailed scoring breakdown:', scoringDetails);
+
+    } catch (error) {
+      console.error('💥 Critical error during quiz submission:', error);
       
-      if (question.type === 'essay') {
-        // Essay questions are now auto-evaluated based on keywords with custom threshold
-        if (userAnswer && question.idealKeywords && question.idealKeywords.length > 0) {
-          // Use 4 as default required keywords, or you can make this configurable per question
-          const requiredKeywords = 4;
-          const essayScore = calculateEssayScore(userAnswer, question.idealKeywords, requiredKeywords);
-          score += (essayScore / 100) * question.marks;
-        }
-        return;
-      }
+      // Emergency fallback - still mark as submitted to prevent infinite loops
+      const emergencyAttempt: QuizAttempt = {
+        ...currentAttempt,
+        endTime: new Date(),
+        score: 0,
+        percentage: 0,
+        isCompleted: true,
+        isSubmitted: true,
+        isAutoSubmitted: isAutoSubmit,
+        isPaused: false,
+        submissionError: error.message,
+      };
 
-      if (question.type === 'multipleChoice') {
-        if (userAnswer === question.answer) {
-          score += question.marks;
-        }
-      } else if (question.type === 'multiSelect') {
-        const correctAnswers = question.answer as string[];
-        const userAnswers = userAnswer as string[] || [];
-        if (JSON.stringify(correctAnswers.sort()) === JSON.stringify(userAnswers.sort())) {
-          score += question.marks;
-        }
-      } else if (question.type === 'fillInBlank') {
-        // Use improved text comparison for fill-in-blank questions
-        if (userAnswer && isSimilarText(userAnswer, question.answer as string)) {
-          score += question.marks;
-        }
-      } else if (question.type === 'dragDrop') {
-        // Check drag and drop answers
-        const userAnswers = userAnswer as Record<string, string> || {};
-        let correctCount = 0;
-        let totalBlanks = 0;
-        
-        question.dragItems?.forEach(item => {
-          totalBlanks++;
-          if (userAnswers[item.category] === item.id) {
-            correctCount++;
-          }
-        });
-        
-        if (correctCount === totalBlanks && totalBlanks > 0) {
-          score += question.marks;
-        }
-      } else if (question.type === 'matching') {
-        // Check matching answers
-        const userAnswers = userAnswer as Record<string, string> || {};
-        let correctCount = 0;
-        let totalPairs = question.matchPairs?.length || 0;
-        
-        question.matchPairs?.forEach(pair => {
-          if (userAnswers[pair.left] === pair.right) {
-            correctCount++;
-          }
-        });
-        
-        if (correctCount === totalPairs && totalPairs > 0) {
-          score += question.marks;
-        }
-      } else if (question.type === 'dropdown') {
-        // Check dropdown answers
-        const userAnswers = userAnswer as Record<string, string> || {};
-        let correctCount = 0;
-        let totalBlanks = question.dropdownBlanks?.length || 0;
-        
-        question.dropdownBlanks?.forEach(blank => {
-          if (userAnswers[blank.id] === blank.correctAnswer) {
-            correctCount++;
-          }
-        });
-        
-        if (correctCount === totalBlanks && totalBlanks > 0) {
-          score += question.marks;
-        }
-      }
-    });
+      const filteredAttempts = attempts.filter(a => !(a.quizId === currentAttempt.quizId && !a.isCompleted));
+      const updatedAttempts = [...filteredAttempts, emergencyAttempt];
 
-    const percentage = totalMarks > 0 ? (score / totalMarks) * 100 : 0;
+      set({
+        attempts: updatedAttempts,
+        currentAttempt: emergencyAttempt,
+        timeRemaining: 0,
+        isTimerRunning: false,
+      });
 
-    const completedAttempt: QuizAttempt = {
-      ...currentAttempt,
-      endTime: new Date(),
-      score: Math.round(score * 100) / 100, // Round to 2 decimal places
-      percentage: Math.round(percentage * 100) / 100,
-      isCompleted: true,
-      isSubmitted: true,
-      isAutoSubmitted: isAutoSubmit, // Track if it was auto-submitted
-      isPaused: false,
+      console.log('🚨 Emergency submission completed with error handling');
+    }
+  },
+
+  // Debug method to get submission info
+  getSubmissionDebugInfo: () => {
+    const { currentAttempt, currentQuiz } = get();
+    return {
+      hasCurrentAttempt: !!currentAttempt,
+      hasCurrentQuiz: !!currentQuiz,
+      currentAttempt,
+      currentQuiz: currentQuiz ? {
+        id: currentQuiz.id,
+        title: currentQuiz.title,
+        questionCount: currentQuiz.questions.length,
+        totalMarks: currentQuiz.totalMarks
+      } : null
     };
-
-    const updatedAttempts = [...attempts.filter(a => !(a.quizId === currentAttempt.quizId && !a.isCompleted)), completedAttempt];
-
-    set({
-      attempts: updatedAttempts,
-      currentAttempt: completedAttempt,
-      timeRemaining: 0,
-    });
   },
 
   // New method to calculate actual time remaining based on timestamps
@@ -607,15 +801,15 @@ export const useQuizStore = create<QuizStore>()(
   },
 }),
     {
-    version: 6, // Updated to version 6 (latest change: 2 final mocks and auto save progress)
+    version: 7, // Updated to version 7 with robust submission system
     name: 'quiz-store', // The key to store in local storage
     storage: createJSONStorage(() => localStorage),
     migrate: (persistedState, version) => {
-      if (version === 6) {
+      if (version === 7) {
         // This means storage already matches the new version
         return persistedState;
       }
-      console.log('Detected old version of quiz store. Resetting storage...');
+      console.log('Detected old version of quiz store. Resetting storage for robust submission system...');
       return {
         ...createInitialState(),
         // Optionally: preserve quizzes array if needed

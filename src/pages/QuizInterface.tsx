@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Send, AlertTriangle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Send, AlertTriangle, Bug } from 'lucide-react';
 import Header from '../components/Header';
 import Timer from '../components/Timer';
 import QuestionNavigation from '../components/QuestionNavigation';
@@ -14,6 +14,8 @@ interface QuizInterfaceProps {
 
 const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome }) => {
   const [showSubmitModal, setShowSubmitModal] = useState(false);
+  const [showDebugInfo, setShowDebugInfo] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const { 
     currentQuiz, 
@@ -23,7 +25,8 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     currentAttempt,
     timeRemaining,
     isTimerRunning,
-    pauseQuiz
+    pauseQuiz,
+    getSubmissionDebugInfo
   } = useQuizStore();
 
   // Handle page visibility change and beforeunload events
@@ -69,6 +72,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     if (currentAttempt?.isSubmitted && !isTimerRunning) {
       // Small delay to show the appropriate message
       const timer = setTimeout(() => {
+        setIsSubmitting(false);
         onSubmit();
       }, currentAttempt.isAutoSubmitted ? 2000 : 100);
       
@@ -81,8 +85,8 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
   }
 
   // If quiz is already submitted, show a loading state with dynamic message
-  if (currentAttempt?.isSubmitted) {
-    const isAutoSubmitted = currentAttempt.isAutoSubmitted;
+  if (currentAttempt?.isSubmitted || isSubmitting) {
+    const isAutoSubmitted = currentAttempt?.isAutoSubmitted;
     
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
@@ -97,6 +101,15 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
               : 'Processing your answers and calculating results...'
             }
           </p>
+          
+          {/* Debug info for troubleshooting */}
+          {currentAttempt?.submissionError && (
+            <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+              <p className="text-red-800 text-sm">
+                Submission completed with error handling. Your progress has been saved.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     );
@@ -120,10 +133,21 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setShowSubmitModal(false);
-    const { submitQuiz } = useQuizStore.getState();
-    submitQuiz(false); // Pass false to indicate manual submit
+    setIsSubmitting(true);
+    
+    try {
+      console.log('🚀 User initiated quiz submission');
+      const { submitQuiz } = useQuizStore.getState();
+      await submitQuiz(false); // Pass false to indicate manual submit
+      console.log('✅ Quiz submission completed');
+    } catch (error) {
+      console.error('❌ Error during submission:', error);
+      setIsSubmitting(false);
+      // Show error message to user
+      alert('There was an issue submitting your quiz. Your progress has been saved. Please try again.');
+    }
   };
 
   const handleNavigateHome = () => {
@@ -166,11 +190,32 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
                   </div>
                 </div>
                 
-                {/* Auto-save indicator */}
-                <div className="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full">
-                  ✓ Progress auto-saved
+                <div className="flex items-center space-x-3">
+                  {/* Auto-save indicator */}
+                  <div className="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full">
+                    ✓ Progress auto-saved
+                  </div>
+                  
+                  {/* Debug button for troubleshooting */}
+                  <button
+                    onClick={() => setShowDebugInfo(!showDebugInfo)}
+                    className="text-xs text-gray-500 hover:text-gray-700 p-1 rounded"
+                    title="Debug Info"
+                  >
+                    <Bug className="h-4 w-4" />
+                  </button>
                 </div>
               </div>
+              
+              {/* Debug Info Panel */}
+              {showDebugInfo && (
+                <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                  <h3 className="font-medium text-yellow-900 mb-2">Debug Information</h3>
+                  <pre className="text-xs text-yellow-800 overflow-auto">
+                    {JSON.stringify(getSubmissionDebugInfo(), null, 2)}
+                  </pre>
+                </div>
+              )}
               
               <QuestionRenderer question={currentQuestion} />
             </div>
@@ -204,7 +249,14 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
               
               <button
                 onClick={handleNext}
-                className="flex items-center space-x-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-all duration-200 hover:transform hover:scale-105"
+                disabled={isSubmitting}
+                className={`
+                  flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:transform hover:scale-105
+                  ${isSubmitting 
+                    ? 'bg-gray-400 text-white cursor-not-allowed'
+                    : 'bg-primary-600 hover:bg-primary-700 text-white'
+                  }
+                `}
               >
                 <span>{isLastQuestion ? 'Submit Quiz' : 'Next'}</span>
                 {isLastQuestion ? (
@@ -264,15 +316,17 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
             <div className="flex items-center justify-end space-x-3">
               <button
                 onClick={() => setShowSubmitModal(false)}
-                className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                disabled={isSubmitting}
+                className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200 disabled:opacity-50"
               >
                 Cancel
               </button>
               <button
                 onClick={handleSubmit}
-                className="px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors duration-200"
+                disabled={isSubmitting}
+                className="px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Submit Quiz
+                {isSubmitting ? 'Submitting...' : 'Submit Quiz'}
               </button>
             </div>
           </div>

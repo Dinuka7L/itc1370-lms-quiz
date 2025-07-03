@@ -60,6 +60,8 @@ export interface QuizAttempt {
   timeSpent?: number; // Total time spent in seconds (for paused quizzes)
   currentQuestionIndex?: number; // Save current question position
   questionStatuses?: Record<string, QuestionStatus>; // Save question statuses
+  scoringDetails?: any[]; // Store detailed scoring information for debugging
+  submissionError?: string; // Store any submission errors
 }
 
 export interface QuestionStatus {
