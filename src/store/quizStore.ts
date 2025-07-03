@@ -465,11 +465,11 @@ export const useQuizStore = create<QuizStore>()(
   },
 }),
     {
-    version: 4, // Updated to version 4
+    version: 5, // Updated to version 5 (latest change: added python mock 4 quiz)
     name: 'quiz-store', // The key to store in local storage
     storage: createJSONStorage(() => localStorage),
     migrate: (persistedState, version) => {
-      if (version === 4) {
+      if (version === 5) {
         // This means storage already matches the new version
         return persistedState;
       }

@@ -16,13 +16,17 @@ import { InformationSystemsDevelopmentQuiz } from './lessonQuizzes/InformationSy
 
 // Import mock exam quizzes
 import { mockFinalPart1Quiz } from './mockExamQuizzes/mockFinalPart1';
-import { mockFinalPart2Quiz } from './mockExamQuizzes/mockFinalPart2';
-import { mockFinalPart3Quiz } from './mockExamQuizzes/mockFinalPart3';
+//import { mockFinalPart2Quiz } from './mockExamQuizzes/mockFinalPart2'; havnt finalized yet
+//import { mockFinalPart3Quiz } from './mockExamQuizzes/mockFinalPart3'; havent finalized yet
 import { mockFinalPart4Quiz } from './mockExamQuizzes/mockFinalPart4';
 
 
 // Combine all quizzes
 export const allQuizzes: Quiz[] = [
+  // Mock exam quizzes
+  mockFinalPart1Quiz,
+  mockFinalPart4Quiz,
+  
   // Lesson quizzes
   OverviewOfInformationTechnologyAndSystemsQuiz,
   HardwareQuiz,
@@ -37,11 +41,7 @@ export const allQuizzes: Quiz[] = [
   PythonOperatorsQuiz,
   PythonConditionalStatementsQuiz,
   
-  // Mock exam quizzes
-  mockFinalPart1Quiz,
-  mockFinalPart2Quiz,
-  mockFinalPart3Quiz,
-  mockFinalPart4Quiz,
+  
 ];
 
 // Helper functions to get specific quiz types
