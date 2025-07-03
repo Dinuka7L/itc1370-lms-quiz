@@ -607,39 +607,18 @@ export const useQuizStore = create<QuizStore>()(
   },
 }),
     {
-    version: 6, // Updated to version 6 for auto-save progress feature
+    version: 6, // Updated to version 6 (latest change: 2 final mocks and auto save progress)
     name: 'quiz-store', // The key to store in local storage
     storage: createJSONStorage(() => localStorage),
     migrate: (persistedState, version) => {
       if (version === 6) {
-        // This means storage already matches the current version
+        // This means storage already matches the new version
         return persistedState;
       }
-      if (version === 5) {
-        console.log('Migrating from version 5 to 6...');
-        return {
-          ...persistedState,
-          quizzes: allQuizzes, // Ensure quizzes are refreshed with latest data
-        };
-      }
-      if (version === 4) {
-        console.log('Migrating from version 4 to 6...');
-        return {
-          ...persistedState,
-          quizzes: allQuizzes,
-        };
-      }
-      if (version === 3) {
-        console.log('Migrating from version 3 to 6...');
-        return {
-          ...persistedState,
-          quizzes: allQuizzes,
-        };
-      }
-      // For versions older than 3, do a full reset
       console.log('Detected old version of quiz store. Resetting storage...');
       return {
         ...createInitialState(),
+        // Optionally: preserve quizzes array if needed
         quizzes: allQuizzes,
       };
     },
