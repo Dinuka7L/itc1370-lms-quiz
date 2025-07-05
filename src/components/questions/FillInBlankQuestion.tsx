@@ -17,6 +17,14 @@ const FillInBlankQuestion: React.FC<FillInBlankQuestionProps> = ({
 
   const handleAnswerChange = (value: string) => {
     if (!showResults) {
+      // Check if answer is getting too long
+      const maxLength = 5000; // 5k characters limit for fill-in-blank
+      if (value.length > maxLength) {
+        if (value.length === maxLength + 1) {
+          alert(`⚠️ Answer is getting very long (${value.length} characters). Fill-in-blank answers should typically be brief.`);
+        }
+      }
+      
       saveAnswer(question.id, value);
     }
   };
@@ -69,6 +77,9 @@ const FillInBlankQuestion: React.FC<FillInBlankQuestionProps> = ({
   const isCorrect = showResults && userAnswer && isSimilarText(userAnswer, correctAnswer);
   const isWrong = showResults && userAnswer && !isCorrect;
 
+  // Check if answer was truncated
+  const wasTruncated = userAnswer.includes('... [Answer truncated due to length]');
+
   return (
     <div className="space-y-4">
       <div 
@@ -78,6 +89,9 @@ const FillInBlankQuestion: React.FC<FillInBlankQuestionProps> = ({
       
       <div className="text-sm text-gray-600 mb-4">
         💡 <strong>Tip:</strong> Minor spelling mistakes and punctuation differences are automatically handled.
+        <span className="block mt-1 text-orange-600 text-xs">
+          ⚠️ Keep answers brief and to the point for fill-in-blank questions.
+        </span>
       </div>
       
       <div className="space-y-4">
@@ -96,6 +110,8 @@ const FillInBlankQuestion: React.FC<FillInBlankQuestionProps> = ({
                   : isWrong
                   ? 'border-red-500 bg-red-50 text-red-900'
                   : 'border-gray-300 bg-gray-50'
+                : userAnswer.length > 1000
+                ? 'border-orange-300 focus:border-orange-500 focus:ring-4 focus:ring-orange-100'
                 : 'border-gray-300 focus:border-primary-500 focus:ring-4 focus:ring-primary-100'
               }
             `}
@@ -111,6 +127,18 @@ const FillInBlankQuestion: React.FC<FillInBlankQuestionProps> = ({
             </div>
           )}
         </div>
+
+        {userAnswer.length > 1000 && !showResults && (
+          <div className="p-3 bg-orange-50 border border-orange-200 rounded-lg">
+            <div className="flex items-start space-x-2">
+              <span className="text-orange-600">⚠️</span>
+              <div className="text-orange-800 text-sm">
+                <strong>Long Answer:</strong> Fill-in-blank answers are typically brief. 
+                Consider shortening your response ({userAnswer.length} characters).
+              </div>
+            </div>
+          </div>
+        )}
         
         {showResults && (
           <div className="space-y-3">
@@ -123,6 +151,11 @@ const FillInBlankQuestion: React.FC<FillInBlankQuestionProps> = ({
                 {isCorrect && (
                   <div className="text-xs text-green-600 mt-1">
                     ✓ Accepted (including minor variations)
+                  </div>
+                )}
+                {wasTruncated && (
+                  <div className="text-xs text-red-600 mt-1">
+                    ⚠️ Answer was truncated for storage efficiency
                   </div>
                 )}
               </div>

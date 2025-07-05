@@ -16,6 +16,16 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
 
   const handleAnswerChange = (value: string) => {
     if (!showResults) {
+      // Check if answer is getting too long
+      const maxLength = 10000; // 10k characters limit
+      if (value.length > maxLength) {
+        // Show warning but allow typing (truncation happens in store)
+        if (value.length === maxLength + 1) {
+          // Show warning only once when limit is first exceeded
+          alert(`⚠️ Answer is getting very long (${value.length} characters). Consider being more concise to ensure your answer is saved properly.`);
+        }
+      }
+      
       saveAnswer(question.id, value);
     }
   };
@@ -49,6 +59,10 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
   const { score: keywordScore, matchedCount } = showResults ? calculateKeywordScore(requiredKeywords) : { score: 0, matchedCount: 0 };
   const earnedMarks = showResults ? Math.round((keywordScore / 100) * question.marks * 100) / 100 : 0;
 
+  // Check if answer was truncated
+  const wasTruncated = userAnswer.includes('... [Answer truncated due to length]');
+  const displayLength = wasTruncated ? userAnswer.length - 35 : userAnswer.length; // Subtract truncation message length
+
   return (
     <div className="space-y-4">
       <div 
@@ -63,6 +77,9 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
             💡 Try to include key concepts related to the topic for better scoring. (Need {requiredKeywords} key concepts for full marks)
           </span>
         )}
+        <span className="block mt-1 text-orange-600 text-xs">
+          ⚠️ Keep answers concise (recommended under 10,000 characters) for optimal performance.
+        </span>
       </div>
       
       <div className="space-y-4">
@@ -76,19 +93,34 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
             w-full p-4 border-2 rounded-lg text-base leading-relaxed resize-vertical transition-all duration-200
             ${showResults
               ? 'border-gray-300 bg-gray-50'
+              : userAnswer.length > 8000
+              ? 'border-orange-300 focus:border-orange-500 focus:ring-4 focus:ring-orange-100'
               : 'border-gray-300 focus:border-primary-500 focus:ring-4 focus:ring-primary-100'
             }
           `}
         />
         
-        <div className="flex justify-between text-sm text-gray-500">
-          <span>
-            {userAnswer.length} characters
+        <div className="flex justify-between text-sm">
+          <span className={`${userAnswer.length > 8000 ? 'text-orange-600 font-medium' : 'text-gray-500'}`}>
+            {displayLength.toLocaleString()} characters
+            {wasTruncated && <span className="text-red-600 ml-2">(Truncated for storage)</span>}
           </span>
-          <span>
+          <span className="text-gray-500">
             {userAnswer.split(/\s+/).filter(word => word.length > 0).length} words
           </span>
         </div>
+        
+        {userAnswer.length > 8000 && !showResults && (
+          <div className="p-3 bg-orange-50 border border-orange-200 rounded-lg">
+            <div className="flex items-start space-x-2">
+              <span className="text-orange-600">⚠️</span>
+              <div className="text-orange-800 text-sm">
+                <strong>Long Answer Warning:</strong> Your answer is getting quite long. 
+                Consider being more concise to ensure optimal performance and storage.
+              </div>
+            </div>
+          </div>
+        )}
       </div>
       
       {showResults && (
@@ -99,6 +131,12 @@ const EssayQuestion: React.FC<EssayQuestionProps> = ({
               <div className="text-gray-800 whitespace-pre-wrap leading-relaxed">
                 {userAnswer}
               </div>
+              {wasTruncated && (
+                <div className="mt-2 p-2 bg-red-50 border border-red-200 rounded text-sm text-red-800">
+                  <strong>Note:</strong> Your original answer was longer but was truncated for storage efficiency. 
+                  The scoring is based on the saved portion.
+                </div>
+              )}
             </div>
           )}
           

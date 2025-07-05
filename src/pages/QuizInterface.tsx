@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Send, AlertTriangle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Send, AlertTriangle, HardDrive } from 'lucide-react';
 import Header from '../components/Header';
 import Timer from '../components/Timer';
 import QuestionNavigation from '../components/QuestionNavigation';
@@ -15,6 +15,7 @@ interface QuizInterfaceProps {
 const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome }) => {
   const [showSubmitModal, setShowSubmitModal] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [storageWarning, setStorageWarning] = useState<string | null>(null);
   
   const { 
     currentQuiz, 
@@ -24,8 +25,28 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     currentAttempt,
     timeRemaining,
     isTimerRunning,
-    pauseQuiz
+    pauseQuiz,
+    checkStorageHealth,
+    cleanupStorage
   } = useQuizStore();
+
+  // Check storage health periodically
+  useEffect(() => {
+    const checkStorage = () => {
+      const health = checkStorageHealth();
+      if (!health.isHealthy && health.warning) {
+        setStorageWarning(health.warning);
+      } else {
+        setStorageWarning(null);
+      }
+    };
+
+    // Check immediately and then every 30 seconds
+    checkStorage();
+    const interval = setInterval(checkStorage, 30000);
+
+    return () => clearInterval(interval);
+  }, [checkStorageHealth]);
 
   // Handle page visibility change and beforeunload events
   useEffect(() => {
@@ -146,6 +167,11 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     }
   };
 
+  const handleCleanupStorage = () => {
+    cleanupStorage();
+    setStorageWarning(null);
+  };
+
   const getUnansweredQuestions = () => {
     return currentQuiz.questions.filter(q => !questionStatuses[q.id]?.answered);
   };
@@ -155,6 +181,26 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
       <Header currentQuiz={currentQuiz.title} onNavigateHome={handleNavigateHome} />
+      
+      {/* Storage Warning Banner */}
+      {storageWarning && (
+        <div className="bg-orange-100 border-b border-orange-200 px-4 py-3">
+          <div className="max-w-7xl mx-auto flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <HardDrive className="h-5 w-5 text-orange-600" />
+              <div className="text-orange-800">
+                <span className="font-medium">Storage Warning:</span> {storageWarning}
+              </div>
+            </div>
+            <button
+              onClick={handleCleanupStorage}
+              className="px-3 py-1 bg-orange-600 hover:bg-orange-700 text-white text-sm rounded transition-colors duration-200"
+            >
+              Clean Up
+            </button>
+          </div>
+        </div>
+      )}
       
       <main className="flex-1 flex">
         {/* Left Sidebar */}
