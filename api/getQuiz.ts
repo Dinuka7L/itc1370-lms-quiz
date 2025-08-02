@@ -1,8 +1,8 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { MongoClient, Db } from 'mongodb';
+import { MongoClient, Db, ObjectId } from 'mongodb';
 
 interface Quiz {
-  _id: string;
+  _id: string | ObjectId;
   id: string;
   title: string;
   description: string;
@@ -74,7 +74,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
 
     const sanitizedQuiz: Quiz = {
-      _id: quiz._id,
+      _id: quiz._id.toString(),
       id: quiz.id,
       title: quiz.title,
       description: quiz.description,
