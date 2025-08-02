@@ -1,16 +1,22 @@
 import React from 'react';
-import { Award, TrendingUp, Target, GraduationCap, BookOpen } from 'lucide-react';
+import { Award, TrendingUp, Target, GraduationCap, BookOpen, AlertCircle, RefreshCw } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import QuizCard from '../components/QuizCard';
 import ProgressBar from '../components/ProgressBar';
+import QuizSkeleton from '../components/QuizSkeleton';
+import LoadingSpinner from '../components/LoadingSpinner';
 import { useQuizStore } from '../store/quizStore';
+import { useQuizzes } from '../hooks/useQuizData';
 
 interface DashboardProps {
   onStartQuiz: (quizId: string) => void;
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
+  const { quizzes: lessonQuizzes, loading: lessonLoading, error: lessonError, refetch: refetchLessons } = useQuizzes('lesson');
+  const { quizzes: mockFinalQuizzes, loading: mockFinalLoading, error: mockFinalError, refetch: refetchMockFinals } = useQuizzes('mockFinal');
+  
   const { 
     getQuizProgress, 
     getQuizScore, 
@@ -19,24 +25,35 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
     getMockFinalProgress,
     getMockFinalMarksObtained,
     getMockFinalTotalMarks,
-    getLessonQuizzes,
-    getMockFinalQuizzes
   } = useQuizStore();
 
   const { attempts } = useQuizStore();
-  const lessonQuizzes = getLessonQuizzes();
-  const mockFinalQuizzes = getMockFinalQuizzes();
   
   const totalMarksObtained = getTotalMarksObtained();
-  const totalPossibleMarks = getTotalPossibleMarks();
+  const totalPossibleMarks = [...lessonQuizzes, ...mockFinalQuizzes].reduce((sum, quiz) => sum + quiz.totalMarks, 0);
 
   const mockFinalProgress = getMockFinalProgress();
   const mockFinalMarksObtained = getMockFinalMarksObtained();
-  const mockFinalTotalMarks = getMockFinalTotalMarks();
+  const mockFinalTotalMarks = mockFinalQuizzes.reduce((sum, quiz) => sum + quiz.totalMarks, 0);
 
   // Calculate lesson quiz completion
   const completedLessonQuizzes = lessonQuizzes.filter(q => getQuizProgress(q.id) === 100).length;
   const lessonQuizProgress = lessonQuizzes.length > 0 ? (completedLessonQuizzes / lessonQuizzes.length) * 100 : 0;
+
+  const ErrorMessage: React.FC<{ error: string; onRetry: () => void }> = ({ error, onRetry }) => (
+    <div className="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+      <AlertCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
+      <h3 className="text-lg font-semibold text-red-900 mb-2">Failed to Load Quizzes</h3>
+      <p className="text-red-700 mb-4">{error}</p>
+      <button
+        onClick={onRetry}
+        className="inline-flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors duration-200"
+      >
+        <RefreshCw className="h-4 w-4" />
+        <span>Retry</span>
+      </button>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
@@ -147,25 +164,36 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                {mockFinalQuizzes.map((quiz) => (
-                  <QuizCard
-                    key={quiz.id}
-                    quiz={quiz}
-                    progress={getQuizProgress(quiz.id)}
-                    score={getQuizScore(quiz.id)}
-                    onStart={() => onStartQuiz(quiz.id)}
-                    hasPastAttempt={attempts.some(
-                      a =>
-                        a.quizId === quiz.id &&
-                        a.isCompleted &&
-                        a.answers &&
-                        Object.keys(a.answers).length > 0
-                    )}
-                  />
 
-                ))}
-              </div>
+              {mockFinalError ? (
+                <ErrorMessage error={mockFinalError} onRetry={refetchMockFinals} />
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                  {mockFinalLoading ? (
+                    <>
+                      <QuizSkeleton />
+                      <QuizSkeleton />
+                    </>
+                  ) : (
+                    mockFinalQuizzes.map((quiz) => (
+                      <QuizCard
+                        key={quiz.id}
+                        quiz={quiz}
+                        progress={getQuizProgress(quiz.id)}
+                        score={getQuizScore(quiz.id)}
+                        onStart={() => onStartQuiz(quiz.id)}
+                        hasPastAttempt={attempts.some(
+                          a =>
+                            a.quizId === quiz.id &&
+                            a.isCompleted &&
+                            a.answers &&
+                            Object.keys(a.answers).length > 0
+                        )}
+                      />
+                    ))
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -226,25 +254,35 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartQuiz }) => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                {lessonQuizzes.map((quiz) => (
-                  <QuizCard
-                    key={quiz.id}
-                    quiz={quiz}
-                    progress={getQuizProgress(quiz.id)}
-                    score={getQuizScore(quiz.id)}
-                    onStart={() => onStartQuiz(quiz.id)}
-                    hasPastAttempt={attempts.some(
-                      a =>
-                        a.quizId === quiz.id &&
-                        a.isCompleted &&
-                        a.answers &&
-                        Object.keys(a.answers).length > 0
-                    )}
-                  />
 
-                ))}
-              </div>
+              {lessonError ? (
+                <ErrorMessage error={lessonError} onRetry={refetchLessons} />
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                  {lessonLoading ? (
+                    Array.from({ length: 6 }).map((_, index) => (
+                      <QuizSkeleton key={index} />
+                    ))
+                  ) : (
+                    lessonQuizzes.map((quiz) => (
+                      <QuizCard
+                        key={quiz.id}
+                        quiz={quiz}
+                        progress={getQuizProgress(quiz.id)}
+                        score={getQuizScore(quiz.id)}
+                        onStart={() => onStartQuiz(quiz.id)}
+                        hasPastAttempt={attempts.some(
+                          a =>
+                            a.quizId === quiz.id &&
+                            a.isCompleted &&
+                            a.answers &&
+                            Object.keys(a.answers).length > 0
+                        )}
+                      />
+                    ))
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>

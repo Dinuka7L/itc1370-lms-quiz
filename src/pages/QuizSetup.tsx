@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Clock, ArrowRight, ArrowLeft, Infinity, RotateCcw, AlertTriangle } from 'lucide-react';
 import Header from '../components/Header';
+import LoadingSpinner from '../components/LoadingSpinner';
 import { useQuizStore } from '../store/quizStore';
+import { useQuiz } from '../hooks/useQuizData';
+import { Quiz } from '../services/api';
 
 
 interface QuizSetupProps {
@@ -12,8 +15,8 @@ interface QuizSetupProps {
 }
 
 const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack, onViewResults }) => {
+  const { quiz, loading, error } = useQuiz(quizId);
   const { 
-    quizzes, 
     randomizeQuestions, 
     setRandomizeQuestions, 
     hasInProgressQuiz, 
@@ -23,7 +26,6 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack, onViewRe
   
   const [selectedTime, setSelectedTime] = useState<number | null>(null);
   
-  const quiz = quizzes.find(q => q.id === quizId);
   const { attempts } = useQuizStore();
   const pastAttempt = attempts.find(
     a =>
@@ -36,8 +38,34 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack, onViewRe
   const hasInProgress = hasInProgressQuiz(quizId);
   const inProgressAttempt = getInProgressAttempt(quizId);
   
-  if (!quiz) {
-    return <div>Quiz not found</div>;
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-200/50 text-center">
+          <LoadingSpinner size="lg" className="mx-auto mb-4" />
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">Loading Quiz...</h2>
+          <p className="text-gray-600">Please wait while we prepare your quiz.</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error || !quiz) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-200/50 text-center">
+          <div className="text-red-500 mb-4">⚠️</div>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">Quiz Not Available</h2>
+          <p className="text-gray-600 mb-4">{error || 'Quiz not found'}</p>
+          <button
+            onClick={onBack}
+            className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors duration-200"
+          >
+            Return to Dashboard
+          </button>
+        </div>
+      </div>
+    );
   }
 
   const handleStart = () => {
@@ -101,7 +129,7 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ quizId, onStart, onBack, onViewRe
               <div className="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-8">
                 <div className="bg-gray-50 rounded-lg p-4">
                   <div className="font-medium text-gray-900">Questions</div>
-                  <div>{quiz.questions.length} questions</div>
+                  <div>{quiz.questionCount || quiz.questions?.length || 0} questions</div>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <div className="font-medium text-gray-900">Total Marks</div>

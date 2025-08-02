@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Send, AlertTriangle, HardDrive } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Send, AlertTriangle, HardDrive, RefreshCw } from 'lucide-react';
 import Header from '../components/Header';
 import Timer from '../components/Timer';
 import QuestionNavigation from '../components/QuestionNavigation';
 import QuickNavigation from '../components/QuickNavigation';
 import QuestionRenderer from '../components/QuestionRenderer';
 import { useQuizStore } from '../store/quizStore';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 interface QuizInterfaceProps {
   onSubmit: () => void;
@@ -14,7 +15,6 @@ interface QuizInterfaceProps {
 
 const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome }) => {
   const [showSubmitModal, setShowSubmitModal] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [storageWarning, setStorageWarning] = useState<string | null>(null);
   
   const { 
@@ -25,6 +25,8 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     currentAttempt,
     timeRemaining,
     isTimerRunning,
+    isSubmitting,
+    submissionError,
     pauseQuiz,
     checkStorageHealth,
     cleanupStorage
@@ -110,7 +112,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
         <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-200/50 text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+          <LoadingSpinner size="lg" className="mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 mb-2">
             {isAutoSubmitted ? 'Time\'s Up!' : 'Quiz Submitted!'}
           </h2>
@@ -145,15 +147,12 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
 
   const handleSubmit = async () => {
     setShowSubmitModal(false);
-    setIsSubmitting(true);
     
     try {
-      const { submitQuiz } = useQuizStore.getState();
       await submitQuiz(false); // Pass false to indicate manual submit
     } catch (error) {
-      setIsSubmitting(false);
       // Show user-friendly error message
-      alert('There was an issue submitting your quiz. Your progress has been saved. Please try again.');
+      console.error('Quiz submission failed:', error);
     }
   };
 
@@ -258,6 +257,13 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
                 )}
               </div>
               
+              {submissionError && (
+                <div className="flex items-center space-x-2 text-red-600 text-sm">
+                  <AlertTriangle className="h-4 w-4" />
+                  <span>Submission failed. Please try again.</span>
+                </div>
+              )}
+              
               <button
                 onClick={handleNext}
                 disabled={isSubmitting}
@@ -269,6 +275,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
                   }
                 `}
               >
+                {isSubmitting && <LoadingSpinner size="sm" />}
                 <span>{isLastQuestion ? 'Submit Quiz' : 'Next'}</span>
                 {isLastQuestion ? (
                   <Send className="h-4 w-4" />
@@ -335,9 +342,10 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
               <button
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center space-x-2 px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Submitting...' : 'Submit Quiz'}
+                {isSubmitting && <LoadingSpinner size="sm" />}
+                <span>{isSubmitting ? 'Submitting...' : 'Submit Quiz'}</span>
               </button>
             </div>
           </div>

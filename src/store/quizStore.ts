@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { Quiz, QuizAttempt, QuizState, QuestionStatus } from '../types/quiz';
-import { allQuizzes } from '../data/quizLoader';
 import { persist, createJSONStorage } from 'zustand/middleware';
+import { apiService, SubmissionResult } from '../services/api';
 
 // Storage management utilities
 const STORAGE_LIMITS = {
@@ -104,12 +104,15 @@ const storageUtils = {
 
 interface QuizStore extends QuizState {
   randomizeQuestions: boolean;
+  // New API-related state
+  isSubmitting: boolean;
+  submissionError: string | null;
   // Actions
-  startQuiz: (quizId: string, timeLimit: number) => void;
+  startQuiz: (quiz: Quiz, timeLimit: number) => void;
   setCurrentQuestion: (index: number) => void;
   saveAnswer: (questionId: string, answer: any) => void;
   toggleQuestionFlag: (questionId: string) => void;
-  submitQuiz: (isAutoSubmit?: boolean) => void;
+  submitQuiz: (isAutoSubmit?: boolean) => Promise<void>;
   setTimeRemaining: (time: number) => void;
   setTimerRunning: (running: boolean) => void;
   resetQuiz: () => void;
@@ -140,9 +143,11 @@ interface QuizStore extends QuizState {
 
 const createInitialState = (): QuizState & {
   randomizeQuestions: boolean;
+  isSubmitting: boolean;
+  submissionError: string | null;
 } => ({
   randomizeQuestions: true,
-  quizzes: allQuizzes,
+  quizzes: [],
   attempts: [],
   currentQuiz: null,
   currentAttempt: null,
@@ -150,6 +155,8 @@ const createInitialState = (): QuizState & {
   questionStatuses: {},
   timeRemaining: 0,
   isTimerRunning: false,
+  isSubmitting: false,
+  submissionError: null,
 });
 
 // Function to shuffle array using Fisher-Yates algorithm
@@ -468,18 +475,17 @@ export const useQuizStore = create<QuizStore>()(
         });
       },
 
-      startQuiz: (quizId: string, timeLimit: number) => {
-        const originalQuiz = get().quizzes.find(q => q.id === quizId);
-        if (!originalQuiz) return;
+      startQuiz: (quiz: Quiz, timeLimit: number) => {
+        if (!quiz) return;
 
         // Create a new quiz instance with shuffled questions
         const shuffledQuestions = get().randomizeQuestions
-        ? shuffleArray(originalQuiz.questions)
-        : originalQuiz.questions;
+        ? shuffleArray(quiz.questions)
+        : quiz.questions;
 
         
-        const quiz: Quiz = {
-          ...originalQuiz,
+        const shuffledQuiz: Quiz = {
+          ...quiz,
           questions: shuffledQuestions
         };
 
@@ -489,7 +495,7 @@ export const useQuizStore = create<QuizStore>()(
         const isUnlimited = timeLimit === -1;
         
         const attempt: QuizAttempt = {
-          quizId,
+          quizId: quiz.id,
           answers: {},
           startTime,
           timeLimit: isUnlimited ? 0 : timeLimit, // Store 0 for unlimited
@@ -502,7 +508,7 @@ export const useQuizStore = create<QuizStore>()(
         };
 
         const questionStatuses: Record<string, QuestionStatus> = {};
-        quiz.questions.forEach(q => {
+        shuffledQuiz.questions.forEach(q => {
           questionStatuses[q.id] = {
             answered: false,
             flagged: false,
@@ -511,10 +517,10 @@ export const useQuizStore = create<QuizStore>()(
         });
 
         // Remove any existing in-progress attempt for this quiz
-        const updatedAttempts = get().attempts.filter(a => !(a.quizId === quizId && !a.isCompleted));
+        const updatedAttempts = get().attempts.filter(a => !(a.quizId === quiz.id && !a.isCompleted));
         
         set({
-          currentQuiz: quiz,
+          currentQuiz: shuffledQuiz,
           currentAttempt: attempt,
           currentQuestionIndex: 0,
           questionStatuses,
@@ -526,45 +532,13 @@ export const useQuizStore = create<QuizStore>()(
 
       resumeQuiz: (quizId: string) => {
         const inProgressAttempt = get().getInProgressAttempt(quizId);
-        const originalQuiz = get().quizzes.find(q => q.id === quizId);
+        // Note: We'll need to fetch the quiz from API when resuming
+        // For now, we'll handle this in the component level
         
-        if (!inProgressAttempt || !originalQuiz) return;
+        if (!inProgressAttempt) return;
 
-        // Restore the quiz with the same question order as when it was started
-        const quiz: Quiz = {
-          ...originalQuiz,
-          questions: originalQuiz.questions // Keep original order for now - could be enhanced to save shuffled order
-        };
-
-        // Calculate remaining time
-        let timeRemaining = 0;
-        if (!inProgressAttempt.isUnlimited && inProgressAttempt.timeLimit > 0) {
-          const totalTimeInSeconds = inProgressAttempt.timeLimit * 60;
-          const timeSpentSoFar = inProgressAttempt.timeSpent || 0;
-          timeRemaining = Math.max(0, totalTimeInSeconds - timeSpentSoFar);
-        }
-
-        // Update the attempt to mark it as resumed
-        const updatedAttempt = {
-          ...inProgressAttempt,
-          isPaused: false,
-          pausedTime: undefined,
-        };
-
-        // Update attempts array
-        const updatedAttempts = get().attempts.map(a => 
-          a.quizId === quizId && !a.isCompleted ? updatedAttempt : a
-        );
-
-        set({
-          currentQuiz: quiz,
-          currentAttempt: updatedAttempt,
-          currentQuestionIndex: inProgressAttempt.currentQuestionIndex || 0,
-          questionStatuses: inProgressAttempt.questionStatuses || {},
-          timeRemaining,
-          isTimerRunning: !inProgressAttempt.isUnlimited,
-          attempts: updatedAttempts,
-        });
+        // This will be handled by the component that fetches the quiz data
+        // and then calls startQuiz with the fetched quiz data
       },
 
       pauseQuiz: () => {
@@ -724,7 +698,7 @@ export const useQuizStore = create<QuizStore>()(
         setTimeout(() => get().saveProgress(), 100);
       },
 
-      submitQuiz: (isAutoSubmit = false) => {
+      submitQuiz: async (isAutoSubmit = false) => {
         const { currentAttempt, currentQuiz, attempts, isTimerRunning } = get();
         
         if (!currentAttempt || !currentQuiz) {
@@ -736,36 +710,35 @@ export const useQuizStore = create<QuizStore>()(
         }
 
         try {
+          set({ isSubmitting: true, submissionError: null });
+
           // Stop the timer immediately (only if it was running)
           if (isTimerRunning) {
             set({ isTimerRunning: false });
           }
 
-          // Calculate score with comprehensive error handling
-          let totalScore = 0;
-          let totalMarks = 0;
+          // Calculate time spent
+          const now = new Date();
+          let timeSpent = currentAttempt.timeSpent || 0;
+          if (isTimerRunning && !currentAttempt.isUnlimited) {
+            const sessionTime = Math.floor((now.getTime() - currentAttempt.startTime.getTime()) / 1000);
+            const totalTimeInSeconds = currentAttempt.timeLimit * 60;
+            timeSpent = totalTimeInSeconds - get().timeRemaining;
+          }
 
-          currentQuiz.questions.forEach((question) => {
-            try {
-              const userAnswer = currentAttempt.answers[question.id];
-              const result = calculateQuestionScore(question, userAnswer);
-              
-              totalMarks += result.maxScore;
-              totalScore += result.score;
-            } catch (error) {
-              totalMarks += question.marks || 0;
-            }
-          });
-
-          const percentage = totalMarks > 0 ? (totalScore / totalMarks) * 100 : 0;
-          const roundedScore = Math.round(totalScore * 100) / 100;
-          const roundedPercentage = Math.round(percentage * 100) / 100;
+          // Submit to API for grading
+          const result: SubmissionResult = await apiService.submitQuiz(
+            currentAttempt.quizId,
+            currentAttempt.answers,
+            timeSpent,
+            isAutoSubmit
+          );
 
           const completedAttempt: QuizAttempt = {
             ...currentAttempt,
-            endTime: new Date(),
-            score: roundedScore,
-            percentage: roundedPercentage,
+            endTime: now,
+            score: result.score,
+            percentage: result.percentage,
             isCompleted: true,
             isSubmitted: true,
             isAutoSubmitted: isAutoSubmit,
@@ -785,30 +758,21 @@ export const useQuizStore = create<QuizStore>()(
             attempts: finalAttempts,
             currentAttempt: completedAttempt,
             timeRemaining: 0,
+            isSubmitting: false,
           });
 
         } catch (error) {
-          // Emergency fallback - still mark as submitted to prevent infinite loops
-          const emergencyAttempt: QuizAttempt = {
-            ...currentAttempt,
-            endTime: new Date(),
-            score: 0,
-            percentage: 0,
-            isCompleted: true,
-            isSubmitted: true,
-            isAutoSubmitted: isAutoSubmit,
-            isPaused: false,
-          };
-
-          const filteredAttempts = attempts.filter(a => !(a.quizId === currentAttempt.quizId && !a.isCompleted));
-          const updatedAttempts = [...filteredAttempts, emergencyAttempt];
-
-          set({
-            attempts: updatedAttempts,
-            currentAttempt: emergencyAttempt,
-            timeRemaining: 0,
-            isTimerRunning: false,
+          console.error('Quiz submission failed:', error);
+          const errorMessage = error instanceof Error ? error.message : 'Failed to submit quiz';
+          
+          set({ 
+            isSubmitting: false, 
+            submissionError: errorMessage 
           });
+          
+          // Don't mark as submitted if API call failed
+          // User can retry submission
+          throw error;
         }
       },
 
@@ -908,23 +872,25 @@ export const useQuizStore = create<QuizStore>()(
       },
 
       getLessonQuizzes: () => {
-        return get().quizzes.filter(q => q.category === 'lesson');
+        // This will be handled by the API service
+        return [];
       },
 
       getMockFinalQuizzes: () => {
-        return get().quizzes.filter(q => q.category === 'mockFinal');
+        // This will be handled by the API service
+        return [];
       },
     }),
     {
-      version: 9, // Updated to version 9 with storage fault tolerance
+      version: 10, // Updated to version 10 for API migration
       name: 'quiz-store',
       storage: createJSONStorage(() => createStorage()),
       migrate: (persistedState, version) => {
-        if (version === 9) {
+        if (version === 10) {
           return persistedState;
         }
         
-        // For any older version, perform cleanup and migration
+        // For any older version, reset to new API-based structure
         try {
           const state = persistedState as any;
           if (state && state.attempts) {
@@ -942,7 +908,7 @@ export const useQuizStore = create<QuizStore>()(
             return {
               ...createInitialState(),
               attempts: cleanedAttempts,
-              quizzes: allQuizzes,
+              quizzes: [], // Quizzes now loaded from API
             };
           }
         } catch (error) {
@@ -951,7 +917,7 @@ export const useQuizStore = create<QuizStore>()(
         
         return {
           ...createInitialState(),
-          quizzes: allQuizzes,
+          quizzes: [], // Quizzes now loaded from API
         };
       },
     }

@@ -4,12 +4,14 @@ import QuizSetup from './pages/QuizSetup';
 import QuizInterface from './pages/QuizInterface';
 import QuizResults from './pages/QuizResults';
 import { useQuizStore } from './store/quizStore';
+import { useQuiz } from './hooks/useQuizData';
 
 type AppState = 'dashboard' | 'setup' | 'quiz' | 'results';
 
 function App() {
   const [currentState, setCurrentState] = useState<AppState>('dashboard');
   const [selectedQuizId, setSelectedQuizId] = useState<string | null>(null);
+  const { quiz: selectedQuiz, loading: quizLoading } = useQuiz(selectedQuizId);
   
   const { startQuiz, submitQuiz, resetQuiz, hasInProgressQuiz, resumeQuiz } = useQuizStore();
 
@@ -38,15 +40,22 @@ function App() {
   };
 
   const handleBeginQuiz = (timeLimit: number) => {
-    if (selectedQuizId) {
-      startQuiz(selectedQuizId, timeLimit);
+    if (selectedQuiz) {
+      startQuiz(selectedQuiz, timeLimit);
       setCurrentState('quiz');
     }
   };
 
   const handleSubmitQuiz = () => {
-    submitQuiz();
-    setCurrentState('results');
+    submitQuiz()
+      .then(() => {
+        setCurrentState('results');
+      })
+      .catch((error) => {
+        console.error('Quiz submission failed:', error);
+        // Handle submission error - could show a retry dialog
+        // For now, we'll stay on the quiz interface
+      });
   };
 
   const handleReturnHome = () => {
@@ -72,7 +81,7 @@ function App() {
         return <Dashboard onStartQuiz={handleStartQuiz} />;
       
       case 'setup':
-        return selectedQuizId ? (
+        return selectedQuizId && !quizLoading ? (
           <QuizSetup
             quizId={selectedQuizId}
             onStart={handleBeginQuiz}
@@ -91,6 +100,14 @@ function App() {
               }
             }}
           />
+        ) : quizLoading ? (
+          <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-200/50 text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">Loading Quiz...</h2>
+              <p className="text-gray-600">Please wait while we prepare your quiz.</p>
+            </div>
+          </div>
         ) : null;
 
       
