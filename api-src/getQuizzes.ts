@@ -16,13 +16,16 @@ interface QuizSummary {
 let cachedDb: Db | null = null;
 
 async function connectToDatabase(): Promise<Db> {
-  if (cachedDb) {
-    return cachedDb;
-  }
+  if (cachedDb) return cachedDb;
 
-  const client = new MongoClient(process.env.MONGODB_URI!);
+  const uri = process.env.MONGODB_URI!;
+  const client = new MongoClient(uri, {
+    tls: true,
+    tlsAllowInvalidCertificates: false,
+    serverSelectionTimeoutMS: 10000,
+  });
+
   await client.connect();
-  
   cachedDb = client.db('itc1370-quiz-app');
   return cachedDb;
 }
