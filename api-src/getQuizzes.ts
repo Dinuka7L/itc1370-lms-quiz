@@ -25,10 +25,7 @@ async function connectToDatabase(): Promise<Db> {
   serverApi: ServerApiVersion.v1,
   tls: true,
   ssl: true,
-  // Add these two options to improve TLS compatibility
   tlsAllowInvalidCertificates: false,
-  tlsInsecure: false,
-
   retryWrites: true,
   serverSelectionTimeoutMS: 10000,
   });
