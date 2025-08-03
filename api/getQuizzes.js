@@ -5,6 +5,9 @@ async function connectToDatabase() {
         return cachedDb;
     }
     const client = new MongoClient(process.env.MONGODB_URI);
+    if (!process.env.MONGODB_URI) {
+        throw new Error('MONGODB_URI environment variable not set');
+    }
     await client.connect();
     cachedDb = client.db('itc1370-quiz-app');
     return cachedDb;
