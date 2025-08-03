@@ -421,7 +421,7 @@ const createStorage = () => {
           // Ultimate fallback - clear storage and save minimal state
           localStorage.clear();
           const minimalState = {
-            quizzes: allQuizzes,
+            quizzes: [],
             attempts: [],
             currentQuiz: null,
             currentAttempt: null,

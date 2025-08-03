@@ -60,14 +60,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     const { id } = req.query;
 
     if (!id || typeof id !== 'string') {
-      return res.status(400).json({ error: 'Quiz ID is required' });
+      res.status(400).json({ error: 'Quiz ID is required' });
+      return;
     }
 
     const db = await connectToDatabase();
     const quiz = await db.collection('quizzes').findOne({ id });
 
     if (!quiz) {
-      return res.status(404).json({ error: 'Quiz not found' });
+      res.status(404).json({ error: 'Quiz not found' });
+      return;
     }
 
     // Remove sensitive data (answers, rationale, idealKeywords) from questions
