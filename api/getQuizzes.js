@@ -24,12 +24,16 @@ export default async function handler(req, res) {
     }
     try {
         const { category } = req.query;
+        console.log('Connecting to DB...');
         const db = await connectToDatabase();
+        console.log('Connected to DB');
         let query = {};
         if (category && typeof category === 'string') {
             query = { category };
         }
+        console.log('Running query:', query);
         const quizzes = await db.collection('quizzes').find(query).toArray();
+        console.log('Quizzes fetched:', quizzes.length);
         const quizSummaries = quizzes.map(quiz => ({
             id: quiz.id,
             title: quiz.title,
