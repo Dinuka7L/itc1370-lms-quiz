@@ -1,18 +1,15 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = handler;
-const mongodb_1 = require("mongodb");
+import { MongoClient } from 'mongodb';
 let cachedDb = null;
 async function connectToDatabase() {
     if (cachedDb) {
         return cachedDb;
     }
-    const client = new mongodb_1.MongoClient(process.env.MONGODB_URI);
+    const client = new MongoClient(process.env.MONGODB_URI);
     await client.connect();
     cachedDb = client.db('itc1370-quiz-app');
     return cachedDb;
 }
-async function handler(req, res) {
+export default async function handler(req, res) {
     // Set CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
