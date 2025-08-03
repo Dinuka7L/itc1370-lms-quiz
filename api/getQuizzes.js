@@ -29,6 +29,7 @@ export default async function handler(req, res) {
     try {
         const { category } = req.query;
         const db = await connectToDatabase();
+        console.log('Connected to DB');
         let query = {};
         if (category && typeof category === 'string') {
             query = { category };
