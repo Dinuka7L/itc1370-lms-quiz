@@ -4,14 +4,23 @@ async function connectToDatabase() {
     if (cachedDb)
         return cachedDb;
     const uri = process.env.MONGODB_URI;
+    console.log('Mongo URI:', uri); // just for debug; remove later
     const client = new MongoClient(uri, {
         tls: true,
-        tlsAllowInvalidCertificates: false,
-        serverSelectionTimeoutMS: 10000,
+        serverSelectionTimeoutMS: 8000,
+        connectTimeoutMS: 8000,
     });
-    await client.connect();
-    cachedDb = client.db('itc1370-quiz-app');
-    return cachedDb;
+    try {
+        console.log('Connecting to MongoDB...');
+        await client.connect();
+        console.log('Connected!');
+        cachedDb = client.db('itc1370-quiz-app');
+        return cachedDb;
+    }
+    catch (err) {
+        console.error('MongoDB connect error:', err);
+        throw err;
+    }
 }
 export default async function handler(req, res) {
     // Set CORS headers
