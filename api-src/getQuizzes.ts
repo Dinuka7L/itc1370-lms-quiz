@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { MongoClient } from 'mongodb';
+import { MongoClient, ServerApiVersion  } from 'mongodb';
 import type { Db } from 'mongodb';
 
 interface QuizSummary {
@@ -22,9 +22,12 @@ async function connectToDatabase(): Promise<Db> {
   console.log('Mongo URI:', uri); // just for debug; remove later
 
   const client = new MongoClient(uri, {
+    // ✅ This part is **critical**
+    serverApi: ServerApiVersion.v1,
     tls: true,
-    serverSelectionTimeoutMS: 8000,
-    connectTimeoutMS: 8000,
+    ssl: true,
+    retryWrites: true,
+    serverSelectionTimeoutMS: 10000,
   });
 
   try {

@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, ServerApiVersion } from 'mongodb';
 let cachedDb = null;
 async function connectToDatabase() {
     if (cachedDb)
@@ -6,9 +6,12 @@ async function connectToDatabase() {
     const uri = process.env.MONGODB_URI;
     console.log('Mongo URI:', uri); // just for debug; remove later
     const client = new MongoClient(uri, {
+        // ✅ This part is **critical**
+        serverApi: ServerApiVersion.v1,
         tls: true,
-        serverSelectionTimeoutMS: 8000,
-        connectTimeoutMS: 8000,
+        ssl: true,
+        retryWrites: true,
+        serverSelectionTimeoutMS: 10000,
     });
     try {
         console.log('Connecting to MongoDB...');
