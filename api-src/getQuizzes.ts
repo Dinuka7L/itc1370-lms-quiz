@@ -22,13 +22,17 @@ async function connectToDatabase(): Promise<Db> {
   console.log('Mongo URI:', uri); // just for debug; remove later
 
   const client = new MongoClient(uri, {
-    // ✅ This part is **critical**
-    serverApi: ServerApiVersion.v1,
-    tls: true,
-    ssl: true,
-    retryWrites: true,
-    serverSelectionTimeoutMS: 10000,
+  serverApi: ServerApiVersion.v1,
+  tls: true,
+  ssl: true,
+  // Add these two options to improve TLS compatibility
+  tlsAllowInvalidCertificates: false,
+  tlsInsecure: false,
+
+  retryWrites: true,
+  serverSelectionTimeoutMS: 10000,
   });
+
 
   try {
     console.log('Connecting to MongoDB...');
