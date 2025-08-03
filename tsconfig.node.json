@@ -17,5 +17,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["vite.config.ts", "api/**/*"]
+  "include": ["vite.config.ts", "api/**/*", "api/getQuiz.ts", "api/getQuizzes.ts", "api/submitQuiz.ts"]
 }
