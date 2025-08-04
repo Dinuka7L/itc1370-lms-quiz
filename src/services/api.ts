@@ -90,8 +90,9 @@ class ApiService {
 
   async getQuiz(quizId: string): Promise<Quiz> {
     try {
-      const response = await this.fetchWithTimeout(`${API_BASE_URL}/getQuiz?id=${quizId}`);
-      
+      const encodedId = encodeURIComponent(quizId);
+      const response = await this.fetchWithTimeout(`${API_BASE_URL}/getQuiz?id=${encodedId}`);
+
       if (!response.ok) {
         if (response.status === 404) {
           throw new Error('Quiz not found');
