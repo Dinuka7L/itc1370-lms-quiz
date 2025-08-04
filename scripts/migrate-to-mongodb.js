@@ -3,17 +3,13 @@
 
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
 
 dotenv.config(); // Load variables from .env
 
-// Import your existing quiz data
+// Sample quiz data - you'll need to add all your quiz data here
 const quizData = [
 {
-  "id": "quiz- lesson 01- Overiew of IT&S",
+  "id": "quiz-lesson-01-overview-of-it-systems",
   "title": "Lesson 1 - Overview of Information Technology",
   "description": "covers fundamental concepts of Information Technology and Information Systems, including components, eras, ICT4D, and strategic IT roles.",
   "timeOptions": [45, 60, 90],
@@ -290,9 +286,6 @@ const quizData = [
     }
   ]
 }
-
-  // You'll need to manually copy your quiz data here from the existing files
-  // or create a separate script to read from the TypeScript files
 ];
 
 async function migrateQuizzes() {
@@ -327,7 +320,5 @@ async function migrateQuizzes() {
 }
 
 // Run migration
-if (process.argv[1] === __filename) {
-  migrateQuizzes();
-}
+migrateQuizzes();
 
