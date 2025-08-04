@@ -103,7 +103,7 @@
                 </span>
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center space-x-2">
-                    <span>Average: {(completedLessonQuizzes + mockFinalQuizzes.filter(q => getQuizProgress(q.id) === 100).length) > 0 ? (totalMarksObtained / (completedLessonQuizzes + mockFinalQuizzes.filter(q => getQuizProgress(q.id) === 100).length)).toFixed(1) : 0} marks/quiz</span>
+                    <span>Average: {(completedLessonQuizzes + (mockFinalQuizzes ?? []).filter(q => q?.id && getQuizProgress(q.id) === 100).length) > 0 ? (totalMarksObtained / (completedLessonQuizzes + (mockFinalQuizzes ?? []).filter(q => q?.id && getQuizProgress(q.id) === 100).length)).toFixed(1) : 0} marks/quiz</span>
                   </div>
                 </div>
               </div>
