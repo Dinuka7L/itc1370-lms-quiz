@@ -48,7 +48,7 @@ export interface SubmissionResult {
 }
 
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://itc1370-lms-quiz.vercel.app/api'
+  ? '/api'
   : '/api';
 
 class ApiService {
