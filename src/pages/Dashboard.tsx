@@ -179,7 +179,7 @@
                       mockFinalQuizzes.map((quiz) => (
                         <QuizCard
                           key={quiz.id}
-                          quiz={quiz}
+                          quiz={{ ...quiz, questions: (quiz as any).questions ?? [] }} // 🔐 Ensures questions is defined
                           progress={getQuizProgress(quiz.id)}
                           score={getQuizScore(quiz.id)}
                           onStart={() => onStartQuiz(quiz.id)}
