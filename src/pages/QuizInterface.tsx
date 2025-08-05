@@ -7,6 +7,8 @@ import QuickNavigation from '../components/QuickNavigation';
 import QuestionRenderer from '../components/QuestionRenderer';
 import { useQuizStore } from '../store/quizStore';
 import LoadingSpinner from '../components/LoadingSpinner';
+import { apiService } from '../services/api';
+
 
 interface QuizInterfaceProps {
   onSubmit: () => void;
@@ -146,15 +148,25 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
   };
 
   const handleSubmit = async () => {
-    setShowSubmitModal(false);
-    
-    try {
-      await submitQuiz(false); // Pass false to indicate manual submit
-    } catch (error) {
-      // Show user-friendly error message
-      console.error('Quiz submission failed:', error);
+  setShowSubmitModal(false);
+
+  try {
+    if (currentQuiz && currentAttempt) {
+      const result = await apiService.submitQuiz(
+        currentQuiz.id,
+        currentAttempt.answers || {},
+        currentAttempt.timeSpent || 0,
+        false // manual submission
+      );
+      console.log('Submission result:', result);
+    } else {
+      throw new Error('Quiz or attempt not initialized');
     }
+  } catch (error) {
+    console.error('Quiz submission failed:', error);
+  }
   };
+
 
   const handleNavigateHome = () => {
     if (currentAttempt && !currentAttempt.isCompleted) {
