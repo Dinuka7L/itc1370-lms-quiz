@@ -47,7 +47,7 @@ function App() {
   };
 
   const handleSubmitQuiz = () => {
-    submitQuiz()
+    submitQuiz()  
       .then(() => {
         setCurrentState('results');
       })

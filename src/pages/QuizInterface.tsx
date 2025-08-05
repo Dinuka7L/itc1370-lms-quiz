@@ -147,25 +147,10 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     }
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
   setShowSubmitModal(false);
-
-  try {
-    if (currentQuiz && currentAttempt) {
-      const result = await apiService.submitQuiz(
-        currentQuiz.id,
-        currentAttempt.answers || {},
-        currentAttempt.timeSpent || 0,
-        false // manual submission
-      );
-      console.log('Submission result:', result);
-    } else {
-      throw new Error('Quiz or attempt not initialized');
-    }
-  } catch (error) {
-    console.error('Quiz submission failed:', error);
-  }
-  };
+  onSubmit(); // This will call handleSubmitQuiz in App.tsx
+};
 
 
   const handleNavigateHome = () => {
