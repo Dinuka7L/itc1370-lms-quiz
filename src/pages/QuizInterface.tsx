@@ -28,6 +28,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ onSubmit, onNavigateHome 
     timeRemaining,
     isTimerRunning,
     isSubmitting,
+    setIsSubmitting,
     submissionError,
     pauseQuiz,
     checkStorageHealth,

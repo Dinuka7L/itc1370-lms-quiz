@@ -107,12 +107,14 @@ interface QuizStore extends QuizState {
   // New API-related state
   isSubmitting: boolean;
   submissionError: string | null;
+  
   // Actions
   startQuiz: (quiz: Quiz, timeLimit: number) => void;
   setCurrentQuestion: (index: number) => void;
   saveAnswer: (questionId: string, answer: any) => void;
   toggleQuestionFlag: (questionId: string) => void;
   submitQuiz: (isAutoSubmit?: boolean) => Promise<void>;
+  setIsSubmitting: (value: boolean) => void;
   setTimeRemaining: (time: number) => void;
   setTimerRunning: (running: boolean) => void;
   resetQuiz: () => void;
@@ -128,6 +130,7 @@ interface QuizStore extends QuizState {
   getMockFinalQuizzes: () => Quiz[];
   // New method for calculating actual time remaining
   calculateTimeRemaining: () => number;
+  
   setRandomizeQuestions: (value: boolean) => void;
   setCurrentAttemptAndQuiz: (attempt: QuizAttempt, quiz: Quiz) => void;
   // New methods for progress saving
@@ -445,6 +448,7 @@ export const useQuizStore = create<QuizStore>()(
   persist(
     (set, get) => ({
       ...createInitialState(),
+      setIsSubmitting: (value: boolean) => set({ isSubmitting: value }),
 
       // Storage health check
       checkStorageHealth: () => {

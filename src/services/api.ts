@@ -20,6 +20,7 @@ export interface Quiz {
   totalMarks: number;
   weight: number;
   category: 'lesson' | 'mockFinal';
+  questionCount?: number;
   questions: Array<{
     id: string;
     type: string;
