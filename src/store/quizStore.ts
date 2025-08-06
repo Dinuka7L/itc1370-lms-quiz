@@ -173,14 +173,11 @@ const shuffleArray = <T>(array: T[]): T[] => {
 };
 
 // Function to normalize text for comparison (handles typos and variations)
-const normalizeText = (text: string): string => {
-  if (typeof text !== 'string') return '';
-  return text
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s]/g, '') // Remove punctuation
-    .replace(/\s+/g, ' '); // Normalize whitespace
+export const normalizeText = (text: any): string => {
+  if (!text || typeof text !== 'string') return '';
+  return text.trim().toLowerCase().replace(/[^\w\s]/gi, '');
 };
+
 
 // Function to check if two strings are similar (handles minor typos)
 const isSimilarText = (userAnswer: string, correctAnswer: string): boolean => {
@@ -226,28 +223,34 @@ const levenshteinDistance = (str1: string, str2: string): number => {
 };
 
 // Updated function to calculate essay score based on keywords with custom threshold
-const calculateEssayScore = (userAnswer: string, idealKeywords: string[], requiredKeywords: number = 4): number => {
-  if (!userAnswer || !idealKeywords || idealKeywords.length === 0) return 0;
-  if (typeof userAnswer !== 'string') return 0;
-  
+export const calculateEssayScore = (
+  userAnswer: any,
+  idealKeywords: string[],
+  requiredKeywords: number = 4
+): number => {
+  // Defensive checks
+  if (!userAnswer || typeof userAnswer !== 'string' || !Array.isArray(idealKeywords)) return 0;
+
   const normalizedAnswer = normalizeText(userAnswer);
+  if (!normalizedAnswer) return 0;
+
   let matchedKeywords = 0;
-  
-  idealKeywords.forEach(keyword => {
-    if (keyword && typeof keyword === 'string') {
-      const normalizedKeyword = normalizeText(keyword);
-      if (normalizedKeyword && normalizedAnswer.includes(normalizedKeyword)) {
-        matchedKeywords++;
-      }
+
+  for (const keyword of idealKeywords) {
+    if (!keyword || typeof keyword !== 'string') continue;
+
+    const normalizedKeyword = normalizeText(keyword);
+    if (
+      normalizedKeyword &&
+      typeof normalizedKeyword === 'string' &&
+      normalizedAnswer.includes(normalizedKeyword)
+    ) {
+      matchedKeywords++;
     }
-  });
-  
-  // If matched keywords meet or exceed the required threshold, give full marks
-  if (matchedKeywords >= requiredKeywords) {
-    return 100;
   }
-  
-  // Otherwise, give partial marks based on the percentage of required keywords found
+
+  if (matchedKeywords >= requiredKeywords) return 100;
+
   return (matchedKeywords / requiredKeywords) * 100;
 };
 
