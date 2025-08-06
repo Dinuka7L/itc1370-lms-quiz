@@ -12,7 +12,9 @@ const MultiSelectQuestion: React.FC<MultiSelectQuestionProps> = ({
   showResults = false 
 }) => {
   const { currentAttempt, saveAnswer } = useQuizStore();
-  const selectedAnswers = (currentAttempt?.answers[question.id] as string[]) || [];
+  const selectedAnswers: string[] = Array.isArray(currentAttempt?.answers?.[question.id])
+  ? currentAttempt.answers[question.id] as string[]
+  : [];
   const correctAnswers = question.answer as string[];
 
   const handleAnswerChange = (option: string) => {
