@@ -121,8 +121,9 @@ const QuizResults: React.FC<QuizResultsProps> = ({ onReturnHome, onRetakeQuiz })
           </div>
           
           {currentQuiz.questions.map((question, index) => {
-            const userAnswer = currentAttempt.answers[question.id];
+            const userAnswer = currentAttempt.answers ? currentAttempt.answers[question.id] : undefined;
             const hasAnswer = userAnswer !== undefined && userAnswer !== null && userAnswer !== '';
+
             
             return (
               <div key={question.id} className="relative">
