@@ -15,7 +15,13 @@ const MultiSelectQuestion: React.FC<MultiSelectQuestionProps> = ({
   const selectedAnswers: string[] = Array.isArray(currentAttempt?.answers?.[question.id])
   ? currentAttempt.answers[question.id] as string[]
   : [];
-  const correctAnswers = question.answer as string[];
+  const correctAnswers: string[] = Array.isArray(question.answer)
+  ? question.answer
+  : typeof question.answer === 'string'
+    ? [question.answer]
+    : [];
+
+
 
   const handleAnswerChange = (option: string) => {
     if (showResults) return;
