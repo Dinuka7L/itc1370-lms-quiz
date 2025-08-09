@@ -35,10 +35,7 @@
     "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
     "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1"
     "concurrently": "^8.2.2",
     "vercel": "^32.0.0"
   },
