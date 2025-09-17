@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Home from './pages/Home';
+import { lazy, Suspense } from 'react';
 import QuizSetup from './pages/QuizSetup';
 import QuizInterface from './pages/QuizInterface';
 import QuizResults from './pages/QuizResults';
@@ -7,7 +8,10 @@ import { useQuizStore } from './store/quizStore';
 import { loadQuiz, loadAllQuizzes } from './utils/quizLoader';
 import { useThemeStore } from './store/themeStore';
 
-type AppState = 'home' | 'dashboard' | 'setup' | 'quiz' | 'results';
+type AppState = 'home' | 'dashboard' | 'setup' | 'quiz' | 'results' | 'make-quiz';
+// Only import MakeQuiz in dev mode
+const isDev = import.meta.env && import.meta.env.DEV;
+const MakeQuiz = isDev ? lazy(() => import('./pages/MakeQuiz')) : undefined;
 
 function App() {
   const [currentState, setCurrentState] = useState<AppState>('home');
@@ -127,8 +131,16 @@ function App() {
   const renderCurrentState = () => {
     switch (currentState) {
       case 'home':
-        return <Home onStartQuiz={handleStartQuiz} />;
-      
+        return <Home onStartQuiz={handleStartQuiz} onMakeQuiz={isDev ? () => setCurrentState('make-quiz') : undefined} />;
+      case 'make-quiz':
+        if (isDev && MakeQuiz) {
+          return (
+            <Suspense fallback={<div className="p-8 text-center">Loading Make Quiz...</div>}>
+              <MakeQuiz />
+            </Suspense>
+          );
+        }
+        return <div className="p-8 text-center">Not available in production.</div>;
       case 'setup':
         return selectedQuizId ? (
           <QuizSetup
@@ -137,12 +149,10 @@ function App() {
             onBack={handleBackToDashboard}
             onViewResults={(quizId) => {
               const { attempts, quizzes, setCurrentAttemptAndQuiz } = useQuizStore.getState();
-
               const attempt = attempts.find(
                 (a) => a.quizId === quizId && a.isCompleted
               );
               const quiz = quizzes.find((q) => q.id === quizId);
-
               if (attempt && quiz) {
                 setCurrentAttemptAndQuiz(attempt, quiz);
                 setCurrentState('results');
@@ -150,11 +160,8 @@ function App() {
             }}
           />
         ) : null;
-
-      
       case 'quiz':
         return <QuizInterface onSubmit={handleSubmitQuiz} onNavigateHome={handleReturnHome} />;
-      
       case 'results':
         return (
           <QuizResults
@@ -162,9 +169,8 @@ function App() {
             onRetakeQuiz={handleRetakeQuiz}
           />
         );
-      
       default:
-        return <Home onStartQuiz={handleStartQuiz} />;
+        return <Home onStartQuiz={handleStartQuiz} onMakeQuiz={isDev ? () => setCurrentState('make-quiz') : undefined} />;
     }
   };
 

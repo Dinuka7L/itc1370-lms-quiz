@@ -12,9 +12,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface HomeProps {
   onStartQuiz: (quizId: string) => void;
+  onMakeQuiz?: () => void;
 }
 
-const Home: React.FC<HomeProps> = ({ onStartQuiz }) => {
+const Home: React.FC<HomeProps> = ({ onStartQuiz, onMakeQuiz }) => {
   const [quizzesBySubject, setQuizzesBySubject] = useState<Record<string, Quiz[]>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -135,6 +136,17 @@ const Home: React.FC<HomeProps> = ({ onStartQuiz }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex flex-col transition-colors duration-300">
       <Header />
+      {onMakeQuiz && (
+        <div className="w-full flex justify-end items-center px-4 pt-4">
+          <button
+            className="btn btn-accent border-2 border-accent-600 dark:border-accent-400 shadow-md hover:shadow-xl focus:ring-2 focus:ring-accent-300 transition-all duration-200 font-semibold text-lg px-6 py-2 rounded-full"
+            onClick={onMakeQuiz}
+            style={{ zIndex: 50 }}
+          >
+            🛠️ Make Quiz
+          </button>
+        </div>
+      )}
 
       
       
