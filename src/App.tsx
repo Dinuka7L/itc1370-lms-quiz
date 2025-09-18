@@ -11,7 +11,8 @@ import { useThemeStore } from './store/themeStore';
 type AppState = 'home' | 'dashboard' | 'setup' | 'quiz' | 'results' | 'make-quiz';
 // Only import MakeQuiz in dev mode
 const isDev = import.meta.env && import.meta.env.DEV;
-const MakeQuiz = isDev ? lazy(() => import('./pages/MakeQuiz')) : undefined;
+const MakeQuiz = isDev ? lazy(() => import('./pages/MakeQuiz')) : lazy(() => import('./pages/MakeQuiz'));
+//set : undefined to not load quiz builder page in production
 
 function App() {
   const [currentState, setCurrentState] = useState<AppState>('home');
