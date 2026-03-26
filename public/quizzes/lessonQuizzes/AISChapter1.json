@@ -1,0 +1,494 @@
+{
+"id": "quiz-AIS-Chapter1",
+"title": "Lesson 01 – Accounting Information Systems: An Overview",
+"description": "Examines systems concepts, data versus information, AIS components, business processes, and how AIS supports strategy and value creation.",
+"subject": "ACC2475 - Accounting Information Systems and ERP Applications",
+"gradientColors": ["#0f172a", "#1e293b", "#334155", "#475569"],
+"timeOptions": [10, 20, 30],
+"totalMarks": 70,
+"weight": 0,
+"category": "lesson",
+"questions": [
+{
+"id": "q1",
+"type": "multipleChoice",
+"question": "A production department chooses to exceed its budget so the organization can deliver products on time. This situation best illustrates which systems principle?",
+"options": [
+"Goal congruence between subsystems and the organization",
+"Subsystem optimization overriding organizational goals",
+"Goal conflict between subsystems",
+"Information overload in operational systems"
+],
+"answer": "Goal congruence between subsystems and the organization",
+"rationale": "Subsystems should support the overall organizational goal even if it harms their own objectives.",
+"marks": 2
+},
+{
+"id": "q2",
+"type": "multipleChoice",
+"question": "Which situation best demonstrates the transformation of data into information?",
+"options": [
+"Recording the numbers 3, 99, and 20000 in a database",
+"Listing a date, customer name, and item number without explanation",
+"Organizing transaction facts into a structured sales invoice",
+"Storing raw transaction logs without processing them"
+],
+"answer": "Organizing transaction facts into a structured sales invoice",
+"rationale": "Information is created when raw facts are organized and processed to give meaning.",
+"marks": 2
+},
+{
+"id": "q3",
+"type": "multipleChoice",
+"question": "Which characteristic of useful information ensures different decision makers derive the same conclusion from identical data?",
+"options": [
+"Consistent",
+"Concise",
+"Relevant",
+"Available"
+],
+"answer": "Consistent",
+"rationale": "Consistency ensures information is presented uniformly across reports and time periods.",
+"marks": 2
+},
+{
+"id": "q4",
+"type": "multipleChoice",
+"question": "A firm introduces automated inventory tracking to reduce duplicate data entry across departments. Which systems concept is being applied?",
+"options": [
+"Subsystem independence",
+"Information decentralization",
+"System integration",
+"Resource segregation"
+],
+"answer": "System integration",
+"rationale": "Integration reduces duplication of recording, storing, and reporting information.",
+"marks": 2
+},
+{
+"id": "q5",
+"type": "multipleChoice",
+"question": "When an organization gathers excessive reports that managers cannot effectively interpret, which problem is most likely occurring?",
+"options": [
+"Data redundancy",
+"Information overload",
+"Goal congruence",
+"Data decentralization"
+],
+"answer": "Information overload",
+"rationale": "Too much information reduces decision quality and increases costs.",
+"marks": 2
+},
+{
+"id": "q6",
+"type": "multipleChoice",
+"question": "Which type of information is typically required by government regulators and external authorities?",
+"options": [
+"Discretionary information",
+"Operational information",
+"Mandatory information",
+"Strategic information"
+],
+"answer": "Mandatory information",
+"rationale": "Mandatory information must be provided to comply with regulatory requirements.",
+"marks": 2
+},
+{
+"id": "q7",
+"type": "multipleChoice",
+"question": "In AIS design, why must organizations evaluate both costs and benefits of information?",
+"options": [
+"Information must be produced regardless of cost",
+"Information is valuable only when benefits exceed production costs",
+"Information costs are always negligible",
+"Costs cannot be estimated during system design"
+],
+"answer": "Information is valuable only when benefits exceed production costs",
+"rationale": "Information has value when the benefit of decisions made from it exceeds its cost.",
+"marks": 2
+},
+{
+"id": "q8",
+"type": "multipleChoice",
+"question": "Which AIS function directly supports managerial planning and control activities?",
+"options": [
+"Transforming data into decision useful information",
+"Replacing internal control structures",
+"Eliminating all manual procedures",
+"Restricting information access to external parties"
+],
+"answer": "Transforming data into decision useful information",
+"rationale": "AIS converts transaction data into meaningful information for management decisions.",
+"marks": 2
+},
+{
+"id": "q9",
+"type": "multipleChoice",
+"question": "A company records sales transactions, stores them in databases, and later produces revenue analysis reports. Which AIS function is illustrated?",
+"options": [
+"Asset safeguarding",
+"Data transformation",
+"Operational outsourcing",
+"Goal conflict management"
+],
+"answer": "Data transformation",
+"rationale": "AIS converts stored transaction data into reports and decision relevant information.",
+"marks": 2
+},
+{
+"id": "q10",
+"type": "multipleChoice",
+"question": "Which component of an AIS ensures that organizational data remains protected from unauthorized access?",
+"options": [
+"Internal controls and security measures",
+"Operational procedures",
+"Transaction cycles",
+"Decision rules"
+],
+"answer": "Internal controls and security measures",
+"rationale": "Controls safeguard assets and protect the integrity of information.",
+"marks": 2
+},
+{
+"id": "q11",
+"type": "multipleChoice",
+"question": "Which of the following best explains machine readable data?",
+"options": [
+"Data stored only in printed reports",
+"Data formatted so computers can process it automatically",
+"Data interpreted manually by managers",
+"Data archived without digital formatting"
+],
+"answer": "Data formatted so computers can process it automatically",
+"rationale": "Machine readable formats allow computer systems to process data efficiently.",
+"marks": 2
+},
+{
+"id": "q12",
+"type": "multipleChoice",
+"question": "Which business process represents the exchange of goods or services for payment from customers?",
+"options": [
+"Revenue cycle",
+"Financing cycle",
+"Human resources cycle",
+"Expenditure cycle"
+],
+"answer": "Revenue cycle",
+"rationale": "The revenue cycle involves sales and collection activities.",
+"marks": 2
+},
+{
+"id": "q13",
+"type": "multipleChoice",
+"question": "A company implementing blockchain removes the need for centralized record keeping. Which characteristic of blockchain enables this?",
+"options": [
+"Distributed ledger architecture",
+"Centralized authentication control",
+"Manual reconciliation procedures",
+"Sequential database indexing"
+],
+"answer": "Distributed ledger architecture",
+"rationale": "Blockchain stores records across a decentralized network rather than a single location.",
+"marks": 2
+},
+{
+"id": "q14",
+"type": "multipleChoice",
+"question": "Which emerging technology allows multiple operating systems to run simultaneously on one physical machine?",
+"options": [
+"Virtualization",
+"Internet of Things",
+"Blockchain",
+"Cloud storage replication"
+],
+"answer": "Virtualization",
+"rationale": "Virtualization enables multiple systems to run on a single physical computer.",
+"marks": 2
+},
+{
+"id": "q15",
+"type": "multipleChoice",
+"question": "Which factor most directly influences how an AIS should be structured to support competitive advantage?",
+"options": [
+"Business strategy",
+"Physical inventory size",
+"Number of employees",
+"Office layout"
+],
+"answer": "Business strategy",
+"rationale": "AIS design must align with organizational strategy.",
+"marks": 2
+},
+{
+"id": "q16",
+"type": "multipleChoice",
+"question": "The concept of a value chain emphasizes that organizational value is created primarily through:",
+"options": [
+"Sequential activities that enhance product value",
+"Increasing the number of internal departments",
+"Eliminating transaction cycles",
+"Reducing all external partnerships"
+],
+"answer": "Sequential activities that enhance product value",
+"rationale": "Value increases as products move through linked activities in the value chain.",
+"marks": 2
+},
+{
+"id": "q17",
+"type": "multipleChoice",
+"question": "Which AIS benefit most directly improves coordination with suppliers and distributors?",
+"options": [
+"Improved supply chain efficiency",
+"Reduced internal reporting",
+"Increased information secrecy",
+"Limited knowledge sharing"
+],
+"answer": "Improved supply chain efficiency",
+"rationale": "AIS enhances communication and coordination across the supply chain.",
+"marks": 2
+},
+{
+"id": "q18",
+"type": "multipleChoice",
+"question": "Which scenario most clearly demonstrates discretionary information usage?",
+"options": [
+"Submitting financial reports required by regulators",
+"Generating optional managerial performance reports",
+"Issuing mandatory tax filings",
+"Producing compliance documentation for government agencies"
+],
+"answer": "Generating optional managerial performance reports",
+"rationale": "Internal users primarily use discretionary information for decision making.",
+"marks": 2
+},
+{
+"id": "q19",
+"type": "multipleChoice",
+"question": "In blockchain systems, cryptographic hashing primarily ensures:",
+"options": [
+"Data integrity and tamper resistance",
+"Reduced transaction visibility",
+"Manual verification of transactions",
+"Centralized data management"
+],
+"answer": "Data integrity and tamper resistance",
+"rationale": "Hashes link blocks and prevent unauthorized modification.",
+"marks": 2
+},
+{
+"id": "q20",
+"type": "multipleChoice",
+"question": "Which AIS component includes the computers, communication networks, and hardware devices used to run the system?",
+"options": [
+"Information technology infrastructure",
+"Data processing procedures",
+"Transaction cycles",
+"Control documentation"
+],
+"answer": "Information technology infrastructure",
+"rationale": "IT infrastructure provides the technological foundation for AIS operations.",
+"marks": 2
+},
+{
+"id": "q21",
+"type": "multipleChoice",
+"question": "Which situation best represents goal conflict within an organization?",
+"options": [
+"A department achieving its targets while supporting overall organizational objectives",
+"Two departments pursuing objectives that undermine each other",
+"All departments aligning their strategies with corporate goals",
+"Subsystems operating independently but efficiently"
+],
+"answer": "Two departments pursuing objectives that undermine each other",
+"rationale": "Goal conflict occurs when subsystem goals contradict each other or the organization.",
+"marks": 2
+},
+{
+"id": "q22",
+"type": "dropdown",
+"question": "The [dropdown_1] cycle manages acquiring goods and services from suppliers, while the [dropdown_2] cycle focuses on selling goods and collecting payment.",
+"dropdownBlanks": [
+{
+"id": "dropdown_1",
+"options": ["Revenue", "Expenditure", "Financing", "Production"],
+"correctAnswer": "Expenditure"
+},
+{
+"id": "dropdown_2",
+"options": ["Revenue", "Production", "Financing", "Human resources"],
+"correctAnswer": "Revenue"
+}
+],
+"rationale": "Expenditure cycles handle purchases while revenue cycles handle sales.",
+"marks": 2
+},
+{
+"id": "q23",
+"type": "dropdown",
+"question": "AIS collects and stores [dropdown_1] about events and resources and later converts them into [dropdown_2] useful for decision making.",
+"dropdownBlanks": [
+{
+"id": "dropdown_1",
+"options": ["data", "reports", "controls", "policies"],
+"correctAnswer": "data"
+},
+{
+"id": "dropdown_2",
+"options": ["information", "transactions", "assets", "policies"],
+"correctAnswer": "information"
+}
+],
+"rationale": "AIS converts raw data into meaningful information.",
+"marks": 2
+},
+{
+"id": "q24",
+"type": "dropdown",
+"question": "In blockchain processing, transactions are first [dropdown_1] before being grouped into a [dropdown_2].",
+"dropdownBlanks": [
+{
+"id": "dropdown_1",
+"options": ["validated", "deleted", "archived", "reversed"],
+"correctAnswer": "validated"
+},
+{
+"id": "dropdown_2",
+"options": ["ledger", "block", "node", "protocol"],
+"correctAnswer": "block"
+}
+],
+"rationale": "Transactions are validated and then grouped into blocks in blockchain systems.",
+"marks": 2
+},
+{
+"id": "q25",
+"type": "fillInBlank",
+"question": "A ________ is a set of interrelated components that interact to achieve a goal.",
+"answer": "system",
+"rationale": "A system consists of interacting components working toward a common objective.",
+"marks": 1
+},
+{
+"id": "q26",
+"type": "fillInBlank",
+"question": "When subsystem objectives align with organizational objectives, the condition is called ________.",
+"answer": "goal congruence",
+"rationale": "Goal congruence occurs when subsystem goals support overall organizational goals.",
+"marks": 1
+},
+{
+"id": "q27",
+"type": "fillInBlank",
+"question": "Embedding sensors into devices so they connect and communicate through the internet describes the ________ concept.",
+"answer": "Internet of Things",
+"rationale": "IoT refers to internet connected physical devices that share data.",
+"marks": 1
+},
+{
+"id": "q28",
+"type": "multiSelect",
+"question": "Which activities represent major AIS business functions?",
+"options": [
+"Collecting and storing organizational data",
+"Transforming data into decision relevant information",
+"Providing controls to safeguard assets",
+"Replacing management decision making"
+],
+"answer": [
+"Collecting and storing organizational data",
+"Transforming data into decision relevant information",
+"Providing controls to safeguard assets"
+],
+"rationale": "AIS collects data, converts it to information, and safeguards assets.",
+"marks": 3
+},
+{
+"id": "q29",
+"type": "multiSelect",
+"question": "Which elements are core components of an Accounting Information System?",
+"options": [
+"People using the system",
+"Software for processing data",
+"Internal control mechanisms",
+"External regulatory agencies"
+],
+"answer": [
+"People using the system",
+"Software for processing data",
+"Internal control mechanisms"
+],
+"rationale": "AIS components include people, procedures, data, software, IT infrastructure, and controls.",
+"marks": 3
+},
+{
+"id": "q30",
+"type": "multiSelect",
+"question": "Which benefits may result from a well designed AIS?",
+"options": [
+"Improved decision making",
+"Enhanced supply chain efficiency",
+"Reduced ability to share knowledge",
+"Improved internal control structures"
+],
+"answer": [
+"Improved decision making",
+"Enhanced supply chain efficiency",
+"Improved internal control structures"
+],
+"rationale": "AIS improves decision quality, efficiency, and control mechanisms.",
+"marks": 3
+},
+{
+"id": "q31",
+"type": "matching",
+"question": "Match each concept with its description.",
+"matchPairs": [
+{ "id": "pair1", "left": "Data", "right": "Raw facts stored in a system" },
+{ "id": "pair2", "left": "Information", "right": "Processed data that has meaning" },
+{ "id": "pair3", "left": "Machine readable format", "right": "Data formatted for computer processing" }
+],
+"rationale": "These definitions distinguish raw facts from processed and usable data.",
+"marks": 2
+},
+{
+"id": "q32",
+"type": "matching",
+"question": "Match each business cycle with its primary focus.",
+"matchPairs": [
+{ "id": "pair1", "left": "Revenue cycle", "right": "Sales and cash collection" },
+{ "id": "pair2", "left": "Expenditure cycle", "right": "Purchasing goods and services" },
+{ "id": "pair3", "left": "Human resources cycle", "right": "Hiring and payroll management" }
+],
+"rationale": "Transaction cycles categorize recurring business processes.",
+"marks": 2
+},
+{
+"id": "q33",
+"type": "matching",
+"question": "Match each emerging technology with its description.",
+"matchPairs": [
+{ "id": "pair1", "left": "Virtualization", "right": "Running multiple systems on one physical machine" },
+{ "id": "pair2", "left": "Cloud computing", "right": "Accessing computing resources remotely via internet" },
+{ "id": "pair3", "left": "Internet of Things", "right": "Devices embedded with sensors connected to networks" }
+],
+"rationale": "These technologies represent key innovations influencing AIS development.",
+"marks": 2
+},
+{
+"id": "q34",
+"type": "essay",
+"question": "Explain how an Accounting Information System supports organizational decision making and operational control across different departments.",
+"idealKeywords": ["data collection", "information processing", "decision making", "internal control", "organizational activities"],
+"rationale": "The answer should explain how AIS gathers data, converts it to information, and supports management control.",
+"marks": 2
+},
+{
+"id": "q35",
+"type": "essay",
+"question": "Discuss how an Accounting Information System contributes to value creation within the organizational value chain and supply chain.",
+"idealKeywords": ["value chain", "supply chain", "information sharing", "efficiency", "decision support"],
+"rationale": "AIS enhances coordination, improves efficiency, and supports value creation across business activities.",
+"marks": 2
+}
+]
+}

@@ -1,0 +1,489 @@
+{
+"id": "quiz-AIS-Chapter2",
+"title": "Lesson 02 – Overview of Transaction Processing and Enterprise Resource Planning Systems",
+"description": "Evaluates conceptual understanding of the data processing cycle, data storage structures, coding techniques, transaction processing methods, and ERP systems.",
+"subject": "ACC2475 - Accounting Information Systems and ERP Applications",
+"gradientColors": ["#1e3a8a", "#2563eb", "#1d4ed8", "#0f172a"],
+"timeOptions": [10, 20, 30],
+"totalMarks": 66,
+"weight": 0,
+"category": "lesson",
+"questions": [
+{
+"id": "q1",
+"type": "multipleChoice",
+"question": "A retail company installs barcode scanners that record sales transactions automatically at checkout. Which stage of the data processing cycle is most directly improved?",
+"options": [
+"Data input capturing business events at the source",
+"Data storage organizing ledger summaries",
+"Information output generating periodic reports",
+"Data deletion removing outdated transaction records"
+],
+"answer": "Data input capturing business events at the source",
+"rationale": "Source data automation improves the capture of transaction data at the point of origin.",
+"marks": 2
+},
+{
+"id": "q2",
+"type": "multipleChoice",
+"question": "A utility company sends a bill that customers return with payment and machine readable information for scanning. What type of document is this?",
+"options": [
+"General journal record",
+"Turnaround document",
+"Source ledger document",
+"Control account document"
+],
+"answer": "Turnaround document",
+"rationale": "Turnaround documents are outputs sent externally and returned as machine readable inputs.",
+"marks": 2
+},
+{
+"id": "q3",
+"type": "multipleChoice",
+"question": "Which scenario best illustrates the event resource agent approach to capturing transaction data?",
+"options": [
+"Recording only the financial value of a sale",
+"Capturing details about the sale, inventory involved, and employees responsible",
+"Storing only the date and total value of transactions",
+"Recording aggregated monthly sales totals"
+],
+"answer": "Capturing details about the sale, inventory involved, and employees responsible",
+"rationale": "Transaction data should capture events, resources affected, and agents involved.",
+"marks": 2
+},
+{
+"id": "q4",
+"type": "multipleChoice",
+"question": "Which coding method assigns numbers sequentially to represent items but provides minimal classification meaning?",
+"options": [
+"Mnemonic code",
+"Group code",
+"Sequence code",
+"Block code"
+],
+"answer": "Sequence code",
+"rationale": "Sequence codes assign numbers consecutively without embedded meaning.",
+"marks": 2
+},
+{
+"id": "q5",
+"type": "multipleChoice",
+"question": "A company structures product codes so the first digits represent product category and the next digits represent location. Which coding approach is being used?",
+"options": [
+"Group coding",
+"Sequential coding",
+"Mnemonic coding",
+"Random numeric coding"
+],
+"answer": "Group coding",
+"rationale": "Group codes combine multiple meaningful segments within a single code.",
+"marks": 2
+},
+{
+"id": "q6",
+"type": "multipleChoice",
+"question": "Why must organizations design coding systems with future expansion in mind?",
+"options": [
+"To ensure codes remain unique during system growth",
+"To allow codes to remain secret from competitors",
+"To eliminate the need for data validation",
+"To reduce the need for database storage capacity"
+],
+"answer": "To ensure codes remain unique during system growth",
+"rationale": "Codes should allow room for expansion as organizations grow.",
+"marks": 2
+},
+{
+"id": "q7",
+"type": "multipleChoice",
+"question": "What is the primary purpose of a subsidiary ledger in an accounting information system?",
+"options": [
+"To summarize the balances of all accounts",
+"To store detailed information for specific accounts",
+"To eliminate the need for transaction journals",
+"To replace the general ledger entirely"
+],
+"answer": "To store detailed information for specific accounts",
+"rationale": "Subsidiary ledgers provide detailed records supporting general ledger control accounts.",
+"marks": 2
+},
+{
+"id": "q8",
+"type": "multipleChoice",
+"question": "Which account in the general ledger summarizes the balances of a related subsidiary ledger?",
+"options": [
+"Master account",
+"Control account",
+"Transaction account",
+"Balancing account"
+],
+"answer": "Control account",
+"rationale": "Control accounts aggregate balances from subsidiary ledger accounts.",
+"marks": 2
+},
+{
+"id": "q9",
+"type": "multipleChoice",
+"question": "A company records thousands of similar sales transactions daily. Which journal type is most appropriate for recording them?",
+"options": [
+"General journal",
+"Specialized journal",
+"Closing journal",
+"Subsidiary journal"
+],
+"answer": "Specialized journal",
+"rationale": "Specialized journals handle large volumes of repetitive transactions.",
+"marks": 2
+},
+{
+"id": "q10",
+"type": "multipleChoice",
+"question": "Which concept allows accountants to trace a transaction from its origin through all stages of processing to final reports?",
+"options": [
+"Transaction aggregation",
+"Audit trail",
+"Database replication",
+"Information consolidation"
+],
+"answer": "Audit trail",
+"rationale": "An audit trail traces transactions from origin to final output or vice versa.",
+"marks": 2
+},
+{
+"id": "q11",
+"type": "multipleChoice",
+"question": "Which CRUD activity involves retrieving existing data without modifying it?",
+"options": [
+"Creating",
+"Reading",
+"Updating",
+"Deleting"
+],
+"answer": "Reading",
+"rationale": "Reading retrieves stored information without altering it.",
+"marks": 2
+},
+{
+"id": "q12",
+"type": "multipleChoice",
+"question": "Which processing approach updates transaction records immediately after each event occurs?",
+"options": [
+"Batch processing",
+"Real time processing",
+"Sequential processing",
+"Archival processing"
+],
+"answer": "Real time processing",
+"rationale": "Real time processing updates system data immediately after transactions occur.",
+"marks": 2
+},
+{
+"id": "q13",
+"type": "multipleChoice",
+"question": "Which processing approach accumulates transactions over time and processes them periodically?",
+"options": [
+"Distributed processing",
+"Batch processing",
+"Parallel processing",
+"Dynamic processing"
+],
+"answer": "Batch processing",
+"rationale": "Batch processing groups transactions and processes them collectively.",
+"marks": 2
+},
+{
+"id": "q14",
+"type": "multipleChoice",
+"question": "Which database element represents the smallest unit of meaningful data stored in a system?",
+"options": [
+"Record",
+"Field",
+"File",
+"Entity"
+],
+"answer": "Field",
+"rationale": "A field stores a single attribute value within a record.",
+"marks": 2
+},
+{
+"id": "q15",
+"type": "multipleChoice",
+"question": "A record containing all details about a customer such as name, address, and account balance represents which data structure?",
+"options": [
+"Attribute set",
+"Record",
+"Database index",
+"Transaction log"
+],
+"answer": "Record",
+"rationale": "A record contains multiple fields describing one entity instance.",
+"marks": 2
+},
+{
+"id": "q16",
+"type": "multipleChoice",
+"question": "Which data storage structure contains permanent information about organizational entities such as customers or employees?",
+"options": [
+"Transaction file",
+"Temporary data file",
+"Master file",
+"Control log"
+],
+"answer": "Master file",
+"rationale": "Master files store relatively permanent information about entities.",
+"marks": 2
+},
+{
+"id": "q17",
+"type": "multipleChoice",
+"question": "Which type of file primarily stores day to day business events such as sales and payments before they update master files?",
+"options": [
+"Transaction file",
+"Reference file",
+"Control file",
+"Historical archive file"
+],
+"answer": "Transaction file",
+"rationale": "Transaction files store event level activity that updates master records.",
+"marks": 2
+},
+{
+"id": "q18",
+"type": "multipleChoice",
+"question": "What is the primary purpose of a chart of accounts within an accounting information system?",
+"options": [
+"To organize the numbering structure of financial accounts",
+"To store transaction records chronologically",
+"To provide backup storage for transaction files",
+"To track employee payroll details"
+],
+"answer": "To organize the numbering structure of financial accounts",
+"rationale": "A chart of accounts lists account numbers assigned to financial statement accounts.",
+"marks": 2
+},
+{
+"id": "q19",
+"type": "multipleChoice",
+"question": "Which output type is most appropriate for answering a specific management question such as identifying the division with the highest sales?",
+"options": [
+"Standard document",
+"Database query",
+"Transaction receipt",
+"Operational log"
+],
+"answer": "Database query",
+"rationale": "Queries allow users to retrieve specific information from a database.",
+"marks": 2
+},
+{
+"id": "q20",
+"type": "multipleChoice",
+"question": "Which ERP characteristic most directly reduces redundant data entry across departments?",
+"options": [
+"Decentralized databases",
+"Centralized integrated database",
+"Independent departmental modules",
+"Manual reconciliation procedures"
+],
+"answer": "Centralized integrated database",
+"rationale": "ERP systems store data once in a centralized database accessible by multiple functions.",
+"marks": 2
+},
+{
+"id": "q21",
+"type": "multipleChoice",
+"question": "Which factor commonly causes resistance when organizations implement ERP systems?",
+"options": [
+"Employees needing to adapt to new procedures and systems",
+"Reduction of system integration across departments",
+"Decrease in information availability",
+"Limited system scalability"
+],
+"answer": "Employees needing to adapt to new procedures and systems",
+"rationale": "ERP implementation often faces resistance because employees must learn new processes.",
+"marks": 2
+},
+{
+"id": "q22",
+"type": "dropdown",
+"question": "The [dropdown_1] ledger contains summarized balances for accounts, while the [dropdown_2] ledger contains detailed information supporting those balances.",
+"dropdownBlanks": [
+{
+"id": "dropdown_1",
+"options": ["general", "transaction", "temporary", "archival"],
+"correctAnswer": "general"
+},
+{
+"id": "dropdown_2",
+"options": ["subsidiary", "journal", "master", "database"],
+"correctAnswer": "subsidiary"
+}
+],
+"rationale": "General ledgers summarize data while subsidiary ledgers store details.",
+"marks": 4
+},
+{
+"id": "q23",
+"type": "dropdown",
+"question": "The CRUD activity that adds a new employee record is [dropdown_1], while removing an inactive vendor from the database is [dropdown_2].",
+"dropdownBlanks": [
+{
+"id": "dropdown_1",
+"options": ["creating", "reading", "updating", "deleting"],
+"correctAnswer": "creating"
+},
+{
+"id": "dropdown_2",
+"options": ["reading", "updating", "deleting", "creating"],
+"correctAnswer": "deleting"
+}
+],
+"rationale": "Creating adds records while deleting removes them from the system.",
+"marks": 4
+},
+{
+"id": "q24",
+"type": "dropdown",
+"question": "When transactions are processed immediately after occurrence it is called [dropdown_1], while processing them periodically in groups is called [dropdown_2].",
+"dropdownBlanks": [
+{
+"id": "dropdown_1",
+"options": ["real time processing", "batch processing", "sequential processing", "parallel processing"],
+"correctAnswer": "real time processing"
+},
+{
+"id": "dropdown_2",
+"options": ["real time processing", "batch processing", "distributed processing", "manual processing"],
+"correctAnswer": "batch processing"
+}
+],
+"rationale": "Real time updates instantly while batch processing handles grouped transactions.",
+"marks": 4
+},
+{
+"id": "q25",
+"type": "fillInBlank",
+"question": "The operations performed on data to generate meaningful information are collectively called the ________ cycle.",
+"answer": "data processing",
+"rationale": "The data processing cycle transforms raw data into useful information.",
+"marks": 2
+},
+{
+"id": "q26",
+"type": "fillInBlank",
+"question": "A traceable path of a transaction from origin to final report is known as an ________.",
+"answer": "audit trail",
+"rationale": "Audit trails allow verification of transaction accuracy.",
+"marks": 2
+},
+{
+"id": "q27",
+"type": "fillInBlank",
+"question": "A collection of related records stored together in a system is called a ________.",
+"answer": "file",
+"rationale": "Files store sets of records in a database structure.",
+"marks": 2
+},
+{
+"id": "q28",
+"type": "multiSelect",
+"question": "Which elements must be captured when recording transaction data about a business activity?",
+"options": [
+"Event details describing the activity",
+"Resources affected by the activity",
+"People participating in the activity",
+"Future strategic forecasts"
+],
+"answer": [
+"Event details describing the activity",
+"Resources affected by the activity",
+"People participating in the activity"
+],
+"rationale": "Transaction data capture events, resources, and agents.",
+"marks": 3
+},
+{
+"id": "q29",
+"type": "multiSelect",
+"question": "Which benefits commonly arise from implementing ERP systems?",
+"options": [
+"Improved information flow across departments",
+"Reduced duplicate data entry",
+"Greater standardization of procedures",
+"Elimination of all implementation costs"
+],
+"answer": [
+"Improved information flow across departments",
+"Reduced duplicate data entry",
+"Greater standardization of procedures"
+],
+"rationale": "ERP improves integration, efficiency, and standardized processes.",
+"marks": 3
+},
+{
+"id": "q30",
+"type": "multiSelect",
+"question": "Which challenges are commonly associated with ERP implementation?",
+"options": [
+"High implementation cost",
+"Long deployment timelines",
+"Organizational resistance from users",
+"Guaranteed elimination of data errors"
+],
+"answer": [
+"High implementation cost",
+"Long deployment timelines",
+"Organizational resistance from users"
+],
+"rationale": "ERP systems can be expensive, complex, and require organizational adaptation.",
+"marks": 3
+},
+{
+"id": "q31",
+"type": "matching",
+"question": "Match each data storage element with its description.",
+"matchPairs": [
+{ "id": "pair1", "left": "Entity", "right": "Object about which data are stored" },
+{ "id": "pair2", "left": "Attribute", "right": "Characteristic describing an entity" },
+{ "id": "pair3", "left": "Record", "right": "Collection of related fields about one entity instance" }
+],
+"marks": 4
+},
+{
+"id": "q32",
+"type": "matching",
+"question": "Match each processing concept with its description.",
+"matchPairs": [
+{ "id": "pair1", "left": "Create", "right": "Adding new data records to the system" },
+{ "id": "pair2", "left": "Update", "right": "Modifying existing stored data" },
+{ "id": "pair3", "left": "Delete", "right": "Removing outdated or unnecessary data records" }
+],
+"marks": 4
+},
+{
+"id": "q33",
+"type": "matching",
+"question": "Match each output type with its example.",
+"matchPairs": [
+{ "id": "pair1", "left": "Document", "right": "Sales invoice given to a customer" },
+{ "id": "pair2", "left": "Report", "right": "Monthly sales summary prepared for management" },
+{ "id": "pair3", "left": "Query", "right": "Database search identifying highest performing division" }
+],
+"marks": 4
+},
+{
+"id": "q34",
+"type": "essay",
+"question": "Analyze how the design of data storage structures such as ledgers, journals, and databases contributes to reliability and traceability in accounting information systems.",
+"idealKeywords": ["data organization", "ledgers", "journals", "audit trail", "reliability"],
+"marks": 5
+},
+{
+"id": "q35",
+"type": "essay",
+"question": "Evaluate the strategic advantages and challenges organizations face when implementing enterprise resource planning systems for transaction processing.",
+"idealKeywords": ["integration", "centralized data", "implementation cost", "process standardization", "organizational change"],
+"marks": 5
+}
+]
+}

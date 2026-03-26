@@ -1,0 +1,490 @@
+{
+"id": "quiz-AIS-Chapter3",
+"title": "Lesson 03 – System Documentation Techniques Part 1",
+"description": "Examines system documentation methods including data flow diagrams, flowcharts, and business process diagrams used to analyze and design information systems.",
+"subject": "ACC2475 - Accounting Information Systems and ERP Applications",
+"gradientColors": ["#1e293b", "#334155", "#475569", "#64748b"],
+"timeOptions": [10, 20, 30],
+"totalMarks": 66,
+"weight": 0,
+"category": "lesson",
+"questions": [
+{
+"id": "q1",
+"type": "multipleChoice",
+"question": "Which situation most clearly demonstrates the primary purpose of system documentation in an organization?",
+"options": [
+"Replacing employee training programs with automated instructions",
+"Providing a structured explanation of how data moves and is processed within a system",
+"Eliminating the need for internal controls in transaction processing",
+"Reducing the requirement for communication between departments"
+],
+"answer": "Providing a structured explanation of how data moves and is processed within a system",
+"rationale": "Documentation explains how systems function including inputs, processing, storage, outputs, and controls.",
+"marks": 2
+},
+{
+"id": "q2",
+"type": "multipleChoice",
+"question": "An analyst reviews diagrams showing the origins, movement, transformation, and storage of data within a payroll system. Which documentation technique is primarily being used?",
+"options": [
+"Data flow diagram",
+"Program flowchart",
+"Entity relationship diagram",
+"Organizational hierarchy chart"
+],
+"answer": "Data flow diagram",
+"rationale": "Data flow diagrams show where data originates, how it moves, how it is transformed, and where it is stored.",
+"marks": 2
+},
+{
+"id": "q3",
+"type": "multipleChoice",
+"question": "Which documentation tool is most appropriate when the objective is to illustrate how physical documents move between departments?",
+"options": [
+"Program flowchart",
+"Document flowchart",
+"Data flow diagram",
+"Business rule matrix"
+],
+"answer": "Document flowchart",
+"rationale": "Document flowcharts describe the flow of documents and information between organizational units.",
+"marks": 2
+},
+{
+"id": "q4",
+"type": "multipleChoice",
+"question": "Which characteristic distinguishes a system flowchart from a document flowchart?",
+"options": [
+"It focuses on logical processing steps rather than document movement",
+"It describes the physical movement of printed documents",
+"It shows organizational reporting relationships",
+"It focuses only on employee responsibilities"
+],
+"answer": "It focuses on logical processing steps rather than document movement",
+"rationale": "System flowcharts show relationships among inputs, processing, and outputs within a system.",
+"marks": 2
+},
+{
+"id": "q5",
+"type": "multipleChoice",
+"question": "A program flowchart primarily documents which aspect of a system?",
+"options": [
+"The movement of documents between departments",
+"The logical sequence of operations within a computer program",
+"The organizational reporting structure of employees",
+"The external entities interacting with a system"
+],
+"answer": "The logical sequence of operations within a computer program",
+"rationale": "Program flowcharts describe the sequence of logical operations performed by software.",
+"marks": 2
+},
+{
+"id": "q6",
+"type": "multipleChoice",
+"question": "In a data flow diagram, which element represents an organization or individual that sends or receives data?",
+"options": [
+"Transformation process",
+"Data source or destination",
+"Data store",
+"Data dictionary"
+],
+"answer": "Data source or destination",
+"rationale": "External entities that send or receive data are represented as sources or destinations.",
+"marks": 2
+},
+{
+"id": "q7",
+"type": "multipleChoice",
+"question": "In a data flow diagram, arrows primarily represent which concept?",
+"options": [
+"Data storage locations",
+"Logical decision rules",
+"Movement of data between elements",
+"Authorization controls"
+],
+"answer": "Movement of data between elements",
+"rationale": "Arrows represent the flow of data between processes, stores, and external entities.",
+"marks": 2
+},
+{
+"id": "q8",
+"type": "multipleChoice",
+"question": "Which DFD element represents the transformation of incoming data into outgoing information?",
+"options": [
+"Data store",
+"External entity",
+"Transformation process",
+"Data dictionary"
+],
+"answer": "Transformation process",
+"rationale": "Processes transform input data into output information within a system.",
+"marks": 2
+},
+{
+"id": "q9",
+"type": "multipleChoice",
+"question": "Which DFD component represents a temporary or permanent repository of data?",
+"options": [
+"Data store",
+"Data flow",
+"Process node",
+"External source"
+],
+"answer": "Data store",
+"rationale": "Data stores represent files or databases where data are stored.",
+"marks": 2
+},
+{
+"id": "q10",
+"type": "multipleChoice",
+"question": "Why must every transformation process in a DFD have both input and output data flows?",
+"options": [
+"To ensure that each process actually transforms incoming data into new outputs",
+"To ensure diagrams maintain symmetrical layouts",
+"To allow processes to store permanent data records",
+"To reduce the number of external entities shown"
+],
+"answer": "To ensure that each process actually transforms incoming data into new outputs",
+"rationale": "Processes must receive input data and produce output data to represent meaningful transformations.",
+"marks": 2
+},
+{
+"id": "q11",
+"type": "multipleChoice",
+"question": "When two related data elements always move together through a system, how should they appear in a DFD?",
+"options": [
+"Combined as a single labeled data flow",
+"Separated into multiple independent flows",
+"Converted into separate data stores",
+"Represented as independent processes"
+],
+"answer": "Combined as a single labeled data flow",
+"rationale": "Data elements that always flow together are represented using a single data flow line.",
+"marks": 2
+},
+{
+"id": "q12",
+"type": "multipleChoice",
+"question": "Which diagram represents the highest level overview of a system within a data flow diagram hierarchy?",
+"options": [
+"System flowchart",
+"Context diagram",
+"Process diagram",
+"Control diagram"
+],
+"answer": "Context diagram",
+"rationale": "A context diagram provides a summary view of the system and its external entities.",
+"marks": 2
+},
+{
+"id": "q13",
+"type": "multipleChoice",
+"question": "Why are complex data flow diagrams subdivided into lower levels?",
+"options": [
+"To simplify diagrams and provide increasing levels of detail",
+"To eliminate the need for context diagrams",
+"To reduce the number of external entities",
+"To convert diagrams into program code"
+],
+"answer": "To simplify diagrams and provide increasing levels of detail",
+"rationale": "Large systems require multiple levels of DFDs to present detailed information clearly.",
+"marks": 2
+},
+{
+"id": "q14",
+"type": "multipleChoice",
+"question": "Which guideline recommends identifying system boundaries before constructing a DFD?",
+"options": [
+"Determine system scope and included data elements",
+"Eliminate all transformation processes",
+"Combine all flows into one diagram",
+"Remove all external entities"
+],
+"answer": "Determine system scope and included data elements",
+"rationale": "System boundaries determine what elements are included or excluded from the diagram.",
+"marks": 2
+},
+{
+"id": "q15",
+"type": "multipleChoice",
+"question": "Which documentation component describes the meaning and structure of every data element used in a system?",
+"options": [
+"Data dictionary",
+"Source document index",
+"Transaction ledger",
+"Process catalog"
+],
+"answer": "Data dictionary",
+"rationale": "A data dictionary defines and documents all data elements, flows, and stores.",
+"marks": 2
+},
+{
+"id": "q16",
+"type": "multipleChoice",
+"question": "Which guideline emphasizes naming data flows first when designing a DFD?",
+"options": [
+"To ensure attention focuses on the movement of data rather than system structure",
+"To eliminate the need for data stores",
+"To ensure processes are drawn before entities",
+"To standardize diagram layout across departments"
+],
+"answer": "To ensure attention focuses on the movement of data rather than system structure",
+"rationale": "Focusing on data flows first helps analysts understand system data movement clearly.",
+"marks": 2
+},
+{
+"id": "q17",
+"type": "multipleChoice",
+"question": "Why should unrelated processes not be combined into a single transformation process in a DFD?",
+"options": [
+"Because unrelated processes distort the logical structure of data transformations",
+"Because multiple processes require separate software systems",
+"Because it increases the number of external entities",
+"Because it eliminates the need for data stores"
+],
+"answer": "Because unrelated processes distort the logical structure of data transformations",
+"rationale": "Combining unrelated activities obscures the logical flow of data and system functions.",
+"marks": 2
+},
+{
+"id": "q18",
+"type": "multipleChoice",
+"question": "Which guideline recommends limiting each DFD page to approximately five to seven processes?",
+"options": [
+"To maintain readability and prevent diagram complexity",
+"To eliminate the need for data dictionaries",
+"To ensure processes are identical in structure",
+"To simplify software implementation"
+],
+"answer": "To maintain readability and prevent diagram complexity",
+"rationale": "Too many processes reduce readability and clarity of diagrams.",
+"marks": 2
+},
+{
+"id": "q19",
+"type": "multipleChoice",
+"question": "Why are physical storage details such as alphabetical file organization typically excluded from DFDs?",
+"options": [
+"Because DFDs focus on logical data flows rather than physical storage methods",
+"Because physical storage information is confidential",
+"Because physical storage has no impact on system design",
+"Because storage methods are only shown in program flowcharts"
+],
+"answer": "Because DFDs focus on logical data flows rather than physical storage methods",
+"rationale": "DFDs illustrate logical data movement rather than physical implementation details.",
+"marks": 2
+},
+{
+"id": "q20",
+"type": "multipleChoice",
+"question": "Which principle recommends organizing DFDs so that data generally flows from top to bottom and from left to right?",
+"options": [
+"Diagram refinement principle",
+"Sequential flow organization",
+"Data flow orientation guideline",
+"Control path optimization"
+],
+"answer": "Data flow orientation guideline",
+"rationale": "Clear directional organization improves readability and interpretation of diagrams.",
+"marks": 2
+},
+{
+"id": "q21",
+"type": "multipleChoice",
+"question": "Which situation best demonstrates the practical value of system documentation for internal control evaluation?",
+"options": [
+"Managers analyzing diagrams to detect weaknesses in transaction authorization procedures",
+"Employees memorizing transaction processing steps",
+"Auditors ignoring documentation during system reviews",
+"Managers relying exclusively on verbal explanations"
+],
+"answer": "Managers analyzing diagrams to detect weaknesses in transaction authorization procedures",
+"rationale": "Documentation helps evaluate system controls and identify weaknesses.",
+"marks": 2
+},
+{
+"id": "q22",
+"type": "dropdown",
+"question": "In a data flow diagram, [dropdown_1] represent transformations of data, while [dropdown_2] represent repositories where data are stored.",
+"dropdownBlanks": [
+{
+"id": "dropdown_1",
+"options": ["processes", "data flows", "entities", "documents"],
+"correctAnswer": "processes"
+},
+{
+"id": "dropdown_2",
+"options": ["data stores", "entities", "reports", "procedures"],
+"correctAnswer": "data stores"
+}
+],
+"rationale": "Processes transform data while data stores represent storage locations.",
+"marks": 4
+},
+{
+"id": "q23",
+"type": "dropdown",
+"question": "The [dropdown_1] diagram provides the highest level overview of a system, while lower level diagrams provide increasing levels of [dropdown_2].",
+"dropdownBlanks": [
+{
+"id": "dropdown_1",
+"options": ["context", "program", "system", "process"],
+"correctAnswer": "context"
+},
+{
+"id": "dropdown_2",
+"options": ["detail", "authorization", "storage", "control"],
+"correctAnswer": "detail"
+}
+],
+"rationale": "Context diagrams summarize the system while lower levels provide greater detail.",
+"marks": 4
+},
+{
+"id": "q24",
+"type": "dropdown",
+"question": "In DFD notation, data sources and destinations are typically represented by [dropdown_1], while data flows are represented by [dropdown_2].",
+"dropdownBlanks": [
+{
+"id": "dropdown_1",
+"options": ["squares", "circles", "arrows", "lines"],
+"correctAnswer": "squares"
+},
+{
+"id": "dropdown_2",
+"options": ["arrows", "squares", "circles", "rectangles"],
+"correctAnswer": "arrows"
+}
+],
+"rationale": "Squares represent external entities and arrows represent data movement.",
+"marks": 4
+},
+{
+"id": "q25",
+"type": "fillInBlank",
+"question": "A diagram that graphically illustrates how data move through a system is called a ________.",
+"answer": "data flow diagram",
+"rationale": "Data flow diagrams show the movement and transformation of data.",
+"marks": 2
+},
+{
+"id": "q26",
+"type": "fillInBlank",
+"question": "A repository where data are stored temporarily or permanently in a DFD is called a ________.",
+"answer": "data store",
+"rationale": "Data stores represent locations where data are held for later use.",
+"marks": 2
+},
+{
+"id": "q27",
+"type": "fillInBlank",
+"question": "A structured list describing every data element, store, and flow in a system is known as a ________.",
+"answer": "data dictionary",
+"rationale": "The data dictionary defines all system data components.",
+"marks": 2
+},
+{
+"id": "q28",
+"type": "multiSelect",
+"question": "Which elements are fundamental components of a data flow diagram?",
+"options": [
+"Data sources and destinations",
+"Data flows",
+"Transformation processes",
+"Data stores"
+],
+"answer": [
+"Data sources and destinations",
+"Data flows",
+"Transformation processes",
+"Data stores"
+],
+"rationale": "These four elements form the basic structure of a DFD.",
+"marks": 3
+},
+{
+"id": "q29",
+"type": "multiSelect",
+"question": "Which objectives can system documentation help achieve within an organization?",
+"options": [
+"Understanding how a system operates",
+"Evaluating internal controls and identifying weaknesses",
+"Designing new systems or improving existing systems",
+"Replacing the need for system users"
+],
+"answer": [
+"Understanding how a system operates",
+"Evaluating internal controls and identifying weaknesses",
+"Designing new systems or improving existing systems"
+],
+"rationale": "Documentation helps understand, evaluate, and design systems.",
+"marks": 3
+},
+{
+"id": "q30",
+"type": "multiSelect",
+"question": "Which guidelines should be followed when designing a clear and effective data flow diagram?",
+"options": [
+"Identify system boundaries before designing the diagram",
+"Use descriptive names for data flows and processes",
+"Group logically related transformation processes",
+"Ignore all data inputs entering the system"
+],
+"answer": [
+"Identify system boundaries before designing the diagram",
+"Use descriptive names for data flows and processes",
+"Group logically related transformation processes"
+],
+"rationale": "These guidelines help maintain clarity and logical accuracy in DFDs.",
+"marks": 3
+},
+{
+"id": "q31",
+"type": "matching",
+"question": "Match each DFD element with its representation.",
+"matchPairs": [
+{ "id": "pair1", "left": "Data source or destination", "right": "Square symbol representing external entity" },
+{ "id": "pair2", "left": "Data flow", "right": "Arrow indicating movement of data" },
+{ "id": "pair3", "left": "Transformation process", "right": "Circle representing data processing activity" }
+],
+"marks": 4
+},
+{
+"id": "q32",
+"type": "matching",
+"question": "Match each documentation tool with its primary purpose.",
+"matchPairs": [
+{ "id": "pair1", "left": "Document flowchart", "right": "Shows movement of documents between departments" },
+{ "id": "pair2", "left": "System flowchart", "right": "Illustrates relationship between inputs processing and outputs" },
+{ "id": "pair3", "left": "Program flowchart", "right": "Represents logical steps executed by a computer program" }
+],
+"marks": 4
+},
+{
+"id": "q33",
+"type": "matching",
+"question": "Match each diagram level with its description.",
+"matchPairs": [
+{ "id": "pair1", "left": "Context diagram", "right": "High level summary of the system and its external entities" },
+{ "id": "pair2", "left": "Level one DFD", "right": "Breaks the system into major processes" },
+{ "id": "pair3", "left": "Lower level DFD", "right": "Provides detailed decomposition of processes" }
+],
+"marks": 4
+},
+{
+"id": "q34",
+"type": "essay",
+"question": "Explain how data flow diagrams help analysts understand and evaluate organizational information systems and identify potential weaknesses.",
+"idealKeywords": ["data movement", "system analysis", "process transformation", "system evaluation", "internal control"],
+"marks": 5
+},
+{
+"id": "q35",
+"type": "essay",
+"question": "Discuss the importance of system documentation in improving system design, communication among stakeholders, and internal control effectiveness.",
+"idealKeywords": ["documentation", "system understanding", "communication", "system design", "internal control"],
+"marks": 5
+}
+]
+}
