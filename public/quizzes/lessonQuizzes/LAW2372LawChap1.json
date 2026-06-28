@@ -1,0 +1,684 @@
+{
+  "id": "quiz-Corporate-Law-Lesson-01",
+  "title": "Lesson 01 – Introduction to Corporate Law and Business Organizations",
+  "description": "Exam-standard quiz covering business organizations, legal personality, corporate characteristics, company formation, Articles of Association, and beneficial ownership under Sri Lankan corporate law.",
+  "subject": "LAW2372 - Corporate Law",
+  "gradientColors": [
+    "#4efc03",
+    "#4efc03",
+    "#007d5a",
+    "#007d5a"
+  ],
+  "timeOptions": [
+    10,
+    20,
+    30
+  ],
+  "totalMarks": 68,
+  "weight": 0,
+  "category": "lesson",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multipleChoice",
+      "question": "A software entrepreneur wants complete managerial control, expects low initial legal costs, and is willing to bear personal financial risk. Which business form best satisfies these priorities?",
+      "options": [
+        "Private company",
+        "Partnership",
+        "Sole proprietorship",
+        "Company limited by guarantee"
+      ],
+      "answer": "Sole proprietorship",
+      "rationale": "A sole proprietorship provides complete control with minimal legal formalities but exposes the owner to unlimited liability.",
+      "marks": 2
+    },
+    {
+      "id": "q2",
+      "type": "multipleChoice",
+      "question": "Two engineers collaborate only to construct a single renewable energy project. They agree to dissolve the relationship immediately after completion. Which legal structure most appropriately reflects this arrangement?",
+      "options": [
+        "Joint venture",
+        "Private company",
+        "General partnership",
+        "Unlimited company"
+      ],
+      "answer": "Joint venture",
+      "rationale": "Joint ventures are generally formed for a specific project or objective rather than an ongoing business.",
+      "marks": 2
+    },
+    {
+      "id": "q3",
+      "type": "multipleChoice",
+      "question": "Which consequence most directly follows from a company's separate legal personality?",
+      "options": [
+        "Shareholders automatically become directors.",
+        "The company may own property independently of its shareholders.",
+        "The company can exist only while its founders remain alive.",
+        "All debts automatically become personal liabilities of members."
+      ],
+      "answer": "The company may own property independently of its shareholders.",
+      "rationale": "Separate legal personality allows the company to own assets and incur liabilities in its own name.",
+      "marks": 2
+    },
+    {
+      "id": "q4",
+      "type": "multipleChoice",
+      "question": "A business wishes to attract public investment by offering shares to the general public. Which company type is most appropriate?",
+      "options": [
+        "Private company",
+        "Unlimited company",
+        "Company limited by guarantee",
+        "Public company"
+      ],
+      "answer": "Public company",
+      "rationale": "Public companies are structured to raise capital from the public through share offerings.",
+      "marks": 2
+    },
+    {
+      "id": "q5",
+      "type": "multipleChoice",
+      "question": "Which characteristic primarily explains why a company continues despite the death of its shareholders?",
+      "options": [
+        "Corporate governance",
+        "Limited liability",
+        "Perpetual succession",
+        "Beneficial ownership disclosure"
+      ],
+      "answer": "Perpetual succession",
+      "rationale": "Perpetual succession ensures continuity regardless of changes in ownership or management.",
+      "marks": 2
+    },
+    {
+      "id": "q6",
+      "type": "multipleChoice",
+      "question": "A company secretary argues that because the company is a separate legal person, regulators should never identify its true owners. Which statement best reflects the law?",
+      "options": [
+        "Separate legal personality completely eliminates ownership disclosure.",
+        "Beneficial ownership disclosure exists because transparency serves public and regulatory interests.",
+        "Only listed companies must disclose beneficial owners.",
+        "Disclosure applies only when the company becomes insolvent."
+      ],
+      "answer": "Beneficial ownership disclosure exists because transparency serves public and regulatory interests.",
+      "rationale": "Separate legal personality and beneficial ownership disclosure operate together to balance legal independence with transparency.",
+      "marks": 2
+    },
+    {
+      "id": "q7",
+      "type": "multipleChoice",
+      "question": "Which factor most strongly distinguishes a partnership from a joint venture?",
+      "options": [
+        "Partnerships are always incorporated.",
+        "Joint ventures are usually limited to a particular undertaking.",
+        "Partnerships cannot earn profits.",
+        "Joint ventures always possess legal personality."
+      ],
+      "answer": "Joint ventures are usually limited to a particular undertaking.",
+      "rationale": "Joint ventures are project-specific whereas partnerships generally conduct an ongoing business.",
+      "marks": 2
+    },
+    {
+      "id": "q8",
+      "type": "multipleChoice",
+      "question": "Which business form best balances limited liability, continuity, and separation between ownership and management?",
+      "options": [
+        "Company",
+        "Partnership",
+        "Joint venture",
+        "Sole proprietorship"
+      ],
+      "answer": "Company",
+      "rationale": "Companies provide limited liability, perpetual succession, and distinct ownership and management structures.",
+      "marks": 2
+    },
+    {
+      "id": "q9",
+      "type": "multipleChoice",
+      "question": "Why are bearer shares prohibited under the beneficial ownership reforms?",
+      "options": [
+        "To simplify dividend payments.",
+        "To reduce annual audit costs.",
+        "To eliminate anonymous ownership structures.",
+        "To increase shareholder voting rights."
+      ],
+      "answer": "To eliminate anonymous ownership structures.",
+      "rationale": "Bearer shares hinder identification of ultimate owners and undermine transparency.",
+      "marks": 2
+    },
+    {
+      "id": "q10",
+      "type": "multipleChoice",
+      "question": "A company owned through several offshore entities ultimately benefits one individual who controls strategic decisions despite holding no direct shares. Under the amended law, that individual is most likely considered:",
+      "options": [
+        "An external creditor",
+        "A nominee shareholder",
+        "A beneficial owner",
+        "A minority shareholder"
+      ],
+      "answer": "A beneficial owner",
+      "rationale": "Effective control can establish beneficial ownership even without direct shareholding.",
+      "marks": 2
+    },
+    {
+      "id": "q11",
+      "type": "multipleChoice",
+      "question": "Which principle best explains why shareholders generally lose only their investment when a limited company becomes insolvent?",
+      "options": [
+        "Unlimited succession",
+        "Separate accounting",
+        "Limited liability",
+        "Corporate governance"
+      ],
+      "answer": "Limited liability",
+      "rationale": "Limited liability protects shareholders' personal assets beyond their agreed investment.",
+      "marks": 2
+    },
+    {
+      "id": "q12",
+      "type": "multipleChoice",
+      "question": "A non-profit organization intends to pursue charitable objectives without distributing profits to members. Which company structure is generally the most appropriate?",
+      "options": [
+        "Company limited by guarantee",
+        "Public company",
+        "Unlimited company",
+        "Private company"
+      ],
+      "answer": "Company limited by guarantee",
+      "rationale": "Companies limited by guarantee are commonly used for charitable and non-profit purposes.",
+      "marks": 2
+    },
+    {
+      "id": "q13",
+      "type": "multipleChoice",
+      "question": "Which statement best explains why Articles of Association are important?",
+      "options": [
+        "They replace all provisions of the Companies Act.",
+        "They function as the company's internal governance framework.",
+        "They determine national constitutional law.",
+        "They eliminate directors' legal duties."
+      ],
+      "answer": "They function as the company's internal governance framework.",
+      "rationale": "The Articles regulate internal management and relationships among the company, directors, and shareholders.",
+      "marks": 2
+    },
+    {
+      "id": "q14",
+      "type": "multipleChoice",
+      "question": "Which situation best demonstrates the practical value of separate legal personality?",
+      "options": [
+        "A shareholder personally signs every supplier contract.",
+        "A company purchases land registered in its own name.",
+        "Directors automatically inherit company assets.",
+        "Employees become personally responsible for company debts."
+      ],
+      "answer": "A company purchases land registered in its own name.",
+      "rationale": "The company itself owns the property rather than its shareholders.",
+      "marks": 2
+    },
+    {
+      "id": "q15",
+      "type": "multipleChoice",
+      "question": "A regulator introduces beneficial ownership disclosure primarily to:",
+      "options": [
+        "Increase the number of directors in companies.",
+        "Reduce incorporation fees.",
+        "Strengthen transparency and combat financial crime.",
+        "Prevent companies from issuing shares."
+      ],
+      "answer": "Strengthen transparency and combat financial crime.",
+      "rationale": "Beneficial ownership disclosure supports AML, CFT, tax compliance, and corporate transparency.",
+      "marks": 2
+    },
+    {
+      "id": "q16",
+      "type": "multipleChoice",
+      "question": "Case Study: Alpha Holdings owns 80 percent of Beta Ltd through three nominee companies. Mr. Silva ultimately controls Alpha Holdings and appoints Beta's directors. Which conclusion is most legally accurate?",
+      "options": [
+        "Only the nominee companies are relevant.",
+        "Mr. Silva is likely the beneficial owner because he exercises ultimate control.",
+        "Beta Ltd has no obligation to identify any individual owner.",
+        "Only direct shareholders qualify as beneficial owners."
+      ],
+      "answer": "Mr. Silva is likely the beneficial owner because he exercises ultimate control.",
+      "rationale": "The law traces ownership through intermediate entities to the ultimate natural person exercising control.",
+      "marks": 2
+    },
+    {
+      "id": "q17",
+      "type": "multipleChoice",
+      "question": "Case Study: Four architects agree to jointly construct one sports complex, sharing profits only from that project. Which legal relationship is most likely intended?",
+      "options": [
+        "Joint venture",
+        "Unlimited company",
+        "General partnership",
+        "Public company"
+      ],
+      "answer": "Joint venture",
+      "rationale": "A project-specific commercial collaboration generally indicates a joint venture.",
+      "marks": 2
+    },
+    {
+      "id": "q18",
+      "type": "multipleChoice",
+      "question": "Case Study: A company loses all shareholders except one due to share transfers. Which statement is most consistent with modern company law?",
+      "options": [
+        "The company automatically ceases to exist.",
+        "The company cannot legally own property anymore.",
+        "A single shareholder may continue the company where permitted by law.",
+        "The company immediately becomes a partnership."
+      ],
+      "answer": "A single shareholder may continue the company where permitted by law.",
+      "rationale": "Modern company law permits single-shareholder companies in appropriate circumstances.",
+      "marks": 2
+    },
+        {
+      "id": "q19",
+      "type": "multipleChoice",
+      "question": "Case Study: A manufacturing company wishes to amend its Articles of Association to introduce new voting rights for a class of shareholders. Which statement is most accurate?",
+      "options": [
+        "The Articles cannot be amended after incorporation.",
+        "The Articles may generally be amended by a special resolution in accordance with the Companies Act.",
+        "Only the Registrar may amend the Articles.",
+        "Directors alone may amend the Articles without shareholder approval."
+      ],
+      "answer": "The Articles may generally be amended by a special resolution in accordance with the Companies Act.",
+      "rationale": "The Articles form the company's internal constitution and can generally be amended through a special resolution.",
+      "marks": 2
+    },
+    {
+      "id": "q20",
+      "type": "multipleChoice",
+      "question": "Case Study: A partnership has operated successfully for fifteen years. One partner dies unexpectedly. Which factor most distinguishes this outcome from the position of an incorporated company?",
+      "options": [
+        "Companies cannot own property.",
+        "Partnerships always enjoy perpetual succession.",
+        "Companies generally continue despite changes in ownership because they possess perpetual succession.",
+        "Companies automatically become sole proprietorships."
+      ],
+      "answer": "Companies generally continue despite changes in ownership because they possess perpetual succession.",
+      "rationale": "Unlike partnerships, companies generally continue regardless of changes in membership.",
+      "marks": 2
+    },
+    {
+      "id": "q21",
+      "type": "multipleChoice",
+      "question": "Which statement best reflects the relationship between shareholders and directors in a company?",
+      "options": [
+        "Shareholders manage day-to-day operations while directors only invest capital.",
+        "Directors and shareholders possess identical legal powers.",
+        "Shareholders provide ownership while directors are responsible for management.",
+        "Directors become owners automatically once appointed."
+      ],
+      "answer": "Shareholders provide ownership while directors are responsible for management.",
+      "rationale": "Corporate ownership rests with shareholders while directors manage the affairs of the company.",
+      "marks": 2
+    },
+    {
+      "id": "q22",
+      "type": "dropdown",
+      "question": "A company enjoys [dropdown_1], meaning it exists separately from its shareholders, while [dropdown_2] protects shareholders from personal liability beyond their agreed investment.",
+      "dropdownBlanks": [
+        {
+          "id": "dropdown_1",
+          "options": [
+            "Separate legal personality",
+            "Unlimited liability",
+            "Mutual agency",
+            "Joint control"
+          ],
+          "correctAnswer": "Separate legal personality"
+        },
+        {
+          "id": "dropdown_2",
+          "options": [
+            "Limited liability",
+            "Corporate taxation",
+            "Perpetual succession",
+            "Joint ownership"
+          ],
+          "correctAnswer": "Limited liability"
+        }
+      ],
+      "rationale": "Separate legal personality and limited liability are two distinct but complementary characteristics of a company.",
+      "marks": 4
+    },
+    {
+      "id": "q23",
+      "type": "dropdown",
+      "question": "The [dropdown_1] governs a company's internal management, while the [dropdown_2] creates the company as a separate legal entity through incorporation.",
+      "dropdownBlanks": [
+        {
+          "id": "dropdown_1",
+          "options": [
+            "Articles of Association",
+            "Business Names Act",
+            "Partnership Agreement",
+            "Memorandum of Understanding"
+          ],
+          "correctAnswer": "Articles of Association"
+        },
+        {
+          "id": "dropdown_2",
+          "options": [
+            "Companies Act",
+            "Prevention of Frauds Ordinance",
+            "Income Tax Act",
+            "Contract Ordinance"
+          ],
+          "correctAnswer": "Companies Act"
+        }
+      ],
+      "rationale": "The Articles regulate internal affairs, while the Companies Act provides the legal framework for incorporation.",
+      "marks": 4
+    },
+    {
+      "id": "q24",
+      "type": "dropdown",
+      "question": "A [dropdown_1] is usually established for a specific commercial project, whereas a [dropdown_2] generally exists to conduct an ongoing business for profit.",
+      "dropdownBlanks": [
+        {
+          "id": "dropdown_1",
+          "options": [
+            "Joint venture",
+            "Private company",
+            "Public authority",
+            "Franchise"
+          ],
+          "correctAnswer": "Joint venture"
+        },
+        {
+          "id": "dropdown_2",
+          "options": [
+            "Partnership",
+            "Syndicate",
+            "Public company",
+            "Franchise"
+          ],
+          "correctAnswer": "Partnership"
+        }
+      ],
+      "rationale": "Joint ventures are project-specific while partnerships are generally continuous business relationships.",
+      "marks": 4
+    },
+    {
+      "id": "q25",
+      "type": "fillInBlank",
+      "question": "The principle that a company continues despite changes in ownership is known as ________.",
+      "answer": "perpetual succession",
+      "rationale": "Perpetual succession allows the company to continue regardless of changes in membership.",
+      "marks": 2
+    },
+    {
+      "id": "q26",
+      "type": "fillInBlank",
+      "question": "A natural person who ultimately owns or effectively controls a company is known as a ________ owner.",
+      "answer": "beneficial",
+      "rationale": "The Companies (Amendment) Act identifies such persons as beneficial owners.",
+      "marks": 2
+    },
+    {
+      "id": "q27",
+      "type": "fillInBlank",
+      "question": "The internal constitutional document governing the management of a company is called the Articles of ________.",
+      "answer": "Association",
+      "rationale": "The Articles of Association regulate the company's internal governance.",
+      "marks": 2
+    },
+    {
+      "id": "q28",
+      "type": "multiSelect",
+      "question": "Which of the following are recognized advantages of incorporating a company?",
+      "options": [
+        "Limited liability",
+        "Perpetual succession",
+        "Automatic personal ownership of company assets",
+        "Separate legal personality"
+      ],
+      "answer": [
+        "Limited liability",
+        "Perpetual succession",
+        "Separate legal personality"
+      ],
+      "rationale": "These characteristics distinguish companies from most unincorporated business organizations.",
+      "marks": 3
+    },
+    {
+      "id": "q29",
+      "type": "multiSelect",
+      "question": "Case Study: Regulators investigate a complex ownership structure involving several nominee shareholders. Which factors may establish beneficial ownership?",
+      "options": [
+        "Ultimate ownership through intermediate entities",
+        "Power to appoint or remove directors",
+        "Effective control over strategic decisions",
+        "Being an ordinary employee without decision-making authority"
+      ],
+      "answer": [
+        "Ultimate ownership through intermediate entities",
+        "Power to appoint or remove directors",
+        "Effective control over strategic decisions"
+      ],
+      "rationale": "Beneficial ownership extends beyond direct shareholding to effective control.",
+      "marks": 3
+    },
+    {
+      "id": "q30",
+      "type": "multiSelect",
+      "question": "Which statements correctly distinguish partnerships from sole proprietorships?",
+      "options": [
+        "Partnerships generally involve two or more persons carrying on business together.",
+        "Partners may possess joint and several liability.",
+        "A sole proprietorship has a separate legal personality.",
+        "Partnerships generally combine a wider range of skills and resources."
+      ],
+      "answer": [
+        "Partnerships generally involve two or more persons carrying on business together.",
+        "Partners may possess joint and several liability.",
+        "Partnerships generally combine a wider range of skills and resources."
+      ],
+      "rationale": "Partnerships involve multiple participants, shared resources, and joint liability, unlike sole proprietorships.",
+      "marks": 3
+    },
+        {
+      "id": "q31",
+      "type": "matching",
+      "question": "Match each business organization with its defining characteristic.",
+      "matchPairs": [
+        {
+          "id": "pair1",
+          "left": "Sole Proprietorship",
+          "right": "Owned and controlled by one individual with unlimited liability"
+        },
+        {
+          "id": "pair2",
+          "left": "Partnership",
+          "right": "Persons carrying on business in common with a view to profit"
+        },
+        {
+          "id": "pair3",
+          "left": "Joint Venture",
+          "right": "Commercial arrangement formed for a specific project or undertaking"
+        },
+        {
+          "id": "pair4",
+          "left": "Company",
+          "right": "Artificial legal person with separate legal personality"
+        }
+      ],
+      "rationale": "Each business structure possesses unique legal characteristics and purposes.",
+      "marks": 4
+    },
+    {
+      "id": "q32",
+      "type": "matching",
+      "question": "Match each company characteristic with its practical consequence.",
+      "matchPairs": [
+        {
+          "id": "pair1",
+          "left": "Separate Legal Personality",
+          "right": "Company owns property and may sue in its own name"
+        },
+        {
+          "id": "pair2",
+          "left": "Limited Liability",
+          "right": "Shareholders' financial exposure is generally limited to their investment"
+        },
+        {
+          "id": "pair3",
+          "left": "Perpetual Succession",
+          "right": "Company continues despite changes in membership"
+        },
+        {
+          "id": "pair4",
+          "left": "Articles of Association",
+          "right": "Govern internal management and shareholder relationships"
+        }
+      ],
+      "rationale": "The practical effects of each corporate characteristic distinguish companies from unincorporated businesses.",
+      "marks": 4
+    },
+    {
+      "id": "q33",
+      "type": "matching",
+      "question": "Match each concept with its correct description.",
+      "matchPairs": [
+        {
+          "id": "pair1",
+          "left": "Beneficial Owner",
+          "right": "Natural person who ultimately owns or effectively controls the company"
+        },
+        {
+          "id": "pair2",
+          "left": "Franchise",
+          "right": "Business model allowing another party to use a brand and operating system"
+        },
+        {
+          "id": "pair3",
+          "left": "Public Private Partnership",
+          "right": "Collaboration between a public authority and a private organization"
+        },
+        {
+          "id": "pair4",
+          "left": "Syndicate",
+          "right": "Temporary association formed to undertake a large transaction or project"
+        }
+      ],
+      "rationale": "Understanding these concepts is essential for distinguishing modern business arrangements.",
+      "marks": 4
+    },
+    {
+      "id": "q34",
+      "type": "essay",
+      "question": "A multinational group establishes a Sri Lankan subsidiary with nominee shareholders while ultimate control remains with one foreign investor. Critically evaluate how the principles of separate legal personality and beneficial ownership disclosure operate together. Discuss why modern corporate law recognizes both concepts instead of treating them as contradictory.",
+      "idealKeywords": [
+        "separate legal personality",
+        "corporate veil",
+        "beneficial ownership",
+        "transparency",
+        "effective control",
+        "AML",
+        "CFT",
+        "ultimate owner",
+        "regulatory compliance",
+        "Companies Act"
+      ],
+      "rationale": "Tests analytical understanding of the relationship between corporate personality and beneficial ownership reforms.",
+      "marks": 5
+    },
+    {
+      "id": "q35",
+      "type": "essay",
+      "question": "An entrepreneur must choose between operating as a sole proprietor, partnership, joint venture, or private company for a technology startup expecting rapid growth and outside investment. Evaluate each business form in terms of legal personality, liability, continuity, management flexibility, fundraising potential, and long-term strategic suitability before recommending the most appropriate structure.",
+      "idealKeywords": [
+        "sole proprietorship",
+        "partnership",
+        "joint venture",
+        "private company",
+        "limited liability",
+        "legal personality",
+        "capital raising",
+        "perpetual succession",
+        "risk",
+        "management"
+      ],
+      "rationale": "Requires comparative analysis, legal reasoning, and practical application of business organization principles.",
+      "marks": 5
+    },
+    {
+      "id": "q36",
+      "type": "multipleChoice",
+      "question": "Case Study: Three investors establish a company to limit personal exposure to business debts. Five years later the company defaults on a large bank loan. Assuming no fraud or personal guarantees, who is primarily liable for the debt?",
+      "options": [
+        "Each shareholder personally for the full debt",
+        "Only the directors personally",
+        "The company as a separate legal person",
+        "The Registrar of Companies"
+      ],
+      "answer": "The company as a separate legal person",
+      "rationale": "Separate legal personality means the company bears its own obligations, while shareholders generally enjoy limited liability.",
+      "marks": 2
+    },
+    {
+      "id": "q37",
+      "type": "multipleChoice",
+      "question": "Case Study: A family business wants to transfer ownership across generations without disrupting operations or existing contracts. Which corporate characteristic provides the greatest legal advantage?",
+      "options": [
+        "Unlimited liability",
+        "Perpetual succession",
+        "Joint ownership",
+        "Mutual agency"
+      ],
+      "answer": "Perpetual succession",
+      "rationale": "Perpetual succession allows ownership to change without affecting the company's continued existence.",
+      "marks": 2
+    },
+    {
+      "id": "q38",
+      "type": "multiSelect",
+      "question": "Case Study: A company is reviewing compliance under the Companies (Amendment) Act relating to beneficial ownership. Which actions support compliance?",
+      "options": [
+        "Maintaining a beneficial ownership register",
+        "Identifying natural persons exercising effective control",
+        "Ignoring indirect ownership through nominee companies",
+        "Submitting required beneficial ownership information within the prescribed period"
+      ],
+      "answer": [
+        "Maintaining a beneficial ownership register",
+        "Identifying natural persons exercising effective control",
+        "Submitting required beneficial ownership information within the prescribed period"
+      ],
+      "rationale": "Compliance requires maintaining records, tracing ultimate ownership, and making timely disclosures.",
+      "marks": 3
+    },
+    {
+      "id": "q39",
+      "type": "multipleChoice",
+      "question": "Case Study: Two construction companies collaborate solely to build an international airport terminal while remaining independent businesses afterwards. Which feature most strongly indicates that this arrangement is a joint venture rather than a partnership?",
+      "options": [
+        "The arrangement is limited to a specific commercial objective.",
+        "The parties intend to earn profits.",
+        "The businesses maintain accounting records.",
+        "The parties employ professional managers."
+      ],
+      "answer": "The arrangement is limited to a specific commercial objective.",
+      "rationale": "A joint venture is typically confined to a particular project or undertaking.",
+      "marks": 2
+    },
+    {
+      "id": "q40",
+      "type": "multiSelect",
+      "question": "Case Study: Which of the following illustrate practical advantages of separate legal personality in commercial practice?",
+      "options": [
+        "The company enters contracts in its own name.",
+        "The company owns land independently of shareholders.",
+        "Shareholders automatically become personally liable for every company debt.",
+        "The company may sue or be sued independently of its members."
+      ],
+      "answer": [
+        "The company enters contracts in its own name.",
+        "The company owns land independently of shareholders.",
+        "The company may sue or be sued independently of its members."
+      ],
+      "rationale": "Separate legal personality enables a company to own property, contract, and litigate independently of its members.",
+      "marks": 3
+    }
+  ]
+}

@@ -1,0 +1,684 @@
+{
+  "id": "quiz-Corporate-Law-Lesson-02",
+  "title": "Lesson 02 – Incorporation and Related Matters",
+  "description": "Exam-standard quiz covering incorporation, separate legal personality, veil of incorporation, company names, company contracts, beneficial ownership, and related provisions under the Companies Act No. 7 of 2007.",
+  "subject": "LAW2372 - Corporate Law",
+  "gradientColors": [
+    "#4efc03",
+    "#2563eb",
+    "#0891b2",
+    "#0f172a"
+  ],
+  "timeOptions": [
+    10,
+    20,
+    30
+  ],
+  "totalMarks": 68,
+  "weight": 0,
+  "category": "lesson",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multipleChoice",
+      "question": "An entrepreneur submits every incorporation document except the written consent of the initial secretary. What is the most appropriate legal consequence?",
+      "options": [
+        "The Registrar must still issue the Certificate of Incorporation.",
+        "The incorporation application is incomplete because a statutory requirement has not been satisfied.",
+        "The company automatically becomes a partnership.",
+        "The omission only affects the company's tax registration."
+      ],
+      "answer": "The incorporation application is incomplete because a statutory requirement has not been satisfied.",
+      "rationale": "Section 4 requires the prescribed incorporation documents, including the secretary's consent.",
+      "marks": 2
+    },
+    {
+      "id": "q2",
+      "type": "multipleChoice",
+      "question": "Which document provides conclusive evidence that all incorporation requirements have been satisfied under the Companies Act?",
+      "options": [
+        "Articles of Association",
+        "Certificate of Incorporation",
+        "Annual Return",
+        "Share Register"
+      ],
+      "answer": "Certificate of Incorporation",
+      "rationale": "The Certificate of Incorporation conclusively establishes the legal existence of the company.",
+      "marks": 2
+    },
+    {
+      "id": "q3",
+      "type": "multipleChoice",
+      "question": "Which statement best explains why the Certificate of Incorporation is commonly described as the company's birth certificate?",
+      "options": [
+        "It creates the company's first shareholders.",
+        "It proves ownership of company assets.",
+        "It legally brings the company into existence as a separate legal person.",
+        "It appoints the first directors."
+      ],
+      "answer": "It legally brings the company into existence as a separate legal person.",
+      "rationale": "The certificate marks the legal commencement of the company's existence.",
+      "marks": 2
+    },
+    {
+      "id": "q4",
+      "type": "multipleChoice",
+      "question": "Which of the following is NOT normally a consequence of incorporation?",
+      "options": [
+        "Separate legal personality",
+        "Perpetual succession",
+        "Unlimited personal liability of shareholders",
+        "Greater borrowing capacity"
+      ],
+      "answer": "Unlimited personal liability of shareholders",
+      "rationale": "Limited companies protect shareholders through limited liability.",
+      "marks": 2
+    },
+    {
+      "id": "q5",
+      "type": "multipleChoice",
+      "question": "A business owner incorporates solely to separate personal assets from business liabilities. Which legal principle primarily achieves this objective?",
+      "options": [
+        "Agency",
+        "Limited liability arising from incorporation",
+        "Partnership law",
+        "Joint ownership"
+      ],
+      "answer": "Limited liability arising from incorporation",
+      "rationale": "Limited liability protects shareholders from personal responsibility for company debts beyond their investment.",
+      "marks": 2
+    },
+    {
+      "id": "q6",
+      "type": "multipleChoice",
+      "question": "Following incorporation, which statement is most accurate regarding company assets?",
+      "options": [
+        "They automatically belong to the majority shareholder.",
+        "They belong jointly to the directors.",
+        "They belong to the company itself.",
+        "They belong equally to all employees."
+      ],
+      "answer": "They belong to the company itself.",
+      "rationale": "Separate legal personality means company assets belong to the company rather than its members.",
+      "marks": 2
+    },
+    {
+      "id": "q7",
+      "type": "multipleChoice",
+      "question": "Which case established the modern doctrine of separate legal personality?",
+      "options": [
+        "Gilford Motor Co Ltd v Horne",
+        "Jones v Lipman",
+        "Salomon v Salomon & Co Ltd",
+        "Lee v Lee's Air Farming Ltd"
+      ],
+      "answer": "Salomon v Salomon & Co Ltd",
+      "rationale": "Salomon established that a company has a legal identity separate from its members.",
+      "marks": 2
+    },
+    {
+      "id": "q8",
+      "type": "multipleChoice",
+      "question": "Which situation most strongly justifies lifting the corporate veil?",
+      "options": [
+        "The company earns substantial profits.",
+        "A company is used merely as a façade to evade existing legal obligations.",
+        "The company has only one shareholder.",
+        "The company owns valuable property."
+      ],
+      "answer": "A company is used merely as a façade to evade existing legal obligations.",
+      "rationale": "Courts may pierce the veil where incorporation is abused to perpetrate fraud or avoid legal duties.",
+      "marks": 2
+    },
+    {
+      "id": "q9",
+      "type": "multipleChoice",
+      "question": "Mr. Silva owns every issued share of Silva (Pvt) Ltd. He argues that because he owns the company, he personally owns every company asset. Which statement is legally correct?",
+      "options": [
+        "He owns the assets because he owns all shares.",
+        "He owns only movable assets.",
+        "The company owns its own assets despite him owning all shares.",
+        "Ownership depends solely on the Articles of Association."
+      ],
+      "answer": "The company owns its own assets despite him owning all shares.",
+      "rationale": "Ownership of shares is distinct from ownership of company property.",
+      "marks": 2
+    },
+    {
+      "id": "q10",
+      "type": "multipleChoice",
+      "question": "Which case illustrates that a sole shareholder may simultaneously be an employee of the company?",
+      "options": [
+        "Lee v Lee's Air Farming Ltd",
+        "Macaura v Northern Assurance",
+        "Jones v Lipman",
+        "Gilford Motor Co Ltd v Horne"
+      ],
+      "answer": "Lee v Lee's Air Farming Ltd",
+      "rationale": "Lee confirmed that a shareholder may also be an employee because the company is a separate legal person.",
+      "marks": 2
+    },
+    {
+      "id": "q11",
+      "type": "multipleChoice",
+      "question": "Which case demonstrates that shareholders cannot insure company property in their personal capacity merely because they own the shares?",
+      "options": [
+        "Salomon v Salomon",
+        "Gilford Motor Co Ltd v Horne",
+        "Macaura v Northern Assurance",
+        "Jubilee Cotton Mills Ltd v Lewis"
+      ],
+      "answer": "Macaura v Northern Assurance",
+      "rationale": "The shareholder had no insurable interest in company-owned timber because it belonged to the company.",
+      "marks": 2
+    },
+    {
+      "id": "q12",
+      "type": "multipleChoice",
+      "question": "A company is incorporated solely to transfer property and avoid performing an existing contractual obligation. Which authority is most directly applicable?",
+      "options": [
+        "Lee v Lee's Air Farming Ltd",
+        "Jones v Lipman",
+        "Jubilee Cotton Mills Ltd v Lewis",
+        "Paul Coir (Pvt) Ltd v Waas"
+      ],
+      "answer": "Jones v Lipman",
+      "rationale": "Jones v Lipman treated the company as a façade created to evade contractual obligations.",
+      "marks": 2
+    },
+    {
+      "id": "q13",
+      "type": "multipleChoice",
+      "question": "Which judicial approach was adopted in Gilford Motor Co Ltd v Horne?",
+      "options": [
+        "Strict application of shareholder democracy",
+        "Recognition of unlimited liability",
+        "Piercing the corporate veil because the company was used to evade contractual obligations",
+        "Recognition of beneficial ownership disclosure"
+      ],
+      "answer": "Piercing the corporate veil because the company was used to evade contractual obligations",
+      "rationale": "The company was merely a device to avoid the defendant's contractual obligations.",
+      "marks": 2
+    },
+    {
+      "id": "q14",
+      "type": "multipleChoice",
+      "question": "Which statement best reflects the legal significance of a single shareholder company under the Companies Act?",
+      "options": [
+        "It is prohibited in Sri Lanka.",
+        "It is permitted under specified circumstances under the Act.",
+        "It automatically becomes an unlimited company.",
+        "It cannot appoint directors."
+      ],
+      "answer": "It is permitted under specified circumstances under the Act.",
+      "rationale": "The Companies Act permits single shareholder companies in accordance with section 4.",
+      "marks": 2
+    },
+    {
+      "id": "q15",
+      "type": "multipleChoice",
+      "question": "Which information must appear on the Certificate of Incorporation?",
+      "options": [
+        "Every shareholder's address",
+        "Future annual profits",
+        "Company name, number, incorporation date and company type",
+        "Auditor's opinion"
+      ],
+      "answer": "Company name, number, incorporation date and company type",
+      "rationale": "These are among the statutory particulars included in the Certificate of Incorporation.",
+      "marks": 2
+    },
+    {
+      "id": "q16",
+      "type": "multipleChoice",
+      "question": "Case Study: Maya incorporates TechVision (Pvt) Ltd through EROC. After receiving the Certificate of Incorporation she signs a contract in the company's name. The supplier later argues that the company did not legally exist when the agreement was signed. Which response is strongest?",
+      "options": [
+        "The supplier is correct because companies never exist until they commence business.",
+        "The company legally existed from the date stated on the Certificate of Incorporation.",
+        "The contract is automatically void because EROC registration has no legal effect.",
+        "The company exists only after issuing shares."
+      ],
+      "answer": "The company legally existed from the date stated on the Certificate of Incorporation.",
+      "rationale": "A company comes into legal existence from the date of incorporation shown on the certificate.",
+      "marks": 2
+    },
+    {
+      "id": "q17",
+      "type": "multipleChoice",
+      "question": "Case Study: XYZ Holdings forms a wholly-owned subsidiary to operate a high-risk mining project. Which is the primary legal advantage of this structure?",
+      "options": [
+        "The subsidiary is not a separate legal person.",
+        "Liability relating to the project is generally ring-fenced within the subsidiary.",
+        "The parent automatically owns all subsidiary assets directly.",
+        "The subsidiary is exempt from the Companies Act."
+      ],
+      "answer": "Liability relating to the project is generally ring-fenced within the subsidiary.",
+      "rationale": "Separate legal personality enables subsidiaries to isolate business risks from the parent company.",
+      "marks": 2
+    },
+    {
+      "id": "q18",
+      "type": "multipleChoice",
+      "question": "Case Study: A promoter chooses a company name almost identical to a famous registered company hoping to attract customers through confusion. Which legal principle is most likely to prevent registration?",
+      "options": [
+        "Restrictions on misleading or identical company names.",
+        "Beneficial ownership disclosure.",
+        "Perpetual succession.",
+        "The doctrine of indoor management."
+      ],
+      "answer": "Restrictions on misleading or identical company names.",
+      "rationale": "The Registrar may refuse or require a change of names that are identical, misleading or otherwise prohibited.",
+      "marks": 2
+    },
+        {
+      "id": "q19",
+      "type": "multipleChoice",
+      "question": "Case Study: During incorporation through EROC, the Registrar discovers that the proposed company name is identical to an existing registered company except for the word 'The' at the beginning. What is the most likely outcome?",
+      "options": [
+        "The name will be accepted because the word 'The' creates a legal distinction.",
+        "The name may be rejected because certain words are disregarded when determining identical names.",
+        "The company must first obtain shareholder approval.",
+        "The Registrar must issue the Certificate of Incorporation before considering the name."
+      ],
+      "answer": "The name may be rejected because certain words are disregarded when determining identical names.",
+      "rationale": "Section 7 disregards words such as 'The' and certain suffixes when determining whether names are identical.",
+      "marks": 2
+    },
+    {
+      "id": "q20",
+      "type": "multipleChoice",
+      "question": "Case Study: A newly incorporated company submits Form BO1 but intentionally omits Form BO5 because the directors believe ownership information is confidential. Which statement is most accurate?",
+      "options": [
+        "Only BO1 is legally required during incorporation.",
+        "BO5 is required because beneficial ownership disclosure forms part of the incorporation compliance process.",
+        "BO5 is required only after the first Annual General Meeting.",
+        "BO disclosure applies only to listed companies."
+      ],
+      "answer": "BO5 is required because beneficial ownership disclosure forms part of the incorporation compliance process.",
+      "rationale": "Beneficial ownership information must be disclosed during incorporation under the amended framework.",
+      "marks": 2
+    },
+    {
+      "id": "q21",
+      "type": "multipleChoice",
+      "question": "Which statement best explains why courts rarely pierce the corporate veil?",
+      "options": [
+        "Separate legal personality is a fundamental principle and should only be disregarded in exceptional circumstances.",
+        "Directors always become personally liable for company debts.",
+        "Shareholders cannot own shares in more than one company.",
+        "Companies automatically lose separate legal personality during litigation."
+      ],
+      "answer": "Separate legal personality is a fundamental principle and should only be disregarded in exceptional circumstances.",
+      "rationale": "Courts preserve separate legal personality unless compelling reasons such as fraud or sham arrangements justify lifting the veil.",
+      "marks": 2
+    },
+    {
+      "id": "q22",
+      "type": "dropdown",
+      "question": "A company comes into legal existence upon the issue of the [dropdown_1], while its internal governance is primarily regulated by the [dropdown_2].",
+      "dropdownBlanks": [
+        {
+          "id": "dropdown_1",
+          "options": [
+            "Certificate of Incorporation",
+            "Annual Return",
+            "Share Certificate",
+            "Prospectus"
+          ],
+          "correctAnswer": "Certificate of Incorporation"
+        },
+        {
+          "id": "dropdown_2",
+          "options": [
+            "Articles of Association",
+            "Business Names Act",
+            "Companies Regulations",
+            "Auditor's Report"
+          ],
+          "correctAnswer": "Articles of Association"
+        }
+      ],
+      "rationale": "The Certificate creates the company while the Articles govern its internal affairs.",
+      "marks": 4
+    },
+    {
+      "id": "q23",
+      "type": "dropdown",
+      "question": "Where a company contract must be in writing and notarially executed, it may generally be signed by [dropdown_1], while a company with only one director may have it signed by [dropdown_2].",
+      "dropdownBlanks": [
+        {
+          "id": "dropdown_1",
+          "options": [
+            "Two directors",
+            "Any employee",
+            "Any shareholder",
+            "The company auditor"
+          ],
+          "correctAnswer": "Two directors"
+        },
+        {
+          "id": "dropdown_2",
+          "options": [
+            "That sole director",
+            "The Registrar",
+            "The majority shareholder",
+            "The company secretary only"
+          ],
+          "correctAnswer": "That sole director"
+        }
+      ],
+      "rationale": "Section 19 specifies how different categories of company contracts may be executed.",
+      "marks": 4
+    },
+    {
+      "id": "q24",
+      "type": "dropdown",
+      "question": "A [dropdown_1] owns a controlling interest in another company, while the controlled company is known as the [dropdown_2].",
+      "dropdownBlanks": [
+        {
+          "id": "dropdown_1",
+          "options": [
+            "Parent company",
+            "Private company",
+            "Unlimited company",
+            "Guarantee company"
+          ],
+          "correctAnswer": "Parent company"
+        },
+        {
+          "id": "dropdown_2",
+          "options": [
+            "Subsidiary",
+            "Holding company",
+            "Nominee",
+            "Associate"
+          ],
+          "correctAnswer": "Subsidiary"
+        }
+      ],
+      "rationale": "A parent company controls a subsidiary while each remains a separate legal person.",
+      "marks": 4
+    },
+    {
+      "id": "q25",
+      "type": "fillInBlank",
+      "question": "The legal principle that treats a company as distinct from its shareholders is known as ________ legal personality.",
+      "answer": "separate",
+      "rationale": "Separate legal personality is the cornerstone of modern company law.",
+      "marks": 2
+    },
+    {
+      "id": "q26",
+      "type": "fillInBlank",
+      "question": "The legal doctrine allowing courts to disregard separate legal personality in exceptional cases is commonly known as lifting the corporate ________.",
+      "answer": "veil",
+      "rationale": "Courts may lift or pierce the corporate veil in limited circumstances.",
+      "marks": 2
+    },
+    {
+      "id": "q27",
+      "type": "fillInBlank",
+      "question": "Following incorporation, every company is assigned a unique company ________ by the Registrar.",
+      "answer": "number",
+      "rationale": "Each incorporated company receives a unique identifying number.",
+      "marks": 2
+    },
+    {
+      "id": "q28",
+      "type": "multiSelect",
+      "question": "Which documents are ordinarily required when applying to incorporate a company under the Companies Act?",
+      "options": [
+        "Declaration regarding the proposed company name",
+        "Articles of Association signed by the initial shareholders",
+        "Consent of the initial directors",
+        "Personal bank statements of every shareholder"
+      ],
+      "answer": [
+        "Declaration regarding the proposed company name",
+        "Articles of Association signed by the initial shareholders",
+        "Consent of the initial directors"
+      ],
+      "rationale": "These are statutory incorporation requirements; personal bank statements are not.",
+      "marks": 3
+    },
+    {
+      "id": "q29",
+      "type": "multiSelect",
+      "question": "Case Study: Which circumstances are recognised grounds for courts to consider lifting the corporate veil?",
+      "options": [
+        "Using a company as a sham to evade legal obligations",
+        "Fraudulent use of the corporate structure",
+        "Agency relationships in appropriate circumstances",
+        "The company has earned substantial profits"
+      ],
+      "answer": [
+        "Using a company as a sham to evade legal obligations",
+        "Fraudulent use of the corporate structure",
+        "Agency relationships in appropriate circumstances"
+      ],
+      "rationale": "The veil may be lifted in exceptional situations including fraud, agency and sham companies.",
+      "marks": 3
+    },
+    {
+      "id": "q30",
+      "type": "multiSelect",
+      "question": "Which statements correctly describe parent and subsidiary companies?",
+      "options": [
+        "Each company remains a separate legal person.",
+        "A subsidiary may be used to ring-fence business risks.",
+        "The parent automatically becomes liable for every subsidiary debt simply because it owns the shares.",
+        "Subsidiaries are commonly used to hold franchises or enter new markets."
+      ],
+      "answer": [
+        "Each company remains a separate legal person.",
+        "A subsidiary may be used to ring-fence business risks.",
+        "Subsidiaries are commonly used to hold franchises or enter new markets."
+      ],
+      "rationale": "Ownership alone does not remove the subsidiary's separate legal personality.",
+      "marks": 3
+    },
+        {
+      "id": "q31",
+      "type": "matching",
+      "question": "Match each case with the legal principle it established.",
+      "matchPairs": [
+        {
+          "id": "pair1",
+          "left": "Salomon v Salomon & Co Ltd",
+          "right": "Company has a legal personality separate from its members"
+        },
+        {
+          "id": "pair2",
+          "left": "Lee v Lee's Air Farming Ltd",
+          "right": "A shareholder may also be an employee of the company"
+        },
+        {
+          "id": "pair3",
+          "left": "Macaura v Northern Assurance",
+          "right": "Shareholders do not own company property"
+        },
+        {
+          "id": "pair4",
+          "left": "Gilford Motor Co Ltd v Horne",
+          "right": "Corporate veil pierced where company was used to evade contractual obligations"
+        }
+      ],
+      "rationale": "These landmark decisions define the scope and limitations of separate legal personality.",
+      "marks": 4
+    },
+    {
+      "id": "q32",
+      "type": "matching",
+      "question": "Match each incorporation document or requirement with its purpose.",
+      "matchPairs": [
+        {
+          "id": "pair1",
+          "left": "Declaration regarding company name",
+          "right": "Confirms the proposed name is not identical or misleading"
+        },
+        {
+          "id": "pair2",
+          "left": "Articles of Association",
+          "right": "Provides the company's internal governance rules"
+        },
+        {
+          "id": "pair3",
+          "left": "Consent of initial directors",
+          "right": "Confirms willingness to act as directors"
+        },
+        {
+          "id": "pair4",
+          "left": "Certificate of Incorporation",
+          "right": "Conclusive evidence that the company has been incorporated"
+        }
+      ],
+      "rationale": "Each document performs a distinct function in the incorporation process.",
+      "marks": 4
+    },
+    {
+      "id": "q33",
+      "type": "matching",
+      "question": "Match each statutory requirement with the correct description.",
+      "matchPairs": [
+        {
+          "id": "pair1",
+          "left": "BO1",
+          "right": "Identifies the authorised person responsible for maintaining beneficial ownership records"
+        },
+        {
+          "id": "pair2",
+          "left": "BO5",
+          "right": "Discloses the ultimate beneficial owner of the company"
+        },
+        {
+          "id": "pair3",
+          "left": "EROC",
+          "right": "Electronic platform used for company incorporation"
+        },
+        {
+          "id": "pair4",
+          "left": "Company Number",
+          "right": "Unique identifier assigned upon incorporation"
+        }
+      ],
+      "rationale": "Modern incorporation requires both digital registration and beneficial ownership compliance.",
+      "marks": 4
+    },
+    {
+      "id": "q34",
+      "type": "essay",
+      "question": "ABC Holdings intends to establish three subsidiaries to operate restaurants, logistics, and software services. Critically evaluate the legal advantages and potential risks of using a parent-subsidiary structure. In your answer discuss separate legal personality, liability, commercial flexibility, beneficial ownership disclosure, and circumstances where courts may lift the corporate veil.",
+      "idealKeywords": [
+        "parent company",
+        "subsidiary",
+        "separate legal personality",
+        "limited liability",
+        "ring-fencing",
+        "beneficial ownership",
+        "corporate veil",
+        "fraud",
+        "agency",
+        "commercial strategy"
+      ],
+      "rationale": "Tests application of incorporation principles to modern corporate group structures.",
+      "marks": 5
+    },
+    {
+      "id": "q35",
+      "type": "essay",
+      "question": "A businessman incorporates a company solely to avoid paying compensation under an existing contract. Discuss whether the company should be treated as a separate legal person or whether the court should lift the corporate veil. Support your answer using statutory principles and relevant case law.",
+      "idealKeywords": [
+        "Salomon",
+        "Gilford Motor",
+        "Jones v Lipman",
+        "corporate veil",
+        "separate legal personality",
+        "fraud",
+        "sham company",
+        "legal obligations",
+        "exceptional circumstances",
+        "Companies Act"
+      ],
+      "rationale": "Requires students to balance the fundamental doctrine of incorporation with recognised judicial exceptions.",
+      "marks": 5
+    },
+    {
+      "id": "q36",
+      "type": "multipleChoice",
+      "question": "Case Study: Bright Solutions (Pvt) Ltd changes its status from a private company to a public company. Which legal consequence is most likely regarding its name?",
+      "options": [
+        "The company may continue using exactly the same name indefinitely.",
+        "The company's name must be changed to reflect its new legal status in accordance with the Companies Act.",
+        "The Registrar automatically dissolves the company.",
+        "Only the shareholders' register must be amended."
+      ],
+      "answer": "The company's name must be changed to reflect its new legal status in accordance with the Companies Act.",
+      "rationale": "A change in company status requires a corresponding change to the company's legal name.",
+      "marks": 2
+    },
+    {
+      "id": "q37",
+      "type": "multipleChoice",
+      "question": "Case Study: A company signs a notarially required agreement through an employee who had neither express nor implied authority to act. Which issue is most likely to arise?",
+      "options": [
+        "The contract automatically becomes a shareholder agreement.",
+        "Questions may arise regarding whether the company was validly bound under the statutory execution requirements.",
+        "The agreement automatically converts into an oral contract.",
+        "The company immediately loses separate legal personality."
+      ],
+      "answer": "Questions may arise regarding whether the company was validly bound under the statutory execution requirements.",
+      "rationale": "Section 19 specifies who may execute different categories of company contracts.",
+      "marks": 2
+    },
+    {
+      "id": "q38",
+      "type": "multiSelect",
+      "question": "Case Study: A company proposes the name 'The National Chamber of Commerce (Private) Limited'. Which factors may prevent approval by the Registrar?",
+      "options": [
+        "Use of conditionally restricted words without required approval",
+        "Use of 'Chamber of Commerce' where statutory conditions are not satisfied",
+        "The name may be misleading or imply official status",
+        "The company intends to issue ordinary shares"
+      ],
+      "answer": [
+        "Use of conditionally restricted words without required approval",
+        "Use of 'Chamber of Commerce' where statutory conditions are not satisfied",
+        "The name may be misleading or imply official status"
+      ],
+      "rationale": "Certain words require ministerial approval or are otherwise restricted under the Companies Act.",
+      "marks": 3
+    },
+    {
+      "id": "q39",
+      "type": "multipleChoice",
+      "question": "Case Study: Following incorporation, a company fails to display its name and company number on invoices and official correspondence. Which statement is most accurate?",
+      "options": [
+        "There is no legal requirement to display them.",
+        "The Companies Act requires the company name and number to appear on specified official documents.",
+        "Only listed companies must display their company number.",
+        "The requirement applies only after the first Annual General Meeting."
+      ],
+      "answer": "The Companies Act requires the company name and number to appear on specified official documents.",
+      "rationale": "Section 12 requires the company name and number to be displayed on prescribed documents and at the registered office.",
+      "marks": 2
+    },
+    {
+      "id": "q40",
+      "type": "multiSelect",
+      "question": "Case Study: During incorporation through EROC, which actions are necessary to satisfy the beneficial ownership framework?",
+      "options": [
+        "Submit BO5 identifying the ultimate beneficial owner",
+        "Submit BO1 identifying the authorised person",
+        "Update the Registrar within the prescribed period when ownership changes",
+        "Disclose only the registered shareholders even where nominee arrangements exist"
+      ],
+      "answer": [
+        "Submit BO5 identifying the ultimate beneficial owner",
+        "Submit BO1 identifying the authorised person",
+        "Update the Registrar within the prescribed period when ownership changes"
+      ],
+      "rationale": "The framework requires disclosure of the true beneficial owner, appointment of an authorised person, and timely updates following changes in ownership.",
+      "marks": 3
+    }
+  ]
+}
