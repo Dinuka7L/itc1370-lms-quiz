@@ -1,0 +1,463 @@
+{
+  "id": "acf-midterm-mega-practice-03",
+  "title": "ACF Midterm Mega Practice – Set 3",
+  "description": "50 completely new and challenging MCQs covering previously under-tested areas of Time Value of Money, Introduction to Corporate Finance, Cost of Capital, Capital Structure, and Capital Budgeting up to Incremental Cash Flows. Designed using lecture and tutorial question patterns.",
+  "subject": "FIN2372 - Advanced Corporate Finance",
+  "gradientColors": ["#7c3aed", "#6d28d9", "#5b21b6", "#4c1d95"],
+  "timeOptions": [60, 75, 90],
+  "totalMarks": 100,
+  "weight": 2,
+  "category": "lesson",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multipleChoice",
+      "question": "You deposit Rs. 25,000 at the beginning of each year for 4 years into an account earning 10% annually. What will the account contain immediately after the fourth deposit has earned interest until the end of Year 4?",
+      "options": ["Rs. 116,025", "Rs. 127,628", "Rs. 100,000", "Rs. 139,391"],
+      "answer": "Rs. 127,628",
+      "rationale": "This is an annuity due because deposits occur at the beginning of each year. FV ordinary annuity = 25,000[(1.10^4 - 1)/0.10] = Rs. 116,025. Multiplying by 1.10 gives the annuity-due FV of approximately Rs. 127,628.",
+      "marks": 2
+    },
+    {
+      "id": "q2",
+      "type": "multipleChoice",
+      "question": "A landlord offers you a 3-year lease requiring payments of Rs. 100,000 at the beginning of each year. If your discount rate is 8%, what is the approximate present value of the lease payments?",
+      "options": ["Rs. 257,710", "Rs. 278,325", "Rs. 300,000", "Rs. 238,620"],
+      "answer": "Rs. 278,325",
+      "rationale": "The payments form a 3-payment annuity due. PV = 100,000 × PVIFA(8%,3) × 1.08 = approximately Rs. 278,325.",
+      "marks": 2
+    },
+    {
+      "id": "q3",
+      "type": "multipleChoice",
+      "question": "Bank A offers 12% compounded quarterly while Bank B offers 11.8% compounded monthly. Which investment provides the higher effective annual return?",
+      "options": ["Bank A", "Bank B", "Both provide exactly the same EAR", "Cannot be determined without the investment amount"],
+      "answer": "Bank A",
+      "rationale": "Bank A EAR = (1 + 0.12/4)^4 - 1 = approximately 12.55%. Bank B EAR = (1 + 0.118/12)^12 - 1 = approximately 12.46%. Therefore, Bank A provides the slightly higher effective return.",
+      "marks": 2
+    },
+    {
+      "id": "q4",
+      "type": "multipleChoice",
+      "question": "An investment promises to pay Rs. 50,000 annually for 4 years, with the first payment occurring 3 years from today. If the discount rate is 10%, what is the approximate present value today?",
+      "options": ["Rs. 158,493", "Rs. 130,986", "Rs. 119,078", "Rs. 144,085"],
+      "answer": "Rs. 130,986",
+      "rationale": "First find the value one period before the first payment, at Year 2: 50,000 × PVIFA(10%,4) = approximately Rs. 158,493. Discount this amount back two years: 158,493/1.10^2 = approximately Rs. 130,986.",
+      "marks": 2
+    },
+    {
+      "id": "q5",
+      "type": "multipleChoice",
+      "question": "An investment will pay Rs. 40,000 per year forever, with the first payment occurring 5 years from today. If the required return is 8%, what is the value of the investment today?",
+      "options": ["Rs. 500,000", "Rs. 367,515", "Rs. 340,292", "Rs. 396,916"],
+      "answer": "Rs. 367,515",
+      "rationale": "The perpetuity is worth 40,000/0.08 = Rs. 500,000 one period before the first payment, which is at Year 4. PV today = 500,000/(1.08)^4 = approximately Rs. 367,515.",
+      "marks": 2
+    },
+    {
+      "id": "q6",
+      "type": "multipleChoice",
+      "question": "You invest Rs. 200,000 today and the investment grows to Rs. 400,000 in 6 years. What approximate annual compound rate of return did you earn?",
+      "options": ["10.00%", "12.25%", "14.87%", "16.67%"],
+      "answer": "12.25%",
+      "rationale": "400,000 = 200,000(1 + r)^6, so (1 + r)^6 = 2. Therefore, r = 2^(1/6) - 1 = approximately 12.25%.",
+      "marks": 2
+    },
+    {
+      "id": "q7",
+      "type": "multipleChoice",
+      "question": "A loan requires annual end-of-year payments of Rs. 30,000 for 5 years. If the interest rate is 9%, what is the approximate amount originally borrowed?",
+      "options": ["Rs. 116,690", "Rs. 150,000", "Rs. 127,917", "Rs. 97,482"],
+      "answer": "Rs. 116,690",
+      "rationale": "The loan amount equals the present value of the repayments: PV = 30,000 × PVIFA(9%,5) = approximately Rs. 116,690.",
+      "marks": 2
+    },
+    {
+      "id": "q8",
+      "type": "multipleChoice",
+      "question": "A Rs. 100,000 loan carries 10% annual interest and requires equal annual payments of Rs. 26,380 for 5 years. Approximately how much of the first payment represents principal repayment?",
+      "options": ["Rs. 10,000", "Rs. 16,380", "Rs. 26,380", "Rs. 36,380"],
+      "answer": "Rs. 16,380",
+      "rationale": "First-year interest = 10% × Rs. 100,000 = Rs. 10,000. Principal repaid = Rs. 26,380 - Rs. 10,000 = Rs. 16,380.",
+      "marks": 2
+    },
+    {
+      "id": "q9",
+      "type": "multipleChoice",
+      "question": "Holding the stated annual rate constant, which change will produce the largest future value for a single deposit over a fixed period?",
+      "options": ["Reducing the compounding frequency", "Increasing the compounding frequency", "Changing from compound interest to simple interest", "Receiving interest only at maturity without compounding"],
+      "answer": "Increasing the compounding frequency",
+      "rationale": "More frequent compounding causes interest to begin earning additional interest sooner, increasing the effective annual rate and future value.",
+      "marks": 2
+    },
+    {
+      "id": "q10",
+      "type": "multipleChoice",
+      "question": "You need Rs. 1,000,000 in 5 years and will make five equal deposits at the end of each year into an account earning 8%. Approximately how much must each deposit be?",
+      "options": ["Rs. 170,456", "Rs. 200,000", "Rs. 184,000", "Rs. 158,200"],
+      "answer": "Rs. 170,456",
+      "rationale": "FV = C × FVIFA(8%,5). The FV annuity factor is approximately 5.8666. Therefore, C = 1,000,000/5.8666 = approximately Rs. 170,456.",
+      "marks": 2
+    },
+    {
+      "id": "q11",
+      "type": "multipleChoice",
+      "question": "A household earns more cash income than it spends on consumption and real investment during a period. Within the financial system, the household is best classified as a:",
+      "options": ["Deficit spending unit", "Financial intermediary", "Surplus spending unit", "Primary market issuer"],
+      "answer": "Surplus spending unit",
+      "rationale": "A surplus spending unit has excess funds available and therefore acts as a saver, lender, supplier of loanable funds, or purchaser of financial assets.",
+      "marks": 2
+    },
+    {
+      "id": "q12",
+      "type": "multipleChoice",
+      "question": "A corporation needs funds to construct a new factory and issues new bonds directly to investors. The corporation is acting primarily as a:",
+      "options": ["Surplus spending unit buying financial assets", "Deficit spending unit issuing financial claims", "Financial intermediary creating deposits", "Secondary-market investor"],
+      "answer": "Deficit spending unit issuing financial claims",
+      "rationale": "The corporation requires external financing and therefore acts as a deficit spending unit. The newly issued bonds are financial claims sold to suppliers of funds.",
+      "marks": 2
+    },
+    {
+      "id": "q13",
+      "type": "multipleChoice",
+      "question": "Which statement concerning financial claims is correct?",
+      "options": ["Every financial asset is also a real asset", "For every financial asset held by one party, there is generally an offsetting financial liability of another party", "Financial claims exist only when securities are traded in secondary markets", "A financial claim increases total real wealth merely by being issued"],
+      "answer": "For every financial asset held by one party, there is generally an offsetting financial liability of another party",
+      "rationale": "A financial asset represents a claim held by one party and a corresponding obligation or liability for another party.",
+      "marks": 2
+    },
+    {
+      "id": "q14",
+      "type": "multipleChoice",
+      "question": "Which property of a financial asset refers most directly to the potential loss an investor may suffer when trying to sell the asset immediately?",
+      "options": ["Expected return", "Liquidity", "Maturity", "Systematic risk"],
+      "answer": "Liquidity",
+      "rationale": "Liquidity concerns the ease and cost of converting an asset into cash quickly. An illiquid asset may require a substantial price reduction to achieve an immediate sale.",
+      "marks": 2
+    },
+    {
+      "id": "q15",
+      "type": "multipleChoice",
+      "question": "Which transaction provides new financing directly to a company?",
+      "options": ["An investor sells existing shares to another investor on the stock exchange", "A company issues new ordinary shares to investors", "An investor purchases existing government bonds from another investor", "A shareholder sells shares through a broker"],
+      "answer": "A company issues new ordinary shares to investors",
+      "rationale": "The issuance of new securities occurs in the primary market and provides new funds directly to the issuing organization.",
+      "marks": 2
+    },
+    {
+      "id": "q16",
+      "type": "multipleChoice",
+      "question": "Which statement best explains why maximizing accounting profit is not equivalent to maximizing shareholder wealth?",
+      "options": ["Accounting profit considers risk more accurately than market value", "Profit maximization may ignore the timing of returns, risk, and differences between accounting income and cash flow", "Shareholder wealth ignores all future cash flows", "Profit maximization always leads to excessive borrowing"],
+      "answer": "Profit maximization may ignore the timing of returns, risk, and differences between accounting income and cash flow",
+      "rationale": "Shareholder wealth reflects the present value of expected future cash flows and therefore incorporates timing and risk, unlike a simple accounting-profit objective.",
+      "marks": 2
+    },
+    {
+      "id": "q17",
+      "type": "multipleChoice",
+      "question": "A company reports net operating profit after tax of Rs. 18 million. Investors have supplied Rs. 120 million of capital and the company's overall cost of capital is 12%. What is its Economic Value Added?",
+      "options": ["Rs. 3.6 million", "Rs. 14.4 million", "Rs. 18 million", "Rs. -3.6 million"],
+      "answer": "Rs. 3.6 million",
+      "rationale": "Capital charge = 120 million × 12% = Rs. 14.4 million. EVA = NOPAT - capital charge = 18 - 14.4 = Rs. 3.6 million.",
+      "marks": 2
+    },
+    {
+      "id": "q18",
+      "type": "multipleChoice",
+      "question": "A company records a credit sale in December but receives the cash in January. Ignoring related expenses, what happens in December?",
+      "options": ["Both accounting income and operating cash flow increase", "Accounting income increases but operating cash flow does not increase from the collection", "Operating cash flow increases but accounting income does not", "Neither accounting income nor operating cash flow changes"],
+      "answer": "Accounting income increases but operating cash flow does not increase from the collection",
+      "rationale": "Accrual accounting recognizes revenue when earned, while the cash collection occurs later. Therefore, accounting income can increase before the corresponding cash is received.",
+      "marks": 2
+    },
+    {
+      "id": "q19",
+      "type": "multipleChoice",
+      "question": "Which action is most clearly an agency cost incurred to monitor management?",
+      "options": ["Paying for an independent external audit", "Accepting a positive-NPV project", "Paying suppliers earlier than required", "Increasing sales through a successful advertising campaign"],
+      "answer": "Paying for an independent external audit",
+      "rationale": "Monitoring costs are agency costs incurred by shareholders to oversee managers and reduce the possibility of actions inconsistent with shareholder interests.",
+      "marks": 2
+    },
+    {
+      "id": "q20",
+      "type": "multipleChoice",
+      "question": "Which responsibility would normally fall more directly under the corporate treasurer rather than the controller?",
+      "options": ["Preparing financial statements", "Managing cash, financing, and relationships with financial markets", "Maintaining accounting records", "Overseeing internal accounting controls"],
+      "answer": "Managing cash, financing, and relationships with financial markets",
+      "rationale": "The treasurer generally manages financing, cash, banking relationships, and financial risk, while the controller focuses more heavily on accounting, reporting, taxation, and internal controls.",
+      "marks": 2
+    },
+    {
+      "id": "q21",
+      "type": "multipleChoice",
+      "question": "A company has a raw equity beta of 1.60. Using the adjustment method Beta adjusted = 0.67(Raw Beta) + 0.33(1), what is the adjusted beta?",
+      "options": ["1.20", "1.33", "1.40", "1.60"],
+      "answer": "1.40",
+      "rationale": "Adjusted beta = 0.67(1.60) + 0.33(1) = 1.072 + 0.33 = 1.402, approximately 1.40. The adjustment pushes the raw beta toward the market average of 1.",
+      "marks": 2
+    },
+    {
+      "id": "q22",
+      "type": "multipleChoice",
+      "question": "All else equal, which company would generally be expected to have the higher beta?",
+      "options": ["A utility selling essential services with stable demand", "A producer of luxury recreational products whose sales rise strongly during economic expansions", "A company with no sensitivity to the business cycle", "A company holding only Treasury securities"],
+      "answer": "A producer of luxury recreational products whose sales rise strongly during economic expansions",
+      "rationale": "Greater revenue cyclicality increases business risk and generally increases beta because the company's performance becomes more sensitive to market conditions.",
+      "marks": 2
+    },
+    {
+      "id": "q23",
+      "type": "multipleChoice",
+      "question": "Two otherwise identical firms differ only in operating cost structure. Firm X has higher fixed operating costs and lower variable costs than Firm Y. Which statement is most likely correct?",
+      "options": ["Firm X has lower operating leverage and therefore lower beta", "Firm X has higher operating leverage and potentially higher beta", "Operating leverage has no relationship with business risk", "Firm Y must have greater financial leverage"],
+      "answer": "Firm X has higher operating leverage and potentially higher beta",
+      "rationale": "Higher fixed operating costs increase the sensitivity of operating profit to changes in sales. This greater operating leverage increases business risk and can contribute to a higher beta.",
+      "marks": 2
+    },
+    {
+      "id": "q24",
+      "type": "multipleChoice",
+      "question": "A company has an unlevered asset beta of 0.80 and plans to use a debt-equity ratio of 0.50. Assume debt beta is zero and ignore taxes. What is the approximate levered equity beta?",
+      "options": ["0.40", "0.80", "1.20", "1.60"],
+      "answer": "1.20",
+      "rationale": "With risk-free debt and no taxes, equity beta = asset beta × (1 + D/E) = 0.80 × 1.50 = 1.20.",
+      "marks": 2
+    },
+    {
+      "id": "q25",
+      "type": "multipleChoice",
+      "question": "A company has a beta of 1.4. The risk-free rate is 5%, and the market risk premium is 7%. What is the company's cost of equity under CAPM?",
+      "options": ["9.8%", "12.0%", "14.8%", "16.8%"],
+      "answer": "14.8%",
+      "rationale": "Ke = Rf + beta × market risk premium = 5% + 1.4(7%) = 14.8%.",
+      "marks": 2
+    },
+    {
+      "id": "q26",
+      "type": "multipleChoice",
+      "question": "A company's next expected dividend is Rs. 8 per share, its shares currently sell for Rs. 100, and dividends are expected to grow at 5% indefinitely. What is the cost of internally generated common equity?",
+      "options": ["8%", "10%", "13%", "15%"],
+      "answer": "13%",
+      "rationale": "Ke = D1/P0 + g = 8/100 + 5% = 13%.",
+      "marks": 2
+    },
+    {
+      "id": "q27",
+      "type": "multipleChoice",
+      "question": "A company will issue new ordinary shares at a market price of Rs. 100 but will incur flotation costs of Rs. 5 per share. The expected dividend next year is Rs. 8 and the growth rate is 5%. What is the approximate cost of new common equity?",
+      "options": ["13.00%", "13.42%", "12.60%", "8.42%"],
+      "answer": "13.42%",
+      "rationale": "Net proceeds = Rs. 95. Cost of new equity = 8/95 + 5% = approximately 13.42%. Flotation costs increase the cost because the firm receives less than the market price.",
+      "marks": 2
+    },
+    {
+      "id": "q28",
+      "type": "multipleChoice",
+      "question": "A preferred share pays a fixed annual dividend of Rs. 12 and currently sells for Rs. 120. What is its cost to the issuing company, ignoring flotation costs?",
+      "options": ["8%", "10%", "12%", "15%"],
+      "answer": "10%",
+      "rationale": "Cost of preferred stock = D/P0 = 12/120 = 10%. Unlike debt interest, preferred dividends do not receive the standard corporate interest tax deduction.",
+      "marks": 2
+    },
+    {
+      "id": "q29",
+      "type": "multipleChoice",
+      "question": "A preferred share pays Rs. 15 annually and can be issued for Rs. 150 with flotation costs of Rs. 10 per share. What is the approximate cost of the new preferred stock?",
+      "options": ["10.00%", "10.71%", "9.38%", "11.67%"],
+      "answer": "10.71%",
+      "rationale": "Net proceeds = 150 - 10 = Rs. 140. Kp = 15/140 = approximately 10.71%.",
+      "marks": 2
+    },
+    {
+      "id": "q30",
+      "type": "multipleChoice",
+      "question": "A company is financed by 50% common equity, 20% preferred stock, and 30% debt. The respective component costs are 16%, 10%, and 8%. The corporate tax rate is 25%. What is the WACC?",
+      "options": ["10.80%", "11.80%", "12.40%", "13.20%"],
+      "answer": "11.80%",
+      "rationale": "WACC = 0.50(16%) + 0.20(10%) + 0.30(8%)(1 - 0.25) = 8% + 2% + 1.8% = 11.8%.",
+      "marks": 2
+    },
+    {
+      "id": "q31",
+      "type": "multipleChoice",
+      "question": "A firm has 200,000 ordinary shares selling for Rs. 40 each, Rs. 2 million of preferred stock at market value, and Rs. 5 million of debt at market value. What is the market-value weight of common equity?",
+      "options": ["40.00%", "46.67%", "53.33%", "61.54%"],
+      "answer": "53.33%",
+      "rationale": "Common equity market value = 200,000 × 40 = Rs. 8 million. Total capital = 8 + 2 + 5 = Rs. 15 million. Equity weight = 8/15 = 53.33%.",
+      "marks": 2
+    },
+    {
+      "id": "q32",
+      "type": "multipleChoice",
+      "question": "A company has a WACC of 11%. It is considering Project A, which has substantially greater systematic risk than the company's existing operations. Which approach is most appropriate?",
+      "options": ["Discount Project A at less than 11% because risky projects create more return", "Automatically discount Project A at exactly 11%", "Use a project-specific required return higher than 11% if its systematic risk is genuinely higher", "Reject Project A regardless of its expected cash flows"],
+      "answer": "Use a project-specific required return higher than 11% if its systematic risk is genuinely higher",
+      "rationale": "The appropriate discount rate should reflect project risk. Using the company-wide WACC for a substantially riskier project can overvalue the project and lead to incorrect acceptance.",
+      "marks": 2
+    },
+    {
+      "id": "q33",
+      "type": "multipleChoice",
+      "question": "An all-equity firm has assets of Rs. 8,000, 400 shares outstanding, and expected EBIT of Rs. 1,200. Ignoring taxes, what are expected EPS and ROE?",
+      "options": ["EPS = Rs. 2; ROE = 10%", "EPS = Rs. 3; ROE = 15%", "EPS = Rs. 4; ROE = 20%", "EPS = Rs. 6; ROE = 30%"],
+      "answer": "EPS = Rs. 3; ROE = 15%",
+      "rationale": "With no debt, earnings to shareholders equal Rs. 1,200. EPS = 1,200/400 = Rs. 3. ROE = 1,200/8,000 = 15%.",
+      "marks": 2
+    },
+    {
+      "id": "q34",
+      "type": "multipleChoice",
+      "question": "The firm in the previous question borrows Rs. 4,000 at 10% and uses the proceeds to repurchase 200 shares at Rs. 20 each. If EBIT remains Rs. 1,200 and taxes are ignored, what are the new EPS and ROE?",
+      "options": ["EPS = Rs. 3; ROE = 15%", "EPS = Rs. 4; ROE = 20%", "EPS = Rs. 6; ROE = 30%", "EPS = Rs. 2; ROE = 10%"],
+      "answer": "EPS = Rs. 4; ROE = 20%",
+      "rationale": "Interest = Rs. 400. Earnings to shareholders = 1,200 - 400 = Rs. 800. With 200 shares remaining, EPS = Rs. 4. Equity is Rs. 4,000, so ROE = 800/4,000 = 20%.",
+      "marks": 2
+    },
+    {
+      "id": "q35",
+      "type": "multipleChoice",
+      "question": "Using the capital structures in Questions 33 and 34, at what EBIT are EPS under the levered and unlevered structures equal?",
+      "options": ["Rs. 400", "Rs. 800", "Rs. 1,000", "Rs. 1,600"],
+      "answer": "Rs. 800",
+      "rationale": "Unlevered EPS = EBIT/400. Levered EPS = (EBIT - 400)/200. Setting them equal gives EBIT/400 = (EBIT - 400)/200, resulting in EBIT = Rs. 800.",
+      "marks": 2
+    },
+    {
+      "id": "q36",
+      "type": "multipleChoice",
+      "question": "If EBIT is below the financial break-even point identified in Question 35, which capital structure produces the higher EPS?",
+      "options": ["The levered structure", "The unlevered structure", "Both always produce identical EPS", "It depends only on the tax rate"],
+      "answer": "The unlevered structure",
+      "rationale": "Below the EBIT-EPS indifference point, fixed interest costs reduce the residual earnings available to the smaller number of shareholders enough that leverage produces lower EPS.",
+      "marks": 2
+    },
+    {
+      "id": "q37",
+      "type": "multipleChoice",
+      "question": "An unlevered firm is worth Rs. 5 million. It introduces permanent debt of Rs. 2 million. The corporate tax rate is 30%. Under MM with corporate taxes and no financial distress costs, what are the levered firm value and levered equity value?",
+      "options": ["Firm value Rs. 5.0m; equity Rs. 3.0m", "Firm value Rs. 5.6m; equity Rs. 3.6m", "Firm value Rs. 7.0m; equity Rs. 5.0m", "Firm value Rs. 5.6m; equity Rs. 5.0m"],
+      "answer": "Firm value Rs. 5.6m; equity Rs. 3.6m",
+      "rationale": "VL = VU + TcD = 5 + 0.30(2) = Rs. 5.6 million. Equity value = VL - D = 5.6 - 2 = Rs. 3.6 million.",
+      "marks": 2
+    },
+    {
+      "id": "q38",
+      "type": "multipleChoice",
+      "question": "A company maintains permanent debt of Rs. 10 million at an interest rate of 8%. If the corporate tax rate is 25%, what are the annual interest tax shield and its present value under the standard perpetual MM assumptions?",
+      "options": ["Annual shield Rs. 200,000; PV Rs. 2.5m", "Annual shield Rs. 800,000; PV Rs. 10m", "Annual shield Rs. 200,000; PV Rs. 2m", "Annual shield Rs. 2.5m; PV Rs. 10m"],
+      "answer": "Annual shield Rs. 200,000; PV Rs. 2.5m",
+      "rationale": "Interest = 10m × 8% = Rs. 800,000. Annual tax shield = 800,000 × 25% = Rs. 200,000. For permanent debt discounted at 8%, PV = 200,000/0.08 = Rs. 2.5 million, which also equals TcD.",
+      "marks": 2
+    },
+    {
+      "id": "q39",
+      "type": "multipleChoice",
+      "question": "An unlevered firm's cost of capital is 15%. It has debt of Rs. 3 million, equity of Rs. 6 million, a cost of debt of 9%, and a corporate tax rate of 30%. Under MM Proposition II with corporate taxes, what is the cost of levered equity?",
+      "options": ["15.0%", "17.1%", "18.0%", "19.2%"],
+      "answer": "17.1%",
+      "rationale": "Rs = R0 + (D/E)(1 - Tc)(R0 - Rd) = 15% + 0.5(0.70)(6%) = 15% + 2.1% = 17.1%.",
+      "marks": 2
+    },
+    {
+      "id": "q40",
+      "type": "multipleChoice",
+      "question": "Under MM with corporate taxes but no bankruptcy or financial distress costs, why does increasing permanent debt increase firm value?",
+      "options": ["Debt permanently increases EBIT", "Debt reduces the business risk of the firm's assets", "Interest tax deductions create additional cash flow available to investors", "Debt causes the cost of equity to fall"],
+      "answer": "Interest tax deductions create additional cash flow available to investors",
+      "rationale": "The tax deductibility of interest creates an interest tax shield. This reduces taxes paid and increases total after-tax cash flow available to debt and equity investors.",
+      "marks": 2
+    },
+    {
+      "id": "q41",
+      "type": "multipleChoice",
+      "question": "A machine originally cost Rs. 500,000 and is depreciated straight-line to zero over 5 years. After 3 years, it is sold for Rs. 250,000. If the corporate tax rate is 30%, what are the book value and after-tax sale proceeds?",
+      "options": ["Book value Rs. 200,000; after-tax proceeds Rs. 235,000", "Book value Rs. 200,000; after-tax proceeds Rs. 250,000", "Book value Rs. 300,000; after-tax proceeds Rs. 265,000", "Book value Rs. 100,000; after-tax proceeds Rs. 205,000"],
+      "answer": "Book value Rs. 200,000; after-tax proceeds Rs. 235,000",
+      "rationale": "Annual depreciation = 500,000/5 = Rs. 100,000. After 3 years, book value = Rs. 200,000. Taxable gain = 250,000 - 200,000 = Rs. 50,000. Tax = Rs. 15,000. After-tax proceeds = 250,000 - 15,000 = Rs. 235,000.",
+      "marks": 2
+    },
+    {
+      "id": "q42",
+      "type": "multipleChoice",
+      "question": "A machine has a book value of Rs. 300,000 but can be sold today for only Rs. 220,000. If the corporate tax rate is 25%, what are the after-tax sale proceeds, assuming the tax loss is immediately deductible?",
+      "options": ["Rs. 200,000", "Rs. 220,000", "Rs. 240,000", "Rs. 300,000"],
+      "answer": "Rs. 240,000",
+      "rationale": "The sale creates a tax-deductible loss of Rs. 80,000. The tax saving is 80,000 × 25% = Rs. 20,000. After-tax proceeds = 220,000 + 20,000 = Rs. 240,000.",
+      "marks": 2
+    },
+    {
+      "id": "q43",
+      "type": "multipleChoice",
+      "question": "A replacement machine costs Rs. 900,000 including installation. The old machine can be sold today for after-tax proceeds of Rs. 180,000. The replacement also requires an additional Rs. 70,000 in net working capital. What is the initial incremental cash outflow?",
+      "options": ["Rs. 650,000", "Rs. 720,000", "Rs. 790,000", "Rs. 970,000"],
+      "answer": "Rs. 790,000",
+      "rationale": "Initial outflow = cost of new machine + NWC investment - after-tax proceeds from old machine = 900,000 + 70,000 - 180,000 = Rs. 790,000.",
+      "marks": 2
+    },
+    {
+      "id": "q44",
+      "type": "multipleChoice",
+      "question": "A new project increases annual sales by Rs. 2,000,000 and cash operating costs by Rs. 1,200,000. However, it reduces the contribution generated by an existing product by Rs. 200,000 annually. Project depreciation is Rs. 300,000 and the tax rate is 30%. What is the annual incremental operating cash flow?",
+      "options": ["Rs. 420,000", "Rs. 510,000", "Rs. 600,000", "Rs. 720,000"],
+      "answer": "Rs. 510,000",
+      "rationale": "Incremental pre-depreciation cash flow = 2,000,000 - 1,200,000 - 200,000 = Rs. 600,000. EBIT = 600,000 - 300,000 = Rs. 300,000. OCF = 300,000(0.70) + 300,000 = Rs. 510,000.",
+      "marks": 2
+    },
+    {
+      "id": "q45",
+      "type": "multipleChoice",
+      "question": "A project requires inventory to increase by Rs. 500,000, accounts receivable to increase by Rs. 300,000, and accounts payable to increase by Rs. 200,000. What is the initial investment in net working capital?",
+      "options": ["Rs. 400,000", "Rs. 600,000", "Rs. 800,000", "Rs. 1,000,000"],
+      "answer": "Rs. 600,000",
+      "rationale": "Increase in NWC = increase in current assets - increase in current liabilities = 500,000 + 300,000 - 200,000 = Rs. 600,000.",
+      "marks": 2
+    },
+    {
+      "id": "q46",
+      "type": "multipleChoice",
+      "question": "A project requires Rs. 600,000 in net working capital initially. During Year 2, required net working capital rises to Rs. 850,000. What incremental cash-flow effect should be recorded in Year 2?",
+      "options": ["Rs. 850,000 inflow", "Rs. 600,000 outflow", "Rs. 250,000 outflow", "Rs. 250,000 inflow"],
+      "answer": "Rs. 250,000 outflow",
+      "rationale": "Only the change in net working capital is included after the initial investment. The additional requirement is 850,000 - 600,000 = Rs. 250,000, creating a cash outflow.",
+      "marks": 2
+    },
+    {
+      "id": "q47",
+      "type": "multipleChoice",
+      "question": "A project ends with equipment that can be sold for Rs. 500,000. Its book value at that time will be Rs. 200,000. The tax rate is 30%, and Rs. 150,000 of net working capital will also be recovered. What is the total terminal non-operating cash flow?",
+      "options": ["Rs. 410,000", "Rs. 500,000", "Rs. 560,000", "Rs. 650,000"],
+      "answer": "Rs. 560,000",
+      "rationale": "Taxable gain = 500,000 - 200,000 = Rs. 300,000. Tax = Rs. 90,000. After-tax salvage proceeds = Rs. 410,000. Add Rs. 150,000 NWC recovery to obtain total terminal cash flow of Rs. 560,000.",
+      "marks": 2
+    },
+    {
+      "id": "q48",
+      "type": "multipleChoice",
+      "question": "A company owns a warehouse that is currently unused. It could rent the warehouse to another business for Rs. 1 million per year after tax. Instead, management plans to use it for a new project. How should the lost rental income be treated?",
+      "options": ["Ignore it because the company already owns the warehouse", "Treat it as a sunk cost", "Treat it as an opportunity cost and an incremental project outflow", "Include only the original purchase price of the warehouse"],
+      "answer": "Treat it as an opportunity cost and an incremental project outflow",
+      "rationale": "Accepting the project causes the company to sacrifice rental income it could otherwise receive. The lost benefit is therefore an incremental opportunity cost.",
+      "marks": 2
+    },
+    {
+      "id": "q49",
+      "type": "multipleChoice",
+      "question": "A firm has already spent Rs. 400,000 developing a prototype. If the project proceeds, it must spend another Rs. 2 million on equipment. The prototype can instead be sold today for Rs. 250,000 after tax. Which amounts are relevant to the decision to proceed?",
+      "options": ["Only the Rs. 400,000 already spent", "Rs. 2 million equipment cost only", "Rs. 2 million equipment cost plus the Rs. 250,000 opportunity cost of not selling the prototype", "Rs. 2.65 million including all three amounts"],
+      "answer": "Rs. 2 million equipment cost plus the Rs. 250,000 opportunity cost of not selling the prototype",
+      "rationale": "The Rs. 400,000 development expenditure is sunk and irrelevant. The Rs. 2 million future equipment expenditure is incremental, and the Rs. 250,000 forgone sale proceeds are an opportunity cost.",
+      "marks": 2
+    },
+    {
+      "id": "q50",
+      "type": "multipleChoice",
+      "question": "A replacement project requires a new machine costing Rs. 1,500,000 including installation. The existing machine has a book value of Rs. 400,000 and can be sold immediately for Rs. 500,000. The tax rate is 30%. The project requires Rs. 200,000 of additional net working capital. The new machine will increase annual revenue by Rs. 900,000 and increase annual cash costs by Rs. 400,000. It will be depreciated straight-line to zero over 5 years. What are the initial incremental cash outflow and annual operating cash flow?",
+      "options": ["Initial outflow Rs. 1,230,000; OCF Rs. 440,000", "Initial outflow Rs. 1,200,000; OCF Rs. 500,000", "Initial outflow Rs. 1,230,000; OCF Rs. 300,000", "Initial outflow Rs. 1,170,000; OCF Rs. 440,000"],
+      "answer": "Initial outflow Rs. 1,230,000; OCF Rs. 440,000",
+      "rationale": "Old machine taxable gain = 500,000 - 400,000 = Rs. 100,000, creating Rs. 30,000 tax. After-tax sale proceeds = Rs. 470,000. Initial outflow = 1,500,000 + 200,000 - 470,000 = Rs. 1,230,000. New depreciation = 1,500,000/5 = Rs. 300,000. Incremental EBIT = 900,000 - 400,000 - 300,000 = Rs. 200,000. OCF = 200,000(0.70) + 300,000 = Rs. 440,000.",
+      "marks": 2
+    }
+  ]
+}

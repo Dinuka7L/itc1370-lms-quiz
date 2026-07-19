@@ -2,7 +2,7 @@
 "id": "quiz-Introduction to Corporate Finance",
 "title": "Lesson 01 - Introduction to Corporate Finance",
 "description": "A challenging assessment of financial systems, corporate finance decisions, value creation, cash flows, shareholder wealth maximization, and agency problems.",
-"subject": "FIN 2372 - Advanced Corporate Finance",
+"subject": "FIN2372 - Advanced Corporate Finance",
 "gradientColors": ["#0f172a", "#1e3a8a", "#2563eb", "#38bdf8"],
 "timeOptions": [10, 20, 30],
 "totalMarks": 70,

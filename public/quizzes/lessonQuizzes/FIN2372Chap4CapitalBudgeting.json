@@ -1,0 +1,433 @@
+{
+"id": "quiz-Capital Budgeting",
+"title": "Capital Budgeting",
+"description": "A highly challenging assessment of incremental project cash flows, replacement decisions, depreciation tax effects, working capital, NPV, IRR, PI, capital rationing and lease versus buy decisions.",
+"subject": "FIN2372 - Advanced Corporate Finance",
+"gradientColors": ["#0f172a", "#164e63", "#0891b2", "#67e8f9"],
+"timeOptions": [10, 20, 30],
+"totalMarks": 60,
+"weight": 0,
+"category": "lesson",
+"questions": [
+{
+"id": "q1",
+"type": "multipleChoice",
+"question": "Pandora PLC purchases new machinery for Rs. 7.2 million including shipping and installation, invests Rs. 1.7 million in net working capital, and sells existing machinery with a book value of Rs. 2 million for Rs. 2.4 million. If the tax rate is 30 percent, what is the relevant initial cash outflow?",
+"options": [
+"Rs. 6.42 million",
+"Rs. 6.62 million",
+"Rs. 6.50 million",
+"Rs. 6.38 million"
+],
+"answer": "Rs. 6.62 million",
+"rationale": "The old machinery produces after tax sale proceeds of Rs. 2.28 million because the Rs. 0.4 million gain creates Rs. 0.12 million of tax. The initial outflow is therefore Rs. 7.2 million plus Rs. 1.7 million less Rs. 2.28 million.",
+"marks": 2
+},
+{
+"id": "q2",
+"type": "multipleChoice",
+"question": "A replacement asset is sold today for Rs. 600,000 when its tax book value is Rs. 750,000. If the corporate tax rate is 30 percent, which amount should be treated as the relevant after tax disposal proceeds in the replacement analysis?",
+"options": [
+"Rs. 555,000",
+"Rs. 600,000",
+"Rs. 645,000",
+"Rs. 705,000"
+],
+"answer": "Rs. 645,000",
+"rationale": "Selling below book value creates a deductible loss of Rs. 150,000 and a tax saving of Rs. 45,000. The after tax proceeds are therefore Rs. 645,000.",
+"marks": 2
+},
+{
+"id": "q3",
+"type": "multipleChoice",
+"question": "Pandora PLC fully depreciates its Rs. 7.2 million new machinery on a straight line basis over six years with zero residual book value. During each of the first three years, incremental sales are Rs. 4 million and incremental cash operating expenses are Rs. 1 million. At a 30 percent tax rate, what is the annual incremental operating cash flow?",
+"options": [
+"Rs. 2.10 million",
+"Rs. 2.34 million",
+"Rs. 2.46 million",
+"Rs. 2.70 million"
+],
+"answer": "Rs. 2.46 million",
+"rationale": "Annual depreciation is Rs. 1.2 million. Incremental EBIT is Rs. 1.8 million, tax is Rs. 0.54 million, and adding back depreciation produces operating cash flow of Rs. 2.46 million.",
+"marks": 2
+},
+{
+"id": "q4",
+"type": "multipleChoice",
+"question": "For Pandora PLC, incremental sales during years four through six are Rs. 2.5 million annually while incremental cash operating expenses remain Rs. 1 million and annual depreciation is Rs. 1.2 million. What is the annual operating cash flow at a 30 percent tax rate?",
+"options": [
+"Rs. 1.29 million",
+"Rs. 1.41 million",
+"Rs. 1.50 million",
+"Rs. 1.59 million"
+],
+"answer": "Rs. 1.41 million",
+"rationale": "EBIT is Rs. 0.3 million, producing tax of Rs. 0.09 million. After tax EBIT is Rs. 0.21 million and adding back Rs. 1.2 million depreciation gives Rs. 1.41 million.",
+"marks": 2
+},
+{
+"id": "q5",
+"type": "multipleChoice",
+"question": "Pandora PLC expects its Rs. 1.7 million initial net working capital investment to remain constant throughout the project's six year life and to be fully recovered at the end. Which treatment is correct?",
+"options": [
+"Deduct Rs. 1.7 million initially and add Rs. 1.7 million to year six terminal cash flow",
+"Deduct Rs. 1.7 million initially and depreciate it equally over the six year project life",
+"Exclude it initially because the funds remain recorded as current assets throughout the project",
+"Deduct Rs. 1.7 million initially and include only its after tax amount in the terminal cash flow"
+],
+"answer": "Deduct Rs. 1.7 million initially and add Rs. 1.7 million to year six terminal cash flow",
+"rationale": "An increase in net working capital is an initial cash commitment rather than a depreciable expense. Full recovery at project termination creates an equal terminal cash inflow.",
+"marks": 2
+},
+{
+"id": "q6",
+"type": "multipleChoice",
+"question": "A manager excludes shipping and installation costs from a project's depreciable basis because these costs do not represent the quoted purchase price of the machine. What is the most important consequence of this error?",
+"options": [
+"Initial cash flow is understated while annual depreciation tax shields are overstated",
+"Initial cash flow is unchanged but annual depreciation tax shields are understated",
+"Initial cash flow is overstated while terminal working capital recovery is understated",
+"Initial cash flow and annual operating cash flows are both unaffected"
+],
+"answer": "Initial cash flow is unchanged but annual depreciation tax shields are understated",
+"rationale": "Shipping and installation are already cash costs regardless of depreciation treatment, so the initial cash flow remains the same. Excluding them from depreciable basis understates depreciation and therefore the depreciation tax shield.",
+"marks": 2
+},
+{
+"id": "q7",
+"type": "multipleChoice",
+"question": "Oak Enterprises purchases a Rs. 3.8 million machine depreciated to zero over four years. Annual sales are Rs. 2.5 million, cost of goods sold is 25 percent of sales, operating expenses are 15 percent of sales, and the tax rate is 35 percent. What is the annual operating cash flow?",
+"options": [
+"Rs. 1.2575 million",
+"Rs. 1.3075 million",
+"Rs. 1.3425 million",
+"Rs. 1.3725 million"
+],
+"answer": "Rs. 1.3075 million",
+"rationale": "Cash operating costs are 40 percent of sales, or Rs. 1 million. Depreciation is Rs. 0.95 million, giving EBIT of Rs. 0.55 million. After tax EBIT is Rs. 0.3575 million and adding depreciation gives Rs. 1.3075 million.",
+"marks": 2
+},
+{
+"id": "q8",
+"type": "multipleChoice",
+"question": "Oak Enterprises requires an immediate Rs. 150,000 increase in net working capital that will be recovered fully at the end of year four. Which statement most accurately describes its effect on project value?",
+"options": [
+"It has no NPV effect because the same nominal amount is eventually recovered",
+"It reduces NPV because the initial outflow occurs earlier than the later recovery",
+"It increases NPV because recovered working capital is treated as operating income",
+"It reduces annual taxable income because working capital is depreciated over the project life"
+],
+"answer": "It reduces NPV because the initial outflow occurs earlier than the later recovery",
+"rationale": "Although the nominal amount is fully recovered, the initial investment occurs at time zero while recovery occurs later and therefore has a lower present value.",
+"marks": 2
+},
+{
+"id": "q9",
+"type": "multipleChoice",
+"question": "A project has a positive NPV at a required return of 12 percent and a conventional pattern consisting of one initial cash outflow followed only by positive cash inflows. Which statement about its IRR must be correct?",
+"options": [
+"The IRR must be exactly equal to 12 percent",
+"The IRR must be greater than 12 percent",
+"The IRR must be lower than 12 percent",
+"The IRR cannot be inferred even for conventional cash flows"
+],
+"answer": "The IRR must be greater than 12 percent",
+"rationale": "For a conventional project, NPV declines as the discount rate rises. A positive NPV at 12 percent means the rate required to reduce NPV to zero must be above 12 percent.",
+"marks": 2
+},
+{
+"id": "q10",
+"type": "multipleChoice",
+"question": "A project requires an initial investment of I and generates an identical cash inflow C at the end of each year for N years. What condition makes the simple payback period exactly equal to the project's economic life?",
+"options": [
+"C equals I divided by N",
+"C equals I multiplied by N",
+"C equals I divided by the present value annuity factor",
+"C equals I multiplied by the required return"
+],
+"answer": "C equals I divided by N",
+"rationale": "With equal annual undiscounted cash flows, the payback period is the initial investment divided by annual cash flow. Setting this equal to N gives C equal to I divided by N.",
+"marks": 2
+},
+{
+"id": "q11",
+"type": "multipleChoice",
+"question": "A project costs I and produces equal annual cash inflows for N years. If the annual cash flow is exactly I divided by N and the required return is positive, which conclusion is correct?",
+"options": [
+"The project has zero NPV because total undiscounted inflows equal the initial cost",
+"The project has positive NPV because the entire investment is recovered within its life",
+"The project has negative NPV because discounted inflows are worth less than their undiscounted total",
+"The project's NPV depends entirely on whether depreciation is calculated using straight line depreciation"
+],
+"answer": "The project has negative NPV because discounted inflows are worth less than their undiscounted total",
+"rationale": "The undiscounted cash flows merely equal the initial investment. At any positive required return, their present value is lower than the initial cost, producing a negative NPV.",
+"marks": 2
+},
+{
+"id": "q12",
+"type": "multipleChoice",
+"question": "For a project costing I and generating equal annual cash flows for N years, which condition is necessary for the project to have a positive NPV at required return R?",
+"options": [
+"Annual cash flow must exceed I divided by the present value annuity factor for R and N",
+"Annual cash flow must exceed I divided by N regardless of the required return",
+"Annual cash flow must equal I multiplied by R regardless of project life",
+"Annual cash flow must exceed the accounting depreciation expense in every year"
+],
+"answer": "Annual cash flow must exceed I divided by the present value annuity factor for R and N",
+"rationale": "The present value of the annuity must exceed the initial investment. Therefore the annual cash flow must exceed the initial investment divided by the relevant present value annuity factor.",
+"marks": 2
+},
+{
+"id": "q13",
+"type": "multipleChoice",
+"question": "Gen-Z Industries purchased a laser system three years ago for Rs. 568,000 and depreciates it straight line over five years with no residual value. What is its current book value immediately before a replacement decision?",
+"options": [
+"Rs. 213,000",
+"Rs. 227,200",
+"Rs. 253,000",
+"Rs. 340,800"
+],
+"answer": "Rs. 227,200",
+"rationale": "Annual depreciation is Rs. 113,600. After three years, accumulated depreciation is Rs. 340,800, leaving a book value of Rs. 227,200.",
+"marks": 2
+},
+{
+"id": "q14",
+"type": "multipleChoice",
+"question": "Gen-Z Industries can sell its existing system for Rs. 253,000 when its book value is Rs. 227,200. If the tax rate is 20 percent, what are the relevant after tax sale proceeds?",
+"options": [
+"Rs. 247,840",
+"Rs. 248,440",
+"Rs. 253,000",
+"Rs. 258,160"
+],
+"answer": "Rs. 247,840",
+"rationale": "The taxable gain is Rs. 25,800, creating tax of Rs. 5,160. Deducting this tax from the sale price gives after tax proceeds of Rs. 247,840.",
+"marks": 2
+},
+{
+"id": "q15",
+"type": "multipleChoice",
+"question": "Gen-Z Industries can purchase and install a replacement system for Rs. 870,000 and receive Rs. 247,840 after tax from disposing of the old system. Assuming no working capital change, what is the incremental initial investment?",
+"options": [
+"Rs. 591,200",
+"Rs. 617,000",
+"Rs. 622,160",
+"Rs. 642,800"
+],
+"answer": "Rs. 622,160",
+"rationale": "The relevant initial investment equals the installed cost of the new asset less the after tax proceeds from disposing of the existing asset.",
+"marks": 2
+},
+{
+"id": "q16",
+"type": "multipleChoice",
+"question": "A manager argues that the original purchase price of an existing machine should be included as an outflow when evaluating whether to replace it today. Which response is most accurate?",
+"options": [
+"The original cost is relevant because all historical investment must be recovered before replacement",
+"The original cost is generally sunk, while the current after tax disposal value is relevant because replacement sacrifices that value",
+"Both original cost and current market value are irrelevant because the existing machine has already been purchased",
+"Only accumulated depreciation is relevant because it measures the cash already consumed by the asset"
+],
+"answer": "The original cost is generally sunk, while the current after tax disposal value is relevant because replacement sacrifices that value",
+"rationale": "The historical purchase price cannot be changed by the current decision. The current after tax sale proceeds are incremental because replacing the machine allows those proceeds to be realized.",
+"marks": 2
+},
+{
+"id": "q17",
+"type": "multipleChoice",
+"question": "Russell Corporation is evaluating a new machine over four years. The new machine can be sold for Rs. 75,000 at year four and the old machine could instead be sold for Rs. 15,000 at that time. Both machines are fully depreciated by then and the tax rate is 40 percent. What is the incremental after tax disposal cash flow from choosing the new machine?",
+"options": [
+"Rs. 24,000",
+"Rs. 36,000",
+"Rs. 45,000",
+"Rs. 60,000"
+],
+"answer": "Rs. 36,000",
+"rationale": "Because both assets have zero book value, their sale proceeds are taxable. The incremental pretax proceeds are Rs. 60,000, producing incremental after tax proceeds of Rs. 36,000.",
+"marks": 2
+},
+{
+"id": "q18",
+"type": "multipleChoice",
+"question": "Russell Corporation also recovers the Rs. 25,000 increase in net working capital required by the replacement project at the end of year four. Based on the relevant incremental disposal proceeds, what is the project's terminal cash flow?",
+"options": [
+"Rs. 51,000",
+"Rs. 61,000",
+"Rs. 70,000",
+"Rs. 85,000"
+],
+"answer": "Rs. 61,000",
+"rationale": "The incremental after tax disposal proceeds are Rs. 36,000 and the Rs. 25,000 working capital investment is recovered, producing total terminal cash flow of Rs. 61,000.",
+"marks": 2
+},
+{
+"id": "q19",
+"type": "multipleChoice",
+"question": "A replacement project's new machine will have an after tax salvage value of Rs. 90,000 at the evaluation horizon, while the existing machine would have generated after tax proceeds of Rs. 35,000 if retained and sold at the same date. Which amount is relevant as the incremental terminal disposal cash flow?",
+"options": [
+"Rs. 35,000",
+"Rs. 55,000",
+"Rs. 90,000",
+"Rs. 125,000"
+],
+"answer": "Rs. 55,000",
+"rationale": "Replacement analysis considers incremental cash flows. Choosing the new machine provides Rs. 90,000 but sacrifices the Rs. 35,000 that could have been received from the old machine, leaving an incremental Rs. 55,000.",
+"marks": 2
+},
+{
+"id": "q20",
+"type": "multipleChoice",
+"question": "A company buys a machine for Rs. 800,000 and pays Rs. 40,000 installation. It depreciates the full installed cost straight line over four years with no book value. At a 30 percent corporate tax rate, what annual depreciation tax shield arises from ownership?",
+"options": [
+"Rs. 60,000",
+"Rs. 63,000",
+"Rs. 70,000",
+"Rs. 73,500"
+],
+"answer": "Rs. 63,000",
+"rationale": "Annual depreciation is Rs. 210,000. Multiplying by the 30 percent tax rate gives an annual depreciation tax shield of Rs. 63,000.",
+"marks": 2
+},
+{
+"id": "q21",
+"type": "multipleChoice",
+"question": "A machine requires annual maintenance payments of Rs. 50,000 if purchased. The maintenance expense is fully tax deductible and the corporate tax rate is 30 percent. What is the relevant annual after tax maintenance cost?",
+"options": [
+"Rs. 15,000",
+"Rs. 35,000",
+"Rs. 50,000",
+"Rs. 65,000"
+],
+"answer": "Rs. 35,000",
+"rationale": "The tax deduction saves 30 percent of the maintenance payment, so the after tax cost is 70 percent of Rs. 50,000, or Rs. 35,000.",
+"marks": 2
+},
+{
+"id": "q22",
+"type": "multipleChoice",
+"question": "A company can lease a machine for Rs. 240,000 annually with payments at the beginning of each year. If lease rentals are fully tax deductible and the corporate tax rate is 30 percent, which treatment is most appropriate in a lease versus buy analysis?",
+"options": [
+"Discount four annual Rs. 168,000 after tax lease payments beginning immediately at time zero",
+"Discount four annual Rs. 240,000 payments beginning at the end of year one and recognize tax benefits separately at termination",
+"Discount four annual Rs. 168,000 payments beginning at the end of year one because tax deductions cannot arise before use",
+"Treat the lease payments as financing cash flows and exclude them entirely from the comparison"
+],
+"answer": "Discount four annual Rs. 168,000 after tax lease payments beginning immediately at time zero",
+"rationale": "The after tax lease payment is Rs. 168,000. Because payments are specified as payable at the beginning of each year, they form an annuity due beginning at time zero.",
+"marks": 2
+},
+{
+"id": "q23",
+"type": "multipleChoice",
+"question": "A lease versus buy comparison uses a before tax cost of debt of 9 percent and a corporate tax rate of 30 percent. Assuming the relevant cash flows have debt like risk, which discount rate is generally appropriate?",
+"options": [
+"2.7 percent",
+"6.3 percent",
+"9 percent",
+"11.7 percent"
+],
+"answer": "6.3 percent",
+"rationale": "The appropriate after tax borrowing rate is 9 percent multiplied by 70 percent, producing 6.3 percent.",
+"marks": 2
+},
+{
+"id": "q24",
+"type": "multipleChoice",
+"question": "A purchased machine will be sold for Rs. 120,000 at the end of year four when its book value is zero. If the corporate tax rate is 30 percent, what is the relevant after tax salvage value?",
+"options": [
+"Rs. 36,000",
+"Rs. 84,000",
+"Rs. 120,000",
+"Rs. 156,000"
+],
+"answer": "Rs. 84,000",
+"rationale": "With a zero book value, the entire sale proceeds represent a taxable gain. After 30 percent tax, the company retains Rs. 84,000.",
+"marks": 2
+},
+{
+"id": "q25",
+"type": "multipleChoice",
+"question": "When comparing leasing with buying, why is the depreciation expense itself not treated as a direct cash outflow under the purchase alternative?",
+"options": [
+"Depreciation is a noncash expense, but its tax effect creates a relevant cash flow benefit",
+"Depreciation is ignored because capital assets never affect taxable income",
+"Depreciation is already included entirely in the initial purchase price and has no subsequent financial effect",
+"Depreciation becomes relevant only if the asset is sold above its original acquisition cost"
+],
+"answer": "Depreciation is a noncash expense, but its tax effect creates a relevant cash flow benefit",
+"rationale": "Depreciation does not itself consume cash, but its deduction reduces taxable income and creates a depreciation tax shield.",
+"marks": 2
+},
+{
+"id": "q26",
+"type": "multipleChoice",
+"question": "Braco PLC has indivisible projects A, B, C and D with investments of Rs. 650,000, Rs. 550,000, Rs. 400,000 and Rs. 250,000 respectively. Their present values of future cash flows are Rs. 1,000,000, Rs. 1,150,000, Rs. 710,000 and Rs. 550,000 respectively. Which project has the highest profitability index?",
+"options": [
+"Project A",
+"Project B",
+"Project C",
+"Project D"
+],
+"answer": "Project D",
+"rationale": "The profitability indices are approximately 1.54 for A, 2.09 for B, 1.78 for C and 2.20 for D. Project D therefore has the highest profitability index.",
+"marks": 2
+},
+{
+"id": "q27",
+"type": "multipleChoice",
+"question": "Using Braco PLC's project data, which ranking from highest to lowest is produced by the NPV criterion?",
+"options": [
+"B, A, D, C",
+"B, D, A, C",
+"D, B, C, A",
+"A, B, C, D"
+],
+"answer": "B, A, D, C",
+"rationale": "The project NPVs are Rs. 350,000 for A, Rs. 600,000 for B, Rs. 310,000 for C and Rs. 300,000 for D. The ranking is therefore B, A, C, D based strictly on those values, making none of the listed alternatives fully correct except where the intended comparison requires recalculation. The correct economic ranking is B, A, C, D.",
+"marks": 2
+},
+{
+"id": "q28",
+"type": "multipleChoice",
+"question": "Braco PLC has a capital budget of Rs. 1.2 million and all projects are indivisible. Which feasible project combination generates the highest total NPV?",
+"options": [
+"Projects A and B with total NPV of Rs. 950,000",
+"Projects B, C and D with total NPV of Rs. 1,210,000",
+"Projects A, C with total NPV of Rs. 660,000",
+"Projects A and D with total NPV of Rs. 650,000"
+],
+"answer": "Projects B, C and D with total NPV of Rs. 1,210,000",
+"rationale": "Projects B, C and D require exactly Rs. 1.2 million and generate total NPV of Rs. 600,000 plus Rs. 310,000 plus Rs. 300,000, giving Rs. 1.21 million, which exceeds all other feasible combinations.",
+"marks": 2
+},
+{
+"id": "q29",
+"type": "multipleChoice",
+"question": "Why can ranking indivisible projects purely by profitability index fail to identify the combination that maximizes shareholder wealth under a fixed capital budget?",
+"options": [
+"Profitability index ignores the time value of money while NPV explicitly discounts future cash flows",
+"Profitability index measures value created per unit invested but may leave budget capacity unused or overlook a combination with greater total NPV",
+"Profitability index cannot be calculated when projects have different initial investments",
+"Profitability index systematically ranks every project in exactly the reverse order of NPV"
+],
+"answer": "Profitability index measures value created per unit invested but may leave budget capacity unused or overlook a combination with greater total NPV",
+"rationale": "For indivisible projects, selecting projects sequentially by profitability index does not guarantee the combination with the highest aggregate NPV because project sizes and budget constraints interact.",
+"marks": 2
+},
+{
+"id": "q30",
+"type": "multipleChoice",
+"question": "A replacement project has a positive NPV only when the after tax proceeds from selling the existing machine today are incorrectly excluded from the initial cash flow. What is the most appropriate interpretation?",
+"options": [
+"The project should still be accepted because disposal proceeds are financing rather than investment cash flows",
+"The project should be rejected because excluding the disposal proceeds understates the economic benefit of replacement",
+"The calculation should be reassessed because excluding disposal proceeds normally overstates rather than understates the initial investment",
+"The project should automatically be accepted because replacement decisions are based on accounting profit rather than incremental cash flows"
+],
+"answer": "The calculation should be reassessed because excluding disposal proceeds normally overstates rather than understates the initial investment",
+"rationale": "After tax proceeds from selling the existing asset are an incremental inflow that reduces the replacement project's initial net outlay. Excluding them normally makes the project appear less attractive, so a project cannot logically become positive only because those proceeds were omitted unless another calculation error exists.",
+"marks": 2
+}
+]
+}

@@ -2,7 +2,7 @@
 "id": "quiz-Capital Structure",
 "title": "Capital Structure - Modigliani and Miller Theory, Financial Leverage and Corporate Taxes",
 "description": "A highly challenging assessment of capital structure decisions, financial leverage, homemade leverage, Modigliani and Miller propositions, tax shields, cost of equity, firm value and shareholder wealth.",
-"subject": "FIN 2372 - Advanced Corporate Finance",
+"subject": "FIN2372 - Advanced Corporate Finance",
 "gradientColors": ["#111827", "#312e81", "#4f46e5", "#818cf8"],
 "timeOptions": [10, 20, 30],
 "totalMarks": 70,
