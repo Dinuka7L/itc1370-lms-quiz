@@ -1,0 +1,503 @@
+{
+"id": "quiz-Introduction to Corporate Finance",
+"title": "Lesson 01 - Introduction to Corporate Finance",
+"description": "A challenging assessment of financial systems, corporate finance decisions, value creation, cash flows, shareholder wealth maximization, and agency problems.",
+"subject": "FIN 2372 - Advanced Corporate Finance",
+"gradientColors": ["#0f172a", "#1e3a8a", "#2563eb", "#38bdf8"],
+"timeOptions": [10, 20, 30],
+"totalMarks": 70,
+"weight": 0,
+"category": "lesson",
+"questions": [
+{
+"id": "q1",
+"type": "multipleChoice",
+"question": "A household earns more cash income than it spends on consumption and real investment during the year. It uses the excess funds to purchase newly issued corporate bonds. Which interpretation is most accurate?",
+"options": [
+"The household is a deficit spending unit purchasing a real asset",
+"The household is a surplus spending unit supplying loanable funds",
+"The household is a financial intermediary transforming financial claims",
+"The household is a deficit spending unit issuing a financial liability"
+],
+"answer": "The household is a surplus spending unit supplying loanable funds",
+"rationale": "A unit whose income exceeds expenditure is a surplus spending unit and can supply its excess funds to deficit spending units by purchasing financial assets.",
+"marks": 2
+},
+{
+"id": "q2",
+"type": "multipleChoice",
+"question": "A manufacturing company requires additional funds to construct a new factory and issues securities to investors. From the perspective of the financial system, which description best applies to the company?",
+"options": [
+"It is a surplus spending unit because it is creating productive assets",
+"It is a financial intermediary because it connects investment with financing",
+"It is a deficit spending unit because its planned expenditure exceeds available internal funds",
+"It is a financial investor because the factory is expected to generate future returns"
+],
+"answer": "It is a deficit spending unit because its planned expenditure exceeds available internal funds",
+"rationale": "A deficit spending unit requires external financing when its planned expenditures exceed available funds and may obtain those funds by issuing securities.",
+"marks": 2
+},
+{
+"id": "q3",
+"type": "multipleChoice",
+"question": "An investor purchases a newly issued bond directly from a company. Which statement best describes the financial claim created by this transaction?",
+"options": [
+"The bond is an asset to both the investor and the issuing company",
+"The bond is a liability to the investor and an asset to the issuing company",
+"The bond is a financial asset to the investor and an offsetting liability to the company",
+"The bond becomes a real asset because the proceeds may finance physical investment"
+],
+"answer": "The bond is a financial asset to the investor and an offsetting liability to the company",
+"rationale": "Every financial asset held by one economic unit corresponds to an offsetting financial liability of another economic unit.",
+"marks": 2
+},
+{
+"id": "q4",
+"type": "multipleChoice",
+"question": "Suppose investors sell existing shares to one another without the issuing company receiving any new funds. What is the most important economic contribution of this activity?",
+"options": [
+"It directly finances new capital expenditure undertaken by the issuing company",
+"It creates additional accounting profits for the company whose shares are traded",
+"It converts the company from a deficit spending unit into a surplus spending unit",
+"It provides liquidity by allowing existing financial claims to be exchanged"
+],
+"answer": "It provides liquidity by allowing existing financial claims to be exchanged",
+"rationale": "Trading existing securities in secondary markets primarily provides liquidity rather than directly supplying new financing to the original issuer.",
+"marks": 2
+},
+{
+"id": "q5",
+"type": "multipleChoice",
+"question": "A company must choose between two projects with identical expected total cash inflows, but one project generates most of its cash earlier. Why can the projects have different values?",
+"options": [
+"Financial value depends on both the amount and timing of expected cash flows",
+"Earlier cash flows automatically eliminate all uncertainty associated with investment",
+"Later cash flows are excluded from corporate finance analysis until they are received",
+"Accounting standards require earlier cash flows to be reported as additional equity"
+],
+"answer": "Financial value depends on both the amount and timing of expected cash flows",
+"rationale": "Finance recognizes that costs and benefits occur over time, making the timing as well as the amount of future cash flows relevant to value.",
+"marks": 2
+},
+{
+"id": "q6",
+"type": "multipleChoice",
+"question": "Which decision would most directly fall within the capital budgeting responsibility of a financial manager?",
+"options": [
+"Choosing the proportion of long term borrowing relative to shareholder financing",
+"Determining whether a new production facility will generate sufficient value",
+"Deciding how much cash should be retained for immediate supplier payments",
+"Selecting the accounting method used to report depreciation expenses"
+],
+"answer": "Determining whether a new production facility will generate sufficient value",
+"rationale": "Capital budgeting concerns the evaluation and selection of long term investments in assets and projects.",
+"marks": 2
+},
+{
+"id": "q7",
+"type": "multipleChoice",
+"question": "A company has already selected a profitable expansion project and must now decide whether to finance it primarily through long term debt or new equity. Which corporate finance decision is being made?",
+"options": [
+"Capital budgeting",
+"Liquidity transformation",
+"Capital structure",
+"Net working capital management"
+],
+"answer": "Capital structure",
+"rationale": "Capital structure decisions determine the mix of financing sources, particularly debt and equity, used by a firm.",
+"marks": 2
+},
+{
+"id": "q8",
+"type": "multipleChoice",
+"question": "A profitable company repeatedly struggles to pay suppliers because excessive funds are tied up in inventory and customer receivables. Which financial management area is most directly responsible for addressing the problem?",
+"options": [
+"Capital structure management",
+"Net working capital management",
+"Long term capital budgeting",
+"Securities market regulation"
+],
+"answer": "Net working capital management",
+"rationale": "Net working capital management focuses on short term assets and liabilities and the firm's ability to support daily operations and meet short term obligations.",
+"marks": 2
+},
+{
+"id": "q9",
+"type": "multipleChoice",
+"question": "Which situation best demonstrates why maximizing accounting profit may fail to maximize shareholder wealth?",
+"options": [
+"A project increases reported profit but generates uncertain cash flows far into the future",
+"A project increases both immediate cash flow and the market value of the company's shares",
+"A company replaces expensive borrowing with a cheaper source of financing",
+"A company rejects a project whose expected benefits are lower than its economic costs"
+],
+"answer": "A project increases reported profit but generates uncertain cash flows far into the future",
+"rationale": "Profit alone does not adequately capture the timing and risk of future benefits, both of which affect shareholder wealth.",
+"marks": 2
+},
+{
+"id": "q10",
+"type": "multipleChoice",
+"question": "A financial manager rejects a project that would increase next year's accounting profit because the project's risk and delayed cash flows are expected to reduce the current market value of the company. Which objective is the manager applying?",
+"options": [
+"Revenue maximization",
+"Shareholder wealth maximization",
+"Market share maximization",
+"Accounting profit maximization"
+],
+"answer": "Shareholder wealth maximization",
+"rationale": "Shareholder wealth maximization focuses on decisions that increase the current value of the firm's stock rather than merely increasing reported profit.",
+"marks": 2
+},
+{
+"id": "q11",
+"type": "multipleChoice",
+"question": "A company makes a large credit sale near the end of its financial year, records the revenue immediately, but will collect the customer payment several months later. Which conclusion is most appropriate?",
+"options": [
+"The transaction can increase accounting income before producing an equivalent cash inflow",
+"The transaction immediately increases both accounting income and operating cash by equal amounts",
+"The transaction increases cash flow immediately but cannot affect accounting income until collection",
+"The transaction has no financial significance until the customer settles the outstanding balance"
+],
+"answer": "The transaction can increase accounting income before producing an equivalent cash inflow",
+"rationale": "Accounting income and cash flow can differ because revenue may be recognized before the related cash is actually collected.",
+"marks": 2
+},
+{
+"id": "q12",
+"type": "multipleChoice",
+"question": "Which condition most strongly indicates that a firm is creating economic value through its financing and investment activities?",
+"options": [
+"The firm continuously increases the number of securities it issues",
+"The firm reports higher revenue regardless of the capital required to generate it",
+"The return generated on invested capital exceeds the cost of obtaining that capital",
+"The firm's total assets increase faster than its annual accounting depreciation"
+],
+"answer": "The return generated on invested capital exceeds the cost of obtaining that capital",
+"rationale": "Value is created when the return generated by invested capital exceeds the cost of the capital used to finance the investment.",
+"marks": 2
+},
+{
+"id": "q13",
+"type": "multipleChoice",
+"question": "Which statement best captures the value creation perspective of finance described in the lesson?",
+"options": [
+"Financial wealth creates real productive assets independently of business investment",
+"Value originates in productive real assets and is transmitted through financial claims held by investors",
+"Value is created primarily through repeated trading of existing securities between investors",
+"Financial contracting creates wealth by eliminating the uncertainty associated with real investments"
+],
+"answer": "Value originates in productive real assets and is transmitted through financial claims held by investors",
+"rationale": "The value creation perspective explains that value is generated by productive real assets and transmitted into the financial securities issued against the business.",
+"marks": 2
+},
+{
+"id": "q14",
+"type": "multipleChoice",
+"question": "An investor wants an asset that can be sold quickly without suffering a substantial loss caused by the need to find a buyer. Which property of a financial asset is the investor primarily concerned with?",
+"options": [
+"Expected return",
+"Credit exposure",
+"Liquidity",
+"Market maturity"
+],
+"answer": "Liquidity",
+"rationale": "Liquidity concerns the ability to sell an asset quickly without suffering a significant loss or undertaking a costly search for a buyer.",
+"marks": 2
+},
+{
+"id": "q15",
+"type": "multipleChoice",
+"question": "Two securities offer the same expected return, but one has a substantially greater probability that the issuer will fail to make promised payments. Which property most clearly distinguishes the securities?",
+"options": [
+"Credit risk",
+"Liquidity preference",
+"Financial intermediation",
+"Capital structure"
+],
+"answer": "Credit risk",
+"rationale": "Credit risk concerns the possibility that an issuer or borrower will fail to meet promised financial obligations.",
+"marks": 2
+},
+{
+"id": "q16",
+"type": "multipleChoice",
+"question": "Which transaction best represents indirect rather than direct financing?",
+"options": [
+"A household purchases newly issued corporate shares through a broker",
+"An investor buys an existing government security from another investor",
+"A company sells newly issued bonds directly to institutional investors",
+"A household deposits funds with a bank that subsequently lends to a business"
+],
+"answer": "A household deposits funds with a bank that subsequently lends to a business",
+"rationale": "Indirect financing occurs when a financial intermediary stands between surplus and deficit units and issues its own claims while acquiring claims issued by borrowers.",
+"marks": 2
+},
+{
+"id": "q17",
+"type": "multipleChoice",
+"question": "Which statement most accurately distinguishes a broker or dealer from a financial intermediary in the flow of funds?",
+"options": [
+"A broker or dealer facilitates direct financing, while an intermediary participates in indirect financing",
+"A broker or dealer creates only real assets, while an intermediary creates only tangible assets",
+"A broker or dealer can serve only deficit units, while an intermediary can serve only surplus units",
+"A broker or dealer eliminates financial claims, while an intermediary eliminates financial liabilities"
+],
+"answer": "A broker or dealer facilitates direct financing, while an intermediary participates in indirect financing",
+"rationale": "Brokers and dealers facilitate transactions involving direct financial claims, whereas intermediaries transform claims in the indirect financing process.",
+"marks": 2
+},
+{
+"id": "q18",
+"type": "multipleChoice",
+"question": "A business experiencing a financing deficit could restore balance between its cash inflows and outflows in several ways. Which action is most consistent with the behavior of a deficit spending unit?",
+"options": [
+"Purchasing additional financial assets using excess current income",
+"Issuing financial liabilities to obtain funds from the financial sector",
+"Increasing money balances while simultaneously reducing all borrowing",
+"Supplying additional loanable funds to other deficit spending units"
+],
+"answer": "Issuing financial liabilities to obtain funds from the financial sector",
+"rationale": "A deficit spending unit can obtain funds by issuing financial liabilities, reducing money balances, or selling previously acquired financial assets.",
+"marks": 2
+},
+{
+"id": "q19",
+"type": "multipleChoice",
+"question": "Which statement about financial claims is logically required for the financial system as a whole?",
+"options": [
+"Total financial assets must exceed total financial liabilities whenever firms invest",
+"Every financial liability must eventually be converted into a tangible real asset",
+"Total financial receivables must correspond to total financial payables",
+"Financial assets can exist without an offsetting obligation when traded in secondary markets"
+],
+"answer": "Total financial receivables must correspond to total financial payables",
+"rationale": "A financial asset for one party represents a corresponding financial liability for another, so aggregate receivables and payables must correspond.",
+"marks": 2
+},
+{
+"id": "q20",
+"type": "multipleChoice",
+"question": "Which of the following is the strongest example of an intangible asset rather than a tangible real asset or a financial asset?",
+"options": [
+"A listed ordinary share",
+"A production machine",
+"A legally protected patent",
+"A government debt security"
+],
+"answer": "A legally protected patent",
+"rationale": "A patent is an intangible asset whose value arises from legal rights rather than physical properties or a financial claim against another economic unit.",
+"marks": 2
+},
+{
+"id": "q21",
+"type": "multipleChoice",
+"question": "A company raises funds by issuing new shares and invests the proceeds in productive machinery. Which statement best describes the transformation involved?",
+"options": [
+"The company transforms financial wealth obtained from investors into productive real assets",
+"The company transforms machinery into a financial liability held by its suppliers",
+"The investors acquire ownership of the machinery as their direct personal real asset",
+"The issuance eliminates the distinction between real assets and financial claims"
+],
+"answer": "The company transforms financial wealth obtained from investors into productive real assets",
+"rationale": "Corporate finance connects financial claims supplied by investors with investment in real business assets that are expected to create value.",
+"marks": 2
+},
+{
+"id": "q22",
+"type": "multipleChoice",
+"question": "Which scenario most clearly represents a potential agency problem between shareholders and managers?",
+"options": [
+"Managers reject a negative value project despite its potential to increase company size",
+"Managers undertake an expansion mainly to increase their prestige despite reducing shareholder value",
+"Managers close a persistently unprofitable division to redirect resources toward better investments",
+"Managers adopt performance targets that directly reward increases in long term shareholder value"
+],
+"answer": "Managers undertake an expansion mainly to increase their prestige despite reducing shareholder value",
+"rationale": "An agency problem arises when managers pursue personal objectives that conflict with the goal of maximizing shareholder wealth.",
+"marks": 2
+},
+{
+"id": "q23",
+"type": "multipleChoice",
+"question": "A board redesigns executive compensation so that a significant portion of management rewards depends on sustained increases in shareholder value. What is the primary purpose of this policy?",
+"options": [
+"To eliminate the need for shareholders to provide capital",
+"To align managerial incentives more closely with shareholder objectives",
+"To convert managers from agents into legal owners of all company assets",
+"To prevent financial markets from influencing corporate decision making"
+],
+"answer": "To align managerial incentives more closely with shareholder objectives",
+"rationale": "Performance related managerial compensation can reduce agency conflicts by making managers benefit when shareholder wealth increases.",
+"marks": 2
+},
+{
+"id": "q24",
+"type": "multipleChoice",
+"question": "Why can widely dispersed ownership increase the potential importance of corporate governance mechanisms?",
+"options": [
+"Dispersed shareholders may individually have limited ability to monitor management effectively",
+"Dispersed ownership automatically prevents managers from controlling corporate resources",
+"Dispersed shareholders are legally prohibited from voting on matters affecting management",
+"Dispersed ownership converts all shareholder claims into short term corporate liabilities"
+],
+"answer": "Dispersed shareholders may individually have limited ability to monitor management effectively",
+"rationale": "When ownership is widely dispersed, management may effectively control the firm because individual shareholders have weaker incentives and ability to exercise direct control.",
+"marks": 2
+},
+{
+"id": "q25",
+"type": "multipleChoice",
+"question": "Which action is most clearly an agency cost intended to reduce conflicts between managers and shareholders?",
+"options": [
+"Paying for an independent audit that monitors managerial reporting",
+"Purchasing a profitable machine that increases future operating cash flows",
+"Accepting a project that creates more value than the capital invested",
+"Repaying a loan according to the original contractual repayment schedule"
+],
+"answer": "Paying for an independent audit that monitors managerial reporting",
+"rationale": "Monitoring expenditures such as independent audit costs can arise because shareholders need mechanisms to reduce or control agency conflicts.",
+"marks": 2
+},
+{
+"id": "q26",
+"type": "multipleChoice",
+"question": "Which combination most directly influences whether managers are likely to act in shareholders' best interests according to the agency framework discussed in the lesson?",
+"options": [
+"The number of products sold and the age of the company",
+"The level of inventory and the maturity of outstanding debt",
+"The alignment of managerial goals and the possibility of replacing ineffective managers",
+"The size of the accounting department and the frequency of financial reporting"
+],
+"answer": "The alignment of managerial goals and the possibility of replacing ineffective managers",
+"rationale": "Managerial behavior is influenced by how closely management incentives align with shareholder objectives and whether control mechanisms allow poorly performing managers to be replaced.",
+"marks": 2
+},
+{
+"id": "q27",
+"type": "multipleChoice",
+"question": "A firm reports a large increase in annual accounting profit, but its share price falls after investors learn that the profit resulted from highly risky projects with uncertain distant cash flows. Which conclusion is most consistent with corporate finance principles?",
+"options": [
+"The market reaction is inconsistent because higher accounting profit must increase shareholder wealth",
+"The market reaction can be rational because value depends on risk, timing, and expected cash flows",
+"The market reaction proves that accounting information has no relevance to financial decisions",
+"The market reaction means that shareholders always prefer immediate dividends to profitable investment"
+],
+"answer": "The market reaction can be rational because value depends on risk, timing, and expected cash flows",
+"rationale": "Shareholder wealth reflects expected future cash flows together with their timing and uncertainty, not accounting profit alone.",
+"marks": 2
+},
+{
+"id": "q28",
+"type": "multipleChoice",
+"question": "A firm generates cash from its operating assets, pays taxes, reinvests part of the remaining cash, and distributes the balance to debt and equity investors. Which principle best determines whether the overall financial process creates value for investors?",
+"options": [
+"The firm must distribute every operating cash flow immediately rather than retain funds",
+"The firm must ensure that accounting revenue always exceeds the book value of assets",
+"The firm must generate cash flows sufficient to compensate providers of capital for the funds committed",
+"The firm must finance all productive assets using internally generated cash rather than external securities"
+],
+"answer": "The firm must generate cash flows sufficient to compensate providers of capital for the funds committed",
+"rationale": "The financial manager seeks to create value by ensuring that the firm's investments generate more value and cash than the resources required to finance them.",
+"marks": 2
+},
+{
+"id": "q29",
+"type": "multipleChoice",
+"question": "Which statement best explains why finance cannot be treated simply as the process of raising money?",
+"options": [
+"Finance also examines how scarce resources are allocated over time under uncertainty",
+"Finance is concerned exclusively with recording historical transactions after they occur",
+"Finance excludes investment decisions because these belong entirely to accounting",
+"Finance studies only government borrowing and the regulation of financial institutions"
+],
+"answer": "Finance also examines how scarce resources are allocated over time under uncertainty",
+"rationale": "Finance is broader than fundraising because it examines resource allocation across time while considering uncertain future costs and benefits.",
+"marks": 2
+},
+{
+"id": "q30",
+"type": "multipleChoice",
+"question": "Which statement most accurately describes the relationship between finance and accounting information?",
+"options": [
+"Finance replaces accounting because historical information has no decision making value",
+"Finance uses accounting information as an input but applies analytical principles to financial decisions",
+"Finance and accounting are identical because both focus exclusively on reported profit",
+"Finance produces accounting information while accounting determines the market value of securities"
+],
+"answer": "Finance uses accounting information as an input but applies analytical principles to financial decisions",
+"rationale": "Finance draws on accounting information but uses analytical and economic principles to evaluate decisions involving investment, financing, risk, and value.",
+"marks": 2
+},
+{
+"id": "q31",
+"type": "multipleChoice",
+"question": "Which choice correctly distinguishes corporate finance from the investment area of finance?",
+"options": [
+"Corporate finance studies how firms raise and use funds, while investment studies securities and portfolio decisions",
+"Corporate finance studies only short term borrowing, while investment studies all long term financing decisions",
+"Corporate finance focuses on financial markets, while investment focuses exclusively on physical business assets",
+"Corporate finance evaluates personal securities, while investment determines corporate capital structures"
+],
+"answer": "Corporate finance studies how firms raise and use funds, while investment studies securities and portfolio decisions",
+"rationale": "Corporate finance focuses on the financial decisions of firms, whereas the investment field focuses on securities markets and the evaluation and management of investments.",
+"marks": 2
+},
+{
+"id": "q32",
+"type": "multipleChoice",
+"question": "A government spends substantially more than its current revenues and finances the difference by issuing government securities purchased by households. Which classification best describes the two parties in this transaction?",
+"options": [
+"The government is the surplus unit and households are the deficit units",
+"Both the government and households are deficit units because securities are involved",
+"The government is the deficit unit and households are acting as surplus units",
+"Both parties are surplus units because financial assets are created by the transaction"
+],
+"answer": "The government is the deficit unit and households are acting as surplus units",
+"rationale": "Governments are commonly deficit spending units when expenditure exceeds income, while households commonly supply excess funds by purchasing financial claims.",
+"marks": 2
+},
+{
+"id": "q33",
+"type": "multipleChoice",
+"question": "An investor buys shares of an existing listed company from another investor on a stock exchange. Which statement best describes the transaction?",
+"options": [
+"The issuing company receives new financing and creates a new real asset",
+"The transaction transfers an existing financial claim and contributes primarily to market liquidity",
+"The selling investor becomes a deficit spending unit solely because the shares were sold",
+"The transaction eliminates the corresponding equity claim from the company's capital structure"
+],
+"answer": "The transaction transfers an existing financial claim and contributes primarily to market liquidity",
+"rationale": "Secondary market transactions transfer existing securities between investors and enhance liquidity without directly providing new funds to the issuing company.",
+"marks": 2
+},
+{
+"id": "q34",
+"type": "multipleChoice",
+"question": "A manager must choose between Project A, which increases company size and managerial status but reduces the current value of the firm's shares, and Project B, which is smaller but increases share value. Under the stated goal of financial management, which decision is appropriate?",
+"options": [
+"Choose Project A because larger firms necessarily create greater shareholder wealth",
+"Choose Project A because managerial control is the primary objective of corporate finance",
+"Choose Project B because increasing the current value of existing stock is the relevant objective",
+"Choose either project because shareholder wealth is independent of managerial investment decisions"
+],
+"answer": "Choose Project B because increasing the current value of existing stock is the relevant objective",
+"rationale": "The goal of financial management is to maximize the current value of existing stock, so the project that increases shareholder value should be preferred.",
+"marks": 2
+},
+{
+"id": "q35",
+"type": "multipleChoice",
+"question": "A financial manager simultaneously evaluates a factory expansion, determines how much debt should finance it, and establishes policies for inventory and short term obligations. Which interpretation is most accurate?",
+"options": [
+"The manager is addressing investment, financing, and net working capital decisions that jointly influence firm value",
+"The manager is performing three accounting functions that have no direct connection with shareholder wealth",
+"The manager is addressing only capital budgeting because every decision ultimately relates to investment",
+"The manager is performing financial intermediation by transferring funds between independent surplus units"
+],
+"answer": "The manager is addressing investment, financing, and net working capital decisions that jointly influence firm value",
+"rationale": "Corporate finance centers on capital budgeting, capital structure, and net working capital management, with all three contributing to the financial manager's value creation responsibility.",
+"marks": 2
+}
+]
+}
