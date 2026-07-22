@@ -1,0 +1,503 @@
+{
+"id": "quiz-IASB Conceptual Framework for Financial Reporting",
+"title": "Chapter 1 Subpart B - IASB Conceptual Framework for Financial Reporting",
+"description": "A challenging assessment of the objective of financial reporting, qualitative characteristics, reporting entities, financial statement elements, recognition, measurement, presentation and capital maintenance.",
+"subject": "ACC2372 - Advanced Financial Accounting and Reporting",
+"gradientColors": ["#4f46e5", "#4338ca", "#3730a3", "#312e81"],
+"timeOptions": [10, 20, 30],
+"totalMarks": 70,
+"weight": 0,
+"category": "lesson",
+"questions": [
+{
+"id": "q1",
+"type": "multipleChoice",
+"question": "A preparer encounters a transaction for which no applicable IFRS Standard exists. Which use of the Conceptual Framework is most appropriate?",
+"options": [
+"Treat the Framework as a Standard that automatically prescribes the accounting treatment",
+"Use the Framework to help develop a consistent accounting policy while recognising that it cannot override any applicable Standard",
+"Ignore the Framework because it is intended exclusively for the development of new Standards",
+"Apply the Framework only if the resulting accounting policy produces the highest reported profit"
+],
+"answer": "Use the Framework to help develop a consistent accounting policy while recognising that it cannot override any applicable Standard",
+"rationale": "The Conceptual Framework assists preparers in developing consistent accounting policies when no Standard applies, but it is not itself a Standard and cannot override a Standard.",
+"marks": 2
+},
+{
+"id": "q2",
+"type": "multipleChoice",
+"question": "Which group is identified as the primary users of general purpose financial reports?",
+"options": [
+"Management, employees and tax authorities",
+"Regulators, governments and members of the general public",
+"Existing and potential investors, lenders and other creditors",
+"Customers, competitors and financial analysts"
+],
+"answer": "Existing and potential investors, lenders and other creditors",
+"rationale": "General purpose financial reports are primarily directed to existing and potential investors, lenders and other creditors who cannot require information directly from the entity.",
+"marks": 2
+},
+{
+"id": "q3",
+"type": "multipleChoice",
+"question": "An investor argues that general purpose financial statements should report the exact market value of the reporting entity. Which response is most consistent with the Conceptual Framework?",
+"options": [
+"Financial reports are designed to determine the exact value of the entity at every reporting date",
+"Financial reports are designed primarily to calculate the amount for which the entire entity could be sold",
+"Financial reports provide information that assists users in estimating value but are not designed to show the value of the entity",
+"Financial reports determine entity value only when all assets and liabilities are measured at fair value"
+],
+"answer": "Financial reports provide information that assists users in estimating value but are not designed to show the value of the entity",
+"rationale": "General purpose financial reports provide information useful in estimating an entity's value rather than directly reporting the entity's exact value.",
+"marks": 2
+},
+{
+"id": "q4",
+"type": "multipleChoice",
+"question": "A company reports strong operating performance under accrual accounting but weak cash flows during the same period. Why can both sets of information remain useful?",
+"options": [
+"Accrual information explains economic effects when they occur, while cash flow information helps assess liquidity, financing and cash generation",
+"Cash flow information completely replaces accrual information whenever the two provide different signals",
+"Accrual information is relevant only when every recognised transaction produces cash in the same reporting period",
+"Cash flow information measures financial performance while accrual information is restricted to measuring financial position"
+],
+"answer": "Accrual information explains economic effects when they occur, while cash flow information helps assess liquidity, financing and cash generation",
+"rationale": "Accrual accounting and cash flow information provide complementary perspectives on performance, resources, claims, liquidity and future cash flow prospects.",
+"marks": 2
+},
+{
+"id": "q5",
+"type": "multipleChoice",
+"question": "Current year revenue is used to forecast next year's revenue and is also compared with the forecast made for the current year twelve months earlier. Which qualitative values are demonstrated?",
+"options": [
+"Neutrality and verifiability",
+"Comparability and understandability",
+"Predictive value and confirmatory value",
+"Completeness and timeliness"
+],
+"answer": "Predictive value and confirmatory value",
+"rationale": "Information has predictive value when used as an input into predictions and confirmatory value when it provides feedback about previous evaluations.",
+"marks": 2
+},
+{
+"id": "q6",
+"type": "multipleChoice",
+"question": "Two companies omit identical monetary amounts from their financial statements. The omission is material for one company but immaterial for the other. What best explains this outcome?",
+"options": [
+"Materiality depends exclusively on whether an amount exceeds a threshold established by the IASB",
+"Materiality is an entity specific aspect of relevance based on the nature or magnitude of information in its particular context",
+"Materiality depends only on the absolute monetary magnitude of an item regardless of the reporting entity",
+"Materiality is an enhancing characteristic that can compensate for information lacking faithful representation"
+],
+"answer": "Materiality is an entity specific aspect of relevance based on the nature or magnitude of information in its particular context",
+"rationale": "The Framework treats materiality as entity specific and therefore does not establish a universal quantitative threshold.",
+"marks": 2
+},
+{
+"id": "q7",
+"type": "multipleChoice",
+"question": "Management deliberately understates assets because it believes conservative reporting is always prudent. Which conclusion best follows from the Conceptual Framework?",
+"options": [
+"The treatment is appropriate because prudence requires systematic understatement whenever uncertainty exists",
+"The treatment is appropriate if liabilities are simultaneously overstated by an equivalent amount",
+"The treatment conflicts with neutrality because prudence requires caution without deliberate understatement or overstatement",
+"The treatment satisfies faithful representation because conservative information is necessarily free from error"
+],
+"answer": "The treatment conflicts with neutrality because prudence requires caution without deliberate understatement or overstatement",
+"rationale": "Prudence supports neutrality through cautious judgement under uncertainty but does not justify deliberate bias in either direction.",
+"marks": 2
+},
+{
+"id": "q8",
+"type": "multipleChoice",
+"question": "An unobservable asset value must be estimated using a carefully selected model. The estimate is clearly identified as an estimate, its limitations are disclosed and the model is applied without process errors. Which statement is most appropriate?",
+"options": [
+"The information cannot be faithfully represented because the exact value is unknown",
+"The information may be faithfully represented even though the estimated amount is not perfectly accurate",
+"The information is useful only if independent observers calculate exactly the same estimated amount",
+"The information must be excluded because measurement uncertainty prevents recognition"
+],
+"answer": "The information may be faithfully represented even though the estimated amount is not perfectly accurate",
+"rationale": "Free from error does not require perfect numerical accuracy when estimates are necessary, provided the estimate and estimation process are properly described and applied.",
+"marks": 2
+},
+{
+"id": "q9",
+"type": "multipleChoice",
+"question": "Two entities consistently apply different accounting methods to economically identical transactions. Which statement best describes the effect?",
+"options": [
+"Comparability may be reduced because consistency assists in achieving comparability but is not itself the ultimate objective",
+"Comparability is automatically achieved because each entity has been internally consistent",
+"Faithful representation is impossible whenever different accounting methods are permitted",
+"Understandability improves because users can select whichever accounting method they prefer"
+],
+"answer": "Comparability may be reduced because consistency assists in achieving comparability but is not itself the ultimate objective",
+"rationale": "Comparability is the goal, while consistency in applying methods is a means of helping achieve that goal.",
+"marks": 2
+},
+{
+"id": "q10",
+"type": "multipleChoice",
+"question": "Independent experts cannot directly observe an inventory amount but can check quantities and costs and recalculate the amount using the same cost flow method. What does this demonstrate?",
+"options": [
+"Direct verification",
+"Indirect verification",
+"Predictive confirmation",
+"Measurement neutrality"
+],
+"answer": "Indirect verification",
+"rationale": "Indirect verification involves checking inputs and recalculating outputs using the same methodology rather than directly observing the amount itself.",
+"marks": 2
+},
+{
+"id": "q11",
+"type": "multipleChoice",
+"question": "A highly complex transaction is material and relevant but difficult even for knowledgeable users to understand. What should the entity generally do?",
+"options": [
+"Exclude the information because understandability takes priority over completeness",
+"Replace the transaction with a simpler hypothetical transaction that users can understand",
+"Present the information as clearly as possible because complexity alone does not justify excluding relevant information",
+"Disclose the information only to professional investors who request it directly"
+],
+"answer": "Present the information as clearly as possible because complexity alone does not justify excluding relevant information",
+"rationale": "Excluding inherently complex but relevant information could make financial reports incomplete and potentially misleading.",
+"marks": 2
+},
+{
+"id": "q12",
+"type": "multipleChoice",
+"question": "Information is highly comparable, timely, verifiable and understandable but does not faithfully represent the relevant economic phenomenon. How should its usefulness be assessed?",
+"options": [
+"It is useful because satisfying all enhancing characteristics compensates for weak faithful representation",
+"It is useful provided the cost of reporting it is sufficiently low",
+"It is not useful because enhancing characteristics cannot compensate for failure to satisfy a fundamental characteristic",
+"It is useful only if management provides additional explanatory information"
+],
+"answer": "It is not useful because enhancing characteristics cannot compensate for failure to satisfy a fundamental characteristic",
+"rationale": "Useful information must be both relevant and faithfully represented before enhancing characteristics can improve its usefulness.",
+"marks": 2
+},
+{
+"id": "q13",
+"type": "multipleChoice",
+"question": "Which statement best reflects the cost constraint in financial reporting?",
+"options": [
+"Information should be reported whenever it is relevant regardless of the cost of providing and using it",
+"Only information that can be produced without significant cost should appear in financial reports",
+"The benefits expected from reporting particular information should justify the costs of providing and using that information",
+"Reporting costs should be assessed solely from the perspective of the reporting entity"
+],
+"answer": "The benefits expected from reporting particular information should justify the costs of providing and using that information",
+"rationale": "Cost is a pervasive constraint and requires consideration of whether the benefits of information justify the costs of its provision and use.",
+"marks": 2
+},
+{
+"id": "q14",
+"type": "multipleChoice",
+"question": "A parent controls several subsidiaries. Investors want information about the economic resources and claims of the parent and subsidiaries viewed together as one reporting entity. Which statements best satisfy that need?",
+"options": [
+"Combined financial statements",
+"Unconsolidated financial statements",
+"Consolidated financial statements",
+"Management financial statements"
+],
+"answer": "Consolidated financial statements",
+"rationale": "Consolidated financial statements present the parent and its subsidiaries as a single reporting entity.",
+"marks": 2
+},
+{
+"id": "q15",
+"type": "multipleChoice",
+"question": "A proposed reporting entity consists of selected activities from several entities that are not linked solely through parent and subsidiary relationships. What is the most important consideration when determining its boundary?",
+"options": [
+"The boundary must correspond exactly to the boundaries of existing legal entities",
+"The boundary should maximise the number of assets included regardless of user needs",
+"The boundary should provide relevant and faithfully represented information without an arbitrary or incomplete selection of activities",
+"The boundary must exclude all activities conducted by entities without common ownership"
+],
+"answer": "The boundary should provide relevant and faithfully represented information without an arbitrary or incomplete selection of activities",
+"rationale": "The reporting entity boundary is driven by primary user information needs and must produce relevant, neutral and faithfully represented information.",
+"marks": 2
+},
+{
+"id": "q16",
+"type": "multipleChoice",
+"question": "An entity expects to cease trading and enter liquidation rather than continue operating for the foreseeable future. Which implication is most appropriate?",
+"options": [
+"The financial statements must still use the going concern basis because it is mandatory under the Framework",
+"The financial statements may require a different preparation basis and should describe the basis used",
+"The entity should omit all liabilities that will become payable during liquidation",
+"The entity should prepare financial statements solely from the perspective of its shareholders"
+],
+"answer": "The financial statements may require a different preparation basis and should describe the basis used",
+"rationale": "The going concern assumption is inappropriate when the entity intends or needs to liquidate or cease trading, requiring consideration and disclosure of another basis.",
+"marks": 2
+},
+{
+"id": "q17",
+"type": "multipleChoice",
+"question": "An entity receives a valuable government granted right at no cost. Which statement best explains why the absence of expenditure does not prevent the right from being an asset?",
+"options": [
+"All government grants automatically qualify as assets regardless of control or economic benefits",
+"An asset is defined by a controlled present economic resource arising from past events rather than by whether expenditure was incurred",
+"An asset exists whenever an item has a positive market value even if the entity cannot control it",
+"An asset requires future economic benefits to be virtually certain rather than merely possible"
+],
+"answer": "An asset is defined by a controlled present economic resource arising from past events rather than by whether expenditure was incurred",
+"rationale": "Incurring expenditure is neither necessary nor sufficient for an asset to exist because the definition focuses on rights, control and past events.",
+"marks": 2
+},
+{
+"id": "q18",
+"type": "multipleChoice",
+"question": "A contractual right has only a small probability of generating economic benefits, but the right presently exists and could generate benefits in at least one circumstance. Which conclusion is most appropriate?",
+"options": [
+"The right cannot be an economic resource because future benefits are not probable",
+"The right may meet the definition of an economic resource even though the low probability may affect recognition and measurement",
+"The right automatically qualifies for recognition because every economic resource must appear in the statement of financial position",
+"The right becomes an economic resource only when the future benefits actually occur"
+],
+"answer": "The right may meet the definition of an economic resource even though the low probability may affect recognition and measurement",
+"rationale": "The potential to produce benefits does not require those benefits to be certain or likely, although probability can affect recognition and measurement decisions.",
+"marks": 2
+},
+{
+"id": "q19",
+"type": "multipleChoice",
+"question": "An entity possesses valuable secret know how that is not legally patented but can prevent other parties from accessing and using it. Which factor most strongly supports the existence of an asset?",
+"options": [
+"Legal ownership is always required before an economic resource can be controlled",
+"The entity has the present ability to direct use of the know how and restrict others from obtaining its benefits",
+"The know how must have been purchased from an independent third party",
+"The economic benefits from the know how must be guaranteed before control can exist"
+],
+"answer": "The entity has the present ability to direct use of the know how and restrict others from obtaining its benefits",
+"rationale": "Control can arise without legally enforceable rights when the entity has other means of directing use and preventing others from obtaining the benefits.",
+"marks": 2
+},
+{
+"id": "q20",
+"type": "multipleChoice",
+"question": "A company publicly commits to repairing environmental damage caused by its operations and has established a practice that makes withdrawal from the commitment practically unrealistic. Which factor most strongly supports a liability?",
+"options": [
+"The obligation must be legally enforceable before any liability can exist",
+"A constructive obligation may exist because the entity has no practical ability to act inconsistently with its commitment",
+"The liability exists only if the exact amount and payment date are known",
+"The liability cannot exist unless the identity of every party receiving compensation is known"
+],
+"answer": "A constructive obligation may exist because the entity has no practical ability to act inconsistently with its commitment",
+"rationale": "An obligation can arise from customary practices, policies or statements when the entity has no practical ability to avoid acting consistently with them.",
+"marks": 2
+},
+{
+"id": "q21",
+"type": "multipleChoice",
+"question": "New legislation imposes a charge on companies that conduct a specified activity next year. At the reporting date, an entity has not yet conducted that activity. Which conclusion best follows?",
+"options": [
+"A present obligation necessarily exists because the legislation has already been enacted",
+"A present obligation arises only when the entity has taken the action or obtained benefits that trigger a transfer it would not otherwise make",
+"A liability exists because management expects that the entity will probably conduct the activity",
+"A liability must be recognised immediately whenever future compliance costs can be estimated"
+],
+"answer": "A present obligation arises only when the entity has taken the action or obtained benefits that trigger a transfer it would not otherwise make",
+"rationale": "Enactment of legislation alone is insufficient when the past event necessary to create the present obligation has not occurred.",
+"marks": 2
+},
+{
+"id": "q22",
+"type": "multipleChoice",
+"question": "A company signs a contract under which it will receive employee services next month in exchange for salary payable after those services are provided. Before any services are received, how is the contract best characterised?",
+"options": [
+"The entire future salary is immediately a liability because the contract is legally enforceable",
+"The future employee services are immediately recognised as an asset at their contractual value",
+"The contract is generally executory because the exchange remains unperformed by both parties",
+"The contract creates immediate income because the entity has secured future labour resources"
+],
+"answer": "The contract is generally executory because the exchange remains unperformed by both parties",
+"rationale": "Before the employee provides services, the entity generally has a combined right and obligation under an executory contract rather than a separate present salary liability.",
+"marks": 2
+},
+{
+"id": "q23",
+"type": "multipleChoice",
+"question": "An entity owns a machine and therefore holds rights to use it, sell it and pledge it. Why may these rights be accounted for together as one asset?",
+"options": [
+"Physical objects rather than rights are always the economic resources recognised in financial statements",
+"Related rights may be combined into a single unit of account when doing so provides useful information",
+"Every right arising from the same contract must legally be recognised as one indivisible asset",
+"Recognition criteria can only be applied to groups of rights and never to individual rights"
+],
+"answer": "Related rights may be combined into a single unit of account when doing so provides useful information",
+"rationale": "Although individual rights can conceptually be separate assets, related rights may be treated as one unit of account when that approach provides useful information.",
+"marks": 2
+},
+{
+"id": "q24",
+"type": "multipleChoice",
+"question": "An item satisfies the definition of an asset, but recognising it would not provide relevant information or a faithful representation. What does the Conceptual Framework imply?",
+"options": [
+"Every item meeting an element definition must automatically be recognised",
+"The item should be recognised because recognition criteria are unrelated to useful information",
+"The item may remain unrecognised because recognition should provide relevant information and a faithful representation",
+"The item must instead be recognised directly as equity"
+],
+"answer": "The item may remain unrecognised because recognition should provide relevant information and a faithful representation",
+"rationale": "Meeting the definition of an element does not automatically require recognition if recognition would fail to provide useful information.",
+"marks": 2
+},
+{
+"id": "q25",
+"type": "multipleChoice",
+"question": "An asset has a very low probability of producing economic benefits. Which statement best reflects the Framework's approach to recognition?",
+"options": [
+"Low probability automatically means the asset does not satisfy the definition of an asset",
+"Low probability automatically prohibits recognition regardless of the information available",
+"Low probability may affect whether recognition provides relevant information but does not by itself determine whether an asset exists",
+"Low probability requires the asset to be recognised at zero without further disclosure"
+],
+"answer": "Low probability may affect whether recognition provides relevant information but does not by itself determine whether an asset exists",
+"rationale": "Probability is not a threshold within the asset definition, though uncertainty and low probability can affect recognition and the information provided.",
+"marks": 2
+},
+{
+"id": "q26",
+"type": "multipleChoice",
+"question": "An entity transfers part of a recognised asset but retains significant rights relating to the transferred component. What is the primary objective when determining derecognition treatment?",
+"options": [
+"Always remove the entire original asset immediately after any legal transfer",
+"Faithfully represent both the assets and liabilities retained and the change in the entity's assets and liabilities resulting from the transaction",
+"Prevent the recognition of any gain or loss whenever part of an asset is transferred",
+"Continue recognising every transferred component until all related cash has been collected"
+],
+"answer": "Faithfully represent both the assets and liabilities retained and the change in the entity's assets and liabilities resulting from the transaction",
+"rationale": "Derecognition decisions seek to faithfully represent what remains after a transaction and how the transaction changed the entity's economic resources and obligations.",
+"marks": 2
+},
+{
+"id": "q27",
+"type": "multipleChoice",
+"question": "Which statement most accurately distinguishes historical cost from current value measurement?",
+"options": [
+"Historical cost is updated for every market price change while current value ignores market conditions",
+"Historical cost derives at least partly from the originating transaction while current value reflects conditions at the measurement date",
+"Historical cost always excludes transaction costs while all current value measures include them",
+"Historical cost and current value produce identical amounts whenever an asset remains unconsumed"
+],
+"answer": "Historical cost derives at least partly from the originating transaction while current value reflects conditions at the measurement date",
+"rationale": "Historical cost is transaction based, whereas current value measures use information updated to conditions existing at the measurement date.",
+"marks": 2
+},
+{
+"id": "q28",
+"type": "multipleChoice",
+"question": "An asset is measured using the price market participants would receive to sell it in an orderly transaction at the measurement date. Which basis is being applied?",
+"options": [
+"Current cost",
+"Value in use",
+"Historical cost",
+"Fair value"
+],
+"answer": "Fair value",
+"rationale": "Fair value is a market participant based exit value representing the price received to sell an asset or paid to transfer a liability.",
+"marks": 2
+},
+{
+"id": "q29",
+"type": "multipleChoice",
+"question": "Management estimates the present value of cash flows it expects to derive from using an asset and ultimately disposing of it. Which measurement basis does this describe?",
+"options": [
+"Value in use",
+"Fair value",
+"Current cost",
+"Historical cost"
+],
+"answer": "Value in use",
+"rationale": "Value in use is an entity specific measure based on the present value of expected cash flows from use and ultimate disposal of an asset.",
+"marks": 2
+},
+{
+"id": "q30",
+"type": "multipleChoice",
+"question": "An entity measures a liability using the present value of the economic resources it expects to transfer as it fulfils the obligation itself. Which basis is being used?",
+"options": [
+"Historical cost",
+"Fulfilment value",
+"Fair value",
+"Current cost"
+],
+"answer": "Fulfilment value",
+"rationale": "Fulfilment value is an entity specific present value measure of the resources expected to be transferred in fulfilling a liability.",
+"marks": 2
+},
+{
+"id": "q31",
+"type": "multipleChoice",
+"question": "A manufacturer uses specialised machinery together with many other resources to produce goods rather than generating cash flows by selling the machinery independently. Which measurement consideration is most relevant?",
+"options": [
+"A current exit value is always most relevant because every asset should be measured as if sold independently",
+"Historical cost or current cost may provide relevant information because the machinery contributes indirectly to cash flows in combination with other resources",
+"Value in use must always be used because the machinery is expected to remain in operation",
+"The machinery should not be measured because its individual cash flows cannot be separately identified"
+],
+"answer": "Historical cost or current cost may provide relevant information because the machinery contributes indirectly to cash flows in combination with other resources",
+"rationale": "Cost based measures can provide relevant information when assets are used together to generate cash flows indirectly through operating activities.",
+"marks": 2
+},
+{
+"id": "q32",
+"type": "multipleChoice",
+"question": "Related assets and liabilities have directly linked cash flows, but management proposes measuring them using different bases that create significant artificial volatility. Which concern is most relevant?",
+"options": [
+"The different bases may create an accounting mismatch that weakens faithful representation",
+"Different measurement bases are prohibited for all assets and liabilities without exception",
+"The different bases necessarily violate the going concern assumption",
+"The different bases eliminate measurement uncertainty and therefore reduce relevance"
+],
+"answer": "The different bases may create an accounting mismatch that weakens faithful representation",
+"rationale": "Using different measurement bases for economically related items can create measurement inconsistencies that may fail to faithfully represent financial position and performance.",
+"marks": 2
+},
+{
+"id": "q33",
+"type": "multipleChoice",
+"question": "A company changes to a more relevant measurement basis, but the change temporarily reduces comparability with prior periods. Which conclusion best follows?",
+"options": [
+"The change must be rejected because comparability always overrides relevance",
+"The change may be justified because an enhancing characteristic can be reduced when necessary to improve fundamental qualitative characteristics",
+"The change is acceptable only if it produces exactly the same carrying amounts as the previous basis",
+"The change proves that the previous financial statements were not faithfully represented"
+],
+"answer": "The change may be justified because an enhancing characteristic can be reduced when necessary to improve fundamental qualitative characteristics",
+"rationale": "Enhancing characteristics are maximised where possible but do not override relevance and faithful representation, and explanatory disclosure can help address reduced comparability.",
+"marks": 2
+},
+{
+"id": "q34",
+"type": "multipleChoice",
+"question": "A financial statement combines so many dissimilar items that important information becomes hidden, while the notes contain excessive insignificant detail. Which presentation principle is most directly violated?",
+"options": [
+"Aggregation should balance useful summarisation against the risk of obscuring relevant information",
+"Every asset and liability should be presented separately regardless of materiality",
+"All information in the notes should be repeated in the primary financial statements",
+"Classification should be based exclusively on the legal form of each transaction"
+],
+"answer": "Aggregation should balance useful summarisation against the risk of obscuring relevant information",
+"rationale": "Aggregation summarises information but can conceal important detail, so financial statements must balance excessive detail against excessive aggregation.",
+"marks": 2
+},
+{
+"id": "q35",
+"type": "multipleChoice",
+"question": "An entity adopts physical capital maintenance because users are primarily concerned with maintaining operating capability. Asset prices rise substantially during the period, but physical productive capacity does not increase. How are those price changes conceptually treated?",
+"options": [
+"They are entirely profit because every increase in asset value represents a return on capital",
+"They are capital maintenance adjustments included in equity rather than profit because they maintain productive capacity",
+"They are ignored because physical capital maintenance does not permit assets to reflect current prices",
+"They are recognised as owner contributions because they increase the entity's net assets"
+],
+"answer": "They are capital maintenance adjustments included in equity rather than profit because they maintain productive capacity",
+"rationale": "Under physical capital maintenance, price changes affecting productive capacity are treated as capital maintenance adjustments rather than profit, with profit arising only after the physical capital has been maintained.",
+"marks": 2
+}
+]
+}
