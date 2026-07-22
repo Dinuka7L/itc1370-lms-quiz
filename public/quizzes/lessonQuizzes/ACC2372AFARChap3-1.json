@@ -1,0 +1,503 @@
+{
+"id": "quiz-Business-Combinations-Part-1",
+"title": "Business Combinations Part 1 - SLFRS 3",
+"description": "A highly challenging assessment of identifying business combinations, determining control, applying the acquisition method, measuring identifiable net assets and NCI, calculating goodwill, and accounting for different forms of consideration and acquisition-related costs.",
+"subject": "ACC2373 - Advanced Financial Accounting and Reporting",
+"gradientColors": ["#0f766e", "#0d9488", "#115e59", "#134e4a"],
+"timeOptions": [10, 20, 30],
+"totalMarks": 70,
+"weight": 0,
+"category": "lesson",
+"questions": [
+{
+"id": "q1",
+"type": "multipleChoice",
+"question": "Company A acquires a collection of assets and assumes several liabilities, but the acquired set does not constitute a business. Which accounting conclusion is most appropriate?",
+"options": [
+"The transaction must be accounted for using the acquisition method because both assets and liabilities were acquired",
+"The transaction is accounted for as an asset acquisition rather than a business combination under SLFRS 3",
+"The transaction is automatically treated as a business combination whenever consideration is transferred",
+"The transaction is outside all financial reporting requirements because no separate legal entity was acquired"
+],
+"answer": "The transaction is accounted for as an asset acquisition rather than a business combination under SLFRS 3",
+"rationale": "SLFRS 3 applies only when the acquired assets and assumed liabilities constitute a business. Otherwise, the transaction is accounted for as an asset acquisition.",
+"marks": 2
+},
+{
+"id": "q2",
+"type": "multipleChoice",
+"question": "Which transaction is most clearly outside the scope of SLFRS 3 according to the exclusions discussed in the lesson?",
+"options": [
+"An entity acquires control of an operating business by issuing its own ordinary shares",
+"An entity obtains control of another business solely through contractual arrangements",
+"Two businesses under common control are combined as part of an internal group restructuring",
+"An entity acquires the operating assets and liabilities of another company that together constitute a business"
+],
+"answer": "Two businesses under common control are combined as part of an internal group restructuring",
+"rationale": "Combinations of entities or businesses under common control are excluded from the scope of SLFRS 3.",
+"marks": 2
+},
+{
+"id": "q3",
+"type": "multipleChoice",
+"question": "An investment entity obtains an investment in a subsidiary that is required under SLFRS 10 to be measured at fair value through profit or loss. Which treatment is most appropriate?",
+"options": [
+"The investment must always be accounted for using the acquisition method under SLFRS 3",
+"The acquisition method applies only if more than 75 percent of the subsidiary is acquired",
+"The acquisition is not accounted for as a business combination under SLFRS 3 in this circumstance",
+"The investment must be consolidated until the investment entity disposes of its controlling interest"
+],
+"answer": "The acquisition is not accounted for as a business combination under SLFRS 3 in this circumstance",
+"rationale": "The scope exclusion discussed in the lesson applies to an investment entity's acquisition of a subsidiary that is required to be measured at fair value through profit or loss.",
+"marks": 2
+},
+{
+"id": "q4",
+"type": "multipleChoice",
+"question": "Which combination of characteristics is required for an entity to qualify as an investment entity under the criteria discussed in the lesson?",
+"options": [
+"Obtaining funds from investors, investing solely for capital appreciation or investment income, and evaluating substantially all investments on a fair value basis",
+"Obtaining bank borrowings, investing primarily in subsidiaries, and measuring substantially all investments using historical cost",
+"Obtaining funds exclusively from one investor, investing only for dividend income, and preparing consolidated financial statements",
+"Obtaining public deposits, investing primarily for strategic control, and evaluating investments using accounting profit"
+],
+"answer": "Obtaining funds from investors, investing solely for capital appreciation or investment income, and evaluating substantially all investments on a fair value basis",
+"rationale": "The investment entity definition focuses on providing investment management services, investing solely for investment returns, and measuring and evaluating substantially all investments on a fair value basis.",
+"marks": 2
+},
+{
+"id": "q5",
+"type": "multipleChoice",
+"question": "Company P holds only 49 percent of the voting rights of Company S but has contractual arrangements that give P the current ability to direct the activities that significantly affect S's returns. P is also exposed to variable returns from S. Which conclusion is most appropriate?",
+"options": [
+"P cannot control S because control always requires ownership of more than half of the voting rights",
+"P may control S because control depends on power, exposure to variable returns and the ability to use power to affect those returns",
+"P can consolidate S only if every other shareholder formally transfers voting rights to P",
+"P has significant influence but can never have control while its legal ownership remains below 50 percent"
+],
+"answer": "P may control S because control depends on power, exposure to variable returns and the ability to use power to affect those returns",
+"rationale": "Control under SLFRS 10 is not determined solely by percentage ownership. An investor controls an investee when it has power, exposure or rights to variable returns and the ability to use its power to affect those returns.",
+"marks": 2
+},
+{
+"id": "q6",
+"type": "multipleChoice",
+"question": "Which transaction can constitute a business combination even though the acquirer transfers no cash, assets, liabilities or equity instruments as consideration?",
+"options": [
+"Obtaining control of a business through contractual arrangements alone",
+"Purchasing a single machine from another operating company",
+"Entering into a supply agreement without obtaining control of the supplier",
+"Acquiring a portfolio of financial assets that does not constitute a business"
+],
+"answer": "Obtaining control of a business through contractual arrangements alone",
+"rationale": "An acquirer may obtain control without transferring consideration, including through contract alone, provided the transaction results in control of a business.",
+"marks": 2
+},
+{
+"id": "q7",
+"type": "multipleChoice",
+"question": "Company A acquires all the operating assets and liabilities of Company B, and the acquired net assets constitute a business. Company B remains legally incorporated and holds shares received from A as consideration. Which statement is most accurate?",
+"options": [
+"No business combination has occurred because Company B was not legally liquidated",
+"A business combination may have occurred because A obtained control of a business regardless of whether B continues as a legal entity",
+"A business combination occurs only when A acquires the shares rather than the net assets of B",
+"The transaction must be treated as a joint arrangement because both companies continue to exist"
+],
+"answer": "A business combination may have occurred because A obtained control of a business regardless of whether B continues as a legal entity",
+"rationale": "The legal continuation or liquidation of the transferor does not by itself determine whether a business combination has occurred. The key issue is whether control of a business has been obtained.",
+"marks": 2
+},
+{
+"id": "q8",
+"type": "multipleChoice",
+"question": "Which sequence correctly represents the acquisition method prescribed by SLFRS 3?",
+"options": [
+"Determine consideration, recognise goodwill, identify the acquirer, and determine the acquisition date",
+"Identify the acquirer, determine the acquisition date, recognise and measure identifiable net assets and NCI, and recognise goodwill or a bargain purchase gain",
+"Recognise acquired assets, determine taxable profit, identify the acquiree, and calculate consolidated retained earnings",
+"Determine the acquisition date, calculate goodwill, identify the acquirer, and subsequently measure all acquired assets at historical cost"
+],
+"answer": "Identify the acquirer, determine the acquisition date, recognise and measure identifiable net assets and NCI, and recognise goodwill or a bargain purchase gain",
+"rationale": "These are the four principal steps of the acquisition method presented in SLFRS 3.",
+"marks": 2
+},
+{
+"id": "q9",
+"type": "multipleChoice",
+"question": "Companies A and B combine through a newly formed Company C, which issues shares to acquire the shares of both existing entities. Why should Company C not automatically be assumed to be the accounting acquirer?",
+"options": [
+"A newly formed entity is legally prohibited from being involved in a business combination",
+"The accounting acquirer is determined by identifying the entity that obtains control and may require assessment of the substance of the combination",
+"The largest pre-combination shareholder must always be treated as the acquirer regardless of the transaction structure",
+"The entity issuing shares can never be the acquirer in a business combination"
+],
+"answer": "The accounting acquirer is determined by identifying the entity that obtains control and may require assessment of the substance of the combination",
+"rationale": "Identifying the acquirer can require judgement, particularly when a newly formed entity is used to facilitate a combination. The control principles and relevant indicators must be considered.",
+"marks": 2
+},
+{
+"id": "q10",
+"type": "multipleChoice",
+"question": "A business combination is effected primarily by Company X transferring cash to the owners of Company Y. In the absence of contrary evidence, which entity is usually identified as the acquirer?",
+"options": [
+"Company Y because its owners receive the consideration",
+"The entity with the lower fair value immediately before the combination",
+"Company X because it transfers the cash used to effect the combination",
+"Neither company because a separate acquisition vehicle must be identified as the acquirer"
+],
+"answer": "Company X because it transfers the cash used to effect the combination",
+"rationale": "In a combination effected primarily by transferring cash or other assets or by incurring liabilities, the entity making the transfer or incurring the liabilities is usually the acquirer.",
+"marks": 2
+},
+{
+"id": "q11",
+"type": "multipleChoice",
+"question": "In a share exchange, former shareholders of Company A collectively receive 70 percent of the voting rights in the combined entity, while former shareholders of Company B receive 30 percent. Other indicators are neutral. Which conclusion is most strongly supported?",
+"options": [
+"Company B is likely the acquirer because its shareholders received fewer voting rights",
+"Company A is likely the acquirer because its former owners hold the largest relative voting rights in the combined entity",
+"The combined entity has no acquirer because neither group holds 100 percent of the voting rights",
+"The legal issuer must be the acquirer regardless of post-combination voting rights"
+],
+"answer": "Company A is likely the acquirer because its former owners hold the largest relative voting rights in the combined entity",
+"rationale": "Relative voting rights in the combined entity are an important indicator when identifying the acquirer in combinations involving exchanges of equity interests.",
+"marks": 2
+},
+{
+"id": "q12",
+"type": "multipleChoice",
+"question": "Two entities combine and the former senior management of Company R dominates the senior management of the combined entity. Company R also initiated the transaction, although Company T is slightly larger. What is the most appropriate conclusion?",
+"options": [
+"Company T must be the acquirer because relative size is the only decisive indicator",
+"Company R must be the acquiree because initiating a combination indicates surrender of control",
+"The indicators should be considered collectively and may support identifying Company R as the acquirer",
+"Neither entity can be identified as the acquirer when different indicators point in different directions"
+],
+"answer": "The indicators should be considered collectively and may support identifying Company R as the acquirer",
+"rationale": "Factors such as management composition, transaction initiation, relative size, voting rights and governing body composition are indicators that require judgement and should be assessed collectively.",
+"marks": 2
+},
+{
+"id": "q13",
+"type": "multipleChoice",
+"question": "A sale agreement is legally completed on 15 March, but contractual terms give the acquirer control of the acquiree from 1 March. Consideration is physically transferred on 20 March. Which date is generally the acquisition date?",
+"options": [
+"1 March because that is when the acquirer obtains control",
+"15 March because legal completion always determines the acquisition date",
+"20 March because consideration must be transferred before control can exist",
+"31 March because acquisition accounting can only be performed at a month end"
+],
+"answer": "1 March because that is when the acquirer obtains control",
+"rationale": "The acquisition date is the date on which control is obtained. Although this is often the legal closing date, control may be obtained earlier or later.",
+"marks": 2
+},
+{
+"id": "q14",
+"type": "multipleChoice",
+"question": "Why can an incorrect acquisition date materially affect the accounting for a business combination?",
+"options": [
+"Because the acquisition date determines only the legal name used in the consolidated financial statements",
+"Because it can affect fair values of acquired net assets, non-cash consideration, NCI and previously held equity interests",
+"Because all acquired assets must be measured at historical cost existing exactly one year before the acquisition date",
+"Because goodwill is calculated solely from post-acquisition profits earned after that date"
+],
+"answer": "Because it can affect fair values of acquired net assets, non-cash consideration, NCI and previously held equity interests",
+"rationale": "The acquisition date is the measurement date for several important components of acquisition accounting and therefore directly affects the amounts recognised.",
+"marks": 2
+},
+{
+"id": "q15",
+"type": "multipleChoice",
+"question": "An acquiree has an identifiable liability for which the probability of an eventual cash outflow is relatively low. The liability nevertheless satisfies the relevant recognition requirements of SLFRS 3. Which treatment is most appropriate?",
+"options": [
+"Exclude the liability because liabilities can be recognised only when cash outflow is more likely than not",
+"Recognise the identifiable liability as part of the acquisition accounting even though the probability threshold used in ordinary recognition may differ",
+"Include the liability directly within goodwill without separately recognising it",
+"Recognise the liability only when the acquiree eventually settles the obligation"
+],
+"answer": "Recognise the identifiable liability as part of the acquisition accounting even though the probability threshold used in ordinary recognition may differ",
+"rationale": "SLFRS 3 requires recognition of identifiable assets acquired and liabilities assumed at the acquisition date under its recognition principles, rather than simply applying ordinary probability thresholds to exclude them.",
+"marks": 2
+},
+{
+"id": "q16",
+"type": "multipleChoice",
+"question": "The acquiree has a present obligation from a past event that was disclosed only as a contingent liability under LKAS 37. At the acquisition date, its fair value can be measured reliably. What should the acquirer generally do?",
+"options": [
+"Ignore it because the acquiree did not recognise it before the combination",
+"Recognise it only if payment is virtually certain",
+"Recognise the contingent liability at its fair value as part of the business combination accounting",
+"Deduct the expected payment directly from retained earnings after the acquisition"
+],
+"answer": "Recognise the contingent liability at its fair value as part of the business combination accounting",
+"rationale": "A qualifying contingent liability representing a present obligation can be recognised by the acquirer in a business combination when its fair value can be measured reliably even if it was not recognised by the acquiree under LKAS 37.",
+"marks": 2
+},
+{
+"id": "q17",
+"type": "multipleChoice",
+"question": "Which amount best represents the fair value concept for a contingent liability assumed in a business combination?",
+"options": [
+"The maximum possible cash payment regardless of its likelihood",
+"The amount originally recorded by the acquiree when the obligation first arose",
+"The amount that a third party would charge to assume the obligation, reflecting expectations about possible cash outflows",
+"Zero whenever the eventual amount and payment date remain uncertain"
+],
+"answer": "The amount that a third party would charge to assume the obligation, reflecting expectations about possible cash outflows",
+"rationale": "The fair value reflects market expectations concerning possible cash outflows and can be viewed as the amount a third party would charge to assume the contingent liability.",
+"marks": 2
+},
+{
+"id": "q18",
+"type": "multipleChoice",
+"question": "An acquiree internally developed a valuable brand but did not recognise it in its own statement of financial position. The brand is identifiable and its fair value can be measured reliably at the acquisition date. What is the appropriate acquisition accounting treatment?",
+"options": [
+"Recognise the brand separately from goodwill at its acquisition-date fair value",
+"Exclude the brand because internally generated brands can never be recognised in any circumstances",
+"Include the entire value of the brand within goodwill because it was previously unrecognised",
+"Recognise the brand only if the acquirer intends to sell it immediately after the combination"
+],
+"answer": "Recognise the brand separately from goodwill at its acquisition-date fair value",
+"rationale": "Identifiable intangible assets acquired in a business combination can be recognised separately from goodwill even when they were not recognised in the acquiree's own financial statements.",
+"marks": 2
+},
+{
+"id": "q19",
+"type": "multipleChoice",
+"question": "Which fair value hierarchy input has the highest priority when determining the fair value of an acquired identifiable asset?",
+"options": [
+"Management's internally developed cash flow forecasts with no observable market support",
+"Quoted prices in active markets for identical assets",
+"Observable information for similar assets adjusted for relevant differences",
+"Replacement cost estimates developed entirely from entity-specific assumptions"
+],
+"answer": "Quoted prices in active markets for identical assets",
+"rationale": "Level 1 inputs are quoted prices in active markets for identical assets or liabilities and have the highest priority within the fair value hierarchy.",
+"marks": 2
+},
+{
+"id": "q20",
+"type": "multipleChoice",
+"question": "At the first reporting date after an acquisition, the acquirer has not completed the valuation of a specialised intangible asset. Which approach is most consistent with the lesson?",
+"options": [
+"Postpone recognition of the entire business combination until all valuations become final",
+"Use a provisional best estimate and adjust the relevant acquisition accounting when the fair value is finalised within the measurement period",
+"Recognise the asset permanently at the acquiree's previous carrying amount",
+"Exclude the asset and prohibit any subsequent adjustment to goodwill"
+],
+"answer": "Use a provisional best estimate and adjust the relevant acquisition accounting when the fair value is finalised within the measurement period",
+"rationale": "Fair values may initially be determined provisionally. The measurement period allows qualifying acquisition-date information to be finalised, with resulting adjustments affecting the acquisition accounting and goodwill.",
+"marks": 2
+},
+{
+"id": "q21",
+"type": "multipleChoice",
+"question": "An acquirer obtains information ten months after the acquisition date showing that an acquired asset's provisional fair value was understated based on conditions that already existed at the acquisition date. What is the most appropriate treatment?",
+"options": [
+"Ignore the information because all acquisition-date measurements become final immediately after the first reporting date",
+"Recognise the difference entirely as current-period operating income without changing goodwill",
+"Adjust the provisional acquisition accounting and the related goodwill within the measurement period",
+"Treat the difference as a new acquisition occurring ten months after the original combination"
+],
+"answer": "Adjust the provisional acquisition accounting and the related goodwill within the measurement period",
+"rationale": "The acquirer has up to twelve months from the acquisition date to finalise provisional values when new information relates to facts and circumstances existing at the acquisition date.",
+"marks": 2
+},
+{
+"id": "q22",
+"type": "multipleChoice",
+"question": "P Co acquires 100 percent of S Co for Rs. 100 million. The acquisition-date fair value of S Co's identifiable net assets is Rs. 98 million. What goodwill arises?",
+"options": [
+"Rs. 198 million",
+"Rs. 2 million",
+"Rs. 98 million",
+"Nil because P acquired all identifiable net assets"
+],
+"answer": "Rs. 2 million",
+"rationale": "For a wholly owned acquiree in this simplified scenario, goodwill is consideration of Rs. 100 million less identifiable net assets of Rs. 98 million.",
+"marks": 2
+},
+{
+"id": "q23",
+"type": "multipleChoice",
+"question": "Company X acquires 70 percent of Company Y for Rs. 429 million. The fair value of Y's identifiable net assets is Rs. 434 million and the fair value of the 30 percent NCI is Rs. 136 million. What goodwill arises when NCI is measured at fair value?",
+"options": [
+"Rs. 125 million",
+"Rs. 131 million",
+"Rs. 5 million",
+"Rs. 136 million"
+],
+"answer": "Rs. 131 million",
+"rationale": "Full goodwill equals consideration of Rs. 429 million plus NCI at fair value of Rs. 136 million less identifiable net assets of Rs. 434 million, giving Rs. 131 million.",
+"marks": 2
+},
+{
+"id": "q24",
+"type": "multipleChoice",
+"question": "Using the same acquisition, what goodwill arises if NCI is instead measured as its proportionate share of identifiable net assets?",
+"options": [
+"Rs. 125.2 million",
+"Rs. 131 million",
+"Rs. 4.8 million",
+"Rs. 130.2 million"
+],
+"answer": "Rs. 125.2 million",
+"rationale": "The proportionate NCI is 30 percent of Rs. 434 million, or Rs. 130.2 million. Goodwill is therefore Rs. 429 million plus Rs. 130.2 million less Rs. 434 million, giving Rs. 125.2 million.",
+"marks": 2
+},
+{
+"id": "q25",
+"type": "multipleChoice",
+"question": "Dambulla Co acquires 90 percent of Alutwewa Co for Rs. 340 million. Alutwewa's carrying net assets are Rs. 320 million. An unrecognised brand has a fair value of Rs. 20 million and land has a fair value Rs. 10 million above carrying amount. NCI is measured proportionately. What goodwill arises?",
+"options": [
+"Rs. 25 million",
+"Rs. 35 million",
+"Rs. 10 million",
+"Rs. 21 million"
+],
+"answer": "Rs. 25 million",
+"rationale": "Fair value of identifiable net assets is Rs. 350 million. Proportionate NCI is Rs. 35 million. Goodwill equals Rs. 340 million plus Rs. 35 million less Rs. 350 million, giving Rs. 25 million.",
+"marks": 2
+},
+{
+"id": "q26",
+"type": "multipleChoice",
+"question": "An acquirer pays Rs. 180 million and acquires 100 percent of a business whose identifiable net assets have a fair value of Rs. 195 million. Assuming all measurements have been appropriately reassessed and confirmed, what is the resulting amount?",
+"options": [
+"Goodwill of Rs. 15 million",
+"A bargain purchase gain of Rs. 15 million",
+"Goodwill of Rs. 195 million",
+"A bargain purchase gain of Rs. 180 million"
+],
+"answer": "A bargain purchase gain of Rs. 15 million",
+"rationale": "When the fair value of identifiable net assets exceeds the relevant acquisition amount, the excess represents a gain from a bargain purchase after the required reassessment.",
+"marks": 2
+},
+{
+"id": "q27",
+"type": "multipleChoice",
+"question": "An acquirer agrees to pay Rs. 20 million three years after the acquisition date with no stated interest. Which amount should generally enter the acquisition-date measurement of consideration?",
+"options": [
+"The undiscounted Rs. 20 million because contractual consideration is never discounted",
+"The present value of Rs. 20 million discounted using an appropriate incremental borrowing rate",
+"The future value of Rs. 20 million compounded to the expected settlement date",
+"Nil until the deferred cash consideration is physically paid"
+],
+"answer": "The present value of Rs. 20 million discounted using an appropriate incremental borrowing rate",
+"rationale": "Deferred cash consideration is measured at present value at the acquisition date. The financing effect arising after acquisition is accounted for separately.",
+"marks": 2
+},
+{
+"id": "q28",
+"type": "multipleChoice",
+"question": "An acquirer issues one million of its listed ordinary shares as consideration. Its shares trade at Rs. 42 each on the acquisition date but had traded at Rs. 38 when negotiations began. Which amount is generally used to measure the equity consideration?",
+"options": [
+"Rs. 38 million because the negotiation date establishes the acquisition cost",
+"Rs. 40 million because an average of negotiation-date and acquisition-date prices is required",
+"Rs. 42 million because the quoted market price at the relevant exchange or acquisition date reflects fair value",
+"The nominal value of the shares because market value cannot be included in consideration"
+],
+"answer": "Rs. 42 million because the quoted market price at the relevant exchange or acquisition date reflects fair value",
+"rationale": "Equity instruments issued as consideration are measured at fair value, with quoted market prices generally providing the relevant fair value for listed shares.",
+"marks": 2
+},
+{
+"id": "q29",
+"type": "multipleChoice",
+"question": "An acquirer incurs Rs. 4 million of underwriting and broker fees specifically to issue new ordinary shares used to finance a business combination. How should these costs generally be treated?",
+"options": [
+"Included in consideration transferred and therefore added to goodwill",
+"Expensed as acquisition-related professional fees in profit or loss",
+"Recognised directly in equity as costs integral to the equity transaction",
+"Added to the fair value of the identifiable net assets acquired"
+],
+"answer": "Recognised directly in equity as costs integral to the equity transaction",
+"rationale": "Costs directly attributable to issuing equity instruments are accounted for as part of the equity transaction rather than as consideration transferred or acquisition-related expenses.",
+"marks": 2
+},
+{
+"id": "q30",
+"type": "multipleChoice",
+"question": "An acquirer incurs costs directly associated with issuing debt instruments to finance a business combination. Which treatment is most appropriate according to the lesson?",
+"options": [
+"Include the costs in the measurement of the related liability",
+"Add the costs directly to goodwill as part of consideration",
+"Recognise the costs as an identifiable intangible asset",
+"Deduct the costs from the fair value of the acquiree's net assets"
+],
+"answer": "Include the costs in the measurement of the related liability",
+"rationale": "Costs associated with issuing debt instruments are accounted for in the measurement of the related financial liability rather than as part of consideration transferred.",
+"marks": 2
+},
+{
+"id": "q31",
+"type": "multipleChoice",
+"question": "An acquirer pays legal advisers, accountants and valuation specialists Rs. 6 million for services directly related to completing a business combination. How should these costs generally be accounted for?",
+"options": [
+"Capitalised as part of goodwill because they were necessary to complete the acquisition",
+"Included in the consideration transferred to the former owners of the acquiree",
+"Expensed as incurred because acquisition-related costs do not form part of consideration transferred",
+"Recognised as an intangible asset and amortised over the expected life of the acquired business"
+],
+"answer": "Expensed as incurred because acquisition-related costs do not form part of consideration transferred",
+"rationale": "Finder's fees, advisory, legal, accounting, valuation and similar professional costs are acquisition-related costs and are generally expensed as incurred.",
+"marks": 2
+},
+{
+"id": "q32",
+"type": "multipleChoice",
+"question": "Why is the treatment of professional acquisition costs in a business combination different from certain directly attributable costs of acquiring an individual item of property, plant and equipment?",
+"options": [
+"SLFRS 3 excludes acquisition-related professional costs from consideration, whereas qualifying directly attributable costs may form part of an asset's cost under other standards",
+"Professional costs are never recognised as expenses under any financial reporting standard",
+"Business combinations are measured entirely at historical cost while individual assets are measured entirely at fair value",
+"SLFRS 3 requires every professional cost to be recognised directly in equity"
+],
+"answer": "SLFRS 3 excludes acquisition-related professional costs from consideration, whereas qualifying directly attributable costs may form part of an asset's cost under other standards",
+"rationale": "Acquisition-related costs under SLFRS 3 are generally expensed, unlike qualifying directly attributable acquisition costs that may be capitalised under standards such as LKAS 16 and LKAS 38.",
+"marks": 2
+},
+{
+"id": "q33",
+"type": "multipleChoice",
+"question": "Company D pays Rs. 10 million immediately to acquire Company E. If E achieves a specified earnings target, D must pay two additional annual instalments of Rs. 2 million each at the end of years one and two. At the acquisition date the condition is expected to be satisfied. Using a 10 percent discount rate, approximately what amount of consideration should be measured at the acquisition date?",
+"options": [
+"Rs. 14.00 million",
+"Rs. 13.47 million",
+"Rs. 12.00 million",
+"Rs. 13.64 million"
+],
+"answer": "Rs. 13.47 million",
+"rationale": "The present value of the first Rs. 2 million payment is approximately Rs. 1.82 million and the second is approximately Rs. 1.65 million. Adding these to the immediate Rs. 10 million payment gives approximately Rs. 13.47 million.",
+"marks": 2
+},
+{
+"id": "q34",
+"type": "multipleChoice",
+"question": "Using the previous scenario, if the fair value of Company E's identifiable net assets is Rs. 9 million and D acquires 100 percent of E, approximately what goodwill arises at the acquisition date?",
+"options": [
+"Rs. 1.00 million",
+"Rs. 5.00 million",
+"Rs. 4.47 million",
+"Rs. 3.47 million"
+],
+"answer": "Rs. 4.47 million",
+"rationale": "The acquisition-date consideration is approximately Rs. 13.47 million. Deducting identifiable net assets of Rs. 9 million produces goodwill of approximately Rs. 4.47 million.",
+"marks": 2
+},
+{
+"id": "q35",
+"type": "multipleChoice",
+"question": "Company P acquires 80 percent of Company S. Consideration transferred is Rs. 760 million. The acquisition-date fair value of S's identifiable net assets is Rs. 850 million. NCI is measured at fair value of Rs. 190 million. During the acquisition P also pays Rs. 12 million in legal and valuation fees and Rs. 8 million in costs of issuing new shares. What amount of goodwill should P recognise from the combination?",
+"options": [
+"Rs. 118 million because all acquisition and share issue costs increase the cost of the business combination",
+"Rs. 100 million because consideration and fair value NCI are included while acquisition-related and equity issue costs are accounted for separately",
+"Rs. 88 million because legal and valuation costs must be deducted from consideration before calculating goodwill",
+"Rs. 108 million because share issue costs increase consideration but professional acquisition costs are expensed"
+],
+"answer": "Rs. 100 million because consideration and fair value NCI are included while acquisition-related and equity issue costs are accounted for separately",
+"rationale": "Goodwill equals Rs. 760 million consideration plus Rs. 190 million NCI less Rs. 850 million identifiable net assets, giving Rs. 100 million. Legal and valuation fees are expensed, while share issue costs are recognised directly in equity and neither forms part of goodwill.",
+"marks": 2
+}
+]
+}
