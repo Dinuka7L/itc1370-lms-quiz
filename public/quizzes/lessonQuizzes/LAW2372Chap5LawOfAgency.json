@@ -1,0 +1,602 @@
+{
+  "id": "quiz-Law-of-Agency",
+  "title": "Lesson 05 - Law of Agency & Application of Agency in Corporates",
+  "description": "Exam-standard quiz covering the creation of agency, authority of agents, duties, rights, liabilities, corporate agency, and termination of agency.",
+  "subject": "LAW2372 - Corporate Law",
+  "gradientColors": [
+    "#0f172a",
+    "#1d4ed8",
+    "#2563eb",
+    "#60a5fa"
+  ],
+  "timeOptions": [
+    10,
+    20,
+    30
+  ],
+  "totalMarks": 66,
+  "weight": 0,
+  "category": "lesson",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multipleChoice",
+      "question": "Nadeesha owns a wholesale business. For almost a year she has consistently accepted purchase orders negotiated by her assistant without ever objecting. A supplier later contracts with the assistant believing he possesses authority. Nadeesha now denies the assistant was ever appointed. Which is the strongest legal conclusion?",
+      "options": [
+        "The assistant possesses implied authority created by the parties' conduct.",
+        "The assistant possesses express authority because previous contracts existed.",
+        "The assistant becomes an agent of necessity.",
+        "No agency exists because no written appointment was executed."
+      ],
+      "answer": "The assistant possesses implied authority created by the parties' conduct.",
+      "rationale": "Agency may arise through implication where the conduct of the parties objectively demonstrates an agency relationship.",
+      "marks": 2
+    },
+    {
+      "id": "q2",
+      "type": "multipleChoice",
+      "question": "Which statement best explains why agency is regarded as an exception to the doctrine of privity of contract?",
+      "options": [
+        "An agent automatically becomes personally liable for every contract.",
+        "The contract creates rights only between the principal and the agent.",
+        "Although the agent contracts with the third party, the resulting contractual rights and liabilities belong to the principal.",
+        "Agency abolishes the doctrine of consideration."
+      ],
+      "answer": "Although the agent contracts with the third party, the resulting contractual rights and liabilities belong to the principal.",
+      "rationale": "Agency permits contractual rights and obligations to arise in favor of a principal who was not personally involved in negotiating the contract.",
+      "marks": 2
+    },
+    {
+      "id": "q3",
+      "type": "multipleChoice",
+      "question": "A managing director is expressly authorized to purchase office furniture for the company. Without obtaining further approval, she hires movers to transport the furniture to the company's premises. What best describes the authority to hire the movers?",
+      "options": [
+        "Apparent authority.",
+        "Implied actual authority.",
+        "Agency by estoppel.",
+        "Agency by necessity."
+      ],
+      "answer": "Implied actual authority.",
+      "rationale": "Implied authority extends to acts reasonably necessary or incidental to carrying out express authority.",
+      "marks": 2
+    },
+    {
+      "id": "q4",
+      "type": "multipleChoice",
+      "question": "Which circumstance would most likely prevent a principal from relying upon ratification?",
+      "options": [
+        "The principal ratifies within a reasonable time.",
+        "The contract was entered into on behalf of the principal.",
+        "The original document was forged.",
+        "The principal had full knowledge of the material facts."
+      ],
+      "answer": "The original document was forged.",
+      "rationale": "A forged transaction cannot be validated through ratification.",
+      "marks": 2
+    },
+    {
+      "id": "q5",
+      "type": "multipleChoice",
+      "question": "A company's procurement manager routinely negotiates contracts. Unknown to suppliers, the board secretly withdraws the manager's authority but allows the manager to continue appearing in the same position. A supplier contracts in good faith. Which doctrine is most likely to bind the company?",
+      "options": [
+        "Actual authority.",
+        "Agency by necessity.",
+        "Apparent or ostensible authority.",
+        "Agency by marriage."
+      ],
+      "answer": "Apparent or ostensible authority.",
+      "rationale": "The principal's representation creates a reasonable belief that authority continues despite its private withdrawal.",
+      "marks": 2
+    },
+    {
+      "id": "q6",
+      "type": "multipleChoice",
+      "question": "Which requirement is essential before agency by necessity can arise?",
+      "options": [
+        "The agent must already possess written authority.",
+        "There must be a genuine emergency making immediate action necessary.",
+        "The principal must expressly authorize the transaction.",
+        "The property involved must be land."
+      ],
+      "answer": "There must be a genuine emergency making immediate action necessary.",
+      "rationale": "Agency of necessity only arises where urgent circumstances require immediate action to protect the principal's interests.",
+      "marks": 2
+    },
+    {
+      "id": "q7",
+      "type": "multipleChoice",
+      "question": "An employee receives confidential pricing information from the principal and later establishes a competing business using that information. Which duty has been most directly breached?",
+      "options": [
+        "Duty to obey instructions.",
+        "Duty of confidentiality.",
+        "Duty to account.",
+        "Duty of indemnity."
+      ],
+      "answer": "Duty of confidentiality.",
+      "rationale": "Agents must not disclose or misuse confidential information obtained during the agency relationship.",
+      "marks": 2
+    },
+    {
+      "id": "q8",
+      "type": "multipleChoice",
+      "question": "A paid purchasing agent buys goods through a company secretly owned by the agent and earns an undisclosed commission. Which remedy is most directly available to the principal?",
+      "options": [
+        "Recovery of the secret profit from the agent.",
+        "Automatic imprisonment of the agent.",
+        "Compulsory winding up of the company.",
+        "Termination of every contract entered into by the agent."
+      ],
+      "answer": "Recovery of the secret profit from the agent.",
+      "rationale": "Agents owe fiduciary duties and must account for undisclosed benefits obtained through the agency.",
+      "marks": 2
+    },
+    {
+      "id": "q9",
+      "type": "multipleChoice",
+      "question": "An estate agent appoints another broker to negotiate the sale of property without the principal's permission and where no trade custom permits delegation. Which legal maxim has been violated?",
+      "options": [
+        "Volenti non fit injuria.",
+        "Delegatus non potest delegare.",
+        "Res ipsa loquitur.",
+        "Nemo dat quod non habet."
+      ],
+      "answer": "Delegatus non potest delegare.",
+      "rationale": "An agent must ordinarily perform the entrusted duties personally unless a recognized exception applies.",
+      "marks": 2
+    },
+    {
+      "id": "q10",
+      "type": "multipleChoice",
+      "question": "Which situation most clearly entitles an agent to claim indemnity from the principal?",
+      "options": [
+        "The agent incurs reasonable expenses while properly performing authorized duties.",
+        "The agent commits fraud during negotiations.",
+        "The agent knowingly exceeds authority without later ratification.",
+        "The agent breaches fiduciary duties for personal gain."
+      ],
+      "answer": "The agent incurs reasonable expenses while properly performing authorized duties.",
+      "rationale": "An agent is entitled to reimbursement for reasonable liabilities and expenses incurred while acting within authority.",
+      "marks": 2
+    },
+    {
+      "id": "q11",
+      "type": "multipleChoice",
+      "question": "A third party knows that an employee lacks authority to conclude a transaction but proceeds regardless. The employee signs the agreement. Which statement is most accurate?",
+      "options": [
+        "The company remains bound through apparent authority.",
+        "The company is bound because the employee held a managerial title.",
+        "The third party cannot rely upon apparent authority because the lack of authority was known.",
+        "The agreement automatically becomes enforceable through estoppel."
+      ],
+      "answer": "The third party cannot rely upon apparent authority because the lack of authority was known.",
+      "rationale": "Apparent authority protects only those who reasonably rely upon the principal's representation of authority.",
+      "marks": 2
+    },
+    {
+      "id": "q12",
+      "type": "multipleChoice",
+      "question": "Which event terminates an agency relationship by operation of law rather than by agreement?",
+      "options": [
+        "Completion of the agreed task.",
+        "Mutual consent of principal and agent.",
+        "Revocation by the principal.",
+        "Death of the principal."
+      ],
+      "answer": "Death of the principal.",
+      "rationale": "Death, incapacity, bankruptcy, frustration and illegality terminate agency automatically by operation of law.",
+      "marks": 2
+    },
+  {
+    "id": "q13",
+    "type": "multipleChoice",
+    "question": "A company director appoints an employee to negotiate contracts but expressly prohibits the employee from agreeing to payment terms exceeding 60 days. The employee agrees to a 90-day payment period with a supplier who has never been informed of the restriction. Which statement is most accurate?",
+    "options": [
+      "The company is bound because the employee possessed apparent authority from the supplier's perspective.",
+      "The company is never bound where internal instructions are exceeded.",
+      "The contract is automatically void because actual authority was exceeded.",
+      "The supplier must sue only the employee."
+    ],
+    "answer": "The company is bound because the employee possessed apparent authority from the supplier's perspective.",
+    "rationale": "A principal may be bound where a third party reasonably relies upon apparent authority despite undisclosed internal limitations.",
+    "marks": 2
+  },
+  {
+    "id": "q14",
+    "type": "multipleChoice",
+    "question": "Which situation most clearly creates agency by estoppel?",
+    "options": [
+      "A principal expressly appoints an agent through a Power of Attorney.",
+      "A principal knowingly allows another person to appear as an authorized agent and a third party relies upon that appearance.",
+      "A person acts during an emergency to protect another's property.",
+      "An agent acts within written authority."
+    ],
+    "answer": "A principal knowingly allows another person to appear as an authorized agent and a third party relies upon that appearance.",
+    "rationale": "Agency by estoppel arises from the principal's representation and the third party's reliance.",
+    "marks": 2
+  },
+  {
+    "id": "q15",
+    "type": "multipleChoice",
+    "question": "An agent purchases goods for the principal after receiving no specific instructions regarding supplier selection. The agent chooses the most reliable supplier at a competitive market price. Which duty has the agent primarily fulfilled?",
+    "options": [
+      "The duty to delegate.",
+      "The duty to exercise reasonable care, skill and judgment.",
+      "The duty to obtain prior judicial approval.",
+      "The duty to seek ratification before acting."
+    ],
+    "answer": "The duty to exercise reasonable care, skill and judgment.",
+    "rationale": "Where no instructions exist, the agent must act honestly and exercise reasonable judgment in the principal's interests.",
+    "marks": 2
+  },
+  {
+    "id": "q16",
+    "type": "multipleChoice",
+    "question": "A paid agent negligently fails to insure cargo despite clear instructions from the principal. The cargo is destroyed in transit. Which legal consequence most directly follows?",
+    "options": [
+      "The agent is liable for the loss resulting from the failure to follow instructions.",
+      "The principal bears the loss because insurance is optional.",
+      "The carrier alone is liable regardless of negligence.",
+      "The agency automatically terminates without any further remedy."
+    ],
+    "answer": "The agent is liable for the loss resulting from the failure to follow instructions.",
+    "rationale": "A paid agent who negligently disobeys lawful instructions is liable for resulting losses.",
+    "marks": 2
+  },
+  {
+    "id": "q17",
+    "type": "multipleChoice",
+    "question": "Which of the following best distinguishes actual authority from apparent authority?",
+    "options": [
+      "Actual authority depends upon the relationship between principal and agent, whereas apparent authority depends upon the principal's representation to third parties.",
+      "Actual authority exists only where authority is written.",
+      "Apparent authority can exist only after litigation.",
+      "Actual authority is created exclusively by statute."
+    ],
+    "answer": "Actual authority depends upon the relationship between principal and agent, whereas apparent authority depends upon the principal's representation to third parties.",
+    "rationale": "Actual authority arises internally, while apparent authority is based upon external representations relied upon by third parties.",
+    "marks": 2
+  },
+  {
+    "id": "q18",
+    "type": "multipleChoice",
+    "question": "A company secretary hires vehicles for company business without express authority. The board has consistently allowed the secretary to arrange similar transactions in the past. Which authority is most likely present?",
+    "options": [
+      "Agency by necessity.",
+      "Apparent authority arising from the company's conduct.",
+      "Ratification by operation of law.",
+      "Agency by marriage."
+    ],
+    "answer": "Apparent authority arising from the company's conduct.",
+    "rationale": "Repeated conduct by the company may lead third parties to reasonably believe authority exists.",
+    "marks": 2
+  },
+  {
+    "id": "q19",
+    "type": "multipleChoice",
+    "question": "An agent receives goods from the principal solely to deliver them to a customer. The principal has not yet paid the agent's commission. Which statement is most accurate regarding the agent's right of lien?",
+    "options": [
+      "The agent may retain the goods because every possession creates a lien.",
+      "The agent cannot exercise a lien where the goods were delivered for a specific purpose inconsistent with retention.",
+      "The agent automatically acquires ownership of the goods.",
+      "The lien converts into a right to sell the goods."
+    ],
+    "answer": "The agent cannot exercise a lien where the goods were delivered for a specific purpose inconsistent with retention.",
+    "rationale": "A lien cannot be asserted where goods are entrusted for a specific purpose incompatible with retaining possession.",
+    "marks": 2
+  },
+  {
+    "id": "q20",
+    "type": "multipleChoice",
+    "question": "An individual contracts on behalf of a company that has not yet been incorporated. Which implied warranty is breached if incorporation never occurs?",
+    "options": [
+      "Warranty that the principal exists.",
+      "Warranty that the company will be incorporated.",
+      "Warranty that consideration is adequate.",
+      "Warranty that the contract is notarized."
+    ],
+    "answer": "Warranty that the company will be incorporated.",
+    "rationale": "A person acting for a proposed company implicitly warrants that the company will come into existence.",
+    "marks": 2
+  },
+  {
+    "id": "q21",
+    "type": "multipleChoice",
+    "question": "A third party enters into a contract believing they are dealing solely with the agent. The agent was in fact acting within authority for an undisclosed principal. Which statement best reflects the general rule?",
+    "options": [
+      "The undisclosed principal may later intervene and enforce the contract, subject to recognized exceptions.",
+      "The undisclosed principal is permanently barred from enforcing the contract.",
+      "The contract automatically becomes void.",
+      "Only the agent can acquire contractual rights."
+    ],
+    "answer": "The undisclosed principal may later intervene and enforce the contract, subject to recognized exceptions.",
+    "rationale": "The law generally permits an undisclosed principal to acquire contractual rights and liabilities, unless an established exception applies.",
+    "marks": 2
+  },
+  {
+    "id": "q22",
+    "type": "multipleChoice",
+    "question": "A principal dismisses an agent immediately after discovering the agent secretly accepted a supplier's bribe. Which statement is legally strongest?",
+    "options": [
+      "The dismissal is justified because acceptance of bribes constitutes a serious breach of fiduciary duty.",
+      "Dismissal is unlawful unless approved by a court.",
+      "The principal must first compensate the agent before dismissal.",
+      "The principal may dismiss the agent only after criminal proceedings conclude."
+    ],
+    "answer": "The dismissal is justified because acceptance of bribes constitutes a serious breach of fiduciary duty.",
+    "rationale": "Accepting secret commissions or bribes fundamentally breaches the fiduciary relationship and justifies immediate dismissal.",
+    "marks": 2
+  },
+  {
+    "id": "q23",
+    "type": "multipleChoice",
+    "question": "Which event terminates an agency relationship through agreement rather than by operation of law?",
+    "options": [
+      "Death of the agent.",
+      "Bankruptcy of the principal.",
+      "Mutual agreement between the principal and the agent.",
+      "Frustration caused by illegality."
+    ],
+    "answer": "Mutual agreement between the principal and the agent.",
+    "rationale": "The parties may mutually agree to terminate the agency relationship at any time.",
+    "marks": 2
+  },
+  {
+    "id": "q24",
+    "type": "multipleChoice",
+    "question": "Which statement most accurately explains why directors are described as agents of the company rather than agents of the shareholders?",
+    "options": [
+      "Directors owe their contractual duties directly to individual shareholders.",
+      "Directors bind the company when acting within authority, while managing the company's affairs rather than acting under shareholders' detailed instructions.",
+      "Directors become agents only during shareholders' meetings.",
+      "Directors are agents solely because they own company shares."
+    ],
+    "answer": "Directors bind the company when acting within authority, while managing the company's affairs rather than acting under shareholders' detailed instructions.",
+    "rationale": "Directors act on behalf of the company as its agents and fiduciaries, not as ordinary agents of individual shareholders.",
+    "marks": 2
+  },
+  {
+    "id": "q25",
+    "type": "dropdown",
+    "question": "Agency by [dropdown_1] arises when an emergency requires immediate action to protect the principal's interests, while agency by [dropdown_2] arises when the principal later adopts an unauthorized act performed on the principal's behalf.",
+    "dropdownBlanks": [
+      {
+        "id": "dropdown_1",
+        "options": [
+          "necessity",
+          "estoppel",
+          "marriage",
+          "express agreement"
+        ],
+        "correctAnswer": "necessity"
+      },
+      {
+        "id": "dropdown_2",
+        "options": [
+          "ratification",
+          "implied agreement",
+          "delegation",
+          "cohabitation"
+        ],
+        "correctAnswer": "ratification"
+      }
+    ],
+    "rationale": "Agency of necessity arises from emergencies, whereas ratification validates a prior unauthorized act retrospectively.",
+    "marks": 3
+  },
+  {
+    "id": "q26",
+    "type": "dropdown",
+    "question": "An agent's right to retain the principal's goods until lawful payments are made is known as a [dropdown_1], while reimbursement for authorized expenses is known as the right of [dropdown_2].",
+    "dropdownBlanks": [
+      {
+        "id": "dropdown_1",
+        "options": [
+          "lien",
+          "mortgage",
+          "pledge",
+          "charge"
+        ],
+        "correctAnswer": "lien"
+      },
+      {
+        "id": "dropdown_2",
+        "options": [
+          "indemnity",
+          "delegation",
+          "ratification",
+          "subrogation"
+        ],
+        "correctAnswer": "indemnity"
+      }
+    ],
+    "rationale": "Agents may retain property through a lien and recover authorized expenses through indemnity.",
+    "marks": 3
+  },
+  {
+    "id": "q27",
+    "type": "dropdown",
+    "question": "Apparent authority depends primarily upon the [dropdown_1] made by the principal and the [dropdown_2] of the third party.",
+    "dropdownBlanks": [
+      {
+        "id": "dropdown_1",
+        "options": [
+          "representation",
+          "consideration",
+          "capacity",
+          "delegation"
+        ],
+        "correctAnswer": "representation"
+      },
+      {
+        "id": "dropdown_2",
+        "options": [
+          "reliance",
+          "approval",
+          "ownership",
+          "registration"
+        ],
+        "correctAnswer": "reliance"
+      }
+    ],
+    "rationale": "Representation by the principal and reliance by the third party are essential elements of apparent authority.",
+    "marks": 3
+  },
+  {
+    "id": "q28",
+    "type": "fillInBlank",
+    "question": "The legal maxim meaning 'an agent cannot delegate' is ________ non potest delegare.",
+    "answer": "delegatus",
+    "rationale": "The maxim 'delegatus non potest delegare' prevents unauthorized delegation of agency duties.",
+    "marks": 2
+  },
+  {
+    "id": "q29",
+    "type": "fillInBlank",
+    "question": "A principal who later adopts an unauthorized act of an agent is said to have ________ the act.",
+    "answer": "ratified",
+    "rationale": "Ratification retrospectively validates an act done on behalf of the principal.",
+    "marks": 2
+  },
+  {
+    "id": "q30",
+    "type": "fillInBlank",
+    "question": "An agent owes the principal a ________ duty requiring loyalty, honesty and avoidance of conflicts of interest.",
+    "answer": "fiduciary",
+    "rationale": "Agency is founded upon fiduciary obligations requiring the agent to prioritize the principal's interests.",
+    "marks": 2
+  },
+  {
+    "id": "q31",
+    "type": "multiSelect",
+    "question": "Which of the following are recognized methods by which an agency relationship may be created?",
+    "options": [
+      "Express agreement",
+      "Implied agreement",
+      "Ratification",
+      "Judicial appointment in every case"
+    ],
+    "answer": [
+      "Express agreement",
+      "Implied agreement",
+      "Ratification"
+    ],
+    "rationale": "Agency may arise by agreement or operation of law, including ratification. Judicial appointment is not a general method of creating agency.",
+    "marks": 3
+  },
+  {
+    "id": "q32",
+    "type": "multiSelect",
+    "question": "Which duties are owed by an agent to the principal?",
+    "options": [
+      "Maintain proper accounts",
+      "Avoid secret profits",
+      "Exercise reasonable care and skill",
+      "Guarantee every commercial transaction succeeds"
+    ],
+    "answer": [
+      "Maintain proper accounts",
+      "Avoid secret profits",
+      "Exercise reasonable care and skill"
+    ],
+    "rationale": "Agents owe duties of care, accounting and fiduciary loyalty but do not guarantee successful business outcomes.",
+    "marks": 3
+  },
+  {
+    "id": "q33",
+    "type": "multiSelect",
+    "question": "Which events terminate an agency relationship by operation of law?",
+    "options": [
+      "Death of either party",
+      "Bankruptcy",
+      "Frustration or illegality",
+      "Mutual agreement"
+    ],
+    "answer": [
+      "Death of either party",
+      "Bankruptcy",
+      "Frustration or illegality"
+    ],
+    "rationale": "Death, bankruptcy and frustration automatically terminate agency, whereas mutual agreement is termination by agreement.",
+    "marks": 3
+  },
+  {
+    "id": "q34",
+    "type": "matching",
+    "question": "Match each case with its correct legal principle.",
+    "matchPairs": [
+      {
+        "id": "pair1",
+        "left": "Keighley Maxsted v Durant",
+        "right": "Requirement for valid ratification"
+      },
+      {
+        "id": "pair2",
+        "left": "Panorama Developments v Fidelis Furnishing",
+        "right": "Apparent authority of a company secretary"
+      },
+      {
+        "id": "pair3",
+        "left": "Turpin v Bilton",
+        "right": "Failure to follow instructions"
+      }
+    ],
+    "marks": 4
+  },
+  {
+    "id": "q35",
+    "type": "matching",
+    "question": "Match the legal concept with its description.",
+    "matchPairs": [
+      {
+        "id": "pair1",
+        "left": "Actual Authority",
+        "right": "Authority expressly or impliedly granted by the principal"
+      },
+      {
+        "id": "pair2",
+        "left": "Apparent Authority",
+        "right": "Authority arising from the principal's representation to third parties"
+      },
+      {
+        "id": "pair3",
+        "left": "Agency by Necessity",
+        "right": "Emergency authority created by operation of law"
+      },
+      {
+        "id": "pair4",
+        "left": "Lien",
+        "right": "Right to retain the principal's property until payment"
+      }
+    ],
+    "marks": 4
+  },
+  {
+    "id": "q36",
+    "type": "matching",
+    "question": "Match each right of an agent with its correct description.",
+    "matchPairs": [
+      {
+        "id": "pair1",
+        "left": "Remuneration",
+        "right": "Payment earned for properly performing the agency agreement"
+      },
+      {
+        "id": "pair2",
+        "left": "Indemnity",
+        "right": "Reimbursement for authorized expenses and liabilities incurred on the principal's behalf"
+      },
+      {
+        "id": "pair3",
+        "left": "General Lien",
+        "right": "Right to retain the principal's property for a general balance due"
+      },
+      {
+        "id": "pair4",
+        "left": "Particular Lien",
+        "right": "Right to retain specific property for charges relating to that property"
+      }
+    ],
+    "marks": 4
+  }
+]
+}

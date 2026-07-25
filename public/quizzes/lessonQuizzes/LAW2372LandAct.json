@@ -1,0 +1,441 @@
+{
+  "id": "quiz-Tutorial03-ForeignLand-ULC-Part1",
+  "title": "Tutorial 03 - Foreign Land Ownership Restrictions and Unlimited Companies",
+  "description": "Exam-standard MCQs based on the Land (Restrictions on Alienation) Act No. 38 of 2014 and Unlimited Companies.",
+  "subject": "LAW2372 - Corporate Law",
+  "gradientColors": [
+    "#1e3a8a",
+    "#2563eb",
+    "#0f766e",
+    "#1d4ed8"
+  ],
+  "timeOptions": [10,20,30],
+  "totalMarks": 60,
+  "weight": 0,
+  "category": "lesson",
+  "questions": [
+    {
+      "id":"q1",
+      "type":"multipleChoice",
+      "question":"Emerald Holdings (Pvt) Ltd is incorporated in Sri Lanka. Forty-eight percent of its shares are held directly by foreign investors while another six percent is held by a Sri Lankan company wholly owned by foreign nationals. Emerald proposes to purchase freehold land in Galle. Which statement is most accurate?",
+      "options":[
+        "The purchase is permitted because direct foreign ownership remains below fifty percent.",
+        "The purchase is prohibited because both direct and indirect foreign ownership must be considered.",
+        "The purchase is valid provided the company has traded in Sri Lanka for more than ten years.",
+        "The purchase is valid because only overseas companies are restricted from acquiring land."
+      ],
+      "answer":"The purchase is prohibited because both direct and indirect foreign ownership must be considered.",
+      "rationale":"The Act aggregates direct and indirect foreign ownership when applying the fifty percent threshold.",
+      "marks":2
+    },
+    {
+      "id":"q2",
+      "type":"multipleChoice",
+      "question":"Blue Ocean Ltd is a Sri Lankan company with forty-five percent foreign shareholding when it acquires freehold land. Twelve years later foreign ownership increases to fifty-two percent and remains unchanged. Which consequence best reflects the Act?",
+      "options":[
+        "The acquisition remains permanently valid because the threshold was satisfied on the date of transfer.",
+        "The company breaches the statutory requirement to maintain foreign ownership below fifty percent for twenty consecutive years.",
+        "The company immediately becomes an overseas company.",
+        "The transfer automatically converts into a ninety-nine-year lease."
+      ],
+      "answer":"The company breaches the statutory requirement to maintain foreign ownership below fifty percent for twenty consecutive years.",
+      "rationale":"The below-fifty-percent level must continue for twenty consecutive years after transfer.",
+      "marks":2
+    },
+    {
+      "id":"q3",
+      "type":"multipleChoice",
+      "question":"A listed Sri Lankan company exceeds the statutory foreign shareholding threshold after an international share issue. Which period is generally available to restore compliance?",
+      "options":[
+        "Six months from the date of exceeding the threshold.",
+        "Twelve months from the date of exceeding the threshold.",
+        "Twenty-four months from the date of the annual general meeting.",
+        "Until the next audited financial statements are filed."
+      ],
+      "answer":"Twelve months from the date of exceeding the threshold.",
+      "rationale":"Quoted companies receive twelve months whereas other companies receive six months.",
+      "marks":2
+    },
+    {
+      "id":"q4",
+      "type":"multipleChoice",
+      "question":"A foreign corporation leases commercial land in Sri Lanka for one hundred and twenty years. Both parties execute the deed and pay every applicable tax. Which legal position is strongest?",
+      "options":[
+        "The lease is fully enforceable because taxes have been paid.",
+        "The lease is valid only for the first ninety-nine years.",
+        "The lease becomes void only if the Registrar refuses registration.",
+        "The lease automatically converts into freehold ownership after ninety-nine years."
+      ],
+      "answer":"The lease is valid only for the first ninety-nine years.",
+      "rationale":"The Act limits foreign leases to ninety-nine years; any excess is ineffective.",
+      "marks":2
+    },
+    {
+      "id":"q5",
+      "type":"multipleChoice",
+      "question":"A foreign-owned company operating continuously in Sri Lanka for eleven years enters into a sixty-year commercial lease outside any BOI zone. Which Land Lease Tax rate most likely applies?",
+      "options":[
+        "Zero percent because the company has operated for more than ten years.",
+        "Seven point five percent because it satisfies a statutory qualifying condition.",
+        "Fifteen percent because only BOI land qualifies for any reduction.",
+        "Fifteen percent because the reduced rate applies only to condominium units."
+      ],
+      "answer":"Seven point five percent because it satisfies a statutory qualifying condition.",
+      "rationale":"Ten or more consecutive years of active operation qualifies for the reduced rate.",
+      "marks":2
+    },
+    {
+      "id":"q6",
+      "type":"multipleChoice",
+      "question":"A foreign investor leases an apartment located on the fifth floor of a condominium for thirty years. Which statement best reflects the applicable Land Lease Tax position?",
+      "options":[
+        "The lease qualifies for the reduced seven point five percent rate.",
+        "The lease is entirely exempt from Land Lease Tax.",
+        "The lease attracts the standard rate because only freehold purchases benefit.",
+        "The lease is prohibited because foreigners cannot lease condominiums."
+      ],
+      "answer":"The lease qualifies for the reduced seven point five percent rate.",
+      "rationale":"Qualifying fourth-floor-and-above condominiums with leases below thirty-five years receive the reduced rate.",
+      "marks":2
+    },
+    {
+      "id":"q7",
+      "type":"multipleChoice",
+      "question":"A foreign company wishes to purchase a condominium unit situated on the third floor. Full consideration has already been remitted into Sri Lanka before transfer. Which conclusion is most accurate?",
+      "options":[
+        "The purchase is permitted because payment was made through inward remittance.",
+        "The purchase remains prohibited because the statutory floor requirement is not satisfied.",
+        "The purchase becomes valid after Cabinet approval alone.",
+        "The purchase is automatically converted into a lease."
+      ],
+      "answer":"The purchase remains prohibited because the statutory floor requirement is not satisfied.",
+      "rationale":"The exemption applies only to qualifying units on or above the fourth floor.",
+      "marks":2
+    },
+    {
+      "id":"q8",
+      "type":"multipleChoice",
+      "question":"Which individual is primarily responsible for certifying every six months that foreign shareholding has remained below the statutory threshold during the twenty-year monitoring period?",
+      "options":[
+        "Chairman of the Board",
+        "Registrar of Companies",
+        "Company Secretary",
+        "External Auditor"
+      ],
+      "answer":"Company Secretary",
+      "rationale":"The Company Secretary has the continuing reporting obligation.",
+      "marks":2
+    },
+    {
+      "id":"q9",
+      "type":"multipleChoice",
+      "question":"Which authority is principally responsible for collecting Land Lease Tax imposed under the Act?",
+      "options":[
+        "Registrar of Lands",
+        "Commissioner General of Inland Revenue",
+        "Registrar of Companies",
+        "Surveyor General"
+      ],
+      "answer":"Commissioner General of Inland Revenue",
+      "rationale":"The Commissioner General administers Land Lease Tax collection.",
+      "marks":2
+    },
+    {
+      "id":"q10",
+      "type":"multipleChoice",
+      "question":"A foreign-owned company validly acquires land under one of the statutory exemptions. Two years later it offers the land as security to a licensed commercial bank. Which statement is legally strongest?",
+      "options":[
+        "The mortgage is unrestricted because ownership was lawfully acquired.",
+        "The mortgage is prohibited during the first five years following the transfer.",
+        "Only foreign banks may accept the mortgage during the first five years.",
+        "The restriction applies only to leases and not to ownership."
+      ],
+      "answer":"The mortgage is prohibited during the first five years following the transfer.",
+      "rationale":"The Act imposes a five-year prohibition on mortgaging qualifying land.",
+      "marks":2
+    },
+    {
+      "id":"q11",
+      "type":"multipleChoice",
+      "question":"Lion Corporate Services recommends incorporating as an Unlimited Liability Company solely to avoid the foreign ownership restrictions contained in the Land Act. Which advice is legally correct?",
+      "options":[
+        "The recommendation is correct because unlimited companies are exempt from the Act.",
+        "The recommendation is incorrect because the decisive test is foreign shareholding rather than company type.",
+        "The recommendation is correct only where the company owns subsidiaries.",
+        "The recommendation is correct if the company does not issue ordinary shares."
+      ],
+      "answer":"The recommendation is incorrect because the decisive test is foreign shareholding rather than company type.",
+      "rationale":"The Land Act applies irrespective of whether the company is limited or unlimited.",
+      "marks":2
+    },
+    {
+      "id":"q12",
+      "type":"multipleChoice",
+      "question":"A Sri Lankan Unlimited Liability Company has one hundred percent Sri Lankan ownership and intends to purchase agricultural land. Which statement best reflects the legal position?",
+      "options":[
+        "The purchase is prohibited because unlimited companies cannot own land.",
+        "The purchase is generally permissible because there is no disqualifying foreign ownership.",
+        "The purchase requires Cabinet approval solely because the company is unlimited.",
+        "The purchase is valid only if the company converts into a private limited company."
+      ],
+      "answer":"The purchase is generally permissible because there is no disqualifying foreign ownership.",
+      "rationale":"Unlimited companies are not restricted merely because of their liability structure.",
+      "marks":2
+    },
+    {
+      "id":"q13",
+      "type":"multipleChoice",
+      "question":"Which commercial advantage most commonly explains why sophisticated corporate groups intentionally choose an Unlimited Liability Company?",
+      "options":[
+        "Automatic exemption from corporate taxation.",
+        "Greater access to public equity markets.",
+        "Reduced public disclosure of financial information.",
+        "Freedom from directors' fiduciary duties."
+      ],
+      "answer":"Reduced public disclosure of financial information.",
+      "rationale":"Commercial privacy is one of the principal reasons for using ULCs.",
+      "marks":2
+    },
+    {
+      "id":"q14",
+      "type":"multipleChoice",
+      "question":"A multinational group proposes using an Unlimited Liability Company as a wholly owned holding company. Which explanation best justifies this decision?",
+      "options":[
+        "Unlimited liability eliminates every regulatory obligation imposed on holding companies.",
+        "The parent already bears the economic risk while obtaining additional financial privacy.",
+        "Unlimited companies cannot become subsidiaries.",
+        "Holding companies are legally required to adopt the unlimited company structure."
+      ],
+      "answer":"The parent already bears the economic risk while obtaining additional financial privacy.",
+      "rationale":"This is the principal commercial justification discussed in practice.",
+      "marks":2
+    },
+    {
+      "id":"q15",
+      "type":"multipleChoice",
+      "question":"Which statement most accurately describes member liability in an Unlimited Liability Company during winding up?",
+      "options":[
+        "Members contribute only up to the unpaid amount on their shares.",
+        "Members contribute only after every creditor has waived recovery.",
+        "Members may be personally required to satisfy company debts if company assets are insufficient.",
+        "Members incur liability only where fraud is established."
+      ],
+      "answer":"Members may be personally required to satisfy company debts if company assets are insufficient.",
+      "rationale":"Unlimited liability removes the statutory cap on members' liability upon winding up.",
+      "marks":2
+    },
+
+  {
+    "id": "q16",
+    "type": "multipleChoice",
+    "question": "Aurora Holdings (Pvt) Ltd is 48% foreign-owned when it acquires freehold land. Two years later, a restructuring causes foreign ownership to increase to 51%. Four months after the increase, the company reduces foreign ownership back to 49%. Which statement is most accurate?",
+    "options": [
+      "The company has complied because foreign ownership was restored below 50% before six months elapsed.",
+      "The company permanently loses ownership because the threshold can never be exceeded.",
+      "The company remains compliant because the 20-year rule only applies to public companies.",
+      "The company automatically converts into an offshore company."
+    ],
+    "answer": "The company has complied because foreign ownership was restored below 50% before six months elapsed.",
+    "rationale": "Non-quoted companies have six months to restore compliance after exceeding the threshold.",
+    "marks": 2
+  },
+  {
+    "id": "q17",
+    "type": "multipleChoice",
+    "question": "A foreign corporation leases land for 95 years inside a BOI-approved industrial zone. Which statement best reflects the legal consequences?",
+    "options": [
+      "The lease is prohibited because foreign companies cannot lease land.",
+      "The lease is valid and generally qualifies for the reduced 7.5% Land Lease Tax.",
+      "The lease is exempt from both Stamp Duty and Land Lease Tax.",
+      "The lease automatically becomes freehold ownership after registration."
+    ],
+    "answer": "The lease is valid and generally qualifies for the reduced 7.5% Land Lease Tax.",
+    "rationale": "Land situated within qualifying BOI zones is one of the statutory grounds for the reduced rate.",
+    "marks": 2
+  },
+  {
+    "id": "q18",
+    "type": "multipleChoice",
+    "question": "A company secretary fails to submit the required six-month compliance reports for three consecutive reporting periods, although foreign ownership remained below 50% throughout. Which statement is legally strongest?",
+    "options": [
+      "No breach exists because the company satisfied the ownership requirement.",
+      "The reporting obligation is independent of the ownership requirement, creating an ongoing compliance failure.",
+      "Only the Registrar of Companies may require such reports.",
+      "The reports become unnecessary once the first five years have passed."
+    ],
+    "answer": "The reporting obligation is independent of the ownership requirement, creating an ongoing compliance failure.",
+    "rationale": "The Company Secretary has an ongoing statutory reporting obligation throughout the monitoring period.",
+    "marks": 2
+  },
+  {
+    "id": "q19",
+    "type": "multipleChoice",
+    "question": "A foreign individual inherits freehold land in Sri Lanka from a Sri Lankan parent through intestate succession. Which statement is most accurate?",
+    "options": [
+      "The inheritance is prohibited because foreigners can never acquire freehold land.",
+      "The transfer falls within a statutory exemption relating to succession.",
+      "The beneficiary must immediately sell the property within six months.",
+      "Ownership is allowed only after Cabinet approval."
+    ],
+    "answer": "The transfer falls within a statutory exemption relating to succession.",
+    "rationale": "Inheritance by intestacy, gift or will to qualifying foreign next of kin is specifically exempted.",
+    "marks": 2
+  },
+  {
+    "id": "q20",
+    "type": "multipleChoice",
+    "question": "A foreign company purchases a condominium unit located on the fifth floor. Full consideration was remitted into Sri Lanka after the transfer deed was executed. Which statement is most accurate?",
+    "options": [
+      "The exemption is unavailable because the inward foreign remittance requirement was not satisfied before transfer.",
+      "The exemption applies because the property is above the fourth floor.",
+      "Timing of payment is legally irrelevant once foreign funds are remitted.",
+      "Foreign companies cannot purchase condominium units under any circumstances."
+    ],
+    "answer": "The exemption is unavailable because the inward foreign remittance requirement was not satisfied before transfer.",
+    "rationale": "The exemption requires the full purchase price to be remitted before the transfer.",
+    "marks": 2
+  },
+  {
+    "id": "q21",
+    "type": "multipleChoice",
+    "question": "A foreign-owned company has operated in Sri Lanka for nine years and eleven months when it enters into a lease agreement. Which Land Lease Tax rate most likely applies?",
+    "options": [
+      "7.5% because the company has substantially satisfied the operational requirement.",
+      "15% because the statutory ten-year requirement has not yet been met.",
+      "0% because the company is already established in Sri Lanka.",
+      "7.5% because all companies with more than 50% foreign ownership qualify."
+    ],
+    "answer": "15% because the statutory ten-year requirement has not yet been met.",
+    "rationale": "The reduced rate requires at least ten consecutive years of operation.",
+    "marks": 2
+  },
+  {
+    "id": "q22",
+    "type": "multipleChoice",
+    "question": "Which scenario most clearly demonstrates indirect foreign ownership exceeding the statutory threshold?",
+    "options": [
+      "A Sri Lankan company owns 55% of another Sri Lankan company while itself being wholly Sri Lankan-owned.",
+      "A foreign parent owns 60% of Company A, which owns 60% of Company B.",
+      "Two Sri Lankan citizens jointly own 60% of the shares.",
+      "Foreign lenders provide 70% of the company's borrowings."
+    ],
+    "answer": "A foreign parent owns 60% of Company A, which owns 60% of Company B.",
+    "rationale": "Indirect ownership through a chain of companies is expressly considered under the Act.",
+    "marks": 2
+  },
+  {
+    "id": "q23",
+    "type": "multipleChoice",
+    "question": "Which authority possesses the primary responsibility for determining whether a transfer or lease should be registered under the Act?",
+    "options": [
+      "Commissioner General of Inland Revenue.",
+      "Registrar of Lands.",
+      "Registrar of Companies.",
+      "Secretary to the Treasury."
+    ],
+    "answer": "Registrar of Lands.",
+    "rationale": "The Registrar of Lands registers deeds and may reject non-compliant transactions.",
+    "marks": 2
+  },
+  {
+    "id": "q24",
+    "type": "multipleChoice",
+    "question": "A Sri Lankan Unlimited Liability Company has 55% foreign shareholding but argues that unlimited member liability provides sufficient creditor protection to justify owning land. Which statement is legally strongest?",
+    "options": [
+      "The argument succeeds because unlimited liability removes the statutory restriction.",
+      "The argument fails because liability structure is irrelevant under the Land Act.",
+      "The argument succeeds if all creditors consent.",
+      "The argument succeeds only where the company has operated for ten years."
+    ],
+    "answer": "The argument fails because liability structure is irrelevant under the Land Act.",
+    "rationale": "The decisive criterion is foreign shareholding, not the type of company.",
+    "marks": 2
+  },
+  {
+    "id": "q25",
+    "type": "multipleChoice",
+    "question": "A Sri Lankan company owns land while maintaining 49% foreign shareholding. During the twentieth year after acquisition, foreign ownership increases to 52%. Which statement is most accurate?",
+    "options": [
+      "The statutory maintenance period has not yet been fully completed, creating a compliance issue.",
+      "The company automatically satisfies the Act because nineteen years is substantially equivalent to twenty.",
+      "The increase is irrelevant after the first ten years.",
+      "The company immediately becomes exempt as a mature business."
+    ],
+    "answer": "The statutory maintenance period has not yet been fully completed, creating a compliance issue.",
+    "rationale": "The below-50% threshold must be maintained for twenty consecutive years.",
+    "marks": 2
+  },
+  {
+    "id": "q26",
+    "type": "multipleChoice",
+    "question": "A company chooses the Unlimited Liability Company structure primarily because it wishes to avoid publishing detailed financial information. Which feature most directly supports this objective?",
+    "options": [
+      "Unlimited companies generally enjoy reduced public disclosure of annual accounts.",
+      "Unlimited companies are exempt from accounting standards.",
+      "Unlimited companies cannot be audited.",
+      "Unlimited companies are exempt from maintaining accounting records."
+    ],
+    "answer": "Unlimited companies generally enjoy reduced public disclosure of annual accounts.",
+    "rationale": "Commercial privacy is one of the principal reasons sophisticated businesses adopt ULCs.",
+    "marks": 2
+  },
+  {
+    "id": "q27",
+    "type": "multipleChoice",
+    "question": "A foreign investor wishes to sublease state land previously leased from the Government. Which additional legal requirement applies?",
+    "options": [
+      "Prior written approval of the relevant Minister.",
+      "Approval from the Commissioner General of Inland Revenue.",
+      "Approval from every shareholder of the lessee company.",
+      "No additional approval is required."
+    ],
+    "answer": "Prior written approval of the relevant Minister.",
+    "rationale": "State land cannot be sub-let or sub-leased without ministerial approval.",
+    "marks": 2
+  },
+  {
+    "id": "q28",
+    "type": "multipleChoice",
+    "question": "Which situation best illustrates why an Unlimited Liability Company is commonly used as an intra-group holding company?",
+    "options": [
+      "The parent company already effectively bears the financial risk while obtaining additional commercial privacy.",
+      "Unlimited liability completely eliminates taxation on dividends.",
+      "Unlimited companies are exempt from corporate governance rules.",
+      "Unlimited companies may publicly issue shares without restriction."
+    ],
+    "answer": "The parent company already effectively bears the financial risk while obtaining additional commercial privacy.",
+    "rationale": "The risk already exists within the corporate group, making privacy the principal commercial advantage.",
+    "marks": 2
+  },
+  {
+    "id": "q29",
+    "type": "multipleChoice",
+    "question": "Which of the following transactions is LEAST likely to qualify for any statutory concession under the tutorial?",
+    "options": [
+      "A lease within a declared BOI industrial estate.",
+      "Purchase of a fifth-floor condominium using full inward remittance before transfer.",
+      "A foreign-owned company operating in Sri Lanka for eleven consecutive years leasing commercial land.",
+      "Purchase of ordinary commercial land by a newly incorporated foreign company."
+    ],
+    "answer": "Purchase of ordinary commercial land by a newly incorporated foreign company.",
+    "rationale": "None of the statutory exemptions or qualifying concessions apply.",
+    "marks": 2
+  },
+  {
+    "id": "q30",
+    "type": "multipleChoice",
+    "question": "Which combination of facts would most strongly support a conclusion that a foreign-owned company may lease land while benefiting from the reduced Land Lease Tax rate?",
+    "options": [
+      "Foreign-owned company, eight years of operation, lease outside qualifying areas.",
+      "Foreign-owned company, eleven years of active operation, sixty-year lease.",
+      "Foreign-owned company, newly incorporated, ninety-nine-year lease.",
+      "Foreign-owned company, six years of operation, ordinary commercial lease."
+    ],
+    "answer": "Foreign-owned company, eleven years of active operation, sixty-year lease.",
+    "rationale": "More than ten consecutive years of active operation satisfies one of the principal statutory grounds for the reduced 7.5% Land Lease Tax rate.",
+    "marks": 2
+  }
+]
+}
+
+

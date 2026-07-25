@@ -1,0 +1,573 @@
+{
+  "id": "quiz-Promoters-PreIncorporation-CompanyContracts",
+  "title": "Lesson 06 - Promoters, Pre-Incorporation Contracts and Company Contracts",
+  "description": "Exam-standard quiz covering promoters, fiduciary duties, pre-incorporation contracts, statutory provisions, and company contracts under the Companies Act No. 07 of 2007.",
+  "subject": "LAW2372 - Corporate Law",
+  "gradientColors": [
+    "#1e3a8a",
+    "#2563eb",
+    "#1d4ed8",
+    "#3b82f6"
+  ],
+  "timeOptions": [
+    10,
+    20,
+    30
+  ],
+  "totalMarks": 66,
+  "weight": 0,
+  "category": "lesson",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multipleChoice",
+      "question": "Nimal conceived the idea of incorporating a resort company, negotiated with landowners, arranged financing, and secured key management before incorporation. He never signed the incorporation documents nor became a director. Which statement best reflects his legal position?",
+      "options": [
+        "He is not a promoter because he never became a director.",
+        "He is a promoter because promotion depends upon the role performed rather than formal designation.",
+        "He is merely an agent of the future company because he negotiated contracts.",
+        "He cannot be regarded as a promoter unless shareholders subsequently approve his actions."
+      ],
+      "answer": "He is a promoter because promotion depends upon the role performed rather than formal designation.",
+      "rationale": "A person's status as a promoter depends upon the functions performed in forming the company rather than any formal title.",
+      "marks": 2
+    },
+    {
+      "id": "q2",
+      "type": "multipleChoice",
+      "question": "Which situation most strongly indicates that an individual is acting as a promoter rather than merely providing professional services?",
+      "options": [
+        "Preparing incorporation documents strictly in accordance with client instructions.",
+        "Conducting the statutory audit after incorporation.",
+        "Conceiving the business venture, arranging incorporation, and organizing its initial business structure.",
+        "Providing legal advice regarding compliance after the company has commenced business."
+      ],
+      "answer": "Conceiving the business venture, arranging incorporation, and organizing its initial business structure.",
+      "rationale": "Promoters actively create and establish the company rather than merely providing professional assistance.",
+      "marks": 2
+    },
+    {
+      "id": "q3",
+      "type": "multipleChoice",
+      "question": "A promoter purchases land for 15 million and later sells it to the proposed company for 25 million without disclosing the profit to an independent board or the intended shareholders. Which legal principle is most directly violated?",
+      "options": [
+        "The doctrine of indoor management.",
+        "The fiduciary obligation prohibiting undisclosed secret profits.",
+        "The rule against ultra vires transactions.",
+        "The doctrine of separate legal personality."
+      ],
+      "answer": "The fiduciary obligation prohibiting undisclosed secret profits.",
+      "rationale": "Promoters occupy a fiduciary position and must not retain undisclosed profits made at the company's expense.",
+      "marks": 2
+    },
+    {
+      "id": "q4",
+      "type": "multipleChoice",
+      "question": "A promoter fully discloses a proposed sale of property to an independent board of directors before the company purchases the property. Which statement best reflects the legal consequence?",
+      "options": [
+        "The transaction remains void because promoters may never sell property to the company.",
+        "The transaction may proceed because proper disclosure removes the objection relating to secret profits.",
+        "The promoter automatically forfeits any profit earned on the transaction.",
+        "The company must first obtain court approval before completing the purchase."
+      ],
+      "answer": "The transaction may proceed because proper disclosure removes the objection relating to secret profits.",
+      "rationale": "A promoter may retain a profit where full disclosure is made to an independent decision-making body.",
+      "marks": 2
+    },
+    {
+      "id": "q5",
+      "type": "multipleChoice",
+      "question": "Which remedy would most appropriately enable a company to recover an undisclosed profit improperly retained by a promoter?",
+      "options": [
+        "Specific performance.",
+        "Recovery of the secret profit through an account of profits.",
+        "Automatic winding up of the company.",
+        "Judicial dissolution of the promoter's business."
+      ],
+      "answer": "Recovery of the secret profit through an account of profits.",
+      "rationale": "The company may recover undisclosed profits obtained in breach of the promoter's fiduciary duties.",
+      "marks": 2
+    },
+    {
+      "id": "q6",
+      "type": "multipleChoice",
+      "question": "A promoter enters into a supply agreement on behalf of a company that has not yet been incorporated. The company is later incorporated but takes no further action. Which statement is legally strongest?",
+      "options": [
+        "The original agreement automatically becomes the company's contract upon incorporation.",
+        "The company becomes bound because it accepted the benefit of incorporation.",
+        "The original agreement does not automatically bind the company merely because incorporation subsequently occurs.",
+        "The agreement is automatically ratified by operation of law."
+      ],
+      "answer": "The original agreement does not automatically bind the company merely because incorporation subsequently occurs.",
+      "rationale": "A company cannot automatically become bound by a pre-incorporation contract solely because it later comes into existence.",
+      "marks": 2
+    },
+    {
+      "id": "q7",
+      "type": "multipleChoice",
+      "question": "A promoter signs a contract 'for and on behalf of ABC Ltd (to be incorporated).' After incorporation the company refuses to adopt the agreement. Which conclusion is most consistent with the statutory framework?",
+      "options": [
+        "The promoter may remain personally liable depending upon the operation of the relevant statutory provisions governing pre-incorporation contracts.",
+        "The company is automatically liable because it now exists.",
+        "Neither the promoter nor the company incurs any contractual liability.",
+        "The contract automatically becomes void without legal consequences."
+      ],
+      "answer": "The promoter may remain personally liable depending upon the operation of the relevant statutory provisions governing pre-incorporation contracts.",
+      "rationale": "The Companies Act provides circumstances where promoters incur liability for pre-incorporation contracts.",
+      "marks": 2
+    },
+    {
+      "id": "q8",
+      "type": "multipleChoice",
+      "question": "Which factor most clearly distinguishes a pre-incorporation contract from an ordinary company contract?",
+      "options": [
+        "The contract concerns the purchase of land.",
+        "The company did not exist as a legal person when the agreement was made.",
+        "The agreement exceeds one year in duration.",
+        "The contract was signed by only one individual."
+      ],
+      "answer": "The company did not exist as a legal person when the agreement was made.",
+      "rationale": "The defining characteristic is that the company had not yet acquired legal personality.",
+      "marks": 2
+    },
+    {
+      "id": "q9",
+      "type": "multipleChoice",
+      "question": "Following incorporation, the directors negotiate and execute a completely new agreement with the same supplier on substantially identical terms. Which legal principle best explains why the company becomes bound?",
+      "options": [
+        "Automatic ratification of the earlier agreement.",
+        "A fresh contract independently entered into after incorporation.",
+        "The doctrine of constructive notice.",
+        "The rule in Turquand's Case."
+      ],
+      "answer": "A fresh contract independently entered into after incorporation.",
+      "rationale": "The company becomes bound through a new contract rather than retrospective ratification of the original agreement.",
+      "marks": 2
+    },
+    {
+      "id": "q10",
+      "type": "multipleChoice",
+      "question": "A supplier knew that a proposed company had not yet been incorporated but nevertheless agreed to contract immediately. Which consideration is most relevant when determining whether the promoter bears personal liability?",
+      "options": [
+        "Whether the promoter became a shareholder after incorporation.",
+        "Whether the statutory provisions governing pre-incorporation contracts impose liability in the circumstances.",
+        "Whether the company ultimately became profitable.",
+        "Whether the supplier later entered into unrelated contracts with the company."
+      ],
+      "answer": "Whether the statutory provisions governing pre-incorporation contracts impose liability in the circumstances.",
+      "rationale": "Personal liability depends primarily upon the statutory rules governing pre-incorporation agreements.",
+      "marks": 2
+    },
+    {
+      "id": "q11",
+      "type": "multipleChoice",
+      "question": "Which statement most accurately explains why promoters are commonly described as occupying a fiduciary position?",
+      "options": [
+        "Because they automatically become trustees of all company property.",
+        "Because they owe duties of loyalty, honesty, and full disclosure while acting in relation to the proposed company.",
+        "Because they are personally responsible for every debt incurred by the company after incorporation.",
+        "Because they exercise judicial powers during incorporation."
+      ],
+      "answer": "Because they owe duties of loyalty, honesty, and full disclosure while acting in relation to the proposed company.",
+      "rationale": "Promoters owe fiduciary duties requiring good faith and complete disclosure of conflicts and profits.",
+      "marks": 2
+    },
+    {
+      "id": "q12",
+      "type": "multipleChoice",
+      "question": "A promoter receives a commission from a machinery supplier for persuading the future company to purchase equipment. The commission is not disclosed to the company or its independent directors. Which outcome is legally strongest?",
+      "options": [
+        "The commission is valid because it was paid by a third party rather than the company.",
+        "The promoter may be required to account to the company for the undisclosed commission as a secret profit.",
+        "The commission is enforceable because promoters are free to receive third-party incentives.",
+        "The company may challenge the payment only if it proves the machinery was defective."
+      ],
+      "answer": "The promoter may be required to account to the company for the undisclosed commission as a secret profit.",
+      "rationale": "Undisclosed commissions received because of the promoter's fiduciary position constitute recoverable secret profits.",
+      "marks": 2
+    },
+  {
+    "id": "q13",
+    "type": "multipleChoice",
+    "question": "A promoter purchases land before deciding to form a company. Several months later, after incorporation, the promoter sells the land to the company at a substantial profit, fully disclosing the purchase price only to fellow promoters who are also shareholders. No independent board exists. Which statement is legally strongest?",
+    "options": [
+      "The disclosure is sufficient because every shareholder knew the purchase price.",
+      "The promoter remains in breach because disclosure must be made to an independent board or an independent body capable of giving informed consent.",
+      "The promoter cannot be liable because the land was acquired before the idea of incorporation arose.",
+      "The company cannot challenge the transaction once title has passed."
+    ],
+    "answer": "The promoter remains in breach because disclosure must be made to an independent board or an independent body capable of giving informed consent.",
+    "rationale": "Disclosure to persons who are themselves interested promoters is generally insufficient to discharge fiduciary obligations.",
+    "marks": 2
+  },
+  {
+    "id": "q14",
+    "type": "multipleChoice",
+    "question": "A solicitor prepares all incorporation documents, files the registration forms, and advises on legal compliance. The solicitor does not participate in forming the business idea, securing capital, or acquiring assets. Which conclusion is most accurate?",
+    "options": [
+      "The solicitor is a promoter because legal work connected with incorporation automatically creates promoter status.",
+      "The solicitor is not ordinarily a promoter because merely acting in a professional capacity is insufficient.",
+      "The solicitor becomes a promoter immediately after incorporation.",
+      "The solicitor becomes a promoter only if appointed company secretary."
+    ],
+    "answer": "The solicitor is not ordinarily a promoter because merely acting in a professional capacity is insufficient.",
+    "rationale": "Professionals acting solely within their professional role are generally not regarded as promoters.",
+    "marks": 2
+  },
+  {
+    "id": "q15",
+    "type": "multipleChoice",
+    "question": "Before incorporation, Ravi signs a contract stating, 'ABC (Pvt) Ltd agrees to purchase machinery from XYZ Ltd.' Ravi signs only in the company's proposed name without mentioning himself. The company is never incorporated. Which legal issue is most significant?",
+    "options": [
+      "Whether a non-existent company was capable of becoming a contracting party at the time of agreement.",
+      "Whether the machinery was delivered within the agreed period.",
+      "Whether Ravi intended to become a shareholder.",
+      "Whether the supplier could have reduced the purchase price."
+    ],
+    "answer": "Whether a non-existent company was capable of becoming a contracting party at the time of agreement.",
+    "rationale": "The principal issue is that the proposed company lacked legal personality when the agreement was made.",
+    "marks": 2
+  },
+  {
+    "id": "q16",
+    "type": "multipleChoice",
+    "question": "Following incorporation, the directors pass a resolution stating that every contract entered into by the promoters before incorporation is hereby ratified. Which statement best reflects the legal position?",
+    "options": [
+      "The resolution automatically validates every pre-incorporation contract.",
+      "A company cannot ratify a contract made before it came into legal existence merely by passing a later resolution.",
+      "The resolution is effective only if filed with the Registrar.",
+      "Ratification is effective only where the promoter becomes a director."
+    ],
+    "answer": "A company cannot ratify a contract made before it came into legal existence merely by passing a later resolution.",
+    "rationale": "Ratification requires a principal to have existed when the original contract was made.",
+    "marks": 2
+  },
+  {
+    "id": "q17",
+    "type": "multipleChoice",
+    "question": "Which circumstance most strongly supports a court ordering rescission of a transaction between a promoter and the company?",
+    "options": [
+      "The company suffered a minor commercial loss despite full disclosure.",
+      "The promoter failed to disclose a material personal profit before the company acquired the property.",
+      "The promoter received ordinary remuneration approved by shareholders.",
+      "The promoter later resigned from the company."
+    ],
+    "answer": "The promoter failed to disclose a material personal profit before the company acquired the property.",
+    "rationale": "Undisclosed profits may justify rescission where restoration remains practically possible.",
+    "marks": 2
+  },
+  {
+    "id": "q18",
+    "type": "multipleChoice",
+    "question": "A promoter enters into a lease before incorporation believing the company will certainly be formed. Incorporation never occurs because regulatory approval is refused. Which statement is legally strongest?",
+    "options": [
+      "The proposed company remains liable because incorporation was intended.",
+      "Liability depends upon the legal consequences applicable to pre-incorporation contracts rather than the promoter's expectation.",
+      "The lessor automatically loses every contractual remedy.",
+      "The contract converts into a personal lease of every future shareholder."
+    ],
+    "answer": "Liability depends upon the legal consequences applicable to pre-incorporation contracts rather than the promoter's expectation.",
+    "rationale": "A promoter's expectation cannot create contractual capacity for a non-existent company.",
+    "marks": 2
+  },
+  {
+    "id": "q19",
+    "type": "multipleChoice",
+    "question": "A promoter honestly believes the company will benefit from purchasing property at twice the promoter's acquisition cost. No disclosure is made because the promoter considers the profit justified. Which statement is most accurate?",
+    "options": [
+      "Honest belief alone excuses non-disclosure.",
+      "Disclosure remains necessary regardless of whether the promoter considers the transaction beneficial.",
+      "Disclosure becomes unnecessary where the property increases in value.",
+      "The transaction is immune from challenge because the promoter acted in good faith."
+    ],
+    "answer": "Disclosure remains necessary regardless of whether the promoter considers the transaction beneficial.",
+    "rationale": "Fiduciary duties require disclosure independent of the promoter's personal assessment of fairness.",
+    "marks": 2
+  },
+  {
+    "id": "q20",
+    "type": "multipleChoice",
+    "question": "Which statement most accurately explains why the decision in Kelner v Baxter remains significant despite modern statutory reforms?",
+    "options": [
+      "It established that promoters always avoid personal liability.",
+      "It illustrates the common law difficulties surrounding contracts made before incorporation.",
+      "It abolished the doctrine of separate legal personality.",
+      "It recognized automatic ratification after incorporation."
+    ],
+    "answer": "It illustrates the common law difficulties surrounding contracts made before incorporation.",
+    "rationale": "The case demonstrates the contractual problems arising where the company did not yet exist.",
+    "marks": 2
+  },
+  {
+    "id": "q21",
+    "type": "multipleChoice",
+    "question": "A director signs a contract on behalf of an already incorporated company without actual authority. The board later approves the transaction before the other party withdraws. Which legal principle most directly distinguishes this situation from a pre-incorporation contract?",
+    "options": [
+      "The company already existed when the contract was made, making later approval legally possible.",
+      "Every unauthorized contract automatically binds the company.",
+      "Directors possess unlimited authority once incorporation occurs.",
+      "The contract becomes void because authority was initially absent."
+    ],
+    "answer": "The company already existed when the contract was made, making later approval legally possible.",
+    "rationale": "Unlike a pre-incorporation contract, the principal already existed when the contract was concluded.",
+    "marks": 2
+  },
+  {
+    "id": "q22",
+    "type": "multipleChoice",
+    "question": "Which situation is LEAST likely to create promoter status?",
+    "options": [
+      "Negotiating with investors to establish initial capital.",
+      "Identifying business opportunities and acquiring startup assets.",
+      "Preparing audited financial statements after incorporation as the external auditor.",
+      "Organizing the first board of directors before incorporation."
+    ],
+    "answer": "Preparing audited financial statements after incorporation as the external auditor.",
+    "rationale": "Professional services performed after incorporation do not ordinarily amount to promotion.",
+    "marks": 2
+  },
+  {
+    "id": "q23",
+    "type": "multipleChoice",
+    "question": "ABC Ltd, after incorporation, wishes to be bound by a supply agreement negotiated before incorporation. Which action provides the strongest legal basis for creating contractual obligations?",
+    "options": [
+      "Passing an ordinary resolution purporting to ratify the earlier agreement.",
+      "Entering into a fresh agreement with the supplier after incorporation.",
+      "Issuing additional shares to the promoter.",
+      "Filing the original agreement with the Registrar."
+    ],
+    "answer": "Entering into a fresh agreement with the supplier after incorporation.",
+    "rationale": "A new contract creates obligations because the company now has legal personality.",
+    "marks": 2
+  },
+  {
+    "id": "q24",
+    "type": "multipleChoice",
+    "question": "A promoter secretly receives commissions from both the seller and the purchaser in relation to the same proposed transaction. Which statement is legally strongest?",
+    "options": [
+      "Only the larger commission is recoverable by the company.",
+      "The promoter may be accountable for every undisclosed benefit obtained through the fiduciary position.",
+      "Third-party commissions are irrelevant because they were not paid by the company.",
+      "Recovery depends solely upon whether the company ultimately made a profit."
+    ],
+    "answer": "The promoter may be accountable for every undisclosed benefit obtained through the fiduciary position.",
+    "rationale": "A promoter must account for all undisclosed benefits arising from the fiduciary relationship.",
+    "marks": 2
+  },
+  {
+    "id": "q25",
+    "type": "dropdown",
+    "question": "Under Section 24, the first implied warranty is that the company will be [dropdown_1], while the second implied warranty is that the company will [dropdown_2] the contract.",
+    "dropdownBlanks": [
+      {
+        "id": "dropdown_1",
+        "options": [
+          "incorporated",
+          "liquidated",
+          "registered as a public company",
+          "merged"
+        ],
+        "correctAnswer": "incorporated"
+      },
+      {
+        "id": "dropdown_2",
+        "options": [
+          "terminate",
+          "ratify",
+          "assign",
+          "cancel"
+        ],
+        "correctAnswer": "ratify"
+      }
+    ],
+    "rationale": "Section 24 implies warranties relating to incorporation and subsequent ratification.",
+    "marks": 3
+  },
+  {
+    "id": "q26",
+    "type": "dropdown",
+    "question": "A formal company contract requiring notarization must ordinarily be signed by [dropdown_1], while an informal contract may be entered into by a person having [dropdown_2] authority.",
+    "dropdownBlanks": [
+      {
+        "id": "dropdown_1",
+        "options": [
+          "two directors",
+          "the company secretary",
+          "any shareholder",
+          "the external auditor"
+        ],
+        "correctAnswer": "two directors"
+      },
+      {
+        "id": "dropdown_2",
+        "options": [
+          "express or implied",
+          "judicial",
+          "statutory only",
+          "fiduciary"
+        ],
+        "correctAnswer": "express or implied"
+      }
+    ],
+    "rationale": "Section 19 specifies execution requirements depending upon the formality of the contract.",
+    "marks": 3
+  },
+  {
+    "id": "q27",
+    "type": "dropdown",
+    "question": "At common law, a pre-incorporation contract was generally [dropdown_1] because the company did not yet exist, meaning there could be no [dropdown_2] for a non-existent principal.",
+    "dropdownBlanks": [
+      {
+        "id": "dropdown_1",
+        "options": [
+          "void",
+          "voidable",
+          "unenforceable only against third parties",
+          "automatically ratified"
+        ],
+        "correctAnswer": "void"
+      },
+      {
+        "id": "dropdown_2",
+        "options": [
+          "agent",
+          "director",
+          "shareholder",
+          "creditor"
+        ],
+        "correctAnswer": "agent"
+      }
+    ],
+    "rationale": "The common law recognized that a non-existent principal cannot appoint an agent.",
+    "marks": 3
+  },
+  {
+    "id": "q28",
+    "type": "fillInBlank",
+    "question": "A promoter occupies a ________ position toward the proposed company.",
+    "answer": "fiduciary",
+    "rationale": "Promoters owe fiduciary duties requiring honesty, loyalty and full disclosure.",
+    "marks": 2
+  },
+  {
+    "id": "q29",
+    "type": "fillInBlank",
+    "question": "Under Section 23, a contract entered into before a company's legal existence is known as a ________ contract.",
+    "answer": "pre-incorporation",
+    "rationale": "Section 23 defines pre-incorporation contracts.",
+    "marks": 2
+  },
+  {
+    "id": "q30",
+    "type": "fillInBlank",
+    "question": "A promoter who earns an undisclosed benefit from dealing with the company has made a ________ profit.",
+    "answer": "secret",
+    "rationale": "Undisclosed gains made by promoters are treated as secret profits.",
+    "marks": 2
+  },
+  {
+    "id": "q31",
+    "type": "multiSelect",
+    "question": "Which of the following are recognized remedies available to a company against a promoter who breaches fiduciary duties?",
+    "options": [
+      "Rescission of the contract",
+      "Recovery of secret profits",
+      "Damages for breach of fiduciary duty",
+      "Automatic compulsory winding up"
+    ],
+    "answer": [
+      "Rescission of the contract",
+      "Recovery of secret profits",
+      "Damages for breach of fiduciary duty"
+    ],
+    "rationale": "The lecture identifies rescission, recovery of secret profits and damages as principal remedies.",
+    "marks": 3
+  },
+  {
+    "id": "q32",
+    "type": "multiSelect",
+    "question": "Which activities are ordinarily regarded as functions of a promoter?",
+    "options": [
+      "Conception of the business idea",
+      "Incorporation of the company",
+      "Floatation of the company",
+      "Annual statutory audit"
+    ],
+    "answer": [
+      "Conception of the business idea",
+      "Incorporation of the company",
+      "Floatation of the company"
+    ],
+    "rationale": "The statutory audit is a professional function rather than a promoter's role.",
+    "marks": 3
+  },
+  {
+    "id": "q33",
+    "type": "multiSelect",
+    "question": "According to the Companies Act, which methods may relieve a promoter from personal liability arising from a pre-incorporation contract?",
+    "options": [
+      "Ratification by the company within the required period",
+      "A fresh agreement entered into after incorporation",
+      "Automatic discharge immediately upon incorporation",
+      "Registration of the prospectus"
+    ],
+    "answer": [
+      "Ratification by the company within the required period",
+      "A fresh agreement entered into after incorporation"
+    ],
+    "rationale": "The Act recognizes ratification and a fresh agreement as mechanisms for avoiding personal liability.",
+    "marks": 3
+  },
+  {
+    "id": "q34",
+    "type": "matching",
+    "question": "Match each case with its legal principle.",
+    "matchPairs": [
+      {
+        "id": "pair1",
+        "left": "Twycross v Grant",
+        "right": "Definition and liability of promoters"
+      },
+      {
+        "id": "pair2",
+        "left": "Gluckstein v Barnes",
+        "right": "Recovery of undisclosed secret profits"
+      },
+      {
+        "id": "pair3",
+        "left": "Kelner v Baxter",
+        "right": "Personal liability on pre-incorporation contracts"
+      }
+    ],
+    "marks": 4
+  },
+  {
+    "id": "q35",
+    "type": "matching",
+    "question": "Match the statutory provision with its principal subject matter.",
+    "matchPairs": [
+      {
+        "id": "pair1",
+        "left": "Section 19",
+        "right": "Company contracts"
+      },
+      {
+        "id": "pair2",
+        "left": "Section 23",
+        "right": "Pre-incorporation contracts and ratification"
+      },
+      {
+        "id": "pair3",
+        "left": "Section 24",
+        "right": "Implied warranties and fresh agreement"
+      },
+      {
+        "id": "pair4",
+        "left": "Section 25",
+        "right": "Court relief where ratification fails"
+      }
+    ],
+    "marks": 4
+  }
+]
+}

@@ -1,0 +1,442 @@
+{
+  "id": "quiz-Types-of-Companies-Hard-MCQ",
+  "title": "Lesson 03 - Types of Companies (Advanced Law MCQ)",
+  "description": "A highly challenging examination-standard quiz covering the legal characteristics, incorporation requirements, statutory provisions, and comparative analysis of company types under the Companies Act No. 07 of 2007.",
+  "subject": "LAW2372 - Corporate Law",
+  "gradientColors": [
+    "#1e3a8a",
+    "#1d4ed8",
+    "#2563eb",
+    "#3b82f6"
+  ],
+  "timeOptions": [
+    10,
+    20,
+    30
+  ],
+  "totalMarks": 60,
+  "weight": 0,
+  "category": "lesson",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multipleChoice",
+      "question": "Which statement most accurately distinguishes a private company from a public company under the Companies Act?",
+      "options": [
+        "A private company is prohibited from inviting the public to subscribe for shares while maintaining membership restrictions prescribed by law.",
+        "A private company may invite the public provided the invitation is approved by unanimous shareholder consent.",
+        "A private company may issue securities to the public provided fewer than fifty persons subscribe.",
+        "A private company may invite institutional investors without losing its private company status."
+      ],
+      "answer": "A private company is prohibited from inviting the public to subscribe for shares while maintaining membership restrictions prescribed by law.",
+      "rationale": "Section 27 requires both restrictions on public invitations and the statutory membership limit.",
+      "marks": 2
+    },
+    {
+      "id": "q2",
+      "type": "multipleChoice",
+      "question": "A private company inadvertently exceeds the statutory membership limit while continuing to prohibit public share offers. What is the strongest legal consequence?",
+      "options": [
+        "It immediately becomes an unlimited company.",
+        "It ceases to qualify as a private company because statutory requirements are no longer satisfied.",
+        "Its directors become personally liable for every corporate debt.",
+        "Its incorporation automatically becomes void."
+      ],
+      "answer": "It ceases to qualify as a private company because statutory requirements are no longer satisfied.",
+      "rationale": "Failure to comply with Section 27 causes loss of private company status under Section 28.",
+      "marks": 2
+    },
+    {
+      "id": "q3",
+      "type": "multipleChoice",
+      "question": "Which feature most accurately explains why unanimous written shareholder consent in a private company cannot always replace formal corporate procedures?",
+      "options": [
+        "Certain statutory decisions are expressly excluded from the operation of Section 31.",
+        "The Registrar must approve every unanimous shareholder decision.",
+        "Only listed private companies may rely upon unanimous written consent.",
+        "Directors possess exclusive authority over every shareholder decision."
+      ],
+      "answer": "Certain statutory decisions are expressly excluded from the operation of Section 31.",
+      "rationale": "Section 31 contains specific statutory exceptions that cannot be bypassed by unanimous consent.",
+      "marks": 2
+    },
+    {
+      "id": "q4",
+      "type": "multipleChoice",
+      "question": "Which characteristic would most likely indicate that a company should be incorporated as a company limited by guarantee rather than by shares?",
+      "options": [
+        "Its principal purpose is promoting charitable or public benefit objectives without distributing dividends.",
+        "It intends to issue preference shares to strategic investors.",
+        "It expects frequent transfers of ownership through public trading.",
+        "It wishes to maximize shareholder dividend distributions."
+      ],
+      "answer": "Its principal purpose is promoting charitable or public benefit objectives without distributing dividends.",
+      "rationale": "Guarantee companies are commonly used for non-profit objectives where profits are not distributed.",
+      "marks": 2
+    },
+    {
+      "id": "q5",
+      "type": "multipleChoice",
+      "question": "A guarantee company registered without the word Limited subsequently breaches conditions attached to its licence. Which outcome best reflects the Registrar's powers?",
+      "options": [
+        "The Registrar may revoke the licence after giving notice and an opportunity to be heard.",
+        "The company is immediately dissolved without further procedure.",
+        "The company automatically converts into a public company.",
+        "The company's directors become personally liable without any administrative process."
+      ],
+      "answer": "The Registrar may revoke the licence after giving notice and an opportunity to be heard.",
+      "rationale": "Revocation requires procedural fairness before exemptions are withdrawn.",
+      "marks": 2
+    },
+    {
+      "id": "q6",
+      "type": "multipleChoice",
+      "question": "Which document contains information unique to a company limited by guarantee and not ordinarily required for a company limited by shares?",
+      "options": [
+        "The amount each member undertakes to contribute upon winding up together with the company's objects.",
+        "The first audited financial statements of the company.",
+        "A register of beneficial ownership.",
+        "A schedule of issued ordinary share capital."
+      ],
+      "answer": "The amount each member undertakes to contribute upon winding up together with the company's objects.",
+      "rationale": "Section 33 requires both the guarantee amount and the company's objects.",
+      "marks": 2
+    },
+    {
+      "id": "q7",
+      "type": "multipleChoice",
+      "question": "Which statement most accurately reflects the legal position of a single shareholder company following the legislative amendments?",
+      "options": [
+        "A company may validly exist with one shareholder provided statutory requirements are satisfied.",
+        "Single shareholder companies remain prohibited unless wholly government owned.",
+        "Single shareholder companies are permitted only where no directors are appointed.",
+        "A single shareholder company automatically becomes an unlimited company."
+      ],
+      "answer": "A company may validly exist with one shareholder provided statutory requirements are satisfied.",
+      "rationale": "Modern legislation expressly recognizes valid single shareholder companies.",
+      "marks": 2
+    },
+    {
+      "id": "q8",
+      "type": "multipleChoice",
+      "question": "Which characteristic distinguishes an unlimited company from every form of limited company?",
+      "options": [
+        "Members remain liable without limitation for company obligations in accordance with the company's constitution.",
+        "The company may not issue shares under any circumstances.",
+        "The company is prohibited from engaging in commercial activities.",
+        "Members are exempt from contributing during winding up."
+      ],
+      "answer": "Members remain liable without limitation for company obligations in accordance with the company's constitution.",
+      "rationale": "Unlimited companies expose members to unlimited liability.",
+      "marks": 2
+    },
+    {
+      "id": "q9",
+      "type": "multipleChoice",
+      "question": "An offshore company incorporated in Sri Lanka begins providing services within Sri Lanka. Which statement best reflects its legal position?",
+      "options": [
+        "The activity conflicts with statutory restrictions applicable to offshore companies.",
+        "The activity is valid provided no Sri Lankan residents become shareholders.",
+        "The activity is lawful after filing annual financial statements.",
+        "The activity is unrestricted if approved by the Registrar."
+      ],
+      "answer": "The activity conflicts with statutory restrictions applicable to offshore companies.",
+      "rationale": "An offshore company is prohibited from carrying on business within Sri Lanka.",
+      "marks": 2
+    },
+    {
+      "id": "q10",
+      "type": "multipleChoice",
+      "question": "Which circumstance prevents the Registrar from granting offshore registration?",
+      "options": [
+        "The company is already subject to winding up, receivership, or creditor protection proceedings.",
+        "The company has fewer than two directors.",
+        "The company has foreign shareholders.",
+        "The company proposes to appoint a corporate secretary."
+      ],
+      "answer": "The company is already subject to winding up, receivership, or creditor protection proceedings.",
+      "rationale": "These circumstances constitute statutory impediments to registration.",
+      "marks": 2
+    },
+    {
+      "id": "q11",
+      "type": "multipleChoice",
+      "question": "Which annual obligation is unique to offshore companies under the Act?",
+      "options": [
+        "Submission of prescribed fees together with evidence regarding funding of annual operating expenses before the statutory deadline.",
+        "Holding an annual general meeting in Sri Lanka.",
+        "Publishing quarterly financial statements.",
+        "Issuing annual dividends to shareholders."
+      ],
+      "answer": "Submission of prescribed fees together with evidence regarding funding of annual operating expenses before the statutory deadline.",
+      "rationale": "Section 263 prescribes continuing annual obligations.",
+      "marks": 2
+    },
+    {
+      "id": "q12",
+      "type": "multipleChoice",
+      "question": "Which requirement distinguishes an overseas company from an offshore company?",
+      "options": [
+        "It is incorporated outside Sri Lanka and establishes a place of business within Sri Lanka.",
+        "It is incorporated in Sri Lanka but trades exclusively abroad.",
+        "It cannot own land within Sri Lanka.",
+        "It must always operate through a subsidiary."
+      ],
+      "answer": "It is incorporated outside Sri Lanka and establishes a place of business within Sri Lanka.",
+      "rationale": "Overseas companies originate outside Sri Lanka but register after establishing a local place of business.",
+      "marks": 2
+    },
+    {
+      "id": "q13",
+      "type": "multipleChoice",
+      "question": "Failure by a foreign corporation to register within one month after establishing a place of business in Sri Lanka primarily concerns which statutory regime?",
+      "options": [
+        "Part XVIII governing overseas companies.",
+        "Part XI governing offshore companies.",
+        "Part III governing guarantee companies.",
+        "Part IV governing prospectuses."
+      ],
+      "answer": "Part XVIII governing overseas companies.",
+      "rationale": "Registration of overseas companies is governed by Part XVIII.",
+      "marks": 2
+    },
+    {
+      "id": "q14",
+      "type": "multipleChoice",
+      "question": "A company controls the appointment and removal of the majority of another company's directors but owns only forty percent of its voting shares. Which conclusion is most accurate?",
+      "options": [
+        "The second company may still be regarded as a subsidiary because board control is independently sufficient.",
+        "Subsidiary status cannot arise without majority share ownership.",
+        "The companies become joint venture partners instead.",
+        "Board control is legally irrelevant once voting rights fall below fifty percent."
+      ],
+      "answer": "The second company may still be regarded as a subsidiary because board control is independently sufficient.",
+      "rationale": "Control over board composition is an independent statutory test.",
+      "marks": 2
+    },
+    {
+      "id": "q15",
+      "type": "multipleChoice",
+      "question": "When determining whether one company is a subsidiary of another, which holding is generally disregarded?",
+      "options": [
+        "Shares held solely in a fiduciary capacity.",
+        "Ordinary shares carrying unrestricted voting rights.",
+        "Shares carrying full dividend participation.",
+        "Shares directly owned by the parent company."
+      ],
+      "answer": "Shares held solely in a fiduciary capacity.",
+      "rationale": "The Act specifically excludes fiduciary holdings when determining control.",
+      "marks": 2
+    },
+
+    {
+    "id": "q16",
+    "type": "multipleChoice",
+    "question": "Alpha Innovations Pvt Ltd has 49 shareholders and prohibits public invitations for shares. To raise capital, the directors privately invite 300 selected professionals to subscribe for newly issued shares without advertising publicly. No shareholder limit is exceeded. Which statement is legally the strongest?",
+    "options": [
+      "The company remains private because membership remains below fifty.",
+      "The company risks losing its private status because the restriction concerns offers to the public, not merely shareholder numbers.",
+      "The issue is valid because only listed companies are prohibited from public invitations.",
+      "The invitation is valid because the recipients were individually selected rather than approached through public media."
+    ],
+    "answer": "The company risks losing its private status because the restriction concerns offers to the public, not merely shareholder numbers.",
+    "rationale": "Section 27 imposes separate requirements relating to public offers and membership limits.",
+    "marks": 2
+  },
+  {
+    "id": "q17",
+    "type": "multipleChoice",
+    "question": "A guarantee company promoting environmental conservation earns a substantial surplus. The members unanimously resolve to distribute the surplus among themselves because every member agrees. Which legal conclusion is most accurate?",
+    "options": [
+      "The distribution is valid because unanimous consent overrides statutory restrictions.",
+      "The distribution is valid provided the Registrar is informed within thirty days.",
+      "The distribution conflicts with the essential characteristics of a guarantee company established for public benefit purposes.",
+      "The distribution automatically converts the company into a company limited by shares."
+    ],
+    "answer": "The distribution conflicts with the essential characteristics of a guarantee company established for public benefit purposes.",
+    "rationale": "The prohibition on distributing profits is fundamental to such licensed guarantee companies.",
+    "marks": 2
+  },
+  {
+    "id": "q18",
+    "type": "multipleChoice",
+    "question": "Ocean Global Ltd is incorporated in Singapore and establishes a branch office in Colombo. Simultaneously, it applies to become an offshore company because almost all of its revenue is earned outside Sri Lanka. Which statement is legally the most accurate?",
+    "options": [
+      "The company should register only as an offshore company because foreign incorporation is irrelevant.",
+      "The establishment of a place of business in Sri Lanka primarily engages the statutory regime governing overseas companies.",
+      "Both registrations are mandatory regardless of the nature of business carried on.",
+      "No registration is required until commercial operations commence."
+    ],
+    "answer": "The establishment of a place of business in Sri Lanka primarily engages the statutory regime governing overseas companies.",
+    "rationale": "Registration as an overseas company is triggered by establishing a place of business in Sri Lanka.",
+    "marks": 2
+  },
+  {
+    "id": "q19",
+    "type": "multipleChoice",
+    "question": "Beta Holdings owns only 38 percent of Gamma Ltd's voting shares. However, Gamma's Articles permit Beta alone to appoint five of seven directors. Another shareholder owns 42 percent of the shares. Which conclusion is strongest?",
+    "options": [
+      "Gamma is not a subsidiary because majority voting control is absent.",
+      "Gamma is a subsidiary because control over board composition is an independent statutory test.",
+      "Gamma is jointly controlled because no shareholder exceeds fifty percent.",
+      "Gamma is automatically an associated company rather than a subsidiary."
+    ],
+    "answer": "Gamma is a subsidiary because control over board composition is an independent statutory test.",
+    "rationale": "Control of board composition alone may establish a subsidiary relationship.",
+    "marks": 2
+  },
+  {
+    "id": "q20",
+    "type": "multipleChoice",
+    "question": "A parent company holds 48 percent of the issued ordinary shares of Delta Ltd. Another 8 percent is registered in the name of an individual acting purely as nominee for the parent company. Which analysis is most accurate?",
+    "options": [
+      "The nominee's shares may be attributed to the parent when determining control.",
+      "Nominee holdings are always disregarded irrespective of their purpose.",
+      "Only directly registered shares are legally relevant.",
+      "Nominee holdings are counted only after liquidation."
+    ],
+    "answer": "The nominee's shares may be attributed to the parent when determining control.",
+    "rationale": "Shares held by nominees are generally treated as controlled by the beneficial holder.",
+    "marks": 2
+  },
+  {
+    "id": "q21",
+    "type": "multipleChoice",
+    "question": "An offshore company annually submits proof of payment of the prescribed fee but fails to provide the required bank certificate relating to operating expenses. Which consequence most closely reflects the statutory framework?",
+    "options": [
+      "The omission is immaterial once the prescribed fee has been paid.",
+      "The Registrar may take action because annual continuation requirements have not been fully satisfied.",
+      "The company automatically becomes an overseas company.",
+      "The company merely loses its tax concessions while retaining offshore status indefinitely."
+    ],
+    "answer": "The Registrar may take action because annual continuation requirements have not been fully satisfied.",
+    "rationale": "Both statutory requirements are necessary for continuation.",
+    "marks": 2
+  },
+  {
+    "id": "q22",
+    "type": "multipleChoice",
+    "question": "A public company reduces its board from three directors to one while continuing all business activities. Six months later, it argues that every decision taken during that period remains unquestionably valid because shareholders approved them retrospectively. Which statement is most accurate?",
+    "options": [
+      "Retrospective shareholder approval automatically cures every statutory non-compliance.",
+      "The company may have breached statutory governance requirements despite shareholder approval.",
+      "A public company may operate with one director if no creditor objects.",
+      "Director numbers are regulated only by the Articles and never by statute."
+    ],
+    "answer": "The company may have breached statutory governance requirements despite shareholder approval.",
+    "rationale": "Public companies must satisfy statutory governance requirements independently of shareholder approval.",
+    "marks": 2
+  },
+  {
+    "id": "q23",
+    "type": "multipleChoice",
+    "question": "A guarantee company later wishes to amend the very object for which the Registrar granted its licence under Section 34. Which additional legal requirement is most likely necessary before the amendment becomes effective?",
+    "options": [
+      "Approval of the Registrar in addition to compliance with the company's internal procedures.",
+      "Approval only by a simple majority of members.",
+      "Approval only by the directors because objects concern management decisions.",
+      "Approval of the Auditor General."
+    ],
+    "answer": "Approval of the Registrar in addition to compliance with the company's internal procedures.",
+    "rationale": "Licensed guarantee companies require Registrar approval for such alterations.",
+    "marks": 2
+  },
+  {
+    "id": "q24",
+    "type": "multipleChoice",
+    "question": "A foreign corporation establishes a representative office in Sri Lanka solely to negotiate future contracts but undertakes no commercial transactions. One month later, no registration has been made. Which issue is most significant?",
+    "options": [
+      "The obligation to register may arise from establishing a place of business rather than commencing commercial sales.",
+      "Registration becomes necessary only after taxable income is earned.",
+      "Registration is unnecessary because negotiations do not create legal obligations.",
+      "Representative offices are expressly excluded from Part XVIII."
+    ],
+    "answer": "The obligation to register may arise from establishing a place of business rather than commencing commercial sales.",
+    "rationale": "The trigger is establishment of a place of business, not completion of transactions.",
+    "marks": 2
+  },
+  {
+    "id": "q25",
+    "type": "multipleChoice",
+    "question": "Omega Ltd owns 60 percent of Zeta Ltd's non-participating preference shares carrying fixed dividends but only 30 percent of its ordinary voting shares. Which statement is legally strongest?",
+    "options": [
+      "Ownership alone establishes subsidiary status regardless of the rights attached to the shares.",
+      "The non-participating shares may not satisfy the statutory test for determining subsidiary control.",
+      "Every preference share carries identical control rights to ordinary shares.",
+      "Dividend entitlement is the only relevant consideration."
+    ],
+    "answer": "The non-participating shares may not satisfy the statutory test for determining subsidiary control.",
+    "rationale": "The Act distinguishes shares that do not participate beyond specified distributions.",
+    "marks": 2
+  },
+  {
+    "id": "q26",
+    "type": "multipleChoice",
+    "question": "A private company validly satisfies every statutory requirement except that its name omits the abbreviation Pvt Ltd due to an administrative error. Which legal issue is most directly engaged?",
+    "options": [
+      "Compliance with statutory naming requirements rather than the validity of incorporation itself.",
+      "Automatic conversion into a public company.",
+      "Unlimited liability of every shareholder.",
+      "Immediate dissolution by operation of law."
+    ],
+    "answer": "Compliance with statutory naming requirements rather than the validity of incorporation itself.",
+    "rationale": "The omission primarily concerns statutory naming compliance.",
+    "marks": 2
+  },
+  {
+    "id": "q27",
+    "type": "multipleChoice",
+    "question": "Sigma Ltd controls the appointment of every director of Theta Ltd. Theta Ltd in turn controls the board of Lambda Ltd. Which statement best reflects the statutory relationship?",
+    "options": [
+      "Lambda may also be regarded as Sigma's subsidiary through indirect corporate control.",
+      "Only direct ownership creates subsidiary status.",
+      "Indirect control is recognized only where share ownership exceeds seventy five percent.",
+      "Theta alone may be regarded as Lambda's holding company."
+    ],
+    "answer": "Lambda may also be regarded as Sigma's subsidiary through indirect corporate control.",
+    "rationale": "Subsidiary relationships may exist through another subsidiary.",
+    "marks": 2
+  },
+  {
+    "id": "q28",
+    "type": "multipleChoice",
+    "question": "An entrepreneur wants complete managerial freedom, protection of personal assets, the ability to operate alone, and no intention of inviting public investment. Which company structure most precisely satisfies every objective?",
+    "options": [
+      "Single shareholder private limited company.",
+      "Unlimited company.",
+      "Public listed company.",
+      "Company limited by guarantee."
+    ],
+    "answer": "Single shareholder private limited company.",
+    "rationale": "It combines limited liability with sole ownership and private company characteristics.",
+    "marks": 2
+  },
+  {
+    "id": "q29",
+    "type": "multipleChoice",
+    "question": "An overseas company properly registers in Sri Lanka and subsequently ceases all Sri Lankan operations. Which legal consequence follows after valid notice is given to the Registrar?",
+    "options": [
+      "Its continuing obligation to lodge future documents with the Registrar generally ceases.",
+      "Its foreign incorporation is automatically cancelled.",
+      "It immediately becomes an offshore company.",
+      "Its directors remain permanently subject to annual filing obligations."
+    ],
+    "answer": "Its continuing obligation to lodge future documents with the Registrar generally ceases.",
+    "rationale": "Section 496 governs cessation of business by overseas companies.",
+    "marks": 2
+  },
+  {
+    "id": "q30",
+    "type": "multipleChoice",
+    "question": "Three companies are being compared. Company A is incorporated in Sri Lanka but trades only abroad. Company B is incorporated abroad and establishes a Colombo office. Company C is incorporated in Sri Lanka and controlled by another Sri Lankan company. Which classification is correct?",
+    "options": [
+      "A is an offshore company, B is an overseas company, and C may be a subsidiary company.",
+      "A is an overseas company, B is an offshore company, and C is an unlimited company.",
+      "A is a guarantee company, B is a subsidiary company, and C is an offshore company.",
+      "A is a holding company, B is a guarantee company, and C is an overseas company."
+    ],
+    "answer": "A is an offshore company, B is an overseas company, and C may be a subsidiary company.",
+    "rationale": "Each classification follows directly from the statutory definitions."
+  }
+  ]
+}

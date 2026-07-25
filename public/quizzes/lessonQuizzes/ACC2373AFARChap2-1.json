@@ -2,7 +2,7 @@
 "id": "quiz-LKAS-12-Income-Taxes",
 "title": "LKAS 12 - Income Taxes",
 "description": "A highly challenging assessment of current tax, deferred tax, tax bases, temporary differences, recognition, measurement, revaluations and the application of LKAS 12 to complex accounting scenarios.",
-"subject": "ACC2372 - Advanced Financial Accounting and Reporting",
+"subject": "ACC2373 - Advanced Financial Accounting and Reporting",
 "gradientColors": ["#7c3aed", "#6d28d9", "#5b21b6", "#4c1d95"],
 "timeOptions": [10, 20, 30],
 "totalMarks": 70,

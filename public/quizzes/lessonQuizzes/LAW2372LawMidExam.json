@@ -1,0 +1,857 @@
+{
+"id": "quiz-Corporate-Law-Midterm-Part-1",
+"title": "Corporate Law Midterm Examination Part 1",
+"description": "Advanced conceptual quiz covering corporate personality, company formation, company types, agency, and incorporation principles under Sri Lankan Corporate Law.",
+"subject": "LAW2372 - Corporate Law",
+"gradientColors": ["#1e3a8a", "#2563eb", "#0f766e", "#1d4ed8"],
+"timeOptions": [10, 20, 30],
+"totalMarks": 120,
+"weight": 0,
+"category": "lesson",
+"questions": [
+{
+"id": "q1",
+"type": "multipleChoice",
+"question": "Which statement best reflects the doctrine of separate legal personality?",
+"options": [
+"A company and its shareholders are treated as a single legal person for contractual liability.",
+"A company exists as a legal entity distinct from its members after incorporation.",
+"A company remains legally dependent upon its directors throughout its existence.",
+"A company acquires legal personality only after issuing shares to the public."
+],
+"answer": "A company exists as a legal entity distinct from its members after incorporation.",
+"rationale": "Separate legal personality recognizes the company as an independent legal entity.",
+"marks": 2
+},
+{
+"id": "q2",
+"type": "multipleChoice",
+"question": "The principal legal significance of Salomon v Salomon is that it established which principle?",
+"options": [
+"Directors are always personally liable for company debts.",
+"A company's legal identity depends upon the number of shareholders.",
+"An incorporated company is legally separate from its incorporators.",
+"Creditors may always proceed directly against shareholders."
+],
+"answer": "An incorporated company is legally separate from its incorporators.",
+"rationale": "The case confirmed the independent legal personality of companies.",
+"marks": 2
+},
+{
+"id": "q3",
+"type": "multipleChoice",
+"question": "Emma wishes to protect her personal assets while operating a café. Which structure is generally the most appropriate?",
+"options": [
+"General partnership",
+"Sole proprietorship",
+"Private limited company",
+"Ordinary joint venture"
+],
+"answer": "Private limited company",
+"rationale": "A private limited company generally limits members' liability.",
+"marks": 2
+},
+{
+"id": "q4",
+"type": "multipleChoice",
+"question": "Two companies combine resources under a formal agreement to complete a single solar project while sharing returns according to contribution. Which arrangement is most accurate?",
+"options": [
+"Holding company",
+"Joint venture",
+"Agency relationship",
+"Subsidiary acquisition"
+],
+"answer": "Joint venture",
+"rationale": "The arrangement possesses the defining characteristics of a joint venture.",
+"marks": 2
+},
+{
+"id": "q5",
+"type": "multipleChoice",
+"question": "Following incorporation of NextGen Tech Solutions Pvt Ltd, which combination most accurately describes its legal consequences?",
+"options": [
+"Separate legal personality, limited liability, and registration under company law.",
+"Unlimited liability, partnership status, and automatic tax exemption.",
+"Separate personality without registration obligations.",
+"Unlimited shareholder liability despite incorporation."
+],
+"answer": "Separate legal personality, limited liability, and registration under company law.",
+"rationale": "These are fundamental consequences of incorporation.",
+"marks": 2
+},
+{
+"id": "q6",
+"type": "multipleChoice",
+"question": "A loan is obtained solely in the company's name and the business later fails. Under the doctrine of incorporation, who ordinarily bears liability?",
+"options": [
+"The managing director personally",
+"Every shareholder jointly",
+"The company itself",
+"The company secretary"
+],
+"answer": "The company itself",
+"rationale": "Company debts belong primarily to the incorporated company.",
+"marks": 2
+},
+{
+"id": "q7",
+"type": "multipleChoice",
+"question": "A former manager creates a deceptively similar company name to evade obligations and mislead customers. Which judicial response is most appropriate?",
+"options": [
+"Automatic winding up without inquiry",
+"Recognition of absolute shareholder immunity",
+"Lifting the corporate veil where fraud or deception is established",
+"Treating both companies as permanently merged"
+],
+"answer": "Lifting the corporate veil where fraud or deception is established",
+"rationale": "Courts may disregard separate personality where fraud or abuse exists.",
+"marks": 2
+},
+{
+"id": "q8",
+"type": "multipleChoice",
+"question": "Where the articles are silent, which execution method ordinarily satisfies company contract requirements?",
+"options": [
+"Signature of one employee",
+"Signature of one shareholder",
+"Two directors or one director together with the secretary",
+"Company seal alone without signatures"
+],
+"answer": "Two directors or one director together with the secretary",
+"rationale": "This is the recognized execution method where articles provide no alternative.",
+"marks": 2
+},
+{
+"id": "q9",
+"type": "multipleChoice",
+"question": "Which statement best explains shareholder protection in a limited liability company?",
+"options": [
+"Shareholders are always liable for unpaid company debts.",
+"Protection generally applies except where fraud or similar misconduct justifies personal liability.",
+"Liability protection applies only while profits are earned.",
+"Protection disappears whenever directors resign."
+],
+"answer": "Protection generally applies except where fraud or similar misconduct justifies personal liability.",
+"rationale": "Limited liability is not absolute where fraud exists.",
+"marks": 2
+},
+{
+"id": "q10",
+"type": "multipleChoice",
+"question": "Before incorporation, Sara collects deposits using the proposed company. When may she become personally liable?",
+"options": [
+"Whenever shareholders disagree with the project",
+"Whenever the company makes a trading loss",
+"Where pre incorporation dealings involve fraud or similar misconduct",
+"Whenever registration is eventually completed"
+],
+"answer": "Where pre incorporation dealings involve fraud or similar misconduct",
+"rationale": "Pre incorporation contracts and fraudulent conduct may create personal liability.",
+"marks": 2
+},
+{
+"id": "q11",
+"type": "multipleChoice",
+"question": "Why is the proposed company name Sri Lanka National Tours likely to be rejected?",
+"options": [
+"It exceeds the permitted number of words.",
+"It misleadingly suggests a governmental connection.",
+"It contains a geographical description.",
+"It lacks a commercial reference."
+],
+"answer": "It misleadingly suggests a governmental connection.",
+"rationale": "Certain names implying state affiliation are restricted.",
+"marks": 2
+},
+{
+"id": "q12",
+"type": "multipleChoice",
+"question": "One founder dies several years after incorporation. Which principle ensures the company's continued existence?",
+"options": [
+"Agency by estoppel",
+"Perpetual succession",
+"Ultra vires",
+"Constructive notice"
+],
+"answer": "Perpetual succession",
+"rationale": "The company's existence continues independently of its members.",
+"marks": 2
+},
+{
+"id": "q13",
+"type": "multipleChoice",
+"question": "Converting from a private company to a public company generally results in which consequence?",
+"options": [
+"Reduced disclosure and simplified governance",
+"Greater disclosure obligations and broader shareholder participation",
+"Automatic exemption from company regulation",
+"Removal of directors' fiduciary duties"
+],
+"answer": "Greater disclosure obligations and broader shareholder participation",
+"rationale": "Public companies operate under stricter governance standards.",
+"marks": 2
+},
+{
+"id": "q14",
+"type": "multipleChoice",
+"question": "What is the defining legal feature of a subsidiary relationship?",
+"options": [
+"Complete operational independence from every parent entity",
+"Control exercised by a parent company over governance or operations",
+"Mandatory equal ownership by all shareholders",
+"Automatic exemption from statutory reporting"
+],
+"answer": "Control exercised by a parent company over governance or operations",
+"rationale": "A subsidiary is characterized by parent company control.",
+"marks": 2
+},
+{
+"id": "q15",
+"type": "multipleChoice",
+"question": "A company limited by guarantee converts into a public company. Which outcome most accurately follows?",
+"options": [
+"Profits must permanently remain undistributed.",
+"Dividend distribution becomes possible subject to applicable rules.",
+"Members automatically lose limited liability.",
+"The company ceases to exist."
+],
+"answer": "Dividend distribution becomes possible subject to applicable rules.",
+"rationale": "Conversion changes the company's operational and financial model.",
+"marks": 2
+},
+{
+"id": "q16",
+"type": "multipleChoice",
+"question": "A non profit organization wishes to avoid issuing shares while limiting member liability. Which company form is appropriate?",
+"options": [
+"Company limited by guarantee",
+"Public limited company",
+"Unlimited company",
+"General partnership"
+],
+"answer": "Company limited by guarantee",
+"rationale": "Guarantee companies suit non profit objectives.",
+"marks": 2
+},
+{
+"id": "q17",
+"type": "multipleChoice",
+"question": "Which combination best reflects principal risks associated with offshore companies?",
+"options": [
+"Lower administration and complete immunity from regulation",
+"Tax avoidance allegations together with regulatory and reputational risks",
+"Automatic domestic tax exemption and unlimited secrecy",
+"Guaranteed protection against legal proceedings"
+],
+"answer": "Tax avoidance allegations together with regulatory and reputational risks",
+"rationale": "Offshore structures create significant compliance and reputation risks.",
+"marks": 2
+},
+{
+"id": "q18",
+"type": "multipleChoice",
+"question": "A foreign incorporated company establishes a place of business in Sri Lanka. How must it generally register?",
+"options": [
+"As a cooperative society",
+"As an overseas company",
+"As a guarantee company",
+"As a statutory corporation"
+],
+"answer": "As an overseas company",
+"rationale": "Foreign incorporated companies register as overseas companies.",
+"marks": 2
+},
+{
+"id": "q19",
+"type": "multipleChoice",
+"question": "An authorized agent concludes a contract on behalf of the principal. Who is ordinarily bound?",
+"options": [
+"Only the agent",
+"Only the witnesses",
+"The principal",
+"No party until later approval"
+],
+"answer": "The principal",
+"rationale": "Authorized agency binds the principal.",
+"marks": 2
+},
+{
+"id": "q20",
+"type": "multipleChoice",
+"question": "A ship captain sells perishable cargo during an emergency after being unable to contact the owner. Which legal principles best justify the sale?",
+"options": [
+"Agency by ratification and constructive notice",
+"Agency of necessity together with the doctrine of salvage",
+"Ultra vires and indoor management",
+"Separate personality and perpetual succession"
+],
+"answer": "Agency of necessity together with the doctrine of salvage",
+"rationale": "Emergency necessity may justify otherwise unauthorized action.",
+"marks": 2
+},
+
+ {
+    "id": "q21",
+    "type": "multipleChoice",
+    "question": "Joe routinely enters contracts on behalf of X Ltd with Harry's knowledge despite lacking express authority. Which type of agency is most accurately created toward third parties acting in good faith?",
+    "options": [
+      "Agency by necessity",
+      "Agency by estoppel or implied authority",
+      "Agency by ratification",
+      "Agency coupled with interest"
+    ],
+    "answer": "Agency by estoppel or implied authority",
+    "rationale": "Consistent conduct accepted by the company creates implied or apparent authority.",
+    "marks": 2
+  },
+  {
+    "id": "q22",
+    "type": "multipleChoice",
+    "question": "Apparent authority arises primarily when:",
+    "options": [
+      "The principal's conduct reasonably represents that the agent possesses authority.",
+      "The agent privately believes they possess authority.",
+      "The board later approves every transaction.",
+      "The third party independently assumes authority without representation."
+    ],
+    "answer": "The principal's conduct reasonably represents that the agent possesses authority.",
+    "rationale": "Apparent authority depends upon representations attributable to the principal.",
+    "marks": 2
+  },
+  {
+    "id": "q23",
+    "type": "multipleChoice",
+    "question": "In a standard agency transaction, who are generally regarded as the contracting parties?",
+    "options": [
+      "The agent and the principal",
+      "The principal and the third party",
+      "The company secretary and the third party",
+      "The directors and the shareholders"
+    ],
+    "answer": "The principal and the third party",
+    "rationale": "The agent acts as an intermediary while the contract binds principal and third party.",
+    "marks": 2
+  },
+  {
+    "id": "q24",
+    "type": "multipleChoice",
+    "question": "Following an unauthorized transaction, may a principal ratify only the beneficial parts while rejecting the remainder?",
+    "options": [
+      "Only where consideration is divisible",
+      "Only with court approval",
+      "No, ratification must apply to the entire transaction.",
+      "Yes, whenever the agent exceeded authority."
+    ],
+    "answer": "No, ratification must apply to the entire transaction.",
+    "rationale": "Partial ratification is generally ineffective.",
+    "marks": 2
+  },
+  {
+    "id": "q25",
+    "type": "multipleChoice",
+    "question": "Which combination of circumstances is essential before agency of necessity can arise?",
+    "options": [
+      "Urgency, impossibility of contacting the principal, and good faith action",
+      "Written authorization together with shareholder approval",
+      "Financial benefit to both principal and agent",
+      "Board resolution and witness certification"
+    ],
+    "answer": "Urgency, impossibility of contacting the principal, and good faith action",
+    "rationale": "Agency of necessity requires an emergency, inability to obtain instructions, and good faith.",
+    "marks": 2
+  },
+  {
+    "id": "q26",
+    "type": "multipleChoice",
+    "question": "A general manager signs a renovation contract outside actual authority, but the contractor reasonably believes authority exists based on prior dealings. Which principle most likely binds the company?",
+    "options": [
+      "Indoor management alone",
+      "Constructive notice",
+      "Apparent authority",
+      "Separate legal personality"
+    ],
+    "answer": "Apparent authority",
+    "rationale": "Previous conduct may create apparent authority upon which third parties rely.",
+    "marks": 2
+  },
+  {
+    "id": "q27",
+    "type": "multipleChoice",
+    "question": "A principal remains silent for several months after learning of an unauthorized sale. Under which circumstance is silence most likely treated as ratification?",
+    "options": [
+      "Where silence reasonably indicates acceptance and the third party relies upon it",
+      "Whenever the transaction produced a profit",
+      "Whenever the agent acted dishonestly",
+      "Whenever the contract exceeded authority"
+    ],
+    "answer": "Where silence reasonably indicates acceptance and the third party relies upon it",
+    "rationale": "Silence combined with reliance may amount to implied ratification or estoppel.",
+    "marks": 2
+  },
+  {
+    "id": "q28",
+    "type": "multipleChoice",
+    "question": "A marketing manager breaches an internal restriction unknown to a long standing supplier. Under what principle might the supplier enforce the agreement?",
+    "options": [
+      "Perpetual succession",
+      "Indoor management supported by apparent authority",
+      "Ultra vires",
+      "Limited liability"
+    ],
+    "answer": "Indoor management supported by apparent authority",
+    "rationale": "Third parties acting in good faith may rely upon apparent authority and indoor management.",
+    "marks": 2
+  },
+  {
+    "id": "q29",
+    "type": "multipleChoice",
+    "question": "An agent exceeds purchasing authority and secretly profits from the transaction. Which fiduciary obligation has primarily been breached?",
+    "options": [
+      "Duty to preserve confidential information only",
+      "Duty to avoid conflicts of interest and secret profits",
+      "Duty to maximize the agent's commission",
+      "Duty to negotiate the highest available price"
+    ],
+    "answer": "Duty to avoid conflicts of interest and secret profits",
+    "rationale": "Agents must avoid conflicts and account for unauthorized profits.",
+    "marks": 2
+  },
+  {
+    "id": "q30",
+    "type": "multipleChoice",
+    "question": "A CEO publicly introduces an independent contractor as the company's operations agent. Which doctrine may prevent the company from denying authority later?",
+    "options": [
+      "Agency by estoppel",
+      "Agency by necessity",
+      "Agency by ratification",
+      "Agency by operation of law"
+    ],
+    "answer": "Agency by estoppel",
+    "rationale": "Representations by the principal may estop denial of authority.",
+    "marks": 2
+  },
+  {
+    "id": "q31",
+    "type": "multipleChoice",
+    "question": "An undisclosed principal generally cannot intervene in a contract where:",
+    "options": [
+      "Intervention would materially alter the contractual rights originally agreed.",
+      "The contract was performed early.",
+      "The agent disclosed partial authority.",
+      "The principal later became insolvent."
+    ],
+    "answer": "Intervention would materially alter the contractual rights originally agreed.",
+    "rationale": "Undisclosed principals cannot intervene where doing so fundamentally changes the bargain.",
+    "marks": 2
+  },
+  {
+    "id": "q32",
+    "type": "multipleChoice",
+    "question": "According to Cooke and Sons v Eshelby, which statement is most accurate regarding an undisclosed principal?",
+    "options": [
+      "The undisclosed principal can sue the buyer, subject to applicable limitations.",
+      "The undisclosed principal never acquires contractual rights.",
+      "Only the agent may recover payment.",
+      "The contract automatically becomes void."
+    ],
+    "answer": "The undisclosed principal can sue the buyer, subject to applicable limitations.",
+    "rationale": "The case recognizes the rights of an undisclosed principal.",
+    "marks": 2
+  },
+  {
+    "id": "q33",
+    "type": "multipleChoice",
+    "question": "An agent reroutes a vessel to protect cargo during severe weather, increasing costs. When is indemnity most likely available?",
+    "options": [
+      "Where the decision was reasonable and necessary to protect the principal's interests.",
+      "Whenever transport costs increase.",
+      "Whenever insurance is unavailable.",
+      "Whenever the principal later benefits financially."
+    ],
+    "answer": "Where the decision was reasonable and necessary to protect the principal's interests.",
+    "rationale": "Necessary and reasonable protective actions generally justify indemnity.",
+    "marks": 2
+  },
+  {
+    "id": "q34",
+    "type": "multipleChoice",
+    "question": "Which event may automatically terminate an agency relationship by operation of law?",
+    "options": [
+      "Increase in company profits",
+      "Mental incapacity of the agent",
+      "Appointment of additional directors",
+      "Change in registered office"
+    ],
+    "answer": "Mental incapacity of the agent",
+    "rationale": "Mental incapacity can terminate an agency relationship.",
+    "marks": 2
+  },
+  {
+    "id": "q35",
+    "type": "multipleChoice",
+    "question": "Which agency relationship is capable of taking effect retrospectively?",
+    "options": [
+      "Agency by estoppel",
+      "Agency by necessity",
+      "Agency by ratification",
+      "Agency by implication"
+    ],
+    "answer": "Agency by ratification",
+    "rationale": "Ratification validates a previously unauthorized act retrospectively.",
+    "marks": 2
+  },
+  {
+    "id": "q36",
+    "type": "multipleChoice",
+    "question": "An undisclosed agency exists where:",
+    "options": [
+      "The agent contracts without revealing the identity or existence of the principal.",
+      "The principal signs every contract personally.",
+      "The company has multiple directors.",
+      "Authority is granted by statute."
+    ],
+    "answer": "The agent contracts without revealing the identity or existence of the principal.",
+    "rationale": "The third party is unaware that the agent acts for another.",
+    "marks": 2
+  },
+  {
+    "id": "q37",
+    "type": "multipleChoice",
+    "question": "Which combination best represents the core fiduciary duties of an agent?",
+    "options": [
+      "Obedience, diligence, accounting, good faith, disclosure, and avoidance of conflicts",
+      "Profit maximization, delegation, secrecy, and investment discretion",
+      "Personal enrichment, confidentiality, and independent contracting",
+      "Advertising, recruitment, financing, and taxation"
+    ],
+    "answer": "Obedience, diligence, accounting, good faith, disclosure, and avoidance of conflicts",
+    "rationale": "These are the principal fiduciary obligations owed by an agent.",
+    "marks": 2
+  },
+  {
+    "id": "q38",
+    "type": "multipleChoice",
+    "question": "A bank relies upon a company's apparent compliance with its Articles of Association despite undisclosed internal irregularities. Which principle primarily protects the bank?",
+    "options": [
+      "Indoor Management Rule",
+      "Separate legal personality",
+      "Ultra vires",
+      "Perpetual succession"
+    ],
+    "answer": "Indoor Management Rule",
+    "rationale": "The indoor management rule protects outsiders dealing in good faith.",
+    "marks": 2
+  },
+  {
+    "id": "q39",
+    "type": "multipleChoice",
+    "question": "Mahony v East Holyford Mining Co. primarily supports which proposition?",
+    "options": [
+      "Outsiders may assume internal procedures have been properly complied with.",
+      "Every outsider is deemed to know internal resolutions.",
+      "Articles override statutory provisions.",
+      "Directors possess unlimited authority."
+    ],
+    "answer": "Outsiders may assume internal procedures have been properly complied with.",
+    "rationale": "The case reinforces the indoor management rule.",
+    "marks": 2
+  },
+  {
+    "id": "q40",
+    "type": "multipleChoice",
+    "question": "A proposed amendment to a company's articles increases an existing member's liability. Which statement is legally correct?",
+    "options": [
+      "The member's liability cannot generally be increased without consent.",
+      "The amendment binds every member immediately.",
+      "A simple board resolution is sufficient.",
+      "Directors may impose additional liability unilaterally."
+    ],
+    "answer": "The member's liability cannot generally be increased without consent.",
+    "rationale": "Members are protected against compulsory increases in liability.",
+    "marks": 2
+    },
+
+  {
+    "id": "q41",
+    "type": "multipleChoice",
+    "question": "Which situation most accurately represents an application of the doctrine of ultra vires under company law?",
+    "options": [
+      "A company enters into a transaction expressly prohibited by its objects or constitutional limitations.",
+      "A director exceeds an internally delegated spending limit without the outsider's knowledge.",
+      "A shareholder votes against a special resolution at a general meeting.",
+      "A company fails to file its annual return within the prescribed period."
+    ],
+    "answer": "A company enters into a transaction expressly prohibited by its objects or constitutional limitations.",
+    "rationale": "Ultra vires concerns acts beyond the company's constitutional authority.",
+    "marks": 2
+  },
+  {
+    "id": "q42",
+    "type": "multipleChoice",
+    "question": "A company's articles require board approval before making outside investments. An outsider contracts without knowledge of this internal restriction. Which doctrine most strongly protects the outsider?",
+    "options": [
+      "Indoor Management Rule",
+      "Constructive fraud",
+      "Separate legal personality",
+      "Doctrine of estoppel by deed"
+    ],
+    "answer": "Indoor Management Rule",
+    "rationale": "The Indoor Management Rule protects outsiders acting in good faith from undisclosed internal irregularities.",
+    "marks": 2
+  },
+  {
+    "id": "q43",
+    "type": "multipleChoice",
+    "question": "A mortgage bond requiring signatures of three directors is executed by only two. According to The Jupiter Cigarette and Tobacco Co. Ltd. v H.C. Henry Soysa, what is the most appropriate legal outcome?",
+    "options": [
+      "The company may still be bound where the lender relied in good faith upon apparent compliance with internal procedures.",
+      "The transaction is automatically void because every constitutional requirement was not fulfilled.",
+      "The directors become personally liable while the company is fully discharged.",
+      "The mortgage remains suspended until shareholder ratification is obtained."
+    ],
+    "answer": "The company may still be bound where the lender relied in good faith upon apparent compliance with internal procedures.",
+    "rationale": "The case illustrates protection afforded to outsiders relying upon apparent regularity.",
+    "marks": 2
+  },
+  {
+    "id": "q44",
+    "type": "multipleChoice",
+    "question": "Galaxy Holdings Ltd borrows funds for an activity allegedly outside its stated objects. Following Peoples Bank v Yashodha Holdings, which conclusion is most consistent with modern company law?",
+    "options": [
+      "The company cannot simply avoid liability by alleging the transaction was ultra vires.",
+      "Every agreement beyond the object clause is automatically void against all parties.",
+      "The lender loses all contractual rights regardless of good faith.",
+      "The directors alone become borrowers under the agreement."
+    ],
+    "answer": "The company cannot simply avoid liability by alleging the transaction was ultra vires.",
+    "rationale": "Modern company law significantly limits reliance on ultra vires to escape contractual obligations.",
+    "marks": 2
+  },
+  {
+    "id": "q45",
+    "type": "multipleChoice",
+    "question": "Which category of company is specifically required to include an object clause within its Articles of Association?",
+    "options": [
+      "Company limited by guarantee",
+      "Public company limited by shares",
+      "Private company limited by shares",
+      "Overseas company"
+    ],
+    "answer": "Company limited by guarantee",
+    "rationale": "Guarantee companies ordinarily require an object clause defining their purposes.",
+    "marks": 2
+  },
+  {
+    "id": "q46",
+    "type": "multipleChoice",
+    "question": "The primary legal purpose of a company's prospectus is to:",
+    "options": [
+      "Provide prospective investors with material information necessary to make informed investment decisions.",
+      "Appoint the first directors of the company.",
+      "Replace the Articles of Association after incorporation.",
+      "Serve as the company's annual financial report."
+    ],
+    "answer": "Provide prospective investors with material information necessary to make informed investment decisions.",
+    "rationale": "A prospectus ensures adequate disclosure to potential investors.",
+    "marks": 2
+  },
+  {
+    "id": "q47",
+    "type": "multipleChoice",
+    "question": "Formal decisions passed collectively by shareholders are known as:",
+    "options": [
+      "Resolutions",
+      "Directions",
+      "Articles",
+      "Mandates"
+    ],
+    "answer": "Resolutions",
+    "rationale": "Shareholders exercise decision-making power through resolutions.",
+    "marks": 2
+  },
+  {
+    "id": "q48",
+    "type": "multipleChoice",
+    "question": "What level of shareholder approval is generally required for a special resolution?",
+    "options": [
+      "More than 75 percent of votes cast",
+      "More than 50 percent of votes cast",
+      "Exactly two thirds of all shareholders",
+      "Unanimous approval of every shareholder"
+    ],
+    "answer": "More than 75 percent of votes cast",
+    "rationale": "Special resolutions generally require a 75 percent majority.",
+    "marks": 2
+  },
+  {
+    "id": "q49",
+    "type": "multipleChoice",
+    "question": "Following the introduction of the Companies Act No. 07 of 2007, which document ceased to be a constitutional document of a company?",
+    "options": [
+      "Memorandum of Association",
+      "Articles of Association",
+      "Certificate of Incorporation",
+      "Register of Members"
+    ],
+    "answer": "Memorandum of Association",
+    "rationale": "The Memorandum no longer functions as a constitutional document under the 2007 Act.",
+    "marks": 2
+  },
+  {
+    "id": "q50",
+    "type": "multipleChoice",
+    "question": "Which type of company may register under Sri Lankan law but is prohibited from carrying on business within Sri Lanka?",
+    "options": [
+      "Offshore company",
+      "Public company",
+      "Guarantee company",
+      "Unlimited company"
+    ],
+    "answer": "Offshore company",
+    "rationale": "Offshore companies are subject to restrictions on conducting business within Sri Lanka.",
+    "marks": 2
+  },
+  {
+    "id": "q51",
+    "type": "multipleChoice",
+    "question": "What liability may arise where a prospectus contains untrue statements?",
+    "options": [
+      "Both civil liability and criminal liability may arise against responsible persons.",
+      "Only civil liability is possible.",
+      "Only criminal liability is possible.",
+      "No liability arises if the company was incorporated."
+    ],
+    "answer": "Both civil liability and criminal liability may arise against responsible persons.",
+    "rationale": "The Companies Act provides both civil and criminal consequences for misleading prospectuses.",
+    "marks": 2
+  },
+  {
+    "id": "q52",
+    "type": "multipleChoice",
+    "question": "Which meetings must generally be open to invitation for all shareholders entitled to participate?",
+    "options": [
+      "General meetings",
+      "Board meetings",
+      "Management committee meetings",
+      "Audit committee meetings"
+    ],
+    "answer": "General meetings",
+    "rationale": "General meetings are meetings of the shareholders.",
+    "marks": 2
+  },
+  {
+    "id": "q53",
+    "type": "multipleChoice",
+    "question": "Who are primarily responsible for taking the procedural steps necessary to establish a company and making the initial business preparations?",
+    "options": [
+      "Promoters",
+      "Liquidators",
+      "Auditors",
+      "Debenture holders"
+    ],
+    "answer": "Promoters",
+    "rationale": "Promoters undertake incorporation and preliminary business activities.",
+    "marks": 2
+  },
+  {
+    "id": "q54",
+    "type": "multipleChoice",
+    "question": "Under the Companies Act No. 07 of 2007, which document serves as the principal constitutional document of a company?",
+    "options": [
+      "Articles of Association",
+      "Prospectus",
+      "Certificate of Incorporation",
+      "Share Register"
+    ],
+    "answer": "Articles of Association",
+    "rationale": "The Articles constitute the primary constitutional document.",
+    "marks": 2
+  },
+  {
+    "id": "q55",
+    "type": "multipleChoice",
+    "question": "Which statement concerning debentures is legally correct?",
+    "options": [
+      "A company may purchase or redeem its own debentures subject to applicable legal requirements.",
+      "A company is absolutely prohibited from acquiring its own debentures.",
+      "Debentures always confer voting rights identical to ordinary shares.",
+      "Debentures can only be issued by public companies."
+    ],
+    "answer": "A company may purchase or redeem its own debentures subject to applicable legal requirements.",
+    "rationale": "Companies may generally acquire their own debentures if statutory requirements are satisfied.",
+    "marks": 2
+  },
+  {
+    "id": "q56",
+    "type": "multipleChoice",
+    "question": "Under the Companies Act No. 07 of 2007, who has primary responsibility for managing the affairs of a company?",
+    "options": [
+      "The board of directors rather than the shareholders",
+      "The shareholders directly through day to day management",
+      "The company secretary exclusively",
+      "The external auditors"
+    ],
+    "answer": "The board of directors rather than the shareholders",
+    "rationale": "Management powers are primarily vested in the board unless otherwise provided.",
+    "marks": 2
+  },
+  {
+    "id": "q57",
+    "type": "multipleChoice",
+    "question": "Shares issued without any preferential or special rights attached are known as:",
+    "options": [
+      "Ordinary shares",
+      "Redeemable preference shares",
+      "Participating preference shares",
+      "Deferred shares"
+    ],
+    "answer": "Ordinary shares",
+    "rationale": "Ordinary shares carry the standard rights of membership.",
+    "marks": 2
+  },
+  {
+    "id": "q58",
+    "type": "multipleChoice",
+    "question": "Redeemable shares are best described as shares that:",
+    "options": [
+      "May be bought back or redeemed by the company in accordance with their terms and the law.",
+      "Can never be cancelled after issue.",
+      "Automatically convert into debentures after one year.",
+      "Must always carry enhanced voting rights."
+    ],
+    "answer": "May be bought back or redeemed by the company in accordance with their terms and the law.",
+    "rationale": "Redeemable shares are capable of redemption subject to legal requirements.",
+    "marks": 2
+  },
+  {
+    "id": "q59",
+    "type": "multipleChoice",
+    "question": "A company may generally make a call on shares when:",
+    "options": [
+      "The call is made in accordance with the terms of issue and the company's constitution.",
+      "Any director independently requests payment.",
+      "The company incurs an operating loss.",
+      "Shareholders unanimously waive notice requirements."
+    ],
+    "answer": "The call is made in accordance with the terms of issue and the company's constitution.",
+    "rationale": "Calls on shares must comply with governing legal and constitutional provisions.",
+    "marks": 2
+  },
+  {
+    "id": "q60",
+    "type": "multipleChoice",
+    "question": "The primary basis for imposing liability upon experts whose reports or opinions appear in a company's prospectus is that:",
+    "options": [
+      "Investors are entitled to rely upon expert statements that are materially false or misleading.",
+      "Experts automatically become company directors once their reports are published.",
+      "Experts guarantee the commercial success of the company.",
+      "Experts assume unlimited liability for every company debt."
+    ],
+    "answer": "Investors are entitled to rely upon expert statements that are materially false or misleading.",
+    "rationale": "Experts may incur liability where investors rely on inaccurate or misleading expert opinions included in a prospectus.",
+    "marks": 2
+  }
+]
+
+}
+
